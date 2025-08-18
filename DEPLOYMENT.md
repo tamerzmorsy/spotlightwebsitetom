@@ -5,9 +5,9 @@ This project is configured for serverless deployment on Vercel.
 ## Deployment Configuration
 
 - **Framework**: Vite (React SPA)
-- **Build Command**: `npm run build:client`
-- **Output Directory**: `dist/spa`
-- **Install Command**: `npm install --legacy-peer-deps`
+- **Build Command**: `npm run build`
+- **Output Directory**: `dist`
+- **Install Command**: `npm install`
 - **API Functions**: Located in `/api/` directory (serverless functions)
 
 ## API Endpoints

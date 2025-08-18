@@ -77,46 +77,31 @@ const Index = () => {
             Your feed, your rules.
           </p>
 
-          {/* Primary CTA */}
-          <div className="mb-16">
-            <Link to="/get-app">
-              <Button
-                size="lg"
-                className="bg-electric-blue text-midnight-black hover:bg-cyan-400 font-semibold text-xl px-12 py-6 rounded-full"
-              >
-                Try it free*
-              </Button>
-            </Link>
-          </div>
-
-          {/* Promotional Text */}
-          <p className="text-base text-soft-gray/60 mb-8">
-            Get 3 months of Spotlight News+ free with a new iPhone, iPad, or
-            Mac.¹
-            <Link
-              to="/get-app"
-              className="text-electric-blue hover:underline ml-1"
+          {/* App Store Badges */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="#"
+              className="transition-transform hover:scale-105 active:scale-95"
+              aria-label="Download on the App Store"
             >
-              Learn more
-            </Link>
-          </p>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                alt="Download on the App Store"
+                className="h-14 w-auto"
+              />
+            </a>
 
-          {/* Stats - Simplified */}
-          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto pt-8 border-t border-soft-gray/10">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-soft-gray mb-1">
-                250K+
-              </div>
-              <div className="text-soft-gray/50 text-sm">Active users</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-soft-gray mb-1">1M+</div>
-              <div className="text-soft-gray/50 text-sm">Stories curated</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-soft-gray mb-1">500+</div>
-              <div className="text-soft-gray/50 text-sm">Campus partners</div>
-            </div>
+            <a
+              href="#"
+              className="transition-transform hover:scale-105 active:scale-95"
+              aria-label="Get it on Google Play"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                alt="Get it on Google Play"
+                className="h-14 w-auto"
+              />
+            </a>
           </div>
         </div>
       </section>

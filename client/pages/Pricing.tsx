@@ -318,7 +318,7 @@ const Pricing = () => {
 
       {/* Enterprise Section */}
       <section className="py-24 bg-gray-900/50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl sm:text-5xl font-display font-bold text-soft-gray mb-8">
             Need something <span className="text-electric-blue">bigger</span>?
           </h2>

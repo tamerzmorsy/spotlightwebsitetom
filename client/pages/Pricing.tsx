@@ -189,12 +189,17 @@ const Pricing = () => {
               <h3 className="text-2xl font-display font-bold text-soft-gray mb-4">
                 Premium
               </h3>
-              <div className="text-5xl font-display font-bold text-soft-gray mb-8">
-                $8.99
+              <div className="text-5xl font-display font-bold text-soft-gray mb-2">
+                {formatPrice(isYearly ? pricing.premium.yearly : pricing.premium.monthly)}
                 <span className="text-lg font-normal text-soft-gray/60">
-                  /month
+                  {getPeriodText()}
                 </span>
               </div>
+              {isYearly && (
+                <div className="text-sm text-soft-gray/60 mb-6">
+                  Equivalent to ${(pricing.premium.yearly / 12).toFixed(2)}/month
+                </div>
+              )}
 
               <div className="space-y-4 mb-12 text-left">
                 <div className="flex items-center">

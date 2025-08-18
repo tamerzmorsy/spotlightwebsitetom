@@ -187,9 +187,9 @@ const Pricing = () => {
             </div>
 
             {/* Premium Plan */}
-            <div className="bg-electric-blue/10 border border-electric-blue/30 rounded-3xl p-12 text-center relative">
+            <div className="bg-electric-blue/10 border border-electric-blue/30 rounded-3xl p-8 text-center relative">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <div className="bg-electric-blue text-midnight-black px-6 py-2 rounded-full text-sm font-medium">
+                <div className="bg-electric-blue text-midnight-black px-4 py-1 rounded-full text-xs font-medium">
                   Most Popular
                 </div>
               </div>
@@ -197,18 +197,19 @@ const Pricing = () => {
               <h3 className="text-2xl font-display font-bold text-soft-gray mb-4">
                 Premium
               </h3>
-              <div className="text-5xl font-display font-bold text-soft-gray mb-2">
+              <div className="text-4xl font-display font-bold text-soft-gray mb-2">
                 {formatPrice(isYearly ? pricing.premium.yearly : pricing.premium.monthly)}
                 <span className="text-lg font-normal text-soft-gray/60">
                   {getPeriodText()}
                 </span>
               </div>
-              {isYearly && (
-                <div className="text-sm text-soft-gray/60 mb-6">
-                  Equivalent to ${(pricing.premium.yearly / 12).toFixed(2)}/month
-                </div>
-              )}
-              {!isYearly && <div className="mb-6"></div>}
+              <div className="text-sm text-soft-gray/60 mb-2">OR</div>
+              <div className="text-3xl font-display font-bold text-soft-gray mb-6">
+                {formatPrice(isYearly ? pricing.premium.monthly * 12 : pricing.premium.yearly)}
+                <span className="text-sm text-soft-gray/60">
+                  {isYearly ? "/year" : "/year"}
+                </span>
+              </div>
 
               <div className="space-y-4 mb-12 text-left">
                 <div className="flex items-center">

@@ -211,36 +211,32 @@ const Pricing = () => {
                 </span>
               </div>
 
-              <div className="space-y-4 mb-12 text-left">
+              <div className="space-y-3 mb-8 text-left text-sm">
                 <div className="flex items-center">
-                  <Check className="w-5 h-5 text-electric-blue mr-3 flex-shrink-0" />
-                  <span className="text-soft-gray/80">All free features</span>
-                </div>
-                <div className="flex items-center">
-                  <Check className="w-5 h-5 text-electric-blue mr-3 flex-shrink-0" />
+                  <Check className="w-4 h-4 text-electric-blue mr-2 flex-shrink-0" />
                   <span className="text-soft-gray/80">
-                    Access to 300+ premium sources
+                    Total control of news feed
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <Check className="w-5 h-5 text-electric-blue mr-3 flex-shrink-0" />
+                  <Check className="w-4 h-4 text-electric-blue mr-2 flex-shrink-0" />
                   <span className="text-soft-gray/80">
-                    No paywall restrictions
+                    Unlimited access to 50+ paywalled publications
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <Check className="w-5 h-5 text-electric-blue mr-3 flex-shrink-0" />
+                  <Check className="w-4 h-4 text-electric-blue mr-2 flex-shrink-0" />
                   <span className="text-soft-gray/80">
-                    Premium challenges & rewards
+                    Unlimited access to 250+ other publications
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <Check className="w-5 h-5 text-electric-blue mr-3 flex-shrink-0" />
-                  <span className="text-soft-gray/80">Advanced analytics</span>
+                  <Check className="w-4 h-4 text-electric-blue mr-2 flex-shrink-0" />
+                  <span className="text-soft-gray/80">Play Sports Challenges</span>
                 </div>
                 <div className="flex items-center">
-                  <Check className="w-5 h-5 text-electric-blue mr-3 flex-shrink-0" />
-                  <span className="text-soft-gray/80">Priority support</span>
+                  <Check className="w-4 h-4 text-electric-blue mr-2 flex-shrink-0" />
+                  <span className="text-soft-gray/80">Qualify for Promotions</span>
                 </div>
               </div>
 

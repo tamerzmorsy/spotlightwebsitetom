@@ -252,15 +252,7 @@ const Pricing = () => {
                   {getPeriodText()}
                 </span>
               </div>
-              {isYearly && (
-                <>
-                  <div className="text-sm text-soft-gray/60 mb-2">OR</div>
-                  <div className="text-lg text-soft-gray/60 mb-6">
-                    ${(pricing.premiumPlus.yearly / 12).toFixed(2)}/month billed annually
-                  </div>
-                </>
-              )}
-              {!isYearly && <div className="mb-6"></div>}
+              <div className="mb-6"></div>
 
               <div className="space-y-3 mb-8 text-left text-sm">
                 <div className="flex items-center">

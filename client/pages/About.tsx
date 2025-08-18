@@ -61,7 +61,7 @@ const About = () => {
           </p>
 
           {/* App Store Badges */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <a
               href="https://apps.apple.com/us/app/spotlight-news/id1291820344"
               className="transition-transform hover:scale-105 active:scale-95"

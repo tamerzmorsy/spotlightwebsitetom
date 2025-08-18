@@ -241,8 +241,70 @@ const Pricing = () => {
               </div>
 
               <Link to="/get-app">
-                <Button className="w-full bg-electric-blue text-midnight-black hover:bg-cyan-400 font-semibold py-4 rounded-full">
+                <Button className="w-full bg-electric-blue text-midnight-black hover:bg-cyan-400 font-semibold py-3 rounded-full text-sm">
                   Start free trial
+                </Button>
+              </Link>
+            </div>
+
+            {/* Premium+ Plan */}
+            <div className="bg-gray-800/30 rounded-3xl p-8 text-center">
+              <h3 className="text-2xl font-display font-bold text-soft-gray mb-4">
+                Premium+
+              </h3>
+              <div className="text-4xl font-display font-bold text-soft-gray mb-2">
+                {formatPrice(isYearly ? pricing.premiumPlus.yearly : pricing.premiumPlus.monthly)}
+                <span className="text-lg font-normal text-soft-gray/60">
+                  {getPeriodText()}
+                </span>
+              </div>
+              <div className="text-sm text-soft-gray/60 mb-2">OR</div>
+              <div className="text-3xl font-display font-bold text-soft-gray mb-6">
+                {formatPrice(isYearly ? pricing.premiumPlus.monthly * 12 : pricing.premiumPlus.yearly)}
+                <span className="text-sm text-soft-gray/60">
+                  {isYearly ? "/year" : "/year"}
+                </span>
+              </div>
+
+              <div className="space-y-3 mb-8 text-left text-sm">
+                <div className="flex items-center">
+                  <Check className="w-4 h-4 text-electric-blue mr-2 flex-shrink-0" />
+                  <span className="text-soft-gray/80">
+                    Total control of news feed
+                  </span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="w-4 h-4 text-electric-blue mr-2 flex-shrink-0" />
+                  <span className="text-soft-gray/80">
+                    Unlimited access to 50+ paywalled publications
+                  </span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="w-4 h-4 text-electric-blue mr-2 flex-shrink-0" />
+                  <span className="text-soft-gray/80">
+                    Unlimited access to 250+ other publications
+                  </span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="w-4 h-4 text-electric-blue mr-2 flex-shrink-0" />
+                  <span className="text-soft-gray/80">Play Sports Challenges</span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="w-4 h-4 text-electric-blue mr-2 flex-shrink-0" />
+                  <span className="text-soft-gray/80">Qualify for Promotions</span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="w-4 h-4 text-electric-blue mr-2 flex-shrink-0" />
+                  <span className="text-soft-gray/80">No ads</span>
+                </div>
+              </div>
+
+              <Link to="/get-app">
+                <Button
+                  variant="outline"
+                  className="w-full border-soft-gray/30 text-soft-gray hover:bg-soft-gray hover:text-midnight-black font-medium py-3 rounded-full text-sm"
+                >
+                  Get started
                 </Button>
               </Link>
             </div>

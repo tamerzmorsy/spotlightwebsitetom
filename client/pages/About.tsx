@@ -1,0 +1,252 @@
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import { Users, Target, Heart, Lightbulb } from "lucide-react";
+
+const About = () => {
+  return (
+    <div className="min-h-screen bg-midnight-black text-soft-gray">
+      <Navigation />
+
+      {/* Hero Section - Apple News style */}
+      <section className="relative pt-20 pb-32 px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-5xl mx-auto">
+          {/* Product Badge */}
+          <div className="mb-8">
+            <span className="inline-block text-electric-blue text-lg font-medium tracking-wide">
+              About Spotlight News
+            </span>
+          </div>
+
+          {/* Main Headline */}
+          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-display font-bold mb-8 leading-[0.85] tracking-tight">
+            Reinventing news
+            <br />
+            for a <span className="text-electric-blue">new generation.</span>
+          </h1>
+
+          {/* Subheadline */}
+          <p className="text-2xl sm:text-3xl text-soft-gray/80 mb-16 font-light leading-relaxed max-w-4xl mx-auto">
+            Algorithm-free feeds. Quality journalism.
+            <br />A sustainable future for news.
+          </p>
+        </div>
+      </section>
+
+      {/* Mission Section */}
+      <section className="py-24 bg-gray-900/30">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Our Mission */}
+          <div className="grid md:grid-cols-2 gap-16 items-center mb-32">
+            <div>
+              <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8 leading-tight">
+                Our <span className="text-electric-blue">mission.</span>
+              </h2>
+              <p className="text-xl text-soft-gray/70 mb-8 leading-relaxed">
+                To reinvigorate the newspaper industry by building a new
+                generation of readers who stay sharp, connected, and
+                inspired—throughout college and beyond.
+              </p>
+              <p className="text-lg text-soft-gray/60 mb-8">
+                We empower students, publishers, and universities to redefine
+                news in the digital age through algorithm-free, customizable
+                access to trusted sources.
+              </p>
+              <Link to="/get-app">
+                <Button
+                  variant="outline"
+                  className="border-electric-blue text-electric-blue hover:bg-electric-blue hover:text-midnight-black font-medium px-8 py-4 rounded-full"
+                >
+                  Join our mission
+                </Button>
+              </Link>
+            </div>
+            <div className="bg-gradient-to-br from-electric-blue/20 to-vibrant-pink/20 rounded-3xl p-16 h-96 flex items-center justify-center">
+              <div className="text-center text-soft-gray/60">
+                <Target className="w-16 h-16 mx-auto mb-4" />
+                <p className="text-lg">Mission & Vision</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Our Values */}
+          <div className="grid md:grid-cols-2 gap-16 items-center mb-32">
+            <div className="bg-gradient-to-br from-neon-green/20 to-electric-blue/20 rounded-3xl p-16 h-96 flex items-center justify-center order-2 md:order-1">
+              <div className="text-center text-soft-gray/60">
+                <Heart className="w-16 h-16 mx-auto mb-4" />
+                <p className="text-lg">Core Values</p>
+              </div>
+            </div>
+            <div className="order-1 md:order-2">
+              <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8 leading-tight">
+                What drives <span className="text-neon-green">us.</span>
+              </h2>
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-xl font-semibold text-neon-green mb-2">
+                    Quality First
+                  </h3>
+                  <p className="text-soft-gray/70">
+                    We partner with trusted publications and prioritize
+                    editorial integrity over engagement algorithms.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-neon-green mb-2">
+                    User Control
+                  </h3>
+                  <p className="text-soft-gray/70">
+                    Readers choose their sources, topics, and reading
+                    experience. No algorithmic manipulation.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-neon-green mb-2">
+                    Fair Revenue
+                  </h3>
+                  <p className="text-soft-gray/70">
+                    Publishers receive 70% of subscription revenue, creating
+                    sustainable economics for journalism.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Our Impact */}
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8 leading-tight">
+                Making an <span className="text-vibrant-pink">impact.</span>
+              </h2>
+              <p className="text-xl text-soft-gray/70 mb-8 leading-relaxed">
+                From Michigan State University's 5,000+ engaged students to
+                hundreds of partner publications, we're building a sustainable
+                future for quality journalism.
+              </p>
+              <div className="grid grid-cols-2 gap-6 mb-8">
+                <div>
+                  <div className="text-3xl font-bold text-vibrant-pink mb-1">
+                    250K+
+                  </div>
+                  <div className="text-soft-gray/60 text-sm">
+                    Active readers
+                  </div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-vibrant-pink mb-1">
+                    300+
+                  </div>
+                  <div className="text-soft-gray/60 text-sm">
+                    Publisher partners
+                  </div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-vibrant-pink mb-1">
+                    500+
+                  </div>
+                  <div className="text-soft-gray/60 text-sm">
+                    University partners
+                  </div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-vibrant-pink mb-1">
+                    70%
+                  </div>
+                  <div className="text-soft-gray/60 text-sm">
+                    Revenue to publishers
+                  </div>
+                </div>
+              </div>
+              <Link to="/contact">
+                <Button
+                  variant="outline"
+                  className="border-vibrant-pink text-vibrant-pink hover:bg-vibrant-pink hover:text-midnight-black font-medium px-8 py-4 rounded-full"
+                >
+                  Partner with us
+                </Button>
+              </Link>
+            </div>
+            <div className="bg-gradient-to-br from-vibrant-pink/20 to-neon-green/20 rounded-3xl p-16 h-96 flex items-center justify-center">
+              <div className="text-center text-soft-gray/60">
+                <Users className="w-16 h-16 mx-auto mb-4" />
+                <p className="text-lg">Our Community</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-24 bg-gray-900/50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl sm:text-5xl font-display font-bold text-soft-gray mb-8">
+            Meet the <span className="text-electric-blue">team.</span>
+          </h2>
+          <p className="text-xl text-soft-gray/70 mb-16 max-w-2xl mx-auto">
+            We're a passionate group of journalists, developers, and advocates
+            working to reshape how news reaches readers.
+          </p>
+
+          <div className="bg-gray-800/30 rounded-2xl p-12">
+            <div className="flex items-center justify-center mb-6">
+              <Lightbulb className="w-12 h-12 text-electric-blue" />
+            </div>
+            <h3 className="text-2xl font-display font-bold text-soft-gray mb-4">
+              Founded on Innovation
+            </h3>
+            <p className="text-soft-gray/70 mb-8 max-w-2xl mx-auto">
+              Starting as a solution to algorithm fatigue and paywall barriers,
+              Spotlight News has evolved into a comprehensive platform that
+              serves students, publishers, and universities equally.
+            </p>
+            <Link to="/contact">
+              <Button className="bg-electric-blue text-midnight-black hover:bg-cyan-400 font-medium px-8 py-4 rounded-full">
+                Join our team
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-24">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8">
+            Ready to be part of <br />
+            <span className="text-electric-blue">the movement</span>?
+          </h2>
+          <p className="text-xl text-soft-gray/70 mb-12 max-w-2xl mx-auto">
+            Whether you're a student, publisher, or university, there's a place
+            for you in our mission.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/get-app">
+              <Button
+                size="lg"
+                className="bg-electric-blue text-midnight-black hover:bg-cyan-400 font-semibold text-lg px-10 py-5 rounded-full"
+              >
+                Download the app
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-soft-gray text-soft-gray hover:bg-soft-gray hover:text-midnight-black font-semibold text-lg px-10 py-5 rounded-full"
+              >
+                Get in touch
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default About;

@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Spotlight News Neon Rebellion Theme
+   * Primary: Electric Blue (#00FFFF) – For logos, headers, and "spotlight" effects
+   * Secondary: Neon Green (#39FF14) – Highlights like custom feed icons or challenge wins
+   * Accent: Vibrant Pink (#FF69B4) – For humor elements (e.g., roast tags, UGC prompts)
+   * Neutral Dark: Midnight Black (#121212) – Background for dark mode (default)
+   * Neutral Light: Soft Gray (#E0E0E0) – For text backgrounds or light mode accents
+   */
+  :root {
+    /* Neon Rebellion - Light Mode (rarely used) */
+    --background: 0 0% 88%;
+    --foreground: 0 0% 7%;
+
+    --card: 0 0% 95%;
+    --card-foreground: 0 0% 7%;
+
+    --popover: 0 0% 95%;
+    --popover-foreground: 0 0% 7%;
+
+    --primary: 180 100% 50%; /* Electric Blue */
+    --primary-foreground: 0 0% 7%;
+
+    --secondary: 100 100% 50%; /* Neon Green */
+    --secondary-foreground: 0 0% 7%;
+
+    --muted: 0 0% 88%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 328 100% 71%; /* Vibrant Pink */
+    --accent-foreground: 0 0% 7%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 180 100% 50%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 88%;
+    --sidebar-foreground: 0 0% 7%;
+    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary-foreground: 0 0% 7%;
+    --sidebar-accent: 0 0% 85%;
+    --sidebar-accent-foreground: 0 0% 7%;
+    --sidebar-border: 0 0% 82%;
+    --sidebar-ring: 180 100% 50%;
+  }
+
+  /* Default Dark Mode - Neon Rebellion */
+  .dark,
+  :root {
+    --background: 0 0% 7%; /* Midnight Black */
+    --foreground: 0 0% 88%; /* Soft Gray */
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 88%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 88%;
+
+    --primary: 180 100% 50%; /* Electric Blue */
+    --primary-foreground: 0 0% 7%;
+
+    --secondary: 100 100% 50%; /* Neon Green */
+    --secondary-foreground: 0 0% 7%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 328 100% 71%; /* Vibrant Pink */
+    --accent-foreground: 0 0% 7%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 180 100% 50%;
+
+    --sidebar-background: 0 0% 7%;
+    --sidebar-foreground: 0 0% 88%;
+    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary-foreground: 0 0% 7%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 88%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 180 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply dark; /* Default to dark mode for Neon Rebellion aesthetic */
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
+  }
+
+  /* Neon glow effects - lightened */
+  .neon-glow-blue {
+    box-shadow:
+      0 0 2px rgba(0, 255, 255, 0.3),
+      0 0 4px rgba(0, 255, 255, 0.2);
+  }
+
+  .neon-glow-green {
+    box-shadow:
+      0 0 2px rgba(57, 255, 20, 0.3),
+      0 0 4px rgba(57, 255, 20, 0.2);
+  }
+
+  .neon-glow-pink {
+    box-shadow:
+      0 0 2px rgba(255, 105, 180, 0.3),
+      0 0 4px rgba(255, 105, 180, 0.2);
+  }
+
+  /* Text glow effects - lightened */
+  .text-glow-blue {
+    text-shadow:
+      0 0 3px rgba(0, 255, 255, 0.4),
+      0 0 6px rgba(0, 255, 255, 0.2);
+  }
+
+  .text-glow-green {
+    text-shadow:
+      0 0 3px rgba(57, 255, 20, 0.4),
+      0 0 6px rgba(57, 255, 20, 0.2);
+  }
+
+  .text-glow-pink {
+    text-shadow:
+      0 0 3px rgba(255, 105, 180, 0.4),
+      0 0 6px rgba(255, 105, 180, 0.2);
+  }
+
+  /* Spotlight beam effect */
+  .spotlight-beam {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .spotlight-beam::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(0, 255, 255, 0.2),
+      transparent
+    );
+    animation: spotlight-beam 3s ease-in-out infinite;
+  }
+}

@@ -68,22 +68,36 @@ const Students = () => {
             No paywalls, no distractions.
           </p>
 
-          {/* Primary CTA */}
-          <div className="mb-8">
-            <Link to="/get-app">
-              <Button
-                size="lg"
-                className="bg-electric-blue text-midnight-black hover:bg-cyan-400 font-semibold text-xl px-12 py-6 rounded-full"
-              >
-                Get the app*
-              </Button>
-            </Link>
-          </div>
+          {/* App Store Badges */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://apps.apple.com/us/app/spotlight-news/id1291820344"
+              className="transition-transform hover:scale-105 active:scale-95"
+              aria-label="Download on the App Store"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                alt="Download on the App Store"
+                className="h-14 w-auto"
+              />
+            </a>
 
-          {/* Feature highlight */}
-          <p className="text-base text-soft-gray/60 mb-16">
-            Free trial included. Win AirPods and iPads in reading challenges.
-          </p>
+            <a
+              href="https://play.google.com/store/apps/details?id=net.spotlightlabs.spotlight"
+              className="transition-transform hover:scale-105 active:scale-95"
+              aria-label="Get it on Google Play"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                alt="Get it on Google Play"
+                className="h-14 w-auto"
+              />
+            </a>
+          </div>
         </div>
       </section>
 

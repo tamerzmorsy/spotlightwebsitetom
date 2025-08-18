@@ -288,7 +288,7 @@ const Publishers = () => {
           </div>
 
           {/* Stats Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <div className="text-center">
               <div className="text-4xl font-bold text-neon-green mb-2">
                 300+
@@ -298,12 +298,6 @@ const Publishers = () => {
             <div className="text-center">
               <div className="text-4xl font-bold text-neon-green mb-2">70%</div>
               <div className="text-soft-gray/60">Revenue share</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-neon-green mb-2">
-                250K+
-              </div>
-              <div className="text-soft-gray/60">Active readers</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-neon-green mb-2">

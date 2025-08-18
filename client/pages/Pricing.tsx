@@ -132,16 +132,19 @@ const Pricing = () => {
             </div>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Free Plan */}
-            <div className="bg-gray-800/30 rounded-3xl p-12 text-center">
+            {/* Basic Plan */}
+            <div className="bg-gray-800/30 rounded-3xl p-8 text-center">
               <h3 className="text-2xl font-display font-bold text-soft-gray mb-4">
-                Free
+                Basic
               </h3>
-              <div className="text-5xl font-display font-bold text-soft-gray mb-8">
-                {formatPrice(pricing.free.monthly)}
+              <div className="text-4xl font-display font-bold text-soft-gray mb-6">
+                {formatPrice(pricing.basic.monthly)}
                 <span className="text-lg font-normal text-soft-gray/60">
                   {getPeriodText()}
                 </span>
+              </div>
+              <div className="text-sm text-soft-gray/60 mb-6">
+                with e-mail registration
               </div>
 
               <div className="space-y-4 mb-12 text-left">

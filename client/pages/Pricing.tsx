@@ -137,9 +137,9 @@ const Pricing = () => {
                 Free
               </h3>
               <div className="text-5xl font-display font-bold text-soft-gray mb-8">
-                $0
+                {formatPrice(pricing.free.monthly)}
                 <span className="text-lg font-normal text-soft-gray/60">
-                  /month
+                  {getPeriodText()}
                 </span>
               </div>
 

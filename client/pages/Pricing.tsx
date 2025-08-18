@@ -10,8 +10,9 @@ const Pricing = () => {
 
   // Pricing data
   const pricing = {
-    free: { monthly: 0, yearly: 0 },
-    premium: { monthly: 8.99, yearly: 99 }, // ~$8.25/month when billed yearly
+    basic: { monthly: 0, yearly: 0 },
+    premium: { monthly: 9.99, yearly: 99 }, // ~$8.25/month when billed yearly
+    premiumPlus: { monthly: 13.99, yearly: 139 }, // ~$11.58/month when billed yearly
   };
 
   const formatPrice = (price: number) => {

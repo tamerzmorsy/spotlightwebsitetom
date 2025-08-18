@@ -317,60 +317,105 @@ const Pricing = () => {
       </section>
 
       {/* Enterprise Section */}
-      <section className="py-24 bg-gray-900/50">
-        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl sm:text-5xl font-display font-bold text-soft-gray mb-8">
-            Need something <span className="text-electric-blue">bigger</span>?
-          </h2>
-          <p className="text-xl text-soft-gray/70 mb-12 max-w-2xl mx-auto">
-            Custom solutions for universities and enterprise organizations.
-          </p>
+      <section className="py-32 relative overflow-hidden">
+        {/* Background gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/40 via-gray-800/20 to-gray-900/60"></div>
 
-          <div className="bg-gray-800/30 rounded-2xl p-12 mb-12">
-            <h3 className="text-2xl font-display font-bold text-electric-blue mb-6">
-              University & Enterprise
-            </h3>
-            <div className="grid md:grid-cols-2 gap-8 text-left mb-8">
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <Check className="w-5 h-5 text-electric-blue mr-3" />
-                  <span className="text-soft-gray/80">
-                    Bulk student subscriptions
-                  </span>
-                </div>
-                <div className="flex items-center">
-                  <Check className="w-5 h-5 text-electric-blue mr-3" />
-                  <span className="text-soft-gray/80">Custom branding</span>
-                </div>
-                <div className="flex items-center">
-                  <Check className="w-5 h-5 text-electric-blue mr-3" />
-                  <span className="text-soft-gray/80">Dedicated support</span>
-                </div>
+        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl sm:text-6xl lg:text-7xl font-display font-bold text-soft-gray mb-6 leading-tight">
+              Need something <span className="text-electric-blue text-glow-blue">bigger</span>?
+            </h2>
+            <p className="text-xl sm:text-2xl text-soft-gray/70 max-w-3xl mx-auto leading-relaxed">
+              Custom solutions for universities and enterprise organizations.
+            </p>
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-gradient-to-br from-gray-800/40 via-gray-700/20 to-gray-900/40 backdrop-blur-sm rounded-3xl border border-electric-blue/20 overflow-hidden">
+              {/* Header */}
+              <div className="bg-electric-blue/10 px-12 py-8 border-b border-electric-blue/20">
+                <h3 className="text-3xl font-display font-bold text-electric-blue text-center">
+                  University & Enterprise
+                </h3>
               </div>
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <Check className="w-5 h-5 text-electric-blue mr-3" />
-                  <span className="text-soft-gray/80">Analytics dashboard</span>
+
+              {/* Content */}
+              <div className="p-12">
+                <div className="grid lg:grid-cols-2 gap-12 mb-12">
+                  <div className="space-y-6">
+                    <div className="flex items-start group">
+                      <div className="w-6 h-6 rounded-full bg-electric-blue/20 flex items-center justify-center mr-4 mt-0.5 group-hover:bg-electric-blue/30 transition-colors">
+                        <Check className="w-4 h-4 text-electric-blue" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-soft-gray mb-1">Bulk student subscriptions</h4>
+                        <p className="text-soft-gray/60 text-sm">Scale access across your entire student body</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start group">
+                      <div className="w-6 h-6 rounded-full bg-electric-blue/20 flex items-center justify-center mr-4 mt-0.5 group-hover:bg-electric-blue/30 transition-colors">
+                        <Check className="w-4 h-4 text-electric-blue" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-soft-gray mb-1">Custom branding</h4>
+                        <p className="text-soft-gray/60 text-sm">Personalized experience with your institution's brand</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start group">
+                      <div className="w-6 h-6 rounded-full bg-electric-blue/20 flex items-center justify-center mr-4 mt-0.5 group-hover:bg-electric-blue/30 transition-colors">
+                        <Check className="w-4 h-4 text-electric-blue" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-soft-gray mb-1">Dedicated support</h4>
+                        <p className="text-soft-gray/60 text-sm">Priority assistance and technical guidance</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-6">
+                    <div className="flex items-start group">
+                      <div className="w-6 h-6 rounded-full bg-electric-blue/20 flex items-center justify-center mr-4 mt-0.5 group-hover:bg-electric-blue/30 transition-colors">
+                        <Check className="w-4 h-4 text-electric-blue" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-soft-gray mb-1">Analytics dashboard</h4>
+                        <p className="text-soft-gray/60 text-sm">Comprehensive insights and usage reports</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start group">
+                      <div className="w-6 h-6 rounded-full bg-electric-blue/20 flex items-center justify-center mr-4 mt-0.5 group-hover:bg-electric-blue/30 transition-colors">
+                        <Check className="w-4 h-4 text-electric-blue" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-soft-gray mb-1">Alumni extension options</h4>
+                        <p className="text-soft-gray/60 text-sm">Continued access for graduates and alumni</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start group">
+                      <div className="w-6 h-6 rounded-full bg-electric-blue/20 flex items-center justify-center mr-4 mt-0.5 group-hover:bg-electric-blue/30 transition-colors">
+                        <Check className="w-4 h-4 text-electric-blue" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-soft-gray mb-1">Implementation support</h4>
+                        <p className="text-soft-gray/60 text-sm">Seamless onboarding and deployment assistance</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="flex items-center">
-                  <Check className="w-5 h-5 text-electric-blue mr-3" />
-                  <span className="text-soft-gray/80">
-                    Alumni extension options
-                  </span>
-                </div>
-                <div className="flex items-center">
-                  <Check className="w-5 h-5 text-electric-blue mr-3" />
-                  <span className="text-soft-gray/80">
-                    Implementation support
-                  </span>
+
+                <div className="text-center">
+                  <Link to="/contact">
+                    <Button className="bg-electric-blue text-midnight-black hover:bg-cyan-400 font-semibold px-12 py-4 rounded-full text-lg neon-glow-blue transition-all duration-300 hover:scale-105">
+                      Contact sales
+                    </Button>
+                  </Link>
+                  <p className="text-soft-gray/50 text-sm mt-4">
+                    Get a custom quote tailored to your organization's needs
+                  </p>
                 </div>
               </div>
             </div>
-            <Link to="/contact">
-              <Button className="bg-electric-blue text-midnight-black hover:bg-cyan-400 font-semibold px-8 py-4 rounded-full">
-                Contact sales
-              </Button>
-            </Link>
           </div>
         </div>
       </section>

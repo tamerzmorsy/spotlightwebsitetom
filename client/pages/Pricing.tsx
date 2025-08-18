@@ -131,7 +131,7 @@ const Pricing = () => {
               </button>
             </div>
           </div>
-          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Free Plan */}
             <div className="bg-gray-800/30 rounded-3xl p-12 text-center">
               <h3 className="text-2xl font-display font-bold text-soft-gray mb-4">

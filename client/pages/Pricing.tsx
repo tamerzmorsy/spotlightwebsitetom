@@ -147,28 +147,32 @@ const Pricing = () => {
                 with e-mail registration
               </div>
 
-              <div className="space-y-4 mb-12 text-left">
+              <div className="space-y-3 mb-8 text-left text-sm">
                 <div className="flex items-center">
-                  <Check className="w-5 h-5 text-electric-blue mr-3 flex-shrink-0" />
+                  <Check className="w-4 h-4 text-electric-blue mr-2 flex-shrink-0" />
                   <span className="text-soft-gray/80">
-                    Access to 100+ publications
+                    Total control of news feed
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <Check className="w-5 h-5 text-electric-blue mr-3 flex-shrink-0" />
+                  <Check className="w-4 h-4 text-electric-blue mr-2 flex-shrink-0" />
                   <span className="text-soft-gray/80">
-                    Custom feed creation
+                    Limited access to 50+ paywalled publications
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <Check className="w-5 h-5 text-electric-blue mr-3 flex-shrink-0" />
+                  <Check className="w-4 h-4 text-electric-blue mr-2 flex-shrink-0" />
                   <span className="text-soft-gray/80">
-                    Basic reading challenges
+                    Unlimited access to 250+ other publications
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <Check className="w-5 h-5 text-electric-blue mr-3 flex-shrink-0" />
-                  <span className="text-soft-gray/80">MyStats tracking</span>
+                  <Check className="w-4 h-4 text-electric-blue mr-2 flex-shrink-0" />
+                  <span className="text-soft-gray/80">Play Sports Challenges</span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="w-4 h-4 text-electric-blue mr-2 flex-shrink-0" />
+                  <span className="text-soft-gray/80">Qualify for Promotions</span>
                 </div>
               </div>
 

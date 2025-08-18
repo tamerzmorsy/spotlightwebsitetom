@@ -80,9 +80,11 @@ const Index = () => {
           {/* App Store Badges */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="#"
+              href="https://apps.apple.com/us/app/spotlight-news/id1291820344"
               className="transition-transform hover:scale-105 active:scale-95"
               aria-label="Download on the App Store"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
@@ -92,9 +94,11 @@ const Index = () => {
             </a>
 
             <a
-              href="#"
+              href="https://play.google.com/store/apps/details?id=net.spotlightlabs.spotlight"
               className="transition-transform hover:scale-105 active:scale-95"
               aria-label="Get it on Google Play"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"

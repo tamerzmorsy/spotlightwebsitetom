@@ -100,7 +100,7 @@ const Pricing = () => {
 
       {/* Pricing Cards - Clean Apple style */}
       <section className="py-24 bg-gray-900/30">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Pricing Toggle */}
           <div className="flex justify-center mb-16">
             <div className="bg-gray-800/50 rounded-full p-2 flex items-center space-x-4">
@@ -131,7 +131,7 @@ const Pricing = () => {
               </button>
             </div>
           </div>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-8xl mx-auto">
             {/* Basic Plan */}
             <div className="bg-gray-800/30 rounded-3xl p-8 text-center">
               <h3 className="text-2xl font-display font-bold text-soft-gray mb-4">
@@ -203,13 +203,15 @@ const Pricing = () => {
                   {getPeriodText()}
                 </span>
               </div>
-              <div className="text-sm text-soft-gray/60 mb-2">OR</div>
-              <div className="text-3xl font-display font-bold text-soft-gray mb-6">
-                {formatPrice(isYearly ? pricing.premium.monthly * 12 : pricing.premium.yearly)}
-                <span className="text-sm text-soft-gray/60">
-                  {isYearly ? "/year" : "/year"}
-                </span>
-              </div>
+              {isYearly && (
+                <>
+                  <div className="text-sm text-soft-gray/60 mb-2">OR</div>
+                  <div className="text-lg text-soft-gray/60 mb-6">
+                    ${(pricing.premium.yearly / 12).toFixed(2)}/month billed annually
+                  </div>
+                </>
+              )}
+              {!isYearly && <div className="mb-6"></div>}
 
               <div className="space-y-3 mb-8 text-left text-sm">
                 <div className="flex items-center">
@@ -258,13 +260,15 @@ const Pricing = () => {
                   {getPeriodText()}
                 </span>
               </div>
-              <div className="text-sm text-soft-gray/60 mb-2">OR</div>
-              <div className="text-3xl font-display font-bold text-soft-gray mb-6">
-                {formatPrice(isYearly ? pricing.premiumPlus.monthly * 12 : pricing.premiumPlus.yearly)}
-                <span className="text-sm text-soft-gray/60">
-                  {isYearly ? "/year" : "/year"}
-                </span>
-              </div>
+              {isYearly && (
+                <>
+                  <div className="text-sm text-soft-gray/60 mb-2">OR</div>
+                  <div className="text-lg text-soft-gray/60 mb-6">
+                    ${(pricing.premiumPlus.yearly / 12).toFixed(2)}/month billed annually
+                  </div>
+                </>
+              )}
+              {!isYearly && <div className="mb-6"></div>}
 
               <div className="space-y-3 mb-8 text-left text-sm">
                 <div className="flex items-center">

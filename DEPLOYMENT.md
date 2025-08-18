@@ -47,6 +47,7 @@ Set these environment variables in your Vercel dashboard:
 
 ## Troubleshooting
 
-- If build fails, ensure all dependencies resolve with `--legacy-peer-deps`
+- If build fails, check the build logs in Vercel dashboard
 - Check function logs in Vercel dashboard for API issues
 - Verify environment variables are set correctly
+- Ensure all routes redirect to `/index.html` for SPA functionality

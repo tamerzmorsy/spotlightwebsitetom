@@ -200,6 +200,7 @@ const Pricing = () => {
                   Equivalent to ${(pricing.premium.yearly / 12).toFixed(2)}/month
                 </div>
               )}
+              {!isYearly && <div className="mb-6"></div>}
 
               <div className="space-y-4 mb-12 text-left">
                 <div className="flex items-center">

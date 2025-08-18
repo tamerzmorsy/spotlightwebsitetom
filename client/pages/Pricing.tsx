@@ -6,6 +6,28 @@ import Footer from "@/components/Footer";
 import { Check, Star } from "lucide-react";
 
 const Pricing = () => {
+  const [isYearly, setIsYearly] = useState(false);
+
+  // Pricing data
+  const pricing = {
+    free: { monthly: 0, yearly: 0 },
+    premium: { monthly: 8.99, yearly: 99 }, // ~$8.25/month when billed yearly
+  };
+
+  const formatPrice = (price: number) => {
+    if (price === 0) return "$0";
+    if (price >= 100) return `$${Math.floor(price)}`;
+    return `$${price.toFixed(2)}`;
+  };
+
+  const getPeriodText = () => isYearly ? "/year" : "/month";
+  const getYearlySavings = () => {
+    const monthlyAnnual = pricing.premium.monthly * 12;
+    const yearlyPrice = pricing.premium.yearly;
+    const savings = Math.round(((monthlyAnnual - yearlyPrice) / monthlyAnnual) * 100);
+    return savings;
+  };
+
   return (
     <div className="min-h-screen bg-midnight-black text-soft-gray">
       <Navigation />

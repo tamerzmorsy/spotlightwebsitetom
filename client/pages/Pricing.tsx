@@ -11,8 +11,35 @@ const Pricing = () => {
       <Navigation />
 
       {/* Hero Section - Apple News style */}
-      <section className="relative pt-20 pb-32 px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-5xl mx-auto">
+      <section className="relative pt-20 pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Video Background */}
+        <video
+          autoPlay={true}
+          muted={true}
+          loop={true}
+          playsInline={true}
+          controls={false}
+          preload="auto"
+          webkit-playsinline="true"
+          data-object-fit="cover"
+          className="absolute inset-0 w-full h-full object-cover z-0"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+        >
+          <source
+            src="https://www.dropbox.com/scl/fi/7h7khkwriqiozm2aau4tv/8199333-sd_960_540_25fps.mp4?rlkey=eelbnbtyquskiii8vfb1rqg88&dl=1"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Overlay Tint */}
+        <div className="absolute inset-0 bg-midnight-black/60 z-10"></div>
+
+        <div className="relative z-20 text-center max-w-8xl mx-auto">
           {/* Product Badge */}
           <div className="mb-8">
             <span className="inline-block text-electric-blue text-lg font-medium tracking-wide">
@@ -164,46 +191,46 @@ const Pricing = () => {
       <section className="py-24 bg-gray-900/50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl sm:text-5xl font-display font-bold text-soft-gray mb-8">
-            Need something <span className="text-vibrant-pink">bigger</span>?
+            Need something <span className="text-electric-blue">bigger</span>?
           </h2>
           <p className="text-xl text-soft-gray/70 mb-12 max-w-2xl mx-auto">
             Custom solutions for universities and enterprise organizations.
           </p>
 
           <div className="bg-gray-800/30 rounded-2xl p-12 mb-12">
-            <h3 className="text-2xl font-display font-bold text-vibrant-pink mb-6">
+            <h3 className="text-2xl font-display font-bold text-electric-blue mb-6">
               University & Enterprise
             </h3>
             <div className="grid md:grid-cols-2 gap-8 text-left mb-8">
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <Check className="w-5 h-5 text-vibrant-pink mr-3" />
+                  <Check className="w-5 h-5 text-electric-blue mr-3" />
                   <span className="text-soft-gray/80">
                     Bulk student subscriptions
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <Check className="w-5 h-5 text-vibrant-pink mr-3" />
+                  <Check className="w-5 h-5 text-electric-blue mr-3" />
                   <span className="text-soft-gray/80">Custom branding</span>
                 </div>
                 <div className="flex items-center">
-                  <Check className="w-5 h-5 text-vibrant-pink mr-3" />
+                  <Check className="w-5 h-5 text-electric-blue mr-3" />
                   <span className="text-soft-gray/80">Dedicated support</span>
                 </div>
               </div>
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <Check className="w-5 h-5 text-vibrant-pink mr-3" />
+                  <Check className="w-5 h-5 text-electric-blue mr-3" />
                   <span className="text-soft-gray/80">Analytics dashboard</span>
                 </div>
                 <div className="flex items-center">
-                  <Check className="w-5 h-5 text-vibrant-pink mr-3" />
+                  <Check className="w-5 h-5 text-electric-blue mr-3" />
                   <span className="text-soft-gray/80">
                     Alumni extension options
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <Check className="w-5 h-5 text-vibrant-pink mr-3" />
+                  <Check className="w-5 h-5 text-electric-blue mr-3" />
                   <span className="text-soft-gray/80">
                     Implementation support
                   </span>
@@ -211,7 +238,7 @@ const Pricing = () => {
               </div>
             </div>
             <Link to="/contact">
-              <Button className="bg-vibrant-pink text-midnight-black hover:bg-pink-400 font-semibold px-8 py-4 rounded-full">
+              <Button className="bg-electric-blue text-midnight-black hover:bg-cyan-400 font-semibold px-8 py-4 rounded-full">
                 Contact sales
               </Button>
             </Link>
@@ -275,24 +302,24 @@ const Pricing = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 bg-gray-900/30">
+      <section className="py-24" style={{ backgroundColor: '#008888' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8">
+          <h2 className="text-5xl sm:text-6xl font-display font-bold text-white mb-8">
             Ready to break through <br />
             <span className="text-electric-blue">the paywalls</span>?
           </h2>
-          <p className="text-xl text-soft-gray/70 mb-12 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
             Start your free trial today. No credit card required.
           </p>
           <Link to="/get-app">
             <Button
               size="lg"
-              className="bg-electric-blue text-midnight-black hover:bg-cyan-400 font-semibold text-lg px-10 py-5 rounded-full"
+              className="bg-white text-[#008888] hover:bg-gray-100 font-semibold text-lg px-10 py-5 rounded-full border-2 border-white"
             >
               Try Premium free
             </Button>
           </Link>
-          <p className="text-sm text-soft-gray/50 mt-8">
+          <p className="text-sm text-white/70 mt-8">
             * 30-day free trial. Cancel anytime.
           </p>
         </div>

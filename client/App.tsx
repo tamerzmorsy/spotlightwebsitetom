@@ -6,6 +6,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AuthProvider } from "@/lib/auth";
 import Index from "./pages/Index";
 import Students from "./pages/Students";
 import Publishers from "./pages/Publishers";
@@ -17,7 +18,7 @@ import Contact from "./pages/Contact";
 import CampusEligibility from "./pages/CampusEligibility";
 import Login from "./pages/Login";
 import Onboarding from "./pages/Onboarding";
-import Dashboard from "./pages/Dashboard";
+import MyStats from "./pages/MyStats";
 import Challenge from "./pages/Challenge";
 import GetApp from "./pages/GetApp";
 import Privacy from "./pages/Privacy";
@@ -28,11 +29,12 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
+    <AuthProvider>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/students" element={<Students />} />
           <Route path="/publishers" element={<Publishers />} />
@@ -44,16 +46,17 @@ const App = () => (
           <Route path="/campus-eligibility" element={<CampusEligibility />} />
           <Route path="/login" element={<Login />} />
           <Route path="/onboarding" element={<Onboarding />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/my-stats" element={<MyStats />} />
           <Route path="/challenge" element={<Challenge />} />
           <Route path="/get-app" element={<GetApp />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </AuthProvider>
   </QueryClientProvider>
 );
 

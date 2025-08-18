@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import { useAuth } from "@/lib/auth";
 import {
   Mail,
   Lock,
@@ -32,6 +34,8 @@ const Login = () => {
   });
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { login, signup } = useAuth();
+  const navigate = useNavigate();
 
   const universities = [
     "Michigan State University",
@@ -80,18 +84,20 @@ const Login = () => {
 
     setIsSubmitting(true);
 
-    // Simulate API call
     try {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-
-      // For demo purposes, just redirect
       if (isSignUp) {
-        // New users go to onboarding
-        window.location.href = "/onboarding";
+        await signup({
+          email: formData.email,
+          password: formData.password,
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          university: formData.university,
+          studentId: formData.studentId,
+        });
+        navigate("/onboarding");
       } else {
-        // Existing users go to dashboard
-        alert("Login successful! Redirecting to your dashboard...");
-        window.location.href = "/";
+        await login(formData.email, formData.password);
+        navigate("/my-stats");
       }
     } catch (error) {
       setErrors({ submit: "Something went wrong. Please try again." });
@@ -518,23 +524,7 @@ const Login = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-midnight-black border-t border-gray-800 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <Link
-              to="/"
-              className="text-2xl font-display font-bold text-electric-blue text-glow-blue mb-4 block"
-            >
-              Spotlight News
-            </Link>
-            <p className="text-soft-gray/80">
-              Delivering news, cutting chaos. The anti-algo rebels making news
-              engaging and discourse meaningful.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

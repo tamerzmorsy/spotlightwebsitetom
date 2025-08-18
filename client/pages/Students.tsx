@@ -18,8 +18,35 @@ const Students = () => {
       <Navigation />
 
       {/* Hero Section - Apple News style */}
-      <section className="relative pt-20 pb-32 px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-8xl mx-auto">
+      <section className="relative pt-20 pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Video Background */}
+        <video
+          autoPlay={true}
+          muted={true}
+          loop={true}
+          playsInline={true}
+          controls={false}
+          preload="auto"
+          webkit-playsinline="true"
+          data-object-fit="cover"
+          className="absolute inset-0 w-full h-full object-cover z-0"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+        >
+          <source
+            src="https://www.dropbox.com/scl/fi/g0ha4ve4ehurqghuik0gr/5544177-sd_960_540_30fps.mp4?rlkey=5chqndjef7f7f20sx3cf7725o&dl=1"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Overlay Tint */}
+        <div className="absolute inset-0 bg-midnight-black/60 z-10"></div>
+
+        <div className="relative z-20 text-center max-w-8xl mx-auto">
           {/* Product Badge */}
           <div className="mb-8">
             <span className="inline-block text-electric-blue text-lg font-medium tracking-wide">
@@ -125,7 +152,7 @@ const Students = () => {
               <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8 leading-tight">
                 Track your reading.
                 <br />
-                <span className="text-neon-green">Stay sharp.</span>
+                <span className="text-electric-blue">Stay sharp.</span>
               </h2>
               <p className="text-xl text-soft-gray/70 mb-8 leading-relaxed">
                 MyStats helps you set goals, track progress, and outsmart
@@ -133,26 +160,26 @@ const Students = () => {
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
+                  <CheckCircle className="w-5 h-5 text-electric-blue mr-3" />
                   <span className="text-soft-gray/80">
                     Reading time tracking
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
+                  <CheckCircle className="w-5 h-5 text-electric-blue mr-3" />
                   <span className="text-soft-gray/80">
                     Goal setting & progress
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
+                  <CheckCircle className="w-5 h-5 text-electric-blue mr-3" />
                   <span className="text-soft-gray/80">Focus insights</span>
                 </div>
               </div>
               <Link to="/dashboard">
                 <Button
                   variant="outline"
-                  className="border-neon-green text-neon-green hover:bg-neon-green hover:text-midnight-black font-medium px-8 py-4 rounded-full"
+                  className="border-electric-blue text-electric-blue hover:bg-electric-blue hover:text-midnight-black font-medium px-8 py-4 rounded-full"
                 >
                   View demo
                 </Button>
@@ -166,7 +193,7 @@ const Students = () => {
               <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8 leading-tight">
                 Read articles.
                 <br />
-                <span className="text-vibrant-pink">Win prizes.</span>
+                <span className="text-electric-blue">Win prizes.</span>
               </h2>
               <p className="text-xl text-soft-gray/70 mb-8 leading-relaxed">
                 Join reading challenges and win real rewards. AirPods, iPads,
@@ -174,24 +201,24 @@ const Students = () => {
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
+                  <CheckCircle className="w-5 h-5 text-electric-blue mr-3" />
                   <span className="text-soft-gray/80">Monthly challenges</span>
                 </div>
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
+                  <CheckCircle className="w-5 h-5 text-electric-blue mr-3" />
                   <span className="text-soft-gray/80">
                     Real prizes: AirPods, iPads
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
+                  <CheckCircle className="w-5 h-5 text-electric-blue mr-3" />
                   <span className="text-soft-gray/80">Achievement badges</span>
                 </div>
               </div>
               <Link to="/challenge">
                 <Button
                   variant="outline"
-                  className="border-vibrant-pink text-vibrant-pink hover:bg-vibrant-pink hover:text-midnight-black font-medium px-8 py-4 rounded-full"
+                  className="border-electric-blue text-electric-blue hover:bg-electric-blue hover:text-midnight-black font-medium px-8 py-4 rounded-full"
                 >
                   Join challenge
                 </Button>
@@ -274,13 +301,13 @@ const Students = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24">
+      <section className="py-24" style={{ backgroundColor: '#008888' }}>
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8">
+          <h2 className="text-5xl sm:text-6xl font-display font-bold text-white mb-8">
             Ready to take control of <br />
             <span className="text-electric-blue">your feed</span>?
           </h2>
-          <p className="text-xl text-soft-gray/70 mb-12 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
             Join thousands of students who've ditched the algorithm and built
             better news habits.
           </p>
@@ -288,7 +315,7 @@ const Students = () => {
             <Link to="/get-app">
               <Button
                 size="lg"
-                className="bg-electric-blue text-midnight-black hover:bg-cyan-400 font-semibold text-lg px-10 py-5 rounded-full"
+                className="bg-white text-[#008888] hover:bg-gray-100 font-semibold text-lg px-10 py-5 rounded-full border-2 border-white"
               >
                 Download the app
               </Button>
@@ -297,7 +324,7 @@ const Students = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-electric-blue text-electric-blue hover:bg-electric-blue hover:text-midnight-black font-semibold text-lg px-10 py-5 rounded-full"
+                className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-[#008888] font-semibold text-lg px-10 py-5 rounded-full"
               >
                 Check campus access
               </Button>

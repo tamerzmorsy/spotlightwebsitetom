@@ -18,8 +18,35 @@ const Universities = () => {
       <Navigation />
 
       {/* Hero Section - Apple News style */}
-      <section className="relative pt-20 pb-32 px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-8xl mx-auto">
+      <section className="relative pt-20 pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Video Background */}
+        <video
+          autoPlay={true}
+          muted={true}
+          loop={true}
+          playsInline={true}
+          controls={false}
+          preload="auto"
+          webkit-playsinline="true"
+          data-object-fit="cover"
+          className="absolute inset-0 w-full h-full object-cover z-0"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+        >
+          <source
+            src="https://www.dropbox.com/scl/fi/rkbftd29i2j56x0euim7a/7683342-sd_960_540_30fps-1.mp4?rlkey=99jzrnoao70n7t3yvg9qyfl79&dl=1"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Overlay Tint */}
+        <div className="absolute inset-0 bg-midnight-black/60 z-10"></div>
+
+        <div className="relative z-20 text-center max-w-8xl mx-auto">
           {/* Product Badge */}
           <div className="mb-8">
             <span className="inline-block text-vibrant-pink text-lg font-medium tracking-wide">
@@ -123,7 +150,7 @@ const Universities = () => {
               <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8 leading-tight">
                 Custom landing pages.
                 <br />
-                <span className="text-neon-green">Full support.</span>
+                <span className="text-vibrant-pink">Full support.</span>
               </h2>
               <p className="text-xl text-soft-gray/70 mb-8 leading-relaxed">
                 Following MSU's successful blueprint, we create branded landing
@@ -132,19 +159,19 @@ const Universities = () => {
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
+                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
                   <span className="text-soft-gray/80">
                     Branded campus pages
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
+                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
                   <span className="text-soft-gray/80">
                     Event promotion support
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
+                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
                   <span className="text-soft-gray/80">
                     Implementation guidance
                   </span>
@@ -152,7 +179,7 @@ const Universities = () => {
               </div>
               <Button
                 variant="outline"
-                className="border-neon-green text-neon-green hover:bg-neon-green hover:text-midnight-black font-medium px-8 py-4 rounded-full"
+                className="border-vibrant-pink text-vibrant-pink hover:bg-vibrant-pink hover:text-midnight-black font-medium px-8 py-4 rounded-full"
               >
                 MSU case study
               </Button>
@@ -165,7 +192,7 @@ const Universities = () => {
               <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8 leading-tight">
                 Extend to alumni.
                 <br />
-                <span className="text-electric-blue">Lifelong impact.</span>
+                <span className="text-vibrant-pink">Lifelong impact.</span>
               </h2>
               <p className="text-xl text-soft-gray/70 mb-8 leading-relaxed">
                 Keep graduates connected with quality journalism. Alumni access
@@ -174,19 +201,19 @@ const Universities = () => {
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-electric-blue mr-3" />
+                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
                   <span className="text-soft-gray/80">
                     Alumni subscription options
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-electric-blue mr-3" />
+                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
                   <span className="text-soft-gray/80">
                     Institutional mission alignment
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-electric-blue mr-3" />
+                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
                   <span className="text-soft-gray/80">
                     Ongoing engagement metrics
                   </span>
@@ -194,7 +221,7 @@ const Universities = () => {
               </div>
               <Button
                 variant="outline"
-                className="border-electric-blue text-electric-blue hover:bg-electric-blue hover:text-midnight-black font-medium px-8 py-4 rounded-full"
+                className="border-vibrant-pink text-vibrant-pink hover:bg-vibrant-pink hover:text-midnight-black font-medium px-8 py-4 rounded-full"
               >
                 Alumni programs
               </Button>
@@ -304,20 +331,20 @@ const Universities = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 bg-gray-900/30">
+      <section className="py-24" style={{ backgroundColor: '#7b004c' }}>
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8">
+          <h2 className="text-5xl sm:text-6xl font-display font-bold text-white mb-8">
             Ready to transform <br />
             <span className="text-vibrant-pink">campus news</span>?
           </h2>
-          <p className="text-xl text-soft-gray/70 mb-12 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
             Let's discuss custom pricing and implementation for your university.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
               <Button
                 size="lg"
-                className="bg-vibrant-pink text-midnight-black hover:bg-pink-400 font-semibold text-lg px-10 py-5 rounded-full"
+                className="bg-white text-[#7b004c] hover:bg-gray-100 font-semibold text-lg px-10 py-5 rounded-full border-2 border-white"
               >
                 <Handshake className="w-5 h-5 mr-2" />
                 Schedule consultation
@@ -326,12 +353,12 @@ const Universities = () => {
             <Button
               size="lg"
               variant="outline"
-              className="border-soft-gray text-soft-gray hover:bg-soft-gray hover:text-midnight-black font-semibold text-lg px-10 py-5 rounded-full"
+              className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-[#7b004c] font-semibold text-lg px-10 py-5 rounded-full"
             >
               Download case study
             </Button>
           </div>
-          <p className="text-sm text-soft-gray/50 mt-8">
+          <p className="text-sm text-white/70 mt-8">
             * Custom pricing based on student population and requirements.
           </p>
         </div>

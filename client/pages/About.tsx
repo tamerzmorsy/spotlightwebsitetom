@@ -11,8 +11,35 @@ const About = () => {
       <Navigation />
 
       {/* Hero Section - Apple News style */}
-      <section className="relative pt-20 pb-32 px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-5xl mx-auto">
+      <section className="relative pt-20 pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Video Background */}
+        <video
+          autoPlay={true}
+          muted={true}
+          loop={true}
+          playsInline={true}
+          controls={false}
+          preload="auto"
+          webkit-playsinline="true"
+          data-object-fit="cover"
+          className="absolute inset-0 w-full h-full object-cover z-0"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+        >
+          <source
+            src="https://www.dropbox.com/scl/fi/dbsc08cdmgatwihebfzzi/9783690-sd_960_506_25fps.mp4?rlkey=gqs9bk0tmd5kcjot1zeoxplaf&dl=1"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Overlay Tint */}
+        <div className="absolute inset-0 bg-midnight-black/60 z-10"></div>
+
+        <div className="relative z-20 text-center max-w-8xl mx-auto">
           {/* Product Badge */}
           <div className="mb-8">
             <span className="inline-block text-electric-blue text-lg font-medium tracking-wide">
@@ -37,7 +64,7 @@ const About = () => {
 
       {/* Mission Section */}
       <section className="py-24 bg-gray-900/30">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Our Mission */}
           <div className="grid md:grid-cols-2 gap-16 items-center mb-32">
             <div>
@@ -81,11 +108,11 @@ const About = () => {
             </div>
             <div className="order-1 md:order-2">
               <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8 leading-tight">
-                What drives <span className="text-neon-green">us.</span>
+                What drives <span className="text-electric-blue">us.</span>
               </h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-neon-green mb-2">
+                  <h3 className="text-xl font-semibold text-electric-blue mb-2">
                     Quality First
                   </h3>
                   <p className="text-soft-gray/70">
@@ -94,7 +121,7 @@ const About = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-neon-green mb-2">
+                  <h3 className="text-xl font-semibold text-electric-blue mb-2">
                     User Control
                   </h3>
                   <p className="text-soft-gray/70">
@@ -103,7 +130,7 @@ const About = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-neon-green mb-2">
+                  <h3 className="text-xl font-semibold text-electric-blue mb-2">
                     Fair Revenue
                   </h3>
                   <p className="text-soft-gray/70">
@@ -119,7 +146,7 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8 leading-tight">
-                Making an <span className="text-vibrant-pink">impact.</span>
+                Making an <span className="text-electric-blue">impact.</span>
               </h2>
               <p className="text-xl text-soft-gray/70 mb-8 leading-relaxed">
                 From Michigan State University's 5,000+ engaged students to
@@ -128,7 +155,7 @@ const About = () => {
               </p>
               <div className="grid grid-cols-2 gap-6 mb-8">
                 <div>
-                  <div className="text-3xl font-bold text-vibrant-pink mb-1">
+                  <div className="text-3xl font-bold text-electric-blue mb-1">
                     250K+
                   </div>
                   <div className="text-soft-gray/60 text-sm">
@@ -136,7 +163,7 @@ const About = () => {
                   </div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-vibrant-pink mb-1">
+                  <div className="text-3xl font-bold text-electric-blue mb-1">
                     300+
                   </div>
                   <div className="text-soft-gray/60 text-sm">
@@ -144,7 +171,7 @@ const About = () => {
                   </div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-vibrant-pink mb-1">
+                  <div className="text-3xl font-bold text-electric-blue mb-1">
                     500+
                   </div>
                   <div className="text-soft-gray/60 text-sm">
@@ -152,7 +179,7 @@ const About = () => {
                   </div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-vibrant-pink mb-1">
+                  <div className="text-3xl font-bold text-electric-blue mb-1">
                     70%
                   </div>
                   <div className="text-soft-gray/60 text-sm">
@@ -163,7 +190,7 @@ const About = () => {
               <Link to="/contact">
                 <Button
                   variant="outline"
-                  className="border-vibrant-pink text-vibrant-pink hover:bg-vibrant-pink hover:text-midnight-black font-medium px-8 py-4 rounded-full"
+                  className="border-electric-blue text-electric-blue hover:bg-electric-blue hover:text-midnight-black font-medium px-8 py-4 rounded-full"
                 >
                   Partner with us
                 </Button>
@@ -181,7 +208,7 @@ const About = () => {
 
       {/* Team Section */}
       <section className="py-24 bg-gray-900/50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl sm:text-5xl font-display font-bold text-soft-gray mb-8">
             Meet the <span className="text-electric-blue">team.</span>
           </h2>
@@ -212,13 +239,13 @@ const About = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8">
+      <section className="py-24" style={{ backgroundColor: '#008888' }}>
+        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-5xl sm:text-6xl font-display font-bold text-white mb-8">
             Ready to be part of <br />
             <span className="text-electric-blue">the movement</span>?
           </h2>
-          <p className="text-xl text-soft-gray/70 mb-12 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
             Whether you're a student, publisher, or university, there's a place
             for you in our mission.
           </p>
@@ -226,7 +253,7 @@ const About = () => {
             <Link to="/get-app">
               <Button
                 size="lg"
-                className="bg-electric-blue text-midnight-black hover:bg-cyan-400 font-semibold text-lg px-10 py-5 rounded-full"
+                className="bg-white text-[#008888] hover:bg-gray-100 font-semibold text-lg px-10 py-5 rounded-full border-2 border-white"
               >
                 Download the app
               </Button>
@@ -235,7 +262,7 @@ const About = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-soft-gray text-soft-gray hover:bg-soft-gray hover:text-midnight-black font-semibold text-lg px-10 py-5 rounded-full"
+                className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-[#008888] font-semibold text-lg px-10 py-5 rounded-full"
               >
                 Get in touch
               </Button>

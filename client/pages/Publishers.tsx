@@ -19,8 +19,35 @@ const Publishers = () => {
       <Navigation />
 
       {/* Hero Section - Apple News style */}
-      <section className="relative pt-20 pb-32 px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-8xl mx-auto">
+      <section className="relative pt-20 pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Video Background */}
+        <video
+          autoPlay={true}
+          muted={true}
+          loop={true}
+          playsInline={true}
+          controls={false}
+          preload="auto"
+          webkit-playsinline="true"
+          data-object-fit="cover"
+          className="absolute inset-0 w-full h-full object-cover z-0"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+        >
+          <source
+            src="https://www.dropbox.com/scl/fi/v5di0kdav8nm27qjh0g9y/8567120-sd_960_506_25fps.mp4?rlkey=uiw9d65wibw4bg5plyn8iee21&dl=1"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Overlay Tint */}
+        <div className="absolute inset-0 bg-midnight-black/60 z-10"></div>
+
+        <div className="relative z-20 text-center max-w-8xl mx-auto">
           {/* Product Badge */}
           <div className="mb-8">
             <span className="inline-block text-neon-green text-lg font-medium tracking-wide">
@@ -118,7 +145,7 @@ const Publishers = () => {
               <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8 leading-tight">
                 Reach readers who
                 <br />
-                <span className="text-electric-blue">actually care.</span>
+                <span className="text-neon-green">actually care.</span>
               </h2>
               <p className="text-xl text-soft-gray/70 mb-8 leading-relaxed">
                 Connect with engaged students and alumni who value quality
@@ -127,17 +154,17 @@ const Publishers = () => {
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-electric-blue mr-3" />
+                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
                   <span className="text-soft-gray/80">250K+ active users</span>
                 </div>
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-electric-blue mr-3" />
+                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
                   <span className="text-soft-gray/80">
                     500+ university partnerships
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-electric-blue mr-3" />
+                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
                   <span className="text-soft-gray/80">
                     High engagement rates
                   </span>
@@ -145,7 +172,7 @@ const Publishers = () => {
               </div>
               <Button
                 variant="outline"
-                className="border-electric-blue text-electric-blue hover:bg-electric-blue hover:text-midnight-black font-medium px-8 py-4 rounded-full"
+                className="border-neon-green text-neon-green hover:bg-neon-green hover:text-midnight-black font-medium px-8 py-4 rounded-full"
               >
                 See audience data
               </Button>
@@ -158,7 +185,7 @@ const Publishers = () => {
               <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8 leading-tight">
                 Zero tech headaches.
                 <br />
-                <span className="text-vibrant-pink">Maximum reach.</span>
+                <span className="text-neon-green">Maximum reach.</span>
               </h2>
               <p className="text-xl text-soft-gray/70 mb-8 leading-relaxed">
                 We handle RSS feeds, app integration, and branding. You focus on
@@ -167,19 +194,19 @@ const Publishers = () => {
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
+                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
                   <span className="text-soft-gray/80">
                     Simple RSS integration
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
+                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
                   <span className="text-soft-gray/80">
                     Equal platform visibility
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
+                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
                   <span className="text-soft-gray/80">
                     24/7 technical support
                   </span>
@@ -187,7 +214,7 @@ const Publishers = () => {
               </div>
               <Button
                 variant="outline"
-                className="border-vibrant-pink text-vibrant-pink hover:bg-vibrant-pink hover:text-midnight-black font-medium px-8 py-4 rounded-full"
+                className="border-neon-green text-neon-green hover:bg-neon-green hover:text-midnight-black font-medium px-8 py-4 rounded-full"
               >
                 Technical details
               </Button>
@@ -289,13 +316,13 @@ const Publishers = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 bg-gray-900/30">
+      <section className="py-24" style={{ backgroundColor: '#1B9900' }}>
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8">
+          <h2 className="text-5xl sm:text-6xl font-display font-bold text-white mb-8">
             Ready to grow <br />
-            <span className="text-neon-green">your revenue</span>?
+            <span style={{ color: '#39FF14' }}>your revenue</span>?
           </h2>
-          <p className="text-xl text-soft-gray/70 mb-12 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
             Join the platform that's helping publishers thrive in the digital
             age.
           </p>
@@ -303,7 +330,7 @@ const Publishers = () => {
             <Link to="/contact">
               <Button
                 size="lg"
-                className="bg-neon-green text-midnight-black hover:bg-lime-400 font-semibold text-lg px-10 py-5 rounded-full"
+                className="bg-white text-[#1B9900] hover:bg-gray-100 font-semibold text-lg px-10 py-5 rounded-full border-2 border-white"
               >
                 <Handshake className="w-5 h-5 mr-2" />
                 Become a partner
@@ -312,7 +339,7 @@ const Publishers = () => {
             <Button
               size="lg"
               variant="outline"
-              className="border-soft-gray text-soft-gray hover:bg-soft-gray hover:text-midnight-black font-semibold text-lg px-10 py-5 rounded-full"
+              className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-[#1B9900] font-semibold text-lg px-10 py-5 rounded-full"
             >
               Download media kit
             </Button>

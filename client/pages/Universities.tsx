@@ -301,18 +301,12 @@ const Universities = () => {
           </div>
 
           {/* Stats Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-3 gap-8 mb-16 max-w-2xl mx-auto">
             <div className="text-center">
               <div className="text-4xl font-bold text-vibrant-pink mb-2">
                 500+
               </div>
               <div className="text-soft-gray/60">University partners</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-vibrant-pink mb-2">
-                250K+
-              </div>
-              <div className="text-soft-gray/60">Student users</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-vibrant-pink mb-2">

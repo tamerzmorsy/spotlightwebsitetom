@@ -155,7 +155,7 @@ const Publishers = () => {
               <div className="space-y-4 mb-8">
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
-                  <span className="text-soft-gray/80">250K+ active users</span>
+                  <span className="text-soft-gray/80">Growing engaged readership</span>
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-neon-green mr-3" />

@@ -100,6 +100,36 @@ const Pricing = () => {
       {/* Pricing Cards - Clean Apple style */}
       <section className="py-24 bg-gray-900/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Pricing Toggle */}
+          <div className="flex justify-center mb-16">
+            <div className="bg-gray-800/50 rounded-full p-2 flex items-center space-x-4">
+              <button
+                onClick={() => setIsYearly(false)}
+                className={`px-6 py-3 rounded-full text-sm font-medium transition-all ${
+                  !isYearly
+                    ? "bg-electric-blue text-midnight-black"
+                    : "text-soft-gray hover:text-white"
+                }`}
+              >
+                Monthly
+              </button>
+              <button
+                onClick={() => setIsYearly(true)}
+                className={`px-6 py-3 rounded-full text-sm font-medium transition-all flex items-center space-x-2 ${
+                  isYearly
+                    ? "bg-electric-blue text-midnight-black"
+                    : "text-soft-gray hover:text-white"
+                }`}
+              >
+                <span>Yearly</span>
+                {isYearly && (
+                  <span className="bg-neon-green text-midnight-black px-2 py-1 rounded-full text-xs font-bold">
+                    Save {getYearlySavings()}%
+                  </span>
+                )}
+              </button>
+            </div>
+          </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             {/* Free Plan */}
             <div className="bg-gray-800/30 rounded-3xl p-12 text-center">

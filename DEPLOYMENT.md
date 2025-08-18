@@ -27,11 +27,11 @@ Set these environment variables in your Vercel dashboard:
 ## Deployment Steps
 
 1. **Connect Repository**: Link your GitHub repository to Vercel
-2. **Configure Project**: 
+2. **Configure Project**:
    - Framework Preset: Vite
-   - Build Command: `npm run build:client`
-   - Output Directory: `dist/spa`
-   - Install Command: `npm install --legacy-peer-deps`
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+   - Install Command: `npm install`
 3. **Deploy**: Vercel will automatically deploy on push to main branch
 
 ## Local Development vs Production

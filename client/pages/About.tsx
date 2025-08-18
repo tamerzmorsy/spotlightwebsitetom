@@ -55,9 +55,9 @@ const About = () => {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-2xl sm:text-3xl text-soft-gray/80 mb-12 font-light leading-relaxed max-w-4xl mx-auto">
-            Algorithm-free feeds. Quality journalism.
-            <br />A sustainable future for news.
+          <p className="text-2xl sm:text-3xl text-soft-gray/80 mb-12 font-light leading-relaxed max-w-8xl mx-auto">
+            Curating quality journalism for a new generation of readers.
+            <br />Algorithm-free feeds. Sustainable news. Better habits.
           </p>
 
           {/* App Store Badges */}

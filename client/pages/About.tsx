@@ -184,15 +184,7 @@ const About = () => {
                 hundreds of partner publications, we're building a sustainable
                 future for quality journalism.
               </p>
-              <div className="grid grid-cols-2 gap-6 mb-8">
-                <div>
-                  <div className="text-3xl font-bold text-electric-blue mb-1">
-                    250K+
-                  </div>
-                  <div className="text-soft-gray/60 text-sm">
-                    Active readers
-                  </div>
-                </div>
+              <div className="grid grid-cols-3 gap-6 mb-8">
                 <div>
                   <div className="text-3xl font-bold text-electric-blue mb-1">
                     300+

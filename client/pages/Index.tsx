@@ -227,10 +227,22 @@ const Index = () => {
                   <span className="text-neon-green font-semibold text-sm text-center">Salt Lake Tribune</span>
                 </div>
 
-                {/* State News - Centered in its own row */}
-                <div className="col-span-2 md:col-span-3 flex justify-center">
-                  <div className="bg-midnight-black/50 rounded-xl p-4 flex items-center justify-center border border-electric-blue/20 hover:border-electric-blue/40 transition-colors w-48">
-                    <span className="text-electric-blue font-bold text-lg">State News</span>
+                {/* University Publications Row */}
+                <div className="col-span-2 md:col-span-3 grid grid-cols-2 md:grid-cols-4 gap-4">
+                  <div className="bg-midnight-black/50 rounded-xl p-4 flex items-center justify-center border border-electric-blue/20 hover:border-electric-blue/40 transition-colors">
+                    <span className="text-electric-blue font-semibold text-sm text-center">State News</span>
+                  </div>
+
+                  <div className="bg-midnight-black/50 rounded-xl p-4 flex items-center justify-center border border-vibrant-pink/20 hover:border-vibrant-pink/40 transition-colors">
+                    <span className="text-vibrant-pink font-semibold text-xs text-center">The JHU News-Letter</span>
+                  </div>
+
+                  <div className="bg-midnight-black/50 rounded-xl p-4 flex items-center justify-center border border-neon-green/20 hover:border-neon-green/40 transition-colors">
+                    <span className="text-neon-green font-semibold text-sm text-center">Michigan Daily</span>
+                  </div>
+
+                  <div className="bg-midnight-black/50 rounded-xl p-4 flex items-center justify-center border border-electric-blue/20 hover:border-electric-blue/40 transition-colors">
+                    <span className="text-electric-blue font-semibold text-xs text-center">Indiana Daily Student</span>
                   </div>
                 </div>
               </div>

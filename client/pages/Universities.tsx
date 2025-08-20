@@ -311,13 +311,6 @@ const Universities = () => {
                 Schedule consultation
               </Button>
             </Link>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-[#7b004c] font-semibold text-lg px-10 py-5 rounded-full"
-            >
-              Download case study
-            </Button>
           </div>
           <p className="text-sm text-white/70 mt-8">
             * Custom pricing based on student population and requirements.

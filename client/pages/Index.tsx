@@ -130,14 +130,6 @@ const Index = () => {
                 Choose your sources, topics, and writers. Create a news
                 experience that's uniquely yours. No algorithmic surprises.
               </p>
-              <Link to="/students">
-                <Button
-                  variant="outline"
-                  className="border-electric-blue text-electric-blue hover:bg-electric-blue hover:text-midnight-black font-medium px-8 py-3 rounded-full"
-                >
-                  Learn more
-                </Button>
-              </Link>
             </div>
             <div className="rounded-3xl overflow-hidden">
               <img
@@ -151,9 +143,58 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-16 items-center mb-20">
-            <div className="bg-gradient-to-br from-neon-green/20 to-electric-blue/20 rounded-3xl p-12 h-80 flex items-center justify-center order-2 md:order-1">
-              <div className="text-center text-soft-gray/60">
-                [Stats & Rewards Mockup]
+            <div className="bg-gradient-to-br from-neon-green/20 to-electric-blue/20 rounded-3xl p-6 h-80 flex items-center justify-center order-2 md:order-1 overflow-hidden">
+              {/* MyStats Mobile Interface Mockup */}
+              <div className="w-full max-w-xs bg-midnight-black/90 rounded-3xl border border-neon-green/30 backdrop-blur-sm relative">
+                {/* Mobile Status Bar */}
+                <div className="flex justify-between items-center px-4 py-2 text-xs text-soft-gray/70">
+                  <span>3:27</span>
+                  <span>MyStats</span>
+                  <span>🔋 27</span>
+                </div>
+
+                {/* Stats Grid */}
+                <div className="px-4 pb-4 space-y-3">
+                  <div className="grid grid-cols-3 gap-2 text-center">
+                    <div className="bg-neon-green/10 rounded-lg p-2 border border-neon-green/20">
+                      <div className="text-neon-green text-xl font-bold">7</div>
+                      <div className="text-xs text-soft-gray/60">Streak</div>
+                    </div>
+                    <div className="bg-electric-blue/10 rounded-lg p-2 border border-electric-blue/20">
+                      <div className="text-electric-blue text-xl font-bold">12</div>
+                      <div className="text-xs text-soft-gray/60">Max</div>
+                    </div>
+                    <div className="bg-vibrant-pink/10 rounded-lg p-2 border border-vibrant-pink/20">
+                      <div className="text-vibrant-pink text-xl font-bold">89%</div>
+                      <div className="text-xs text-soft-gray/60">Read</div>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-2 text-center">
+                    <div className="bg-electric-blue/10 rounded-lg p-2 border border-electric-blue/20">
+                      <div className="text-electric-blue text-lg font-bold">4</div>
+                      <div className="text-xs text-soft-gray/60">Today</div>
+                    </div>
+                    <div className="bg-neon-green/10 rounded-lg p-2 border border-neon-green/20">
+                      <div className="text-neon-green text-lg font-bold">28m</div>
+                      <div className="text-xs text-soft-gray/60">Time</div>
+                    </div>
+                  </div>
+
+                  {/* Goal Progress */}
+                  <div className="bg-vibrant-pink/10 rounded-lg p-2 border border-vibrant-pink/20">
+                    <div className="text-xs text-vibrant-pink font-medium mb-1">Weekly Goal</div>
+                    <div className="w-full bg-midnight-black/50 rounded-full h-2">
+                      <div className="bg-vibrant-pink h-2 rounded-full" style={{ width: '78%' }}></div>
+                    </div>
+                    <div className="text-xs text-soft-gray/60 mt-1">78% complete</div>
+                  </div>
+                </div>
+
+                {/* Floating rewards indicator */}
+                <div className="absolute -top-2 -right-2 w-6 h-6 bg-vibrant-pink rounded-full flex items-center justify-center text-xs font-bold text-midnight-black">
+                  🏆
+                </div>
               </div>
             </div>
             <div className="order-1 md:order-2">
@@ -165,14 +206,6 @@ const Index = () => {
                 Track your reading with MyStats. Join challenges. Win real
                 prizes like AirPods and iPads while staying informed.
               </p>
-              <Link to="/challenge">
-                <Button
-                  variant="outline"
-                  className="border-neon-green text-neon-green hover:bg-neon-green hover:text-midnight-black font-medium px-8 py-3 rounded-full"
-                >
-                  Join challenge
-                </Button>
-              </Link>
             </div>
           </div>
 
@@ -186,18 +219,57 @@ const Index = () => {
                 Break through paywalls with a single subscription. Access
                 premium content from hundreds of publications.
               </p>
-              <Link to="/pricing">
-                <Button
-                  variant="outline"
-                  className="border-vibrant-pink text-vibrant-pink hover:bg-vibrant-pink hover:text-midnight-black font-medium px-8 py-3 rounded-full"
-                >
-                  View pricing
-                </Button>
-              </Link>
             </div>
-            <div className="bg-gradient-to-br from-vibrant-pink/20 to-neon-green/20 rounded-3xl p-12 h-80 flex items-center justify-center">
-              <div className="text-center text-soft-gray/60">
-                [Publication Logos Grid]
+            <div className="bg-gradient-to-br from-vibrant-pink/20 to-neon-green/20 rounded-3xl p-8 h-80 flex items-center justify-center">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-lg">
+                {/* Forbes */}
+                <div className="bg-midnight-black/50 rounded-xl p-4 flex items-center justify-center border border-electric-blue/20 hover:border-electric-blue/40 transition-colors">
+                  <span className="text-electric-blue font-bold text-lg">Forbes</span>
+                </div>
+
+                {/* TIME */}
+                <div className="bg-midnight-black/50 rounded-xl p-4 flex items-center justify-center border border-vibrant-pink/20 hover:border-vibrant-pink/40 transition-colors">
+                  <span className="text-vibrant-pink font-bold text-lg">TIME</span>
+                </div>
+
+                {/* Bloomberg */}
+                <div className="bg-midnight-black/50 rounded-xl p-4 flex items-center justify-center border border-neon-green/20 hover:border-neon-green/40 transition-colors">
+                  <span className="text-neon-green font-bold text-lg">Bloomberg</span>
+                </div>
+
+                {/* Miami Herald */}
+                <div className="bg-midnight-black/50 rounded-xl p-4 flex items-center justify-center border border-electric-blue/20 hover:border-electric-blue/40 transition-colors">
+                  <span className="text-electric-blue font-semibold text-sm">Miami Herald</span>
+                </div>
+
+                {/* Semafor */}
+                <div className="bg-midnight-black/50 rounded-xl p-4 flex items-center justify-center border border-vibrant-pink/20 hover:border-vibrant-pink/40 transition-colors">
+                  <span className="text-vibrant-pink font-bold text-lg">Semafor</span>
+                </div>
+
+                {/* Salt Lake Tribune */}
+                <div className="bg-midnight-black/50 rounded-xl p-4 flex items-center justify-center border border-neon-green/20 hover:border-neon-green/40 transition-colors">
+                  <span className="text-neon-green font-semibold text-sm text-center">Salt Lake Tribune</span>
+                </div>
+
+                {/* University Publications Row */}
+                <div className="col-span-2 md:col-span-3 grid grid-cols-2 md:grid-cols-4 gap-4">
+                  <div className="bg-midnight-black/50 rounded-xl p-4 flex items-center justify-center border border-electric-blue/20 hover:border-electric-blue/40 transition-colors">
+                    <span className="text-electric-blue font-semibold text-sm text-center">State News</span>
+                  </div>
+
+                  <div className="bg-midnight-black/50 rounded-xl p-4 flex items-center justify-center border border-vibrant-pink/20 hover:border-vibrant-pink/40 transition-colors">
+                    <span className="text-vibrant-pink font-semibold text-xs text-center">The JHU News-Letter</span>
+                  </div>
+
+                  <div className="bg-midnight-black/50 rounded-xl p-4 flex items-center justify-center border border-neon-green/20 hover:border-neon-green/40 transition-colors">
+                    <span className="text-neon-green font-semibold text-sm text-center">Michigan Daily</span>
+                  </div>
+
+                  <div className="bg-midnight-black/50 rounded-xl p-4 flex items-center justify-center border border-electric-blue/20 hover:border-electric-blue/40 transition-colors">
+                    <span className="text-electric-blue font-semibold text-xs text-center">Indiana Daily Student</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

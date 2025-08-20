@@ -119,19 +119,70 @@ const Students = () => {
                   </span>
                 </div>
               </div>
-              <Link to="/campus-eligibility">
-                <Button
-                  variant="outline"
-                  className="border-electric-blue text-electric-blue hover:bg-electric-blue hover:text-midnight-black font-medium px-8 py-4 rounded-full"
-                >
-                  Check campus eligibility
-                </Button>
-              </Link>
             </div>
-            <div className="bg-gradient-to-br from-electric-blue/20 to-vibrant-pink/20 rounded-3xl p-16 h-96 flex items-center justify-center">
-              <div className="text-center text-soft-gray/60">
-                <Target className="w-16 h-16 mx-auto mb-4" />
-                <p className="text-lg">Custom Feed Interface</p>
+            <div className="bg-gradient-to-br from-electric-blue/20 to-vibrant-pink/20 rounded-3xl p-6 h-96 flex items-center justify-center overflow-hidden">
+              {/* Mobile Feed Interface Mockup */}
+              <div className="w-full max-w-xs bg-midnight-black/90 rounded-3xl border border-electric-blue/30 backdrop-blur-sm relative">
+                {/* Mobile Header */}
+                <div className="flex justify-between items-center px-4 py-3 border-b border-electric-blue/20">
+                  <span className="text-electric-blue font-bold text-lg">MyNews</span>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-vibrant-pink rounded-full"></div>
+                    <span className="text-xs text-soft-gray/70">🏆</span>
+                  </div>
+                </div>
+
+                {/* News Feed */}
+                <div className="p-3 space-y-3 max-h-80 overflow-hidden">
+                  {/* Article 1 */}
+                  <div className="bg-electric-blue/10 rounded-lg border border-electric-blue/20 overflow-hidden">
+                    <div className="h-16 bg-gradient-to-r from-electric-blue/30 to-vibrant-pink/20 flex items-center justify-center">
+                      <div className="w-8 h-8 bg-white rounded-md flex items-center justify-center">
+                        <span className="text-midnight-black text-xs font-bold">📱</span>
+                      </div>
+                    </div>
+                    <div className="p-2">
+                      <div className="text-electric-blue text-xs font-medium">Bloomberg</div>
+                      <div className="text-white text-xs font-semibold leading-tight mb-1">Apple to bring blood oxygen feature to some US watch...</div>
+                      <div className="text-soft-gray/60 text-xs">Today • 2 min read</div>
+                    </div>
+                  </div>
+
+                  {/* Article 2 */}
+                  <div className="bg-vibrant-pink/10 rounded-lg border border-vibrant-pink/20 overflow-hidden">
+                    <div className="h-16 bg-gradient-to-r from-vibrant-pink/30 to-neon-green/20 flex items-center justify-center">
+                      <div className="w-8 h-8 bg-red-600 rounded-md flex items-center justify-center">
+                        <span className="text-white text-xs font-bold">🇺🇸</span>
+                      </div>
+                    </div>
+                    <div className="p-2">
+                      <div className="text-vibrant-pink text-xs font-medium">Miami Herald</div>
+                      <div className="text-white text-xs font-semibold leading-tight mb-1">Trump hoping to achieve halt to Ukraine fighting...</div>
+                      <div className="text-soft-gray/60 text-xs">3h ago • 4 min read</div>
+                    </div>
+                  </div>
+
+                  {/* Article 3 (partial) */}
+                  <div className="bg-neon-green/10 rounded-lg border border-neon-green/20 overflow-hidden opacity-50">
+                    <div className="h-12 bg-gradient-to-r from-neon-green/30 to-electric-blue/20 flex items-center justify-center">
+                      <div className="w-6 h-6 bg-neon-green rounded-md flex items-center justify-center">
+                        <span className="text-midnight-black text-xs font-bold">💼</span>
+                      </div>
+                    </div>
+                    <div className="p-2">
+                      <div className="text-neon-green text-xs font-medium">Forbes</div>
+                      <div className="text-white text-xs font-semibold leading-tight">Tech startup raises $50M...</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Bottom Navigation Indicator */}
+                <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-1">
+                  <div className="w-1 h-1 bg-electric-blue rounded-full"></div>
+                  <div className="w-1 h-1 bg-soft-gray/30 rounded-full"></div>
+                  <div className="w-1 h-1 bg-soft-gray/30 rounded-full"></div>
+                  <div className="w-1 h-1 bg-soft-gray/30 rounded-full"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -172,14 +223,6 @@ const Students = () => {
                   <span className="text-soft-gray/80">Focus insights</span>
                 </div>
               </div>
-              <Link to="/dashboard">
-                <Button
-                  variant="outline"
-                  className="border-electric-blue text-electric-blue hover:bg-electric-blue hover:text-midnight-black font-medium px-8 py-4 rounded-full"
-                >
-                  View demo
-                </Button>
-              </Link>
             </div>
           </div>
 
@@ -211,90 +254,70 @@ const Students = () => {
                   <span className="text-soft-gray/80">Achievement badges</span>
                 </div>
               </div>
-              <Link to="/challenge">
-                <Button
-                  variant="outline"
-                  className="border-electric-blue text-electric-blue hover:bg-electric-blue hover:text-midnight-black font-medium px-8 py-4 rounded-full"
-                >
-                  Join challenge
-                </Button>
-              </Link>
             </div>
-            <div className="bg-gradient-to-br from-vibrant-pink/20 to-neon-green/20 rounded-3xl p-16 h-96 flex items-center justify-center">
-              <div className="text-center text-soft-gray/60">
-                <Award className="w-16 h-16 mx-auto mb-4" />
-                <p className="text-lg">Challenges & Rewards</p>
+            <div className="bg-gradient-to-br from-vibrant-pink/20 to-neon-green/20 rounded-3xl p-8 h-96 flex items-center justify-center">
+              {/* Clean Reading Streak Calendar */}
+              <div className="text-center">
+                <h3 className="text-white text-xl font-semibold mb-2">Reading Streak</h3>
+                <p className="text-electric-blue text-sm mb-6">7 days strong 🔥</p>
+
+                {/* Calendar Grid */}
+                <div className="space-y-3">
+                  {/* Week Days Header */}
+                  <div className="grid grid-cols-7 gap-2 text-xs text-soft-gray/60 mb-2">
+                    <span>S</span>
+                    <span>M</span>
+                    <span>T</span>
+                    <span>W</span>
+                    <span>T</span>
+                    <span>F</span>
+                    <span>S</span>
+                  </div>
+
+                  {/* Week 1 */}
+                  <div className="grid grid-cols-7 gap-2">
+                    <div className="w-8 h-8 bg-soft-gray/20 rounded-lg"></div>
+                    <div className="w-8 h-8 bg-soft-gray/20 rounded-lg"></div>
+                    <div className="w-8 h-8 bg-neon-green rounded-lg flex items-center justify-center">
+                      <div className="w-2 h-2 bg-midnight-black rounded-full"></div>
+                    </div>
+                    <div className="w-8 h-8 bg-neon-green rounded-lg flex items-center justify-center">
+                      <div className="w-2 h-2 bg-midnight-black rounded-full"></div>
+                    </div>
+                    <div className="w-8 h-8 bg-neon-green rounded-lg flex items-center justify-center">
+                      <div className="w-2 h-2 bg-midnight-black rounded-full"></div>
+                    </div>
+                    <div className="w-8 h-8 bg-neon-green rounded-lg flex items-center justify-center">
+                      <div className="w-2 h-2 bg-midnight-black rounded-full"></div>
+                    </div>
+                    <div className="w-8 h-8 bg-neon-green rounded-lg flex items-center justify-center">
+                      <div className="w-2 h-2 bg-midnight-black rounded-full"></div>
+                    </div>
+                  </div>
+
+                  {/* Week 2 */}
+                  <div className="grid grid-cols-7 gap-2">
+                    <div className="w-8 h-8 bg-soft-gray/20 rounded-lg"></div>
+                    <div className="w-8 h-8 bg-neon-green rounded-lg flex items-center justify-center">
+                      <div className="w-2 h-2 bg-midnight-black rounded-full"></div>
+                    </div>
+                    <div className="w-8 h-8 bg-electric-blue rounded-lg flex items-center justify-center border-2 border-white">
+                      <div className="w-2 h-2 bg-midnight-black rounded-full"></div>
+                    </div>
+                    <div className="w-8 h-8 bg-soft-gray/20 rounded-lg border border-electric-blue/40"></div>
+                    <div className="w-8 h-8 bg-soft-gray/20 rounded-lg"></div>
+                    <div className="w-8 h-8 bg-soft-gray/20 rounded-lg"></div>
+                    <div className="w-8 h-8 bg-soft-gray/20 rounded-lg"></div>
+                  </div>
+                </div>
+
+                <p className="text-xs text-soft-gray/60 mt-6">Today's goal: Read 3 articles</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Social Proof - Simplified */}
-      <section className="py-24 bg-gray-900/50">
-        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl sm:text-5xl font-display font-bold text-soft-gray mb-16">
-            Loved by students{" "}
-            <span className="text-electric-blue">everywhere.</span>
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gray-800/30 rounded-2xl p-8">
-              <div className="flex justify-center mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-4 h-4 fill-electric-blue text-electric-blue"
-                  />
-                ))}
-              </div>
-              <p className="text-soft-gray/90 mb-4">
-                "Spotlight cleared my feeds mess—now it's all clean reads! Won
-                AirPods too. 🔥"
-              </p>
-              <div className="text-sm text-electric-blue font-medium">
-                Alex, MSU Student
-              </div>
-            </div>
-
-            <div className="bg-gray-800/30 rounded-2xl p-8">
-              <div className="flex justify-center mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-4 h-4 fill-electric-blue text-electric-blue"
-                  />
-                ))}
-              </div>
-              <p className="text-soft-gray/90 mb-4">
-                "Finally, news that doesn't waste my time. The challenges
-                actually make reading fun."
-              </p>
-              <div className="text-sm text-electric-blue font-medium">
-                Sarah, UCLA Student
-              </div>
-            </div>
-
-            <div className="bg-gray-800/30 rounded-2xl p-8">
-              <div className="flex justify-center mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-4 h-4 fill-electric-blue text-electric-blue"
-                  />
-                ))}
-              </div>
-              <p className="text-soft-gray/90 mb-4">
-                "MyStats helped me actually stick to reading news. Game changer
-                for staying informed."
-              </p>
-              <div className="text-sm text-electric-blue font-medium">
-                Marcus, Stanford Student
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Final CTA */}
       <section className="py-24" style={{ backgroundColor: '#008888' }}>

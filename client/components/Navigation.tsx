@@ -131,30 +131,14 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
                     Sign In
                   </Button>
                 </Link>
-                <div className="flex gap-2">
-                  <a
-                    href="#"
-                    className="transition-transform hover:scale-105 active:scale-95"
-                    aria-label="Download on the App Store"
+                <Link to="/signup">
+                  <Button
+                    size="sm"
+                    className="bg-electric-blue text-midnight-black hover:bg-cyan-400 font-semibold text-sm px-6 py-2 rounded-full"
                   >
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
-                      alt="Download on the App Store"
-                      className="h-8 w-auto"
-                    />
-                  </a>
-                  <a
-                    href="#"
-                    className="transition-transform hover:scale-105 active:scale-95"
-                    aria-label="Get it on Google Play"
-                  >
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                      alt="Get it on Google Play"
-                      className="h-8 w-auto"
-                    />
-                  </a>
-                </div>
+                    Create Free Account
+                  </Button>
+                </Link>
               </>
             )}
           </div>

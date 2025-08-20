@@ -67,23 +67,7 @@ const Universities = () => {
             engagement, no stress.
           </p>
 
-          {/* Primary CTA */}
-          <div className="mb-8">
-            <Link to="/contact">
-              <Button
-                size="lg"
-                className="bg-vibrant-pink text-midnight-black hover:bg-pink-400 font-semibold text-xl px-12 py-6 rounded-full"
-              >
-                Get custom pricing*
-              </Button>
-            </Link>
-          </div>
 
-          {/* Feature highlight */}
-          <p className="text-base text-soft-gray/60 mb-16">
-            MSU model: 5,000+ students engaged since 2022. Big Ten expansion
-            ready.
-          </p>
         </div>
       </section>
 
@@ -99,52 +83,90 @@ const Universities = () => {
                 <span className="text-vibrant-pink">Thousands of students.</span>
               </h2>
               <p className="text-xl text-soft-gray/70 mb-8 leading-relaxed">
-                Centralize 300+ publications in one app. From campus papers to
-                premium outlets, no algorithms or paywalls blocking access to
-                quality journalism.
+                Seamless setup in 2 weeks with bulk enrollment and university branding. Students get instant access to 300+ publications through their campus-specific portal.
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
                   <span className="text-soft-gray/80">
-                    300+ trusted publications
+                    Bulk student enrollment system
                   </span>
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
                   <span className="text-soft-gray/80">
-                    No algorithm interference
+                    University branding customization
                   </span>
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
                   <span className="text-soft-gray/80">
-                    Campus to global coverage
+                    Campus-specific news feeds
+                  </span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
+                  <span className="text-soft-gray/80">
+                    Admin dashboard & usage analytics
+                  </span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
+                  <span className="text-soft-gray/80">
+                    Zero ongoing maintenance required
                   </span>
                 </div>
               </div>
-              <Button
-                variant="outline"
-                className="border-vibrant-pink text-vibrant-pink hover:bg-vibrant-pink hover:text-midnight-black font-medium px-8 py-4 rounded-full"
-              >
-                View demo
-              </Button>
             </div>
-            <div className="bg-gradient-to-br from-vibrant-pink/20 to-electric-blue/20 rounded-3xl p-16 h-96 flex items-center justify-center">
-              <div className="text-center text-soft-gray/60">
-                <Users className="w-16 h-16 mx-auto mb-4" />
-                <p className="text-lg">Campus Integration</p>
+            <div className="bg-gradient-to-br from-vibrant-pink/20 to-electric-blue/20 rounded-3xl p-8 h-96 flex items-center justify-center overflow-hidden relative">
+              {/* University Dashboard Mockup */}
+              <div className="w-full max-w-sm bg-midnight-black/80 rounded-2xl border border-electric-blue/30 backdrop-blur-sm">
+                {/* Header */}
+                <div className="flex items-center justify-between p-4 border-b border-electric-blue/20">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 bg-electric-blue rounded-full"></div>
+                    <span className="text-electric-blue font-semibold text-sm">University Name</span>
+                  </div>
+                  <div className="text-neon-green text-xs">●  LIVE</div>
+                </div>
+
+                {/* Stats Cards */}
+                <div className="p-4 space-y-3">
+                  <div className="bg-electric-blue/10 rounded-lg p-3 border border-electric-blue/20">
+                    <div className="text-electric-blue text-xs font-medium">Active Students</div>
+                    <div className="text-white text-lg font-bold">5,247</div>
+                    <div className="text-neon-green text-xs">+12% this week</div>
+                  </div>
+
+                  <div className="bg-vibrant-pink/10 rounded-lg p-3 border border-vibrant-pink/20">
+                    <div className="text-vibrant-pink text-xs font-medium">Daily Engagement</div>
+                    <div className="text-white text-lg font-bold">89%</div>
+                    <div className="text-neon-green text-xs">+5% vs last month</div>
+                  </div>
+
+                  <div className="bg-neon-green/10 rounded-lg p-3 border border-neon-green/20">
+                    <div className="text-neon-green text-xs font-medium">News Sources</div>
+                    <div className="text-white text-lg font-bold">324</div>
+                    <div className="text-soft-gray/60 text-xs">Campus + Global</div>
+                  </div>
+                </div>
               </div>
+
+              {/* Floating Elements */}
+              <div className="absolute top-4 right-4 w-3 h-3 bg-neon-green rounded-full animate-pulse"></div>
+              <div className="absolute bottom-6 left-6 w-2 h-2 bg-electric-blue rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+              <div className="absolute top-1/2 right-8 w-1 h-1 bg-vibrant-pink rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
             </div>
           </div>
 
           {/* Benefit 2: Custom Implementation */}
           <div className="grid md:grid-cols-2 gap-16 items-center mb-32">
-            <div className="bg-gradient-to-br from-neon-green/20 to-vibrant-pink/20 rounded-3xl p-16 h-96 flex items-center justify-center order-2 md:order-1">
-              <div className="text-center text-soft-gray/60">
-                <GraduationCap className="w-16 h-16 mx-auto mb-4" />
-                <p className="text-lg">Custom Landing Pages</p>
-              </div>
+            <div className="bg-gradient-to-br from-neon-green/20 to-vibrant-pink/20 rounded-3xl overflow-hidden h-96 flex items-center justify-center order-2 md:order-1">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Ff9a2587e1b874b6e9d34bfb6b703b455%2F0ade9e40550b449382b641e41d0ff1e4?format=webp&width=800"
+                alt="Custom Landing Pages"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="order-1 md:order-2">
               <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8 leading-tight">
@@ -177,12 +199,6 @@ const Universities = () => {
                   </span>
                 </div>
               </div>
-              <Button
-                variant="outline"
-                className="border-vibrant-pink text-vibrant-pink hover:bg-vibrant-pink hover:text-midnight-black font-medium px-8 py-4 rounded-full"
-              >
-                MSU case study
-              </Button>
             </div>
           </div>
 
@@ -219,116 +235,50 @@ const Universities = () => {
                   </span>
                 </div>
               </div>
-              <Button
-                variant="outline"
-                className="border-vibrant-pink text-vibrant-pink hover:bg-vibrant-pink hover:text-midnight-black font-medium px-8 py-4 rounded-full"
-              >
-                Alumni programs
-              </Button>
             </div>
-            <div className="bg-gradient-to-br from-electric-blue/20 to-neon-green/20 rounded-3xl p-16 h-96 flex items-center justify-center">
-              <div className="text-center text-soft-gray/60">
-                <BarChart3 className="w-16 h-16 mx-auto mb-4" />
-                <p className="text-lg">Engagement Analytics</p>
+            <div className="bg-gradient-to-br from-electric-blue/20 to-neon-green/20 rounded-3xl p-8 h-96 flex items-center justify-center overflow-hidden relative">
+              {/* Alumni Analytics Dashboard */}
+              <div className="w-full max-w-sm bg-midnight-black/80 rounded-2xl border border-neon-green/30 backdrop-blur-sm">
+                {/* Header */}
+                <div className="flex items-center justify-between p-4 border-b border-neon-green/20">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 bg-neon-green rounded-full"></div>
+                    <span className="text-neon-green font-semibold text-sm">Alumni Network</span>
+                  </div>
+                  <div className="text-electric-blue text-xs">●  ACTIVE</div>
+                </div>
+
+                {/* Alumni Stats Cards */}
+                <div className="p-4 space-y-3">
+                  <div className="bg-neon-green/10 rounded-lg p-3 border border-neon-green/20">
+                    <div className="text-neon-green text-xs font-medium">Active Alumni</div>
+                    <div className="text-white text-lg font-bold">12,847</div>
+                    <div className="text-electric-blue text-xs">78% retention rate</div>
+                  </div>
+
+                  <div className="bg-electric-blue/10 rounded-lg p-3 border border-electric-blue/20">
+                    <div className="text-electric-blue text-xs font-medium">Global Reach</div>
+                    <div className="text-white text-lg font-bold">45 Countries</div>
+                    <div className="text-neon-green text-xs">6 continents</div>
+                  </div>
+
+                  <div className="bg-vibrant-pink/10 rounded-lg p-3 border border-vibrant-pink/20">
+                    <div className="text-vibrant-pink text-xs font-medium">Avg. Reading Time</div>
+                    <div className="text-white text-lg font-bold">18 min</div>
+                    <div className="text-soft-gray/60 text-xs">Daily engagement</div>
+                  </div>
+                </div>
               </div>
+
+              {/* Floating Analytics Elements */}
+              <div className="absolute top-6 right-6 w-2 h-2 bg-electric-blue rounded-full animate-pulse"></div>
+              <div className="absolute bottom-8 left-8 w-3 h-3 bg-vibrant-pink rounded-full animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+              <div className="absolute top-1/3 right-4 w-1 h-1 bg-neon-green rounded-full animate-pulse" style={{ animationDelay: '3s' }}></div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Success Story - MSU */}
-      <section className="py-24 bg-gray-900/50">
-        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl sm:text-5xl font-display font-bold text-soft-gray mb-8">
-            MSU's <span className="text-vibrant-pink">success story.</span>
-          </h2>
-          <p className="text-xl text-soft-gray/70 mb-12">
-            See how Michigan State University transformed campus news
-            engagement.
-          </p>
-
-          <div className="bg-gray-800/30 rounded-2xl p-12 mb-16">
-            <div className="flex justify-center mb-6">
-              {[...Array(5)].map((_, i) => (
-                <Star
-                  key={i}
-                  className="w-5 h-5 fill-vibrant-pink text-vibrant-pink"
-                />
-              ))}
-            </div>
-            <p className="text-soft-gray/90 mb-6 text-xl leading-relaxed">
-              "MSU's blueprint: Over 5,000 students hooked since '22, feedback
-              stellar. Big Ten's next."
-            </p>
-            <div className="text-vibrant-pink font-medium">
-              Jack Harrison, ASMSU Chief of Staff
-            </div>
-          </div>
-
-          {/* MSU Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-vibrant-pink mb-2">
-                5,000+
-              </div>
-              <div className="text-soft-gray/60">Students engaged</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-vibrant-pink mb-2">
-                2022
-              </div>
-              <div className="text-soft-gray/60">Partnership started</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-vibrant-pink mb-2">
-                Big Ten
-              </div>
-              <div className="text-soft-gray/60">Expansion ready</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Partnership Stats */}
-      <section className="py-24">
-        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-display font-bold text-soft-gray mb-6">
-              Join <span className="text-vibrant-pink">500+ universities</span>
-              <br />
-              already transforming campus news.
-            </h2>
-          </div>
-
-          {/* Stats Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-vibrant-pink mb-2">
-                500+
-              </div>
-              <div className="text-soft-gray/60">University partners</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-vibrant-pink mb-2">
-                250K+
-              </div>
-              <div className="text-soft-gray/60">Student users</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-vibrant-pink mb-2">
-                300+
-              </div>
-              <div className="text-soft-gray/60">Publication partners</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-vibrant-pink mb-2">
-                95%
-              </div>
-              <div className="text-soft-gray/60">Satisfaction rate</div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Final CTA */}
       <section className="py-24" style={{ backgroundColor: '#7b004c' }}>
@@ -350,17 +300,7 @@ const Universities = () => {
                 Schedule consultation
               </Button>
             </Link>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-[#7b004c] font-semibold text-lg px-10 py-5 rounded-full"
-            >
-              Download case study
-            </Button>
           </div>
-          <p className="text-sm text-white/70 mt-8">
-            * Custom pricing based on student population and requirements.
-          </p>
         </div>
       </section>
 

@@ -115,7 +115,7 @@ const Index = () => {
               News that <span className="text-electric-blue">matters.</span>
             </h2>
             <p className="text-xl text-soft-gray/70 max-w-2xl mx-auto">
-              Curate your perfect feed from 300+ trusted sources. No algorithms.
+              Curate your perfect feed from 400+ trusted sources. No algorithms.
               No noise.
             </p>
           </div>

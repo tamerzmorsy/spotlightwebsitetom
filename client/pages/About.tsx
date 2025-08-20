@@ -149,22 +149,13 @@ const About = () => {
             Whether you're a student, publisher, or university, there's a place
             for you in our mission.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Link to="/get-app">
               <Button
                 size="lg"
                 className="bg-white text-[#008888] hover:bg-gray-100 font-semibold text-lg px-10 py-5 rounded-full border-2 border-white"
               >
                 Download the app
-              </Button>
-            </Link>
-            <Link to="/contact">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-[#008888] font-semibold text-lg px-10 py-5 rounded-full"
-              >
-                Get in touch
               </Button>
             </Link>
           </div>

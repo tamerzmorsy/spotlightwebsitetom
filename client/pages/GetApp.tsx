@@ -154,53 +154,6 @@ const GetApp = () => {
         </div>
       </section>
 
-      {/* Social Proof */}
-      <section className="py-24 bg-gray-900/50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl sm:text-5xl font-display font-bold text-soft-gray mb-16">
-            What students are <span className="text-electric-blue">saying</span>
-            .
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gray-800/30 rounded-2xl p-8">
-              <div className="flex justify-center mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-4 h-4 fill-electric-blue text-electric-blue"
-                  />
-                ))}
-              </div>
-              <p className="text-soft-gray/90 mb-4 text-lg">
-                "Finally, an app that doesn't waste my time. Clean design, real
-                news, actual rewards."
-              </p>
-              <div className="text-sm text-electric-blue font-medium">
-                Alex M. — MSU Student
-              </div>
-            </div>
-
-            <div className="bg-gray-800/30 rounded-2xl p-8">
-              <div className="flex justify-center mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-4 h-4 fill-electric-blue text-electric-blue"
-                  />
-                ))}
-              </div>
-              <p className="text-soft-gray/90 mb-4 text-lg">
-                "Won AirPods just by reading articles I actually wanted to read.
-                This app gets it."
-              </p>
-              <div className="text-sm text-electric-blue font-medium">
-                Sarah L. — UCLA Student
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Final CTA */}
       <section className="py-24">

@@ -120,10 +120,69 @@ const Students = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-electric-blue/20 to-vibrant-pink/20 rounded-3xl p-16 h-96 flex items-center justify-center">
-              <div className="text-center text-soft-gray/60">
-                <Target className="w-16 h-16 mx-auto mb-4" />
-                <p className="text-lg">Custom Feed Interface</p>
+            <div className="bg-gradient-to-br from-electric-blue/20 to-vibrant-pink/20 rounded-3xl p-6 h-96 flex items-center justify-center overflow-hidden">
+              {/* Mobile Feed Interface Mockup */}
+              <div className="w-full max-w-xs bg-midnight-black/90 rounded-3xl border border-electric-blue/30 backdrop-blur-sm relative">
+                {/* Mobile Header */}
+                <div className="flex justify-between items-center px-4 py-3 border-b border-electric-blue/20">
+                  <span className="text-electric-blue font-bold text-lg">MyNews</span>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-vibrant-pink rounded-full"></div>
+                    <span className="text-xs text-soft-gray/70">🏆</span>
+                  </div>
+                </div>
+
+                {/* News Feed */}
+                <div className="p-3 space-y-3 max-h-80 overflow-hidden">
+                  {/* Article 1 */}
+                  <div className="bg-electric-blue/10 rounded-lg border border-electric-blue/20 overflow-hidden">
+                    <div className="h-16 bg-gradient-to-r from-electric-blue/30 to-vibrant-pink/20 flex items-center justify-center">
+                      <div className="w-8 h-8 bg-white rounded-md flex items-center justify-center">
+                        <span className="text-midnight-black text-xs font-bold">📱</span>
+                      </div>
+                    </div>
+                    <div className="p-2">
+                      <div className="text-electric-blue text-xs font-medium">Bloomberg</div>
+                      <div className="text-white text-xs font-semibold leading-tight mb-1">Apple to bring blood oxygen feature to some US watch...</div>
+                      <div className="text-soft-gray/60 text-xs">Today • 2 min read</div>
+                    </div>
+                  </div>
+
+                  {/* Article 2 */}
+                  <div className="bg-vibrant-pink/10 rounded-lg border border-vibrant-pink/20 overflow-hidden">
+                    <div className="h-16 bg-gradient-to-r from-vibrant-pink/30 to-neon-green/20 flex items-center justify-center">
+                      <div className="w-8 h-8 bg-red-600 rounded-md flex items-center justify-center">
+                        <span className="text-white text-xs font-bold">🇺🇸</span>
+                      </div>
+                    </div>
+                    <div className="p-2">
+                      <div className="text-vibrant-pink text-xs font-medium">Miami Herald</div>
+                      <div className="text-white text-xs font-semibold leading-tight mb-1">Trump hoping to achieve halt to Ukraine fighting...</div>
+                      <div className="text-soft-gray/60 text-xs">3h ago • 4 min read</div>
+                    </div>
+                  </div>
+
+                  {/* Article 3 (partial) */}
+                  <div className="bg-neon-green/10 rounded-lg border border-neon-green/20 overflow-hidden opacity-50">
+                    <div className="h-12 bg-gradient-to-r from-neon-green/30 to-electric-blue/20 flex items-center justify-center">
+                      <div className="w-6 h-6 bg-neon-green rounded-md flex items-center justify-center">
+                        <span className="text-midnight-black text-xs font-bold">💼</span>
+                      </div>
+                    </div>
+                    <div className="p-2">
+                      <div className="text-neon-green text-xs font-medium">Forbes</div>
+                      <div className="text-white text-xs font-semibold leading-tight">Tech startup raises $50M...</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Bottom Navigation Indicator */}
+                <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-1">
+                  <div className="w-1 h-1 bg-electric-blue rounded-full"></div>
+                  <div className="w-1 h-1 bg-soft-gray/30 rounded-full"></div>
+                  <div className="w-1 h-1 bg-soft-gray/30 rounded-full"></div>
+                  <div className="w-1 h-1 bg-soft-gray/30 rounded-full"></div>
+                </div>
               </div>
             </div>
           </div>

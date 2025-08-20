@@ -262,14 +262,6 @@ const Students = () => {
                   <span className="text-soft-gray/80">Achievement badges</span>
                 </div>
               </div>
-              <Link to="/challenge">
-                <Button
-                  variant="outline"
-                  className="border-electric-blue text-electric-blue hover:bg-electric-blue hover:text-midnight-black font-medium px-8 py-4 rounded-full"
-                >
-                  Join challenge
-                </Button>
-              </Link>
             </div>
             <div className="bg-gradient-to-br from-vibrant-pink/20 to-neon-green/20 rounded-3xl p-6 h-96 flex items-center justify-center overflow-hidden">
               {/* Challenges Dashboard Mockup */}

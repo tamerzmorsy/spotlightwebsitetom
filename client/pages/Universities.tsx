@@ -210,12 +210,6 @@ const Universities = () => {
                   </span>
                 </div>
               </div>
-              <Button
-                variant="outline"
-                className="border-vibrant-pink text-vibrant-pink hover:bg-vibrant-pink hover:text-midnight-black font-medium px-8 py-4 rounded-full"
-              >
-                MSU case study
-              </Button>
             </div>
           </div>
 

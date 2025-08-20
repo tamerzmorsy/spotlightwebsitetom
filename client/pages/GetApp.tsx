@@ -66,16 +66,14 @@ const GetApp = () => {
             </a>
           </div>
 
-          {/* Phone Mockup */}
+          {/* App Screenshot */}
           <div className="relative mx-auto max-w-sm">
             <div className="bg-gradient-to-br from-electric-blue/20 to-vibrant-pink/20 rounded-[3rem] p-2 mx-auto">
-              <div className="bg-midnight-black rounded-[2.5rem] p-4 h-[640px] w-[300px] flex items-center justify-center">
-                <div className="text-center text-soft-gray/60">
-                  <Smartphone className="w-20 h-20 mx-auto mb-4" />
-                  <p className="text-lg">Spotlight News App</p>
-                  <p className="text-sm text-soft-gray/40">Mobile Interface</p>
-                </div>
-              </div>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Ff9a2587e1b874b6e9d34bfb6b703b455%2F718f6adb99e84d0286b3d4afe1886caf?format=webp&width=800"
+                alt="Spotlight News mobile app screenshot showing MyNews feed interface"
+                className="w-full rounded-[2.5rem] shadow-2xl"
+              />
             </div>
           </div>
         </div>

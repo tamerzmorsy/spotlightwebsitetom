@@ -89,17 +89,6 @@ const Index = () => {
             </Link>
           </div>
 
-          {/* Promotional Text */}
-          <p className="text-base text-soft-gray/60 mb-8">
-            Get 3 months of Spotlight News+ free with a new iPhone, iPad, or
-            Mac.¹
-            <Link
-              to="/get-app"
-              className="text-electric-blue hover:underline ml-1"
-            >
-              Learn more
-            </Link>
-          </p>
 
         </div>
       </section>

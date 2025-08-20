@@ -246,12 +246,6 @@ const Universities = () => {
                   </span>
                 </div>
               </div>
-              <Button
-                variant="outline"
-                className="border-vibrant-pink text-vibrant-pink hover:bg-vibrant-pink hover:text-midnight-black font-medium px-8 py-4 rounded-full"
-              >
-                Alumni programs
-              </Button>
             </div>
             <div className="bg-gradient-to-br from-electric-blue/20 to-neon-green/20 rounded-3xl p-16 h-96 flex items-center justify-center">
               <div className="text-center text-soft-gray/60">

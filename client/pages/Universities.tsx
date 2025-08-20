@@ -67,17 +67,6 @@ const Universities = () => {
             engagement, no stress.
           </p>
 
-          {/* Primary CTA */}
-          <div className="mb-8">
-            <Link to="/contact">
-              <Button
-                size="lg"
-                className="bg-vibrant-pink text-midnight-black hover:bg-pink-400 font-semibold text-xl px-12 py-6 rounded-full"
-              >
-                Get custom pricing*
-              </Button>
-            </Link>
-          </div>
 
         </div>
       </section>

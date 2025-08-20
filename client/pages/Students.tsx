@@ -223,14 +223,6 @@ const Students = () => {
                   <span className="text-soft-gray/80">Focus insights</span>
                 </div>
               </div>
-              <Link to="/dashboard">
-                <Button
-                  variant="outline"
-                  className="border-electric-blue text-electric-blue hover:bg-electric-blue hover:text-midnight-black font-medium px-8 py-4 rounded-full"
-                >
-                  View demo
-                </Button>
-              </Link>
             </div>
           </div>
 

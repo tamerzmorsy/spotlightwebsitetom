@@ -195,9 +195,44 @@ const Index = () => {
                 </Button>
               </Link>
             </div>
-            <div className="bg-gradient-to-br from-vibrant-pink/20 to-neon-green/20 rounded-3xl p-12 h-80 flex items-center justify-center">
-              <div className="text-center text-soft-gray/60">
-                [Publication Logos Grid]
+            <div className="bg-gradient-to-br from-vibrant-pink/20 to-neon-green/20 rounded-3xl p-8 h-80 flex items-center justify-center">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-lg">
+                {/* Forbes */}
+                <div className="bg-midnight-black/50 rounded-xl p-4 flex items-center justify-center border border-electric-blue/20 hover:border-electric-blue/40 transition-colors">
+                  <span className="text-electric-blue font-bold text-lg">Forbes</span>
+                </div>
+
+                {/* TIME */}
+                <div className="bg-midnight-black/50 rounded-xl p-4 flex items-center justify-center border border-vibrant-pink/20 hover:border-vibrant-pink/40 transition-colors">
+                  <span className="text-vibrant-pink font-bold text-lg">TIME</span>
+                </div>
+
+                {/* Bloomberg */}
+                <div className="bg-midnight-black/50 rounded-xl p-4 flex items-center justify-center border border-neon-green/20 hover:border-neon-green/40 transition-colors">
+                  <span className="text-neon-green font-bold text-lg">Bloomberg</span>
+                </div>
+
+                {/* Miami Herald */}
+                <div className="bg-midnight-black/50 rounded-xl p-4 flex items-center justify-center border border-electric-blue/20 hover:border-electric-blue/40 transition-colors">
+                  <span className="text-electric-blue font-semibold text-sm">Miami Herald</span>
+                </div>
+
+                {/* Semafor */}
+                <div className="bg-midnight-black/50 rounded-xl p-4 flex items-center justify-center border border-vibrant-pink/20 hover:border-vibrant-pink/40 transition-colors">
+                  <span className="text-vibrant-pink font-bold text-lg">Semafor</span>
+                </div>
+
+                {/* Salt Lake Tribune */}
+                <div className="bg-midnight-black/50 rounded-xl p-4 flex items-center justify-center border border-neon-green/20 hover:border-neon-green/40 transition-colors">
+                  <span className="text-neon-green font-semibold text-sm text-center">Salt Lake Tribune</span>
+                </div>
+
+                {/* State News - Centered in its own row */}
+                <div className="col-span-2 md:col-span-3 flex justify-center">
+                  <div className="bg-midnight-black/50 rounded-xl p-4 flex items-center justify-center border border-electric-blue/20 hover:border-electric-blue/40 transition-colors w-48">
+                    <span className="text-electric-blue font-bold text-lg">State News</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

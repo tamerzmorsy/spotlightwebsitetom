@@ -81,14 +81,6 @@ const About = () => {
                 news in the digital age through algorithm-free, customizable
                 access to trusted sources.
               </p>
-              <Link to="/get-app">
-                <Button
-                  variant="outline"
-                  className="border-electric-blue text-electric-blue hover:bg-electric-blue hover:text-midnight-black font-medium px-8 py-4 rounded-full"
-                >
-                  Join our mission
-                </Button>
-              </Link>
             </div>
             <div className="bg-gradient-to-br from-electric-blue/20 to-vibrant-pink/20 rounded-3xl p-16 h-96 flex items-center justify-center">
               <div className="text-center text-soft-gray/60">
@@ -142,101 +134,9 @@ const About = () => {
             </div>
           </div>
 
-          {/* Our Impact */}
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8 leading-tight">
-                Making an <span className="text-electric-blue">impact.</span>
-              </h2>
-              <p className="text-xl text-soft-gray/70 mb-8 leading-relaxed">
-                From Michigan State University's 5,000+ engaged students to
-                hundreds of partner publications, we're building a sustainable
-                future for quality journalism.
-              </p>
-              <div className="grid grid-cols-2 gap-6 mb-8">
-                <div>
-                  <div className="text-3xl font-bold text-electric-blue mb-1">
-                    250K+
-                  </div>
-                  <div className="text-soft-gray/60 text-sm">
-                    Active readers
-                  </div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-electric-blue mb-1">
-                    300+
-                  </div>
-                  <div className="text-soft-gray/60 text-sm">
-                    Publisher partners
-                  </div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-electric-blue mb-1">
-                    500+
-                  </div>
-                  <div className="text-soft-gray/60 text-sm">
-                    University partners
-                  </div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-electric-blue mb-1">
-                    70%
-                  </div>
-                  <div className="text-soft-gray/60 text-sm">
-                    Revenue to publishers
-                  </div>
-                </div>
-              </div>
-              <Link to="/contact">
-                <Button
-                  variant="outline"
-                  className="border-electric-blue text-electric-blue hover:bg-electric-blue hover:text-midnight-black font-medium px-8 py-4 rounded-full"
-                >
-                  Partner with us
-                </Button>
-              </Link>
-            </div>
-            <div className="bg-gradient-to-br from-vibrant-pink/20 to-neon-green/20 rounded-3xl p-16 h-96 flex items-center justify-center">
-              <div className="text-center text-soft-gray/60">
-                <Users className="w-16 h-16 mx-auto mb-4" />
-                <p className="text-lg">Our Community</p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-24 bg-gray-900/50">
-        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl sm:text-5xl font-display font-bold text-soft-gray mb-8">
-            Meet the <span className="text-electric-blue">team.</span>
-          </h2>
-          <p className="text-xl text-soft-gray/70 mb-16 max-w-2xl mx-auto">
-            We're a passionate group of journalists, developers, and advocates
-            working to reshape how news reaches readers.
-          </p>
-
-          <div className="bg-gray-800/30 rounded-2xl p-12">
-            <div className="flex items-center justify-center mb-6">
-              <Lightbulb className="w-12 h-12 text-electric-blue" />
-            </div>
-            <h3 className="text-2xl font-display font-bold text-soft-gray mb-4">
-              Founded on Innovation
-            </h3>
-            <p className="text-soft-gray/70 mb-8 max-w-2xl mx-auto">
-              Starting as a solution to algorithm fatigue and paywall barriers,
-              Spotlight News has evolved into a comprehensive platform that
-              serves students, publishers, and universities equally.
-            </p>
-            <Link to="/contact">
-              <Button className="bg-electric-blue text-midnight-black hover:bg-cyan-400 font-medium px-8 py-4 rounded-full">
-                Join our team
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* Final CTA */}
       <section className="py-24" style={{ backgroundColor: '#008888' }}>
@@ -249,22 +149,13 @@ const About = () => {
             Whether you're a student, publisher, or university, there's a place
             for you in our mission.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Link to="/get-app">
               <Button
                 size="lg"
                 className="bg-white text-[#008888] hover:bg-gray-100 font-semibold text-lg px-10 py-5 rounded-full border-2 border-white"
               >
                 Download the app
-              </Button>
-            </Link>
-            <Link to="/contact">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-[#008888] font-semibold text-lg px-10 py-5 rounded-full"
-              >
-                Get in touch
               </Button>
             </Link>
           </div>

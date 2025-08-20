@@ -78,46 +78,32 @@ const Index = () => {
           </p>
 
           {/* Primary CTA */}
-          <div className="mb-16">
-            <Link to="/get-app">
-              <Button
-                size="lg"
-                className="bg-electric-blue text-midnight-black hover:bg-cyan-400 font-semibold text-xl px-12 py-6 rounded-full"
-              >
-                Try it free*
-              </Button>
-            </Link>
-          </div>
-
-          {/* Promotional Text */}
-          <p className="text-base text-soft-gray/60 mb-8">
-            Get 3 months of Spotlight News+ free with a new iPhone, iPad, or
-            Mac.¹
-            <Link
-              to="/get-app"
-              className="text-electric-blue hover:underline ml-1"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+            <a
+              href="#"
+              className="transition-transform hover:scale-105 active:scale-95"
+              aria-label="Download on the App Store"
             >
-              Learn more
-            </Link>
-          </p>
-
-          {/* Stats - Simplified */}
-          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto pt-8 border-t border-soft-gray/10">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-soft-gray mb-1">
-                250K+
-              </div>
-              <div className="text-soft-gray/50 text-sm">Active users</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-soft-gray mb-1">1M+</div>
-              <div className="text-soft-gray/50 text-sm">Stories curated</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-soft-gray mb-1">500+</div>
-              <div className="text-soft-gray/50 text-sm">Campus partners</div>
-            </div>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                alt="Download on the App Store"
+                className="h-14 w-auto"
+              />
+            </a>
+            <a
+              href="#"
+              className="transition-transform hover:scale-105 active:scale-95"
+              aria-label="Get it on Google Play"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                alt="Get it on Google Play"
+                className="h-14 w-auto"
+              />
+            </a>
           </div>
+
+
         </div>
       </section>
 
@@ -129,7 +115,7 @@ const Index = () => {
               News that <span className="text-electric-blue">matters.</span>
             </h2>
             <p className="text-xl text-soft-gray/70 max-w-2xl mx-auto">
-              Curate your perfect feed from 300+ trusted sources. No algorithms.
+              Curate your perfect feed from 400+ trusted sources. No algorithms.
               No noise.
             </p>
           </div>
@@ -337,25 +323,13 @@ const Index = () => {
             Ready to rebel against <br />
             <span className="text-electric-blue">bad feeds?</span>
           </h2>
-          <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
-            Join 250,000+ users who've taken control of their news experience.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Link to="/get-app">
               <Button
                 size="lg"
                 className="bg-white text-[#008888] hover:bg-gray-100 font-semibold text-lg px-10 py-5 rounded-full border-2 border-white"
               >
                 Download the app
-              </Button>
-            </Link>
-            <Link to="/onboarding">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-[#008888] font-semibold text-lg px-10 py-5 rounded-full"
-              >
-                Try online
               </Button>
             </Link>
           </div>

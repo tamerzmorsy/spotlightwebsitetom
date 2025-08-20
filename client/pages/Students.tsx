@@ -80,10 +80,6 @@ const Students = () => {
             </Link>
           </div>
 
-          {/* Feature highlight */}
-          <p className="text-base text-soft-gray/60 mb-16">
-            Free trial included. Win AirPods and iPads in reading challenges.
-          </p>
         </div>
       </section>
 
@@ -311,7 +307,7 @@ const Students = () => {
             Join thousands of students who've ditched the algorithm and built
             better news habits.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Link to="/get-app">
               <Button
                 size="lg"
@@ -320,19 +316,7 @@ const Students = () => {
                 Download the app
               </Button>
             </Link>
-            <Link to="/campus-eligibility">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-[#008888] font-semibold text-lg px-10 py-5 rounded-full"
-              >
-                Check campus access
-              </Button>
-            </Link>
           </div>
-          <p className="text-sm text-soft-gray/50 mt-8">
-            * Free trial included. No credit card required.
-          </p>
         </div>
       </section>
 

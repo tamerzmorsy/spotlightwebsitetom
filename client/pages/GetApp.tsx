@@ -66,16 +66,14 @@ const GetApp = () => {
             </a>
           </div>
 
-          {/* Phone Mockup */}
+          {/* App Screenshot */}
           <div className="relative mx-auto max-w-sm">
             <div className="bg-gradient-to-br from-electric-blue/20 to-vibrant-pink/20 rounded-[3rem] p-2 mx-auto">
-              <div className="bg-midnight-black rounded-[2.5rem] p-4 h-[640px] w-[300px] flex items-center justify-center">
-                <div className="text-center text-soft-gray/60">
-                  <Smartphone className="w-20 h-20 mx-auto mb-4" />
-                  <p className="text-lg">Spotlight News App</p>
-                  <p className="text-sm text-soft-gray/40">Mobile Interface</p>
-                </div>
-              </div>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Ff9a2587e1b874b6e9d34bfb6b703b455%2F718f6adb99e84d0286b3d4afe1886caf?format=webp&width=800"
+                alt="Spotlight News mobile app screenshot showing MyNews feed interface"
+                className="w-full rounded-[2.5rem] shadow-2xl"
+              />
             </div>
           </div>
         </div>
@@ -156,53 +154,6 @@ const GetApp = () => {
         </div>
       </section>
 
-      {/* Social Proof */}
-      <section className="py-24 bg-gray-900/50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl sm:text-5xl font-display font-bold text-soft-gray mb-16">
-            What students are <span className="text-electric-blue">saying</span>
-            .
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gray-800/30 rounded-2xl p-8">
-              <div className="flex justify-center mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-4 h-4 fill-electric-blue text-electric-blue"
-                  />
-                ))}
-              </div>
-              <p className="text-soft-gray/90 mb-4 text-lg">
-                "Finally, an app that doesn't waste my time. Clean design, real
-                news, actual rewards."
-              </p>
-              <div className="text-sm text-electric-blue font-medium">
-                Alex M. — MSU Student
-              </div>
-            </div>
-
-            <div className="bg-gray-800/30 rounded-2xl p-8">
-              <div className="flex justify-center mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-4 h-4 fill-electric-blue text-electric-blue"
-                  />
-                ))}
-              </div>
-              <p className="text-soft-gray/90 mb-4 text-lg">
-                "Won AirPods just by reading articles I actually wanted to read.
-                This app gets it."
-              </p>
-              <div className="text-sm text-electric-blue font-medium">
-                Sarah L. — UCLA Student
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Final CTA */}
       <section className="py-24">

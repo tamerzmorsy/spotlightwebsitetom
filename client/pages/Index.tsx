@@ -78,15 +78,29 @@ const Index = () => {
           </p>
 
           {/* Primary CTA */}
-          <div className="mb-16">
-            <Link to="/get-app">
-              <Button
-                size="lg"
-                className="bg-electric-blue text-midnight-black hover:bg-cyan-400 font-semibold text-xl px-12 py-6 rounded-full"
-              >
-                Try it free*
-              </Button>
-            </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+            <a
+              href="#"
+              className="transition-transform hover:scale-105 active:scale-95"
+              aria-label="Download on the App Store"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                alt="Download on the App Store"
+                className="h-14 w-auto"
+              />
+            </a>
+            <a
+              href="#"
+              className="transition-transform hover:scale-105 active:scale-95"
+              aria-label="Get it on Google Play"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                alt="Get it on Google Play"
+                className="h-14 w-auto"
+              />
+            </a>
           </div>
 
 

@@ -309,9 +309,6 @@ const Index = () => {
             Ready to rebel against <br />
             <span className="text-electric-blue">bad feeds?</span>
           </h2>
-          <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
-            Join 250,000+ users who've taken control of their news experience.
-          </p>
           <div className="flex justify-center">
             <Link to="/get-app">
               <Button

@@ -130,14 +130,6 @@ const Index = () => {
                 Choose your sources, topics, and writers. Create a news
                 experience that's uniquely yours. No algorithmic surprises.
               </p>
-              <Link to="/students">
-                <Button
-                  variant="outline"
-                  className="border-electric-blue text-electric-blue hover:bg-electric-blue hover:text-midnight-black font-medium px-8 py-3 rounded-full"
-                >
-                  Learn more
-                </Button>
-              </Link>
             </div>
             <div className="rounded-3xl overflow-hidden">
               <img
@@ -214,14 +206,6 @@ const Index = () => {
                 Track your reading with MyStats. Join challenges. Win real
                 prizes like AirPods and iPads while staying informed.
               </p>
-              <Link to="/challenge">
-                <Button
-                  variant="outline"
-                  className="border-neon-green text-neon-green hover:bg-neon-green hover:text-midnight-black font-medium px-8 py-3 rounded-full"
-                >
-                  Join challenge
-                </Button>
-              </Link>
             </div>
           </div>
 
@@ -235,14 +219,6 @@ const Index = () => {
                 Break through paywalls with a single subscription. Access
                 premium content from hundreds of publications.
               </p>
-              <Link to="/pricing">
-                <Button
-                  variant="outline"
-                  className="border-vibrant-pink text-vibrant-pink hover:bg-vibrant-pink hover:text-midnight-black font-medium px-8 py-3 rounded-full"
-                >
-                  View pricing
-                </Button>
-              </Link>
             </div>
             <div className="bg-gradient-to-br from-vibrant-pink/20 to-neon-green/20 rounded-3xl p-8 h-80 flex items-center justify-center">
               <div className="grid grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-lg">

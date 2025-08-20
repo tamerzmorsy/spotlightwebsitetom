@@ -280,15 +280,15 @@ const Students = () => {
                   <div className="bg-vibrant-pink/10 rounded-xl p-3 border border-vibrant-pink/20">
                     <div className="flex justify-between items-start mb-2">
                       <div className="text-vibrant-pink text-xs font-medium">Monthly Challenge</div>
-                      <div className="text-xs text-neon-green">🏆 AirPods Pro</div>
+                      <div className="text-xs text-neon-green">🏆 Premium Prize</div>
                     </div>
-                    <div className="text-white text-sm font-semibold mb-2">Read 15 articles this month</div>
+                    <div className="text-white text-sm font-semibold mb-2">Complete reading goals</div>
                     <div className="w-full bg-midnight-black/50 rounded-full h-2 mb-1">
-                      <div className="bg-vibrant-pink h-2 rounded-full" style={{ width: '73%' }}></div>
+                      <div className="bg-vibrant-pink h-2 rounded-full" style={{ width: '67%' }}></div>
                     </div>
                     <div className="flex justify-between text-xs text-soft-gray/60">
-                      <span>11/15 articles</span>
-                      <span>6 days left</span>
+                      <span>67% complete</span>
+                      <span>8 days left</span>
                     </div>
                   </div>
 
@@ -296,29 +296,29 @@ const Students = () => {
                   <div className="bg-neon-green/10 rounded-xl p-3 border border-neon-green/20">
                     <div className="flex justify-between items-start mb-2">
                       <div className="text-neon-green text-xs font-medium">Weekly Streak</div>
-                      <div className="text-xs text-electric-blue">🎁 $25 Gift Card</div>
+                      <div className="text-xs text-electric-blue">🎁 Reward</div>
                     </div>
-                    <div className="text-white text-sm font-semibold mb-2">Read daily for 7 days</div>
+                    <div className="text-white text-sm font-semibold mb-2">Daily reading streak</div>
                     <div className="flex space-x-1 mb-1">
                       <div className="w-4 h-4 bg-neon-green rounded-sm"></div>
                       <div className="w-4 h-4 bg-neon-green rounded-sm"></div>
                       <div className="w-4 h-4 bg-neon-green rounded-sm"></div>
                       <div className="w-4 h-4 bg-neon-green rounded-sm"></div>
-                      <div className="w-4 h-4 bg-neon-green rounded-sm"></div>
+                      <div className="w-4 h-4 bg-soft-gray/30 rounded-sm"></div>
                       <div className="w-4 h-4 bg-soft-gray/30 rounded-sm"></div>
                       <div className="w-4 h-4 bg-soft-gray/30 rounded-sm"></div>
                     </div>
-                    <div className="text-xs text-soft-gray/60">Day 5 of 7 complete</div>
+                    <div className="text-xs text-soft-gray/60">4 day streak</div>
                   </div>
 
                   {/* Recent Achievement */}
                   <div className="bg-electric-blue/10 rounded-xl p-3 border border-electric-blue/20 opacity-75">
                     <div className="flex items-center space-x-2 mb-1">
-                      <span className="text-electric-blue text-xs">🥇</span>
-                      <div className="text-electric-blue text-xs font-medium">Achievement Unlocked</div>
+                      <span className="text-electric-blue text-xs">🏅</span>
+                      <div className="text-electric-blue text-xs font-medium">Achievement Earned</div>
                     </div>
-                    <div className="text-white text-sm font-semibold">News Explorer Badge</div>
-                    <div className="text-xs text-soft-gray/60">Read from 10 different sources</div>
+                    <div className="text-white text-sm font-semibold">Reading Badge</div>
+                    <div className="text-xs text-soft-gray/60">Milestone reached</div>
                   </div>
                 </div>
 

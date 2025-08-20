@@ -79,11 +79,6 @@ const Universities = () => {
             </Link>
           </div>
 
-          {/* Feature highlight */}
-          <p className="text-base text-soft-gray/60 mb-16">
-            MSU model: 5,000+ students engaged since 2022. Big Ten expansion
-            ready.
-          </p>
         </div>
       </section>
 

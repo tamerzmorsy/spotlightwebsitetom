@@ -80,10 +80,6 @@ const Students = () => {
             </Link>
           </div>
 
-          {/* Feature highlight */}
-          <p className="text-base text-soft-gray/60 mb-16">
-            Free trial included. Win AirPods and iPads in reading challenges.
-          </p>
         </div>
       </section>
 

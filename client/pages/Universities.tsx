@@ -140,11 +140,12 @@ const Universities = () => {
 
           {/* Benefit 2: Custom Implementation */}
           <div className="grid md:grid-cols-2 gap-16 items-center mb-32">
-            <div className="bg-gradient-to-br from-neon-green/20 to-vibrant-pink/20 rounded-3xl p-16 h-96 flex items-center justify-center order-2 md:order-1">
-              <div className="text-center text-soft-gray/60">
-                <GraduationCap className="w-16 h-16 mx-auto mb-4" />
-                <p className="text-lg">Custom Landing Pages</p>
-              </div>
+            <div className="bg-gradient-to-br from-neon-green/20 to-vibrant-pink/20 rounded-3xl overflow-hidden h-96 flex items-center justify-center order-2 md:order-1">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Ff9a2587e1b874b6e9d34bfb6b703b455%2F0ade9e40550b449382b641e41d0ff1e4?format=webp&width=800"
+                alt="Custom Landing Pages"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="order-1 md:order-2">
               <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8 leading-tight">

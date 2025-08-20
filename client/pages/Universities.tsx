@@ -137,7 +137,7 @@ const Universities = () => {
                 variant="outline"
                 className="border-vibrant-pink text-vibrant-pink hover:bg-vibrant-pink hover:text-midnight-black font-medium px-8 py-4 rounded-full"
               >
-                View demo
+                Implementation guide
               </Button>
             </div>
             <div className="bg-gradient-to-br from-vibrant-pink/20 to-electric-blue/20 rounded-3xl p-16 h-96 flex items-center justify-center">

@@ -99,27 +99,37 @@ const Universities = () => {
                 <span className="text-vibrant-pink">Thousands of students.</span>
               </h2>
               <p className="text-xl text-soft-gray/70 mb-8 leading-relaxed">
-                Centralize 300+ publications in one app. From campus papers to
-                premium outlets, no algorithms or paywalls blocking access to
-                quality journalism.
+                Seamless setup in 2 weeks with bulk enrollment and university branding. Students get instant access to 300+ publications through their campus-specific portal.
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
                   <span className="text-soft-gray/80">
-                    300+ trusted publications
+                    Bulk student enrollment system
                   </span>
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
                   <span className="text-soft-gray/80">
-                    No algorithm interference
+                    University branding customization
                   </span>
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
                   <span className="text-soft-gray/80">
-                    Campus to global coverage
+                    Campus-specific news feeds
+                  </span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
+                  <span className="text-soft-gray/80">
+                    Admin dashboard & usage analytics
+                  </span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
+                  <span className="text-soft-gray/80">
+                    Zero ongoing maintenance required
                   </span>
                 </div>
               </div>

@@ -148,7 +148,7 @@ const Footer = () => {
         <div className="pt-8 border-t border-soft-gray/10">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-soft-gray/60 text-sm mb-4 md:mb-0">
-              © 2024 Spotlight News. All rights reserved.
+              © 2025 Spotlight News. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
               <Link 

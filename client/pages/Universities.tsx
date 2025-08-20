@@ -312,9 +312,6 @@ const Universities = () => {
               </Button>
             </Link>
           </div>
-          <p className="text-sm text-white/70 mt-8">
-            * Custom pricing based on student population and requirements.
-          </p>
         </div>
       </section>
 

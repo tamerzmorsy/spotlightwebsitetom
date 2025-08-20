@@ -137,37 +137,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-24 bg-gray-900/50">
-        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl sm:text-5xl font-display font-bold text-soft-gray mb-8">
-            Meet the <span className="text-electric-blue">team.</span>
-          </h2>
-          <p className="text-xl text-soft-gray/70 mb-16 max-w-2xl mx-auto">
-            We're a passionate group of journalists, developers, and advocates
-            working to reshape how news reaches readers.
-          </p>
-
-          <div className="bg-gray-800/30 rounded-2xl p-12">
-            <div className="flex items-center justify-center mb-6">
-              <Lightbulb className="w-12 h-12 text-electric-blue" />
-            </div>
-            <h3 className="text-2xl font-display font-bold text-soft-gray mb-4">
-              Founded on Innovation
-            </h3>
-            <p className="text-soft-gray/70 mb-8 max-w-2xl mx-auto">
-              Starting as a solution to algorithm fatigue and paywall barriers,
-              Spotlight News has evolved into a comprehensive platform that
-              serves students, publishers, and universities equally.
-            </p>
-            <Link to="/contact">
-              <Button className="bg-electric-blue text-midnight-black hover:bg-cyan-400 font-medium px-8 py-4 rounded-full">
-                Join our team
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* Final CTA */}
       <section className="py-24" style={{ backgroundColor: '#008888' }}>

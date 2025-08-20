@@ -147,7 +147,7 @@ const Universities = () => {
                 <div className="flex items-center justify-between p-4 border-b border-electric-blue/20">
                   <div className="flex items-center space-x-2">
                     <div className="w-6 h-6 bg-electric-blue rounded-full"></div>
-                    <span className="text-electric-blue font-semibold text-sm">Michigan State</span>
+                    <span className="text-electric-blue font-semibold text-sm">University Name</span>
                   </div>
                   <div className="text-neon-green text-xs">●  LIVE</div>
                 </div>

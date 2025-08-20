@@ -134,67 +134,6 @@ const About = () => {
             </div>
           </div>
 
-          {/* Our Impact */}
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8 leading-tight">
-                Making an <span className="text-electric-blue">impact.</span>
-              </h2>
-              <p className="text-xl text-soft-gray/70 mb-8 leading-relaxed">
-                From Michigan State University's 5,000+ engaged students to
-                hundreds of partner publications, we're building a sustainable
-                future for quality journalism.
-              </p>
-              <div className="grid grid-cols-2 gap-6 mb-8">
-                <div>
-                  <div className="text-3xl font-bold text-electric-blue mb-1">
-                    250K+
-                  </div>
-                  <div className="text-soft-gray/60 text-sm">
-                    Active readers
-                  </div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-electric-blue mb-1">
-                    300+
-                  </div>
-                  <div className="text-soft-gray/60 text-sm">
-                    Publisher partners
-                  </div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-electric-blue mb-1">
-                    500+
-                  </div>
-                  <div className="text-soft-gray/60 text-sm">
-                    University partners
-                  </div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-electric-blue mb-1">
-                    70%
-                  </div>
-                  <div className="text-soft-gray/60 text-sm">
-                    Revenue to publishers
-                  </div>
-                </div>
-              </div>
-              <Link to="/contact">
-                <Button
-                  variant="outline"
-                  className="border-electric-blue text-electric-blue hover:bg-electric-blue hover:text-midnight-black font-medium px-8 py-4 rounded-full"
-                >
-                  Partner with us
-                </Button>
-              </Link>
-            </div>
-            <div className="bg-gradient-to-br from-vibrant-pink/20 to-neon-green/20 rounded-3xl p-16 h-96 flex items-center justify-center">
-              <div className="text-center text-soft-gray/60">
-                <Users className="w-16 h-16 mx-auto mb-4" />
-                <p className="text-lg">Our Community</p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 

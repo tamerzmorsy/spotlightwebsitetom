@@ -263,69 +263,63 @@ const Students = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-vibrant-pink/20 to-neon-green/20 rounded-3xl p-6 h-96 flex items-center justify-center overflow-hidden">
-              {/* Challenges Dashboard Mockup */}
-              <div className="w-full max-w-sm bg-midnight-black/90 rounded-3xl border border-vibrant-pink/30 backdrop-blur-sm relative">
-                {/* Header */}
-                <div className="flex justify-between items-center px-4 py-3 border-b border-vibrant-pink/20">
-                  <span className="text-vibrant-pink font-bold text-lg">Challenges</span>
-                  <div className="flex items-center space-x-1">
-                    <span className="text-neon-green text-xs font-bold">1,247</span>
-                    <span className="text-xs text-soft-gray/70">pts</span>
+            <div className="bg-gradient-to-br from-vibrant-pink/20 to-neon-green/20 rounded-3xl p-8 h-96 flex items-center justify-center">
+              {/* Clean Reading Streak Calendar */}
+              <div className="text-center">
+                <h3 className="text-white text-xl font-semibold mb-2">Reading Streak</h3>
+                <p className="text-electric-blue text-sm mb-6">7 days strong 🔥</p>
+
+                {/* Calendar Grid */}
+                <div className="space-y-3">
+                  {/* Week Days Header */}
+                  <div className="grid grid-cols-7 gap-2 text-xs text-soft-gray/60 mb-2">
+                    <span>S</span>
+                    <span>M</span>
+                    <span>T</span>
+                    <span>W</span>
+                    <span>T</span>
+                    <span>F</span>
+                    <span>S</span>
+                  </div>
+
+                  {/* Week 1 */}
+                  <div className="grid grid-cols-7 gap-2">
+                    <div className="w-8 h-8 bg-soft-gray/20 rounded-lg"></div>
+                    <div className="w-8 h-8 bg-soft-gray/20 rounded-lg"></div>
+                    <div className="w-8 h-8 bg-neon-green rounded-lg flex items-center justify-center">
+                      <div className="w-2 h-2 bg-midnight-black rounded-full"></div>
+                    </div>
+                    <div className="w-8 h-8 bg-neon-green rounded-lg flex items-center justify-center">
+                      <div className="w-2 h-2 bg-midnight-black rounded-full"></div>
+                    </div>
+                    <div className="w-8 h-8 bg-neon-green rounded-lg flex items-center justify-center">
+                      <div className="w-2 h-2 bg-midnight-black rounded-full"></div>
+                    </div>
+                    <div className="w-8 h-8 bg-neon-green rounded-lg flex items-center justify-center">
+                      <div className="w-2 h-2 bg-midnight-black rounded-full"></div>
+                    </div>
+                    <div className="w-8 h-8 bg-neon-green rounded-lg flex items-center justify-center">
+                      <div className="w-2 h-2 bg-midnight-black rounded-full"></div>
+                    </div>
+                  </div>
+
+                  {/* Week 2 */}
+                  <div className="grid grid-cols-7 gap-2">
+                    <div className="w-8 h-8 bg-soft-gray/20 rounded-lg"></div>
+                    <div className="w-8 h-8 bg-neon-green rounded-lg flex items-center justify-center">
+                      <div className="w-2 h-2 bg-midnight-black rounded-full"></div>
+                    </div>
+                    <div className="w-8 h-8 bg-electric-blue rounded-lg flex items-center justify-center border-2 border-white">
+                      <div className="w-2 h-2 bg-midnight-black rounded-full"></div>
+                    </div>
+                    <div className="w-8 h-8 bg-soft-gray/20 rounded-lg border border-electric-blue/40"></div>
+                    <div className="w-8 h-8 bg-soft-gray/20 rounded-lg"></div>
+                    <div className="w-8 h-8 bg-soft-gray/20 rounded-lg"></div>
+                    <div className="w-8 h-8 bg-soft-gray/20 rounded-lg"></div>
                   </div>
                 </div>
 
-                {/* Active Challenge */}
-                <div className="p-4 space-y-3">
-                  <div className="bg-vibrant-pink/10 rounded-xl p-3 border border-vibrant-pink/20">
-                    <div className="flex justify-between items-start mb-2">
-                      <div className="text-vibrant-pink text-xs font-medium">Monthly Challenge</div>
-                      <div className="text-xs text-neon-green">🏆 Premium Prize</div>
-                    </div>
-                    <div className="text-white text-sm font-semibold mb-2">Complete reading goals</div>
-                    <div className="w-full bg-midnight-black/50 rounded-full h-2 mb-1">
-                      <div className="bg-vibrant-pink h-2 rounded-full" style={{ width: '67%' }}></div>
-                    </div>
-                    <div className="flex justify-between text-xs text-soft-gray/60">
-                      <span>67% complete</span>
-                      <span>8 days left</span>
-                    </div>
-                  </div>
-
-                  {/* Weekly Challenge */}
-                  <div className="bg-neon-green/10 rounded-xl p-3 border border-neon-green/20">
-                    <div className="flex justify-between items-start mb-2">
-                      <div className="text-neon-green text-xs font-medium">Weekly Streak</div>
-                      <div className="text-xs text-electric-blue">🎁 Reward</div>
-                    </div>
-                    <div className="text-white text-sm font-semibold mb-2">Daily reading streak</div>
-                    <div className="flex space-x-1 mb-1">
-                      <div className="w-4 h-4 bg-neon-green rounded-sm"></div>
-                      <div className="w-4 h-4 bg-neon-green rounded-sm"></div>
-                      <div className="w-4 h-4 bg-neon-green rounded-sm"></div>
-                      <div className="w-4 h-4 bg-neon-green rounded-sm"></div>
-                      <div className="w-4 h-4 bg-soft-gray/30 rounded-sm"></div>
-                      <div className="w-4 h-4 bg-soft-gray/30 rounded-sm"></div>
-                      <div className="w-4 h-4 bg-soft-gray/30 rounded-sm"></div>
-                    </div>
-                    <div className="text-xs text-soft-gray/60">4 day streak</div>
-                  </div>
-
-                  {/* Recent Achievement */}
-                  <div className="bg-electric-blue/10 rounded-xl p-3 border border-electric-blue/20 opacity-75">
-                    <div className="flex items-center space-x-2 mb-1">
-                      <span className="text-electric-blue text-xs">🏅</span>
-                      <div className="text-electric-blue text-xs font-medium">Achievement Earned</div>
-                    </div>
-                    <div className="text-white text-sm font-semibold">Reading Badge</div>
-                    <div className="text-xs text-soft-gray/60">Milestone reached</div>
-                  </div>
-                </div>
-
-                {/* Floating prize indicator */}
-                <div className="absolute -top-2 -right-2 w-8 h-8 bg-neon-green rounded-full flex items-center justify-center text-xs font-bold text-midnight-black animate-pulse">
-                  🎁
-                </div>
+                <p className="text-xs text-soft-gray/60 mt-6">Today's goal: Read 3 articles</p>
               </div>
             </div>
           </div>

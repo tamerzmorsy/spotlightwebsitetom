@@ -247,11 +247,44 @@ const Universities = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-electric-blue/20 to-neon-green/20 rounded-3xl p-16 h-96 flex items-center justify-center">
-              <div className="text-center text-soft-gray/60">
-                <BarChart3 className="w-16 h-16 mx-auto mb-4" />
-                <p className="text-lg">Engagement Analytics</p>
+            <div className="bg-gradient-to-br from-electric-blue/20 to-neon-green/20 rounded-3xl p-8 h-96 flex items-center justify-center overflow-hidden relative">
+              {/* Alumni Analytics Dashboard */}
+              <div className="w-full max-w-sm bg-midnight-black/80 rounded-2xl border border-neon-green/30 backdrop-blur-sm">
+                {/* Header */}
+                <div className="flex items-center justify-between p-4 border-b border-neon-green/20">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 bg-neon-green rounded-full"></div>
+                    <span className="text-neon-green font-semibold text-sm">Alumni Network</span>
+                  </div>
+                  <div className="text-electric-blue text-xs">●  ACTIVE</div>
+                </div>
+
+                {/* Alumni Stats Cards */}
+                <div className="p-4 space-y-3">
+                  <div className="bg-neon-green/10 rounded-lg p-3 border border-neon-green/20">
+                    <div className="text-neon-green text-xs font-medium">Active Alumni</div>
+                    <div className="text-white text-lg font-bold">12,847</div>
+                    <div className="text-electric-blue text-xs">78% retention rate</div>
+                  </div>
+
+                  <div className="bg-electric-blue/10 rounded-lg p-3 border border-electric-blue/20">
+                    <div className="text-electric-blue text-xs font-medium">Global Reach</div>
+                    <div className="text-white text-lg font-bold">45 Countries</div>
+                    <div className="text-neon-green text-xs">6 continents</div>
+                  </div>
+
+                  <div className="bg-vibrant-pink/10 rounded-lg p-3 border border-vibrant-pink/20">
+                    <div className="text-vibrant-pink text-xs font-medium">Avg. Reading Time</div>
+                    <div className="text-white text-lg font-bold">18 min</div>
+                    <div className="text-soft-gray/60 text-xs">Daily engagement</div>
+                  </div>
+                </div>
               </div>
+
+              {/* Floating Analytics Elements */}
+              <div className="absolute top-6 right-6 w-2 h-2 bg-electric-blue rounded-full animate-pulse"></div>
+              <div className="absolute bottom-8 left-8 w-3 h-3 bg-vibrant-pink rounded-full animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+              <div className="absolute top-1/3 right-4 w-1 h-1 bg-neon-green rounded-full animate-pulse" style={{ animationDelay: '3s' }}></div>
             </div>
           </div>
         </div>

@@ -160,11 +160,11 @@ const About = () => {
                   <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-electric-blue/20 hover:border-electric-blue/40 transition-all duration-300 group">
                     <div className="flex items-center space-x-3">
                       <div className="w-8 h-8 bg-electric-blue/20 rounded-full flex items-center justify-center group-hover:bg-electric-blue/30 transition-colors">
-                        <span className="text-xs font-bold text-electric-blue">T</span>
+                        <span className="text-xs font-bold text-electric-blue">C</span>
                       </div>
                       <div>
-                        <h4 className="text-sm font-semibold text-electric-blue">Truth & Transparency</h4>
-                        <p className="text-xs text-soft-gray/70">Authentic stories that matter</p>
+                        <h4 className="text-sm font-semibold text-electric-blue">Connection</h4>
+                        <p className="text-xs text-soft-gray/70">Bringing communities together</p>
                       </div>
                     </div>
                   </div>
@@ -172,11 +172,11 @@ const About = () => {
                   <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-neon-green/20 hover:border-neon-green/40 transition-all duration-300 group">
                     <div className="flex items-center space-x-3">
                       <div className="w-8 h-8 bg-neon-green/20 rounded-full flex items-center justify-center group-hover:bg-neon-green/30 transition-colors">
-                        <span className="text-xs font-bold text-neon-green">E</span>
+                        <span className="text-xs font-bold text-neon-green">P</span>
                       </div>
                       <div>
-                        <h4 className="text-sm font-semibold text-neon-green">Empowerment</h4>
-                        <p className="text-xs text-soft-gray/70">Knowledge that inspires action</p>
+                        <h4 className="text-sm font-semibold text-neon-green">Purpose</h4>
+                        <p className="text-xs text-soft-gray/70">Journalism with deeper meaning</p>
                       </div>
                     </div>
                   </div>
@@ -184,11 +184,11 @@ const About = () => {
                   <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-electric-blue/20 hover:border-electric-blue/40 transition-all duration-300 group">
                     <div className="flex items-center space-x-3">
                       <div className="w-8 h-8 bg-electric-blue/20 rounded-full flex items-center justify-center group-hover:bg-electric-blue/30 transition-colors">
-                        <span className="text-xs font-bold text-electric-blue">I</span>
+                        <span className="text-xs font-bold text-electric-blue">G</span>
                       </div>
                       <div>
-                        <h4 className="text-sm font-semibold text-electric-blue">Innovation</h4>
-                        <p className="text-xs text-soft-gray/70">Reimagining what's possible</p>
+                        <h4 className="text-sm font-semibold text-electric-blue">Growth</h4>
+                        <p className="text-xs text-soft-gray/70">Expanding perspectives daily</p>
                       </div>
                     </div>
                   </div>

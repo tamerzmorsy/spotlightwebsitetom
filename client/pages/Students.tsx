@@ -189,10 +189,72 @@ const Students = () => {
 
           {/* Feature 2: MyStats */}
           <div className="grid md:grid-cols-2 gap-16 items-center mb-32">
-            <div className="bg-gradient-to-br from-neon-green/20 to-electric-blue/20 rounded-3xl p-16 h-96 flex items-center justify-center order-2 md:order-1">
-              <div className="text-center text-soft-gray/60">
-                <BarChart3 className="w-16 h-16 mx-auto mb-4" />
-                <p className="text-lg">Reading Analytics</p>
+            <div className="bg-gradient-to-br from-neon-green/20 to-electric-blue/20 rounded-3xl p-6 h-96 flex flex-col justify-center order-2 md:order-1 overflow-hidden">
+              {/* MyStats Dashboard */}
+              <div className="bg-white/95 rounded-2xl p-6 shadow-xl">
+                {/* Tab Navigation */}
+                <div className="flex space-x-4 mb-6 bg-gray-100 rounded-lg p-1">
+                  <div className="flex-1 text-center py-2 bg-blue-500 text-white rounded-md text-sm font-medium">📊 Stats</div>
+                  <div className="flex-1 text-center py-2 text-gray-500 text-sm">🏆 Leaderboards</div>
+                  <div className="flex-1 text-center py-2 text-gray-500 text-sm">🎯 Custom</div>
+                  <div className="flex-1 text-center py-2 text-gray-500 text-sm">🎖️ Badges</div>
+                </div>
+
+                {/* Stats Grid */}
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                  <div className="border-l-4 border-blue-500 pl-3">
+                    <div className="text-xs text-gray-500 mb-1">📰 Daily Articles</div>
+                    <div className="text-xl font-bold text-gray-800">2 / 3</div>
+                    <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+                      <div className="bg-blue-500 h-2 rounded-full" style={{width: '66%'}}></div>
+                    </div>
+                  </div>
+
+                  <div className="border-l-4 border-green-500 pl-3">
+                    <div className="text-xs text-gray-500 mb-1">🕐 Daily Reading</div>
+                    <div className="text-xl font-bold text-gray-800">15 / 30min</div>
+                    <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+                      <div className="bg-green-500 h-2 rounded-full" style={{width: '50%'}}></div>
+                    </div>
+                  </div>
+
+                  <div className="border-l-4 border-orange-500 pl-3">
+                    <div className="text-xs text-gray-500 mb-1">📈 Monthly Articles</div>
+                    <div className="text-xl font-bold text-gray-800">45 / 80</div>
+                    <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+                      <div className="bg-orange-500 h-2 rounded-full" style={{width: '56%'}}></div>
+                    </div>
+                  </div>
+
+                  <div className="border-l-4 border-teal-500 pl-3">
+                    <div className="text-xs text-gray-500 mb-1">⏱️ Monthly Time</div>
+                    <div className="text-xl font-bold text-gray-800">320 / 500min</div>
+                    <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+                      <div className="bg-teal-500 h-2 rounded-full" style={{width: '64%'}}></div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Additional Stats */}
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="bg-gray-50 rounded-lg p-3 text-center">
+                    <div className="text-xs text-gray-500 mb-1">Current Streak</div>
+                    <div className="text-lg font-bold text-gray-800">14 days</div>
+                    <div className="text-xs text-gray-400">25 days last month</div>
+                  </div>
+
+                  <div className="bg-gray-50 rounded-lg p-3 text-center">
+                    <div className="text-xs text-gray-500 mb-1">Max Streak</div>
+                    <div className="text-lg font-bold text-gray-800">28 days</div>
+                    <div className="text-xs text-gray-400">Personal best</div>
+                  </div>
+
+                  <div className="bg-gray-50 rounded-lg p-3 text-center">
+                    <div className="text-xs text-gray-500 mb-1">Articles Shared</div>
+                    <div className="text-lg font-bold text-gray-800">45</div>
+                    <div className="text-xs text-gray-400">12 last month</div>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="order-1 md:order-2">

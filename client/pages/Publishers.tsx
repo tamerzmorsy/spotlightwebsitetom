@@ -125,10 +125,57 @@ const Publishers = () => {
                 View revenue model
               </Button>
             </div>
-            <div className="bg-gradient-to-br from-neon-green/20 to-electric-blue/20 rounded-3xl p-16 h-96 flex items-center justify-center">
-              <div className="text-center text-soft-gray/60">
-                <DollarSign className="w-16 h-16 mx-auto mb-4" />
-                <p className="text-lg">Revenue Dashboard</p>
+            <div className="bg-gradient-to-br from-neon-green/20 to-electric-blue/20 rounded-3xl p-12 h-96 relative overflow-hidden">
+              {/* Monopoly money pattern background */}
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute top-4 left-4 text-neon-green font-bold text-2xl">$500</div>
+                <div className="absolute top-4 right-4 text-electric-blue font-bold text-xl">$100</div>
+                <div className="absolute bottom-4 left-4 text-vibrant-pink font-bold text-xl">$50</div>
+                <div className="absolute bottom-4 right-4 text-neon-green font-bold text-lg">$20</div>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-electric-blue font-bold text-3xl opacity-50">$1000</div>
+              </div>
+
+              {/* Monopoly Guy Character */}
+              <div className="relative z-10 h-full flex flex-col items-center justify-center">
+                {/* Top Hat */}
+                <div className="relative mb-2">
+                  <div className="w-16 h-12 bg-midnight-black rounded-t-lg border-2 border-soft-gray/30"></div>
+                  <div className="w-20 h-3 bg-midnight-black rounded-full border-2 border-soft-gray/30 -mt-1"></div>
+                </div>
+
+                {/* Head */}
+                <div className="relative">
+                  <div className="w-14 h-14 bg-soft-gray rounded-full border-2 border-soft-gray/50 relative">
+                    {/* Monocle */}
+                    <div className="absolute -right-2 top-3 w-6 h-6 border-2 border-electric-blue rounded-full bg-electric-blue/10"></div>
+                    {/* Eyes */}
+                    <div className="absolute top-4 left-3 w-2 h-2 bg-midnight-black rounded-full"></div>
+                    <div className="absolute top-4 right-3 w-2 h-2 bg-midnight-black rounded-full"></div>
+                    {/* Mustache */}
+                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-8 h-2 bg-midnight-black rounded-full"></div>
+                  </div>
+                </div>
+
+                {/* Body with suit */}
+                <div className="w-12 h-16 bg-midnight-black rounded-lg mt-2 relative">
+                  {/* Bow tie */}
+                  <div className="absolute top-1 left-1/2 transform -translate-x-1/2 w-4 h-2 bg-vibrant-pink rounded"></div>
+                  {/* Vest */}
+                  <div className="absolute top-3 left-1 right-1 bottom-1 bg-electric-blue/20 rounded"></div>
+                </div>
+
+                {/* Money bag */}
+                <div className="mt-4 relative">
+                  <div className="w-8 h-6 bg-neon-green/30 rounded-full border-2 border-neon-green/50 flex items-center justify-center">
+                    <DollarSign className="w-4 h-4 text-neon-green" />
+                  </div>
+                </div>
+
+                {/* Text */}
+                <div className="mt-4 text-center">
+                  <p className="text-lg font-display font-bold text-electric-blue mb-1">Revenue Dashboard</p>
+                  <p className="text-sm text-soft-gray/70">70% to Publishers</p>
+                </div>
               </div>
             </div>
           </div>

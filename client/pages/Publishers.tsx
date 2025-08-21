@@ -114,55 +114,12 @@ const Publishers = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-neon-green/20 to-electric-blue/20 rounded-3xl p-8 h-96 relative overflow-hidden">
-              {/* Digital Wallet Interface */}
-              <div className="relative z-10 h-full flex flex-col">
-                {/* Wallet Header */}
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-8 h-8 bg-electric-blue/20 rounded-lg flex items-center justify-center">
-                      <DollarSign className="w-5 h-5 text-electric-blue" />
-                    </div>
-                    <span className="text-sm font-medium text-soft-gray">Revenue Wallet</span>
-                  </div>
-                  <div className="w-2 h-2 bg-neon-green rounded-full animate-pulse"></div>
-                </div>
-
-                {/* Main Balance Display */}
-                <div className="text-center mb-8">
-                  <p className="text-sm text-soft-gray/60 mb-1">Monthly Revenue</p>
-                  <p className="text-4xl font-display font-bold text-neon-green mb-2">$24,750</p>
-                  <p className="text-xs text-soft-gray/70">↗️ +18.5% from last month</p>
-                </div>
-
-                {/* Stacked Bills Animation */}
-                <div className="flex justify-center mb-6">
-                  <div className="relative">
-                    {/* Stack of bills */}
-                    <div className="absolute w-16 h-10 bg-neon-green/30 rounded border border-neon-green/50 transform -rotate-3 animate-float" style={{animationDelay: '0s'}}></div>
-                    <div className="absolute w-16 h-10 bg-electric-blue/30 rounded border border-electric-blue/50 transform rotate-2 animate-float" style={{animationDelay: '0.5s'}}></div>
-                    <div className="w-16 h-10 bg-vibrant-pink/30 rounded border border-vibrant-pink/50 transform rotate-1 animate-float" style={{animationDelay: '1s'}}></div>
-
-                    {/* Floating coins */}
-                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-neon-green/40 rounded-full border-2 border-neon-green/60 flex items-center justify-center animate-bounce" style={{animationDelay: '0.2s'}}>
-                      <span className="text-xs text-neon-green font-bold">$</span>
-                    </div>
-                    <div className="absolute -bottom-1 -left-2 w-4 h-4 bg-electric-blue/40 rounded-full border border-electric-blue/60 animate-bounce" style={{animationDelay: '0.8s'}}></div>
-                  </div>
-                </div>
-
-                {/* Revenue Breakdown */}
-                <div className="space-y-3 mt-auto">
-                  <div className="flex justify-between items-center bg-white/5 rounded-lg p-3">
-                    <span className="text-sm text-soft-gray/80">Your Share (70%)</span>
-                    <span className="text-sm font-semibold text-neon-green">$17,325</span>
-                  </div>
-                  <div className="flex justify-between items-center bg-white/5 rounded-lg p-3">
-                    <span className="text-sm text-soft-gray/80">Platform Fee</span>
-                    <span className="text-sm font-semibold text-soft-gray/60">$7,425</span>
-                  </div>
-                </div>
-              </div>
+            <div className="bg-gradient-to-br from-neon-green/20 to-electric-blue/20 rounded-3xl overflow-hidden h-96 relative">
+              <img
+                src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80"
+                alt="Students reading news on their mobile phones"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
 

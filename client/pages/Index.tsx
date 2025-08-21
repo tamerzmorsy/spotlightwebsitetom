@@ -164,8 +164,8 @@ const Index = () => {
                       <div className="text-electric-blue text-xl font-bold">12</div>
                       <div className="text-xs text-soft-gray/60">Max</div>
                     </div>
-                    <div className="bg-vibrant-pink/10 rounded-lg p-2 border border-vibrant-pink/20">
-                      <div className="text-vibrant-pink text-xl font-bold">89%</div>
+                    <div className="bg-electric-blue/10 rounded-lg p-2 border border-electric-blue/20">
+                      <div className="text-electric-blue text-xl font-bold">89%</div>
                       <div className="text-xs text-soft-gray/60">Read</div>
                     </div>
                   </div>
@@ -182,17 +182,17 @@ const Index = () => {
                   </div>
 
                   {/* Goal Progress */}
-                  <div className="bg-vibrant-pink/10 rounded-lg p-2 border border-vibrant-pink/20">
-                    <div className="text-xs text-vibrant-pink font-medium mb-1">Weekly Goal</div>
+                  <div className="bg-electric-blue/10 rounded-lg p-2 border border-electric-blue/20">
+                    <div className="text-xs text-electric-blue font-medium mb-1">Weekly Goal</div>
                     <div className="w-full bg-midnight-black/50 rounded-full h-2">
-                      <div className="bg-vibrant-pink h-2 rounded-full" style={{ width: '78%' }}></div>
+                      <div className="bg-electric-blue h-2 rounded-full" style={{ width: '78%' }}></div>
                     </div>
                     <div className="text-xs text-soft-gray/60 mt-1">78% complete</div>
                   </div>
                 </div>
 
                 {/* Floating rewards indicator */}
-                <div className="absolute -top-2 -right-2 w-6 h-6 bg-vibrant-pink rounded-full flex items-center justify-center text-xs font-bold text-midnight-black">
+                <div className="absolute -top-2 -right-2 w-6 h-6 bg-electric-blue rounded-full flex items-center justify-center text-xs font-bold text-midnight-black">
                   🏆
                 </div>
               </div>
@@ -213,7 +213,7 @@ const Index = () => {
             <div>
               <h3 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8 leading-tight">
                 One subscription. <br />
-                <span className="text-vibrant-pink">All access.</span>
+                <span className="text-electric-blue">All access.</span>
               </h3>
               <p className="text-xl text-soft-gray/70 mb-8 leading-relaxed">
                 Break through paywalls with a single subscription. Access

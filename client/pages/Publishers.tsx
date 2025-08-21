@@ -57,7 +57,7 @@ const Publishers = () => {
 
           {/* Main Headline */}
           <h1 className="text-6xl sm:text-7xl lg:text-8xl font-display font-bold mb-8 leading-[0.85] tracking-tight">
-            Revenue fading?
+            Aging Readership? Shedding Subscribers?
             <br />
             <span className="text-neon-green">Spotlight brings the win.</span>
           </h1>
@@ -74,7 +74,7 @@ const Publishers = () => {
                 size="lg"
                 className="bg-neon-green text-midnight-black hover:bg-lime-400 font-semibold text-xl px-12 py-6 rounded-full"
               >
-                Become a partner*
+                Become a partner
               </Button>
             </Link>
           </div>
@@ -93,9 +93,9 @@ const Publishers = () => {
           <div className="grid md:grid-cols-2 gap-16 items-center mb-32">
             <div>
               <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8 leading-tight">
-                Keep more of
+                Fresh Audience.
                 <br />
-                what you <span className="text-neon-green">earn.</span>
+                <span className="text-neon-green">Incremental Readership.</span>
               </h2>
               <p className="text-xl text-soft-gray/70 mb-8 leading-relaxed">
                 70% revenue share from subscriptions and advertising. No complex
@@ -241,9 +241,9 @@ const Publishers = () => {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8 leading-tight">
-                Zero tech headaches.
+                Maximum reach.
                 <br />
-                <span className="text-neon-green">Maximum reach.</span>
+                <span className="text-neon-green">Only Upside.</span>
               </h2>
               <p className="text-xl text-soft-gray/70 mb-8 leading-relaxed">
                 We handle RSS feeds, app integration, and branding. You focus on
@@ -371,8 +371,8 @@ const Publishers = () => {
       <section className="py-24" style={{ backgroundColor: '#1B9900' }}>
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-5xl sm:text-6xl font-display font-bold text-white mb-8">
-            Ready to grow <br />
-            <span style={{ color: '#39FF14' }}>your revenue</span>?
+            Hundreds of publishers already signed. <br />
+            <span style={{ color: '#39FF14' }}>Don't get left behind.</span>
           </h2>
           <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
             Join the platform that's helping publishers thrive in the digital
@@ -397,7 +397,6 @@ const Publishers = () => {
             </Button>
           </div>
           <p className="text-sm text-soft-gray/50 mt-8">
-            * Standard partnership terms apply.
           </p>
         </div>
       </section>

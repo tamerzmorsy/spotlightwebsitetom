@@ -56,7 +56,7 @@ const Publishers = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-display font-bold mb-8 leading-[0.85] tracking-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-8 leading-[0.85] tracking-tight">
             Aging Readership? Shedding Subscribers? <span className="text-neon-green">Spotlight brings the win.</span>
           </h1>
 

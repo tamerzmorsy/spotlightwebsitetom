@@ -68,7 +68,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
           <Link to="/" className="flex items-center z-50" onClick={closeMenu}>
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F57f3921c477141799725b87f2761d2c2%2F33482e5d334548d19dc3d9d06ed75615?format=webp&width=800"
-              alt="Spotlight News"
+              alt="SpotlightNews"
               className="h-8 w-auto"
               style={{ filter: 'brightness(0) saturate(100%) invert(50%) sepia(100%) saturate(2000%) hue-rotate(154deg) brightness(119%) contrast(119%)' }}
             />

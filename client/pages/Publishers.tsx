@@ -292,13 +292,6 @@ const Publishers = () => {
                 Become a partner
               </Button>
             </Link>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-[#1B9900] font-semibold text-lg px-10 py-5 rounded-full"
-            >
-              Download media kit
-            </Button>
           </div>
           <p className="text-sm text-soft-gray/50 mt-8">
           </p>

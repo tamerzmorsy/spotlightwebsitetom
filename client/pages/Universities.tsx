@@ -77,9 +77,7 @@ const Universities = () => {
           <div className="grid md:grid-cols-2 gap-16 items-center mb-32">
             <div>
               <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8 leading-tight">
-                One platform.
-                <br />
-                <span className="text-vibrant-pink">Thousands of students.</span>
+                Build smarter students <span className="text-neon-green">with better news.</span>
               </h2>
               <p className="text-xl text-soft-gray/70 mb-8 leading-relaxed">
                 Build smarter students with better news.

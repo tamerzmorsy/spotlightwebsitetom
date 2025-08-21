@@ -125,7 +125,7 @@ const About = () => {
                 {/* Vision statement */}
                 <div className="mt-6 text-center">
                   <p className="text-sm text-soft-gray/80 leading-relaxed">
-                    Creating the future where students discover, engage with, and support quality journalism on their terms.
+                    Building a new generation of readers and sustainable revenue streams for publishers.
                   </p>
                 </div>
               </div>

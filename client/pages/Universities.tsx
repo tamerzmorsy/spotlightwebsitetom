@@ -55,7 +55,7 @@ const Universities = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-display font-bold mb-8 leading-[0.85] tracking-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-8 leading-[0.85] tracking-tight">
             Hundreds of Publications in One App.
             <br />
             <span className="text-vibrant-pink">All students, one affordable subscription.</span>

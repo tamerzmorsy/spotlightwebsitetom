@@ -143,30 +143,6 @@ const Publishers = () => {
                 journalism. University partnerships drive bulk subscriptions and
                 steady revenue streams.
               </p>
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
-                  <span className="text-soft-gray/80">250K+ active users</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
-                  <span className="text-soft-gray/80">
-                    500+ university partnerships
-                  </span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
-                  <span className="text-soft-gray/80">
-                    High engagement rates
-                  </span>
-                </div>
-              </div>
-              <Button
-                variant="outline"
-                className="border-neon-green text-neon-green hover:bg-neon-green hover:text-midnight-black font-medium px-8 py-4 rounded-full"
-              >
-                See audience data
-              </Button>
             </div>
           </div>
 

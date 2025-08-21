@@ -172,12 +172,6 @@ const Publishers = () => {
                     Equal platform visibility
                   </span>
                 </div>
-                <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
-                  <span className="text-soft-gray/80">
-                    24/7 technical support
-                  </span>
-                </div>
               </div>
             </div>
             <div className="bg-gradient-to-br from-neon-green/20 to-electric-blue/20 rounded-3xl overflow-hidden h-96 relative">

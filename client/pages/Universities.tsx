@@ -84,27 +84,33 @@ const Universities = () => {
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
+                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
                   <span className="text-soft-gray/80">
-                    Track Usage & Student Growth
+                    Access to hundreds of trusted publications in one place
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
+                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
                   <span className="text-soft-gray/80">
-                    University branding customization
+                    Strengthens news literacy and critical thinking
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
+                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
                   <span className="text-soft-gray/80">
-                    Zero ongoing maintenance required
+                    Supports education in and out of the classroom
+                  </span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
+                  <span className="text-soft-gray/80">
+                    Fosters civic engagement and informed citizenship
+                  </span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
+                  <span className="text-soft-gray/80">
+                    Affordable, campus-wide access for every student
                   </span>
                 </div>
               </div>

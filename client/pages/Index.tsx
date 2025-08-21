@@ -350,13 +350,13 @@ const Index = () => {
 
             {/* Universities Card */}
             <div className="group relative">
-              <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 h-80 flex flex-col hover:border-vibrant-pink/30 hover:bg-gray-800/40 transition-all duration-300">
+              <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 h-80 flex flex-col hover:border-electric-blue/30 hover:bg-gray-800/40 transition-all duration-300">
                 <div className="flex-1">
                   <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 bg-vibrant-pink/20 rounded-xl flex items-center justify-center mr-4">
-                      <GraduationCap className="w-6 h-6 text-vibrant-pink" />
+                    <div className="w-12 h-12 bg-electric-blue/20 rounded-xl flex items-center justify-center mr-4">
+                      <GraduationCap className="w-6 h-6 text-electric-blue" />
                     </div>
-                    <span className="text-neon-green text-sm font-medium">For Colleges/Universities</span>
+                    <span className="text-electric-blue text-sm font-medium">For Colleges/Universities</span>
                   </div>
 
                   <h3 className="text-2xl font-display font-bold text-white mb-4">
@@ -370,7 +370,7 @@ const Index = () => {
                 </div>
 
                 <Link to="/universities" className="w-full">
-                  <Button className="w-full bg-vibrant-pink text-black hover:bg-vibrant-pink/90 font-medium py-3 rounded-xl transition-colors">
+                  <Button className="w-full bg-electric-blue text-black hover:bg-electric-blue/90 font-medium py-3 rounded-xl transition-colors">
                     Contact Us
                   </Button>
                 </Link>

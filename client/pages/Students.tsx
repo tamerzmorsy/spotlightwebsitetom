@@ -189,74 +189,52 @@ const Students = () => {
 
           {/* Feature 2: MyStats */}
           <div className="grid md:grid-cols-2 gap-16 items-center mb-32">
-            <div className="bg-gradient-to-br from-neon-green/20 to-electric-blue/20 rounded-3xl p-6 flex items-center justify-center order-2 md:order-1">
-              {/* Stats Dashboard */}
-              <div className="bg-white rounded-2xl p-8 shadow-xl w-full max-w-2xl">
-                {/* Tab Navigation */}
-                <div className="flex bg-gray-50 rounded-xl p-1 mb-8">
-                  <div className="flex-1 text-center py-3 px-4 bg-white rounded-lg shadow-sm">
-                    <span className="text-blue-600 text-sm font-semibold">📊 Stats</span>
-                  </div>
-                  <div className="flex-1 text-center py-3 px-4">
-                    <span className="text-gray-500 text-sm font-medium">🏆 Leaderboards</span>
-                  </div>
-                  <div className="flex-1 text-center py-3 px-4">
-                    <span className="text-gray-500 text-sm font-medium">⚡ Custom</span>
-                  </div>
-                  <div className="flex-1 text-center py-3 px-4">
-                    <span className="text-gray-500 text-sm font-medium">🏅 Badges</span>
-                  </div>
+            <div className="bg-gradient-to-br from-neon-green/20 to-electric-blue/20 rounded-3xl p-8 h-96 flex items-center justify-center order-2 md:order-1">
+              {/* Compact Stats Dashboard */}
+              <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 w-full max-w-md shadow-lg">
+                {/* Compact Tab Navigation */}
+                <div className="flex bg-gray-100 rounded-lg p-1 mb-4">
+                  <div className="flex-1 text-center py-1.5 px-2 bg-white rounded-md text-xs font-medium text-blue-600">📊 Stats</div>
+                  <div className="flex-1 text-center py-1.5 px-2 text-xs text-gray-500">🏆 Boards</div>
+                  <div className="flex-1 text-center py-1.5 px-2 text-xs text-gray-500">⚡ Custom</div>
+                  <div className="flex-1 text-center py-1.5 px-2 text-xs text-gray-500">🏅 Badges</div>
                 </div>
 
-                {/* Stats Grid */}
-                <div className="grid grid-cols-2 gap-6">
+                {/* Compact Stats Grid */}
+                <div className="grid grid-cols-2 gap-3">
                   {/* Daily Articles */}
-                  <div className="bg-white border-l-4 border-blue-500 p-5 rounded-lg shadow-sm">
-                    <div className="flex items-center text-gray-600 text-sm mb-3">
-                      <span className="mr-2">📰</span>
-                      <span>Daily</span>
-                      <br />
-                      <span>Articles</span>
-                    </div>
-                    <div className="text-3xl font-bold text-gray-900 mb-3">2 / 3</div>
-                    <div className="w-full bg-gray-100 rounded-full h-2">
-                      <div className="bg-blue-500 h-2 rounded-full transition-all duration-500" style={{width: '67%'}}></div>
+                  <div className="border-l-4 border-blue-500 bg-blue-50/50 p-3 rounded">
+                    <div className="text-blue-600 text-xs mb-1">📰 Daily Articles</div>
+                    <div className="text-xl font-bold text-gray-900 mb-2">2 / 3</div>
+                    <div className="w-full bg-gray-200 rounded-full h-1">
+                      <div className="bg-blue-500 h-1 rounded-full" style={{width: '67%'}}></div>
                     </div>
                   </div>
 
                   {/* Daily Reading */}
-                  <div className="bg-white border-l-4 border-green-500 p-5 rounded-lg shadow-sm">
-                    <div className="flex items-center text-gray-600 text-sm mb-3">
-                      <span className="mr-2">⏱️</span>
-                      <span>Daily<br />Reading</span>
-                    </div>
-                    <div className="text-3xl font-bold text-gray-900 mb-3">15 /<br />30min</div>
-                    <div className="w-full bg-gray-100 rounded-full h-2">
-                      <div className="bg-green-500 h-2 rounded-full transition-all duration-500" style={{width: '50%'}}></div>
+                  <div className="border-l-4 border-green-500 bg-green-50/50 p-3 rounded">
+                    <div className="text-green-600 text-xs mb-1">⏱️ Daily Reading</div>
+                    <div className="text-xl font-bold text-gray-900 mb-2">15 / 30min</div>
+                    <div className="w-full bg-gray-200 rounded-full h-1">
+                      <div className="bg-green-500 h-1 rounded-full" style={{width: '50%'}}></div>
                     </div>
                   </div>
 
                   {/* Monthly Articles */}
-                  <div className="bg-white border-l-4 border-orange-500 p-5 rounded-lg shadow-sm">
-                    <div className="flex items-center text-gray-600 text-sm mb-3">
-                      <span className="mr-2">📊</span>
-                      <span>Monthly<br />Articles</span>
-                    </div>
-                    <div className="text-3xl font-bold text-gray-900 mb-3">45 / 80</div>
-                    <div className="w-full bg-gray-100 rounded-full h-2">
-                      <div className="bg-orange-500 h-2 rounded-full transition-all duration-500" style={{width: '56%'}}></div>
+                  <div className="border-l-4 border-orange-500 bg-orange-50/50 p-3 rounded">
+                    <div className="text-orange-600 text-xs mb-1">📊 Monthly Articles</div>
+                    <div className="text-xl font-bold text-gray-900 mb-2">45 / 80</div>
+                    <div className="w-full bg-gray-200 rounded-full h-1">
+                      <div className="bg-orange-500 h-1 rounded-full" style={{width: '56%'}}></div>
                     </div>
                   </div>
 
                   {/* Monthly Time */}
-                  <div className="bg-white border-l-4 border-teal-500 p-5 rounded-lg shadow-sm">
-                    <div className="flex items-center text-gray-600 text-sm mb-3">
-                      <span className="mr-2">⏰</span>
-                      <span>Monthly<br />Time</span>
-                    </div>
-                    <div className="text-3xl font-bold text-gray-900 mb-3">320 /<br />500min</div>
-                    <div className="w-full bg-gray-100 rounded-full h-2">
-                      <div className="bg-teal-500 h-2 rounded-full transition-all duration-500" style={{width: '64%'}}></div>
+                  <div className="border-l-4 border-teal-500 bg-teal-50/50 p-3 rounded">
+                    <div className="text-teal-600 text-xs mb-1">⏰ Monthly Time</div>
+                    <div className="text-xl font-bold text-gray-900 mb-2">320 / 500min</div>
+                    <div className="w-full bg-gray-200 rounded-full h-1">
+                      <div className="bg-teal-500 h-1 rounded-full" style={{width: '64%'}}></div>
                     </div>
                   </div>
                 </div>

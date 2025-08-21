@@ -121,117 +121,13 @@ const Students = () => {
               </div>
             </div>
             <div className="bg-gradient-to-br from-electric-blue/20 to-neon-green/20 rounded-3xl p-6 h-96 flex items-center justify-center overflow-hidden">
-              {/* Mobile Feed Interface - Interactive Design */}
-              <div className="w-full max-w-xs bg-midnight-black rounded-3xl border border-electric-blue/30 backdrop-blur-sm relative overflow-hidden group hover:border-electric-blue/50 transition-all duration-300">
-                {/* Pull to refresh indicator */}
-                <div className="absolute top-1 left-1/2 transform -translate-x-1/2 w-8 h-1 bg-electric-blue/40 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-                {/* Mobile Header with Interactive Icons */}
-                <div className="flex justify-between items-center px-4 py-3 border-b border-electric-blue/20">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-electric-blue rounded-md flex items-center justify-center hover:bg-electric-blue/80 transition-colors cursor-pointer">
-                      <span className="text-midnight-black text-xs">📰</span>
-                    </div>
-                    <span className="text-electric-blue font-bold text-lg">MyNews</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-neon-green/20 rounded-full flex items-center justify-center hover:bg-neon-green/30 transition-colors cursor-pointer relative">
-                      <span className="text-xs">🔔</span>
-                      <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-                    </div>
-                    <div className="w-6 h-6 bg-electric-blue/20 rounded-full flex items-center justify-center hover:bg-electric-blue/30 transition-colors cursor-pointer">
-                      <span className="text-xs">🏆</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Featured Article with Interactive Elements */}
-                <div className="p-4">
-                  <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden mb-4 shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer">
-                    <div className="h-32 relative overflow-hidden bg-gradient-to-br from-electric-blue/10 to-neon-green/10">
-                      {/* Modern article header with gradient background */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-electric-blue/20 via-transparent to-neon-green/15"></div>
-
-                      {/* Breaking news badge with pulse */}
-                      <div className="absolute top-3 left-3 bg-red-500 text-white text-xs px-2 py-1 rounded-full font-semibold animate-pulse">
-                        BREAKING
-                      </div>
-
-                      {/* Interactive action buttons */}
-                      <div className="absolute top-3 right-3 flex space-x-2">
-                        <div className="w-6 h-6 bg-black/40 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-black/60 transition-colors cursor-pointer">
-                          <span className="text-xs">📤</span>
-                        </div>
-                        <div className="w-6 h-6 bg-black/40 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-black/60 transition-colors cursor-pointer">
-                          <span className="text-xs">🔖</span>
-                        </div>
-                      </div>
-
-                      {/* Large news icon/graphic with hover effect */}
-                      <div className="absolute bottom-3 left-3 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/20 hover:bg-white/20 transition-colors">
-                        <span className="text-2xl">📱</span>
-                      </div>
-
-                      {/* Swipe indicators */}
-                      <div className="absolute left-2 top-1/2 transform -translate-y-1/2 opacity-50">
-                        <div className="w-1 h-6 bg-white/30 rounded-full"></div>
-                      </div>
-                      <div className="absolute right-2 top-1/2 transform -translate-y-1/2 opacity-50">
-                        <div className="w-1 h-6 bg-white/30 rounded-full"></div>
-                      </div>
-                    </div>
-
-                    <div className="p-4">
-                      <div className="text-electric-blue text-sm font-medium mb-2 hover:text-electric-blue/80 transition-colors cursor-pointer">TechCrunch</div>
-                      <div className="text-white text-sm font-semibold leading-tight mb-2 hover:text-electric-blue transition-colors cursor-pointer">
-                        Student News App Raises $50M to Transform Campus Media
-                      </div>
-                      <div className="text-gray-400 text-xs mb-3">By Sarah Chen</div>
-                      <div className="text-gray-300 text-xs leading-relaxed mb-3">
-                        Revolutionary platform connects college students with personalized news feeds, challenging traditional media consumption...
-                      </div>
-
-                      {/* Interactive engagement bar */}
-                      <div className="flex justify-between items-center mb-3">
-                        <div className="flex items-center space-x-3">
-                          <button className="flex items-center space-x-1 hover:text-red-400 transition-colors group">
-                            <span className="text-xs group-hover:animate-pulse">❤️</span>
-                            <span className="text-gray-400 text-xs">127</span>
-                          </button>
-                          <button className="flex items-center space-x-1 hover:text-electric-blue transition-colors">
-                            <span className="text-xs">💬</span>
-                            <span className="text-gray-400 text-xs">23</span>
-                          </button>
-                          <button className="flex items-center space-x-1 hover:text-neon-green transition-colors">
-                            <span className="text-xs">🔄</span>
-                            <span className="text-gray-400 text-xs">45</span>
-                          </button>
-                        </div>
-                      </div>
-
-                      <div className="flex justify-between items-center">
-                        <div className="text-gray-400 text-xs">2 hours ago • 3 min read</div>
-                        <div className="flex items-center space-x-1">
-                          <span className="text-yellow-400 text-xs">⭐</span>
-                          <span className="text-gray-400 text-xs">4.8</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Interactive navigation dots */}
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-1">
-                  <div className="w-2 h-2 bg-electric-blue rounded-full cursor-pointer hover:scale-125 transition-transform"></div>
-                  <div className="w-2 h-2 bg-gray-600 rounded-full cursor-pointer hover:bg-gray-400 hover:scale-125 transition-all"></div>
-                  <div className="w-2 h-2 bg-gray-600 rounded-full cursor-pointer hover:bg-gray-400 hover:scale-125 transition-all"></div>
-                  <div className="w-2 h-2 bg-gray-600 rounded-full cursor-pointer hover:bg-gray-400 hover:scale-125 transition-all"></div>
-                </div>
-
-                {/* Swipe gesture hint */}
-                <div className="absolute bottom-16 right-4 text-gray-500 text-xs opacity-70 animate-bounce">
-                  Swipe →
-                </div>
+              {/* News Feed Interface with User's Image */}
+              <div className="w-full h-full rounded-2xl overflow-hidden border border-electric-blue/30 hover:border-electric-blue/50 transition-all duration-300">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Ff9a2587e1b874b6e9d34bfb6b703b455%2F39b6125179894b93bb77ec51c48749c3?format=webp&width=800"
+                  alt="News feed interface"
+                  className="w-full h-full object-cover rounded-2xl"
+                />
               </div>
             </div>
           </div>

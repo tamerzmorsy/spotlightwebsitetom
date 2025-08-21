@@ -220,7 +220,7 @@ const Index = () => {
                 premium content from hundreds of publications.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-vibrant-pink/20 to-neon-green/20 rounded-3xl p-8 h-80 flex items-center justify-center">
+            <div className="bg-gradient-to-br from-electric-blue/20 to-neon-green/20 rounded-3xl p-8 h-80 flex items-center justify-center">
               <div className="grid grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-lg">
                 {/* Forbes */}
                 <div className="bg-midnight-black/50 rounded-xl p-4 flex items-center justify-center border border-electric-blue/20 hover:border-electric-blue/40 transition-colors">
@@ -228,8 +228,8 @@ const Index = () => {
                 </div>
 
                 {/* TIME */}
-                <div className="bg-midnight-black/50 rounded-xl p-4 flex items-center justify-center border border-vibrant-pink/20 hover:border-vibrant-pink/40 transition-colors">
-                  <span className="text-vibrant-pink font-bold text-lg">TIME</span>
+                <div className="bg-midnight-black/50 rounded-xl p-4 flex items-center justify-center border border-electric-blue/20 hover:border-electric-blue/40 transition-colors">
+                  <span className="text-electric-blue font-bold text-lg">TIME</span>
                 </div>
 
                 {/* Bloomberg */}
@@ -243,8 +243,8 @@ const Index = () => {
                 </div>
 
                 {/* Semafor */}
-                <div className="bg-midnight-black/50 rounded-xl p-4 flex items-center justify-center border border-vibrant-pink/20 hover:border-vibrant-pink/40 transition-colors">
-                  <span className="text-vibrant-pink font-bold text-lg">Semafor</span>
+                <div className="bg-midnight-black/50 rounded-xl p-4 flex items-center justify-center border border-electric-blue/20 hover:border-electric-blue/40 transition-colors">
+                  <span className="text-electric-blue font-bold text-lg">Semafor</span>
                 </div>
 
                 {/* Salt Lake Tribune */}
@@ -264,7 +264,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900/30 to-midnight-black"></div>
         <div className="absolute top-32 left-20 w-96 h-96 bg-electric-blue/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-32 right-20 w-80 h-80 bg-neon-green/5 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-vibrant-pink/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-electric-blue/5 rounded-full blur-3xl"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}

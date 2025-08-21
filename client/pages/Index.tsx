@@ -68,7 +68,7 @@ const Index = () => {
           <div className="mb-8 flex justify-center">
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F57f3921c477141799725b87f2761d2c2%2F0b0a31ccf47e48388d0e7b1d2cc829fd?format=webp&width=800"
-              alt="Spotlight News"
+              alt="SpotlightNews"
               className="h-12 w-auto"
               style={{ filter: 'brightness(0) saturate(100%) invert(50%) sepia(100%) saturate(2000%) hue-rotate(154deg) brightness(119%) contrast(119%)' }}
             />
@@ -145,7 +145,7 @@ const Index = () => {
             <div className="rounded-3xl overflow-hidden">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F57f3921c477141799725b87f2761d2c2%2F61dcb29404b54e3294abf0a058330ed3?format=webp&width=540&height=320"
-                alt="Spotlight News Feed Preview"
+                alt="SpotlightNews Feed Preview"
                 className="w-full h-auto"
                 width={540}
                 height={320}

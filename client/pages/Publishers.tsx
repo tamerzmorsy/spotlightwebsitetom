@@ -116,7 +116,7 @@ const Publishers = () => {
             </div>
             <div className="bg-gradient-to-br from-neon-green/20 to-electric-blue/20 rounded-3xl overflow-hidden h-96 relative">
               <img
-                src="https://images.unsplash.com/photo-1607706189992-eae578626c86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                src="https://cdn.builder.io/api/v1/image/assets%2Ff9a2587e1b874b6e9d34bfb6b703b455%2Fe39b8a9e622d47f88f20045baf7e9669?format=webp&width=800"
                 alt="Students reading news on their mobile phones"
                 className="w-full h-full object-cover"
               />

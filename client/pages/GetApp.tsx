@@ -177,9 +177,6 @@ const GetApp = () => {
             </a>
           </div>
 
-          <p className="text-sm text-soft-gray/50">
-            Free download. No credit card required.
-          </p>
         </div>
       </section>
 

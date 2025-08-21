@@ -117,19 +117,6 @@ const Universities = () => {
                 alt="Diverse group of college students collaborating and studying together"
                 className="w-full h-full object-cover"
               />
-              {/* Overlay with engagement metrics */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-midnight-black/90 via-midnight-black/60 to-transparent p-6">
-                <div className="flex items-center justify-between text-white">
-                  <div>
-                    <p className="text-sm font-medium mb-1">Students Reached</p>
-                    <p className="text-2xl font-bold text-neon-green">5,247+</p>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-sm font-medium mb-1">Daily Engagement</p>
-                    <p className="text-2xl font-bold text-electric-blue">89%</p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 

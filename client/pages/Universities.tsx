@@ -50,21 +50,20 @@ const Universities = () => {
           {/* Product Badge */}
           <div className="mb-8">
             <span className="inline-block text-vibrant-pink text-lg font-medium tracking-wide">
-              For Universities
+              For Colleges/Universities
             </span>
           </div>
 
           {/* Main Headline */}
           <h1 className="text-6xl sm:text-7xl lg:text-8xl font-display font-bold mb-8 leading-[0.85] tracking-tight">
-            Campus news struggling?
+            Hundreds of Publications in One App.
             <br />
-            <span className="text-vibrant-pink">Spotlight's your fix.</span>
+            <span className="text-vibrant-pink">All students, one affordable subscription.</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-2xl sm:text-3xl text-soft-gray/80 mb-12 font-light leading-relaxed max-w-8xl mx-auto">
-            Bulk subscriptions for thousands of students—boost access,
-            engagement, no stress.
+            Affordable bulk subscriptions cover the whole school
           </p>
 
 
@@ -83,13 +82,13 @@ const Universities = () => {
                 <span className="text-vibrant-pink">Thousands of students.</span>
               </h2>
               <p className="text-xl text-soft-gray/70 mb-8 leading-relaxed">
-                Seamless setup in 2 weeks with bulk enrollment and university branding. Students get instant access to 300+ publications through their campus-specific portal.
+                Build smarter students with better news.
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
                   <span className="text-soft-gray/80">
-                    Bulk student enrollment system
+                    Track Usage & Student Growth
                   </span>
                 </div>
                 <div className="flex items-center">
@@ -100,15 +99,9 @@ const Universities = () => {
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
-                  <span className="text-soft-gray/80">
-                    Campus-specific news feeds
-                  </span>
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
-                  <span className="text-soft-gray/80">
-                    Admin dashboard & usage analytics
-                  </span>
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
@@ -284,8 +277,8 @@ const Universities = () => {
       <section className="py-24" style={{ backgroundColor: '#7b004c' }}>
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-5xl sm:text-6xl font-display font-bold text-white mb-8">
-            Ready to transform <br />
-            <span className="text-vibrant-pink">campus news</span>?
+            Transform how students access news— <br />
+            <span className="text-vibrant-pink">Spotlight is the resource they'll use most.</span>
           </h2>
           <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
             Let's discuss custom pricing and implementation for your university.

@@ -50,21 +50,20 @@ const Universities = () => {
           {/* Product Badge */}
           <div className="mb-8">
             <span className="inline-block text-vibrant-pink text-lg font-medium tracking-wide">
-              For Universities
+              For Colleges/Universities
             </span>
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-display font-bold mb-8 leading-[0.85] tracking-tight">
-            Campus news struggling?
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-8 leading-[0.85] tracking-tight">
+            Hundreds of Publications in One App.
             <br />
-            <span className="text-vibrant-pink">Spotlight's your fix.</span>
+            <span className="text-vibrant-pink">All students, one affordable subscription.</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-2xl sm:text-3xl text-soft-gray/80 mb-12 font-light leading-relaxed max-w-8xl mx-auto">
-            Bulk subscriptions for thousands of students—boost access,
-            engagement, no stress.
+            Affordable bulk subscriptions cover the whole school
           </p>
 
 
@@ -78,84 +77,50 @@ const Universities = () => {
           <div className="grid md:grid-cols-2 gap-16 items-center mb-32">
             <div>
               <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8 leading-tight">
-                One platform.
-                <br />
-                <span className="text-vibrant-pink">Thousands of students.</span>
+                Build smarter students <span className="text-neon-green">with better news.</span>
               </h2>
               <p className="text-xl text-soft-gray/70 mb-8 leading-relaxed">
-                Seamless setup in 2 weeks with bulk enrollment and university branding. Students get instant access to 300+ publications through their campus-specific portal.
+                Build smarter students with better news.
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
+                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
                   <span className="text-soft-gray/80">
-                    Bulk student enrollment system
+                    Access to hundreds of trusted publications in one place
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
+                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
                   <span className="text-soft-gray/80">
-                    University branding customization
+                    Strengthens news literacy and critical thinking
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
+                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
                   <span className="text-soft-gray/80">
-                    Campus-specific news feeds
+                    Supports education in and out of the classroom
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
+                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
                   <span className="text-soft-gray/80">
-                    Admin dashboard & usage analytics
+                    Fosters civic engagement and informed citizenship
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
+                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
                   <span className="text-soft-gray/80">
-                    Zero ongoing maintenance required
+                    Affordable, campus-wide access for every student
                   </span>
                 </div>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-vibrant-pink/20 to-electric-blue/20 rounded-3xl p-8 h-96 flex items-center justify-center overflow-hidden relative">
-              {/* University Dashboard Mockup */}
-              <div className="w-full max-w-sm bg-midnight-black/80 rounded-2xl border border-electric-blue/30 backdrop-blur-sm">
-                {/* Header */}
-                <div className="flex items-center justify-between p-4 border-b border-electric-blue/20">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-electric-blue rounded-full"></div>
-                    <span className="text-electric-blue font-semibold text-sm">University Name</span>
-                  </div>
-                  <div className="text-neon-green text-xs">●  LIVE</div>
-                </div>
-
-                {/* Stats Cards */}
-                <div className="p-4 space-y-3">
-                  <div className="bg-electric-blue/10 rounded-lg p-3 border border-electric-blue/20">
-                    <div className="text-electric-blue text-xs font-medium">Active Students</div>
-                    <div className="text-white text-lg font-bold">5,247</div>
-                    <div className="text-neon-green text-xs">+12% this week</div>
-                  </div>
-
-                  <div className="bg-vibrant-pink/10 rounded-lg p-3 border border-vibrant-pink/20">
-                    <div className="text-vibrant-pink text-xs font-medium">Daily Engagement</div>
-                    <div className="text-white text-lg font-bold">89%</div>
-                    <div className="text-neon-green text-xs">+5% vs last month</div>
-                  </div>
-
-                  <div className="bg-neon-green/10 rounded-lg p-3 border border-neon-green/20">
-                    <div className="text-neon-green text-xs font-medium">News Sources</div>
-                    <div className="text-white text-lg font-bold">324</div>
-                    <div className="text-soft-gray/60 text-xs">Campus + Global</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Floating Elements */}
-              <div className="absolute top-4 right-4 w-3 h-3 bg-neon-green rounded-full animate-pulse"></div>
-              <div className="absolute bottom-6 left-6 w-2 h-2 bg-electric-blue rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
-              <div className="absolute top-1/2 right-8 w-1 h-1 bg-vibrant-pink rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
+            <div className="bg-gradient-to-br from-neon-green/20 to-electric-blue/20 rounded-3xl overflow-hidden h-96 relative">
+              <img
+                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                alt="Diverse group of college students collaborating and studying together"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
 
@@ -169,15 +134,14 @@ const Universities = () => {
               />
             </div>
             <div className="order-1 md:order-2">
-              <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8 leading-tight">
+              <h2 className="text-3xl sm:text-4xl font-display font-bold text-soft-gray mb-8 leading-tight">
                 Custom landing pages.
                 <br />
-                <span className="text-vibrant-pink">Full support.</span>
+                <span className="text-neon-green">Full support.</span>
               </h2>
               <p className="text-xl text-soft-gray/70 mb-8 leading-relaxed">
-                Following MSU's successful blueprint, we create branded landing
-                pages, promote at campus events, and deliver thousands of
-                engaged users.
+                Following Lehigh's successful blueprint, we create branded landing
+                pages, promote at campus events, and deliver engaged students.
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center">
@@ -206,74 +170,53 @@ const Universities = () => {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8 leading-tight">
-                Extend to alumni.
+                Save Local News.
                 <br />
-                <span className="text-vibrant-pink">Lifelong impact.</span>
+                <span className="text-neon-green">Strengthen Communities.</span>
               </h2>
               <p className="text-xl text-soft-gray/70 mb-8 leading-relaxed">
-                Keep graduates connected with quality journalism. Alumni access
-                extends your institutional impact while supporting news literacy
-                and civic engagement.
+                SpotlightNews shares revenue directly with local and college publishers, ensuring their survival while building the next generation of readers. Partnering with us means your institution supports real journalism, news literacy, and civic engagement at every level.
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
+                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
                   <span className="text-soft-gray/80">
-                    Alumni subscription options
+                    Direct revenue sharing with local and college outlets
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
+                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
                   <span className="text-soft-gray/80">
-                    Institutional mission alignment
+                    Sustainable support for struggling publications
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
+                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
                   <span className="text-soft-gray/80">
-                    Ongoing engagement metrics
+                    Mission alignment: strengthen journalism and civic life
                   </span>
                 </div>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-electric-blue/20 to-neon-green/20 rounded-3xl p-8 h-96 flex items-center justify-center overflow-hidden relative">
-              {/* Alumni Analytics Dashboard */}
-              <div className="w-full max-w-sm bg-midnight-black/80 rounded-2xl border border-neon-green/30 backdrop-blur-sm">
-                {/* Header */}
-                <div className="flex items-center justify-between p-4 border-b border-neon-green/20">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-neon-green rounded-full"></div>
-                    <span className="text-neon-green font-semibold text-sm">Alumni Network</span>
+            <div className="bg-gradient-to-br from-electric-blue/20 to-neon-green/20 rounded-3xl overflow-hidden h-96 relative">
+              <img
+                src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                alt="Local newspaper and community journalism"
+                className="w-full h-full object-cover"
+              />
+              {/* Overlay with local news impact metrics */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-midnight-black/90 via-midnight-black/60 to-transparent p-6">
+                <div className="flex items-center justify-between text-white">
+                  <div>
+                    <p className="text-sm font-medium mb-1">Local Publishers Supported</p>
+                    <p className="text-2xl font-bold text-neon-green">150+</p>
                   </div>
-                  <div className="text-electric-blue text-xs">●  ACTIVE</div>
-                </div>
-
-                {/* Alumni Stats Cards */}
-                <div className="p-4 space-y-3">
-                  <div className="bg-neon-green/10 rounded-lg p-3 border border-neon-green/20">
-                    <div className="text-neon-green text-xs font-medium">Active Alumni</div>
-                    <div className="text-white text-lg font-bold">12,847</div>
-                    <div className="text-electric-blue text-xs">78% retention rate</div>
-                  </div>
-
-                  <div className="bg-electric-blue/10 rounded-lg p-3 border border-electric-blue/20">
-                    <div className="text-electric-blue text-xs font-medium">Global Reach</div>
-                    <div className="text-white text-lg font-bold">45 Countries</div>
-                    <div className="text-neon-green text-xs">6 continents</div>
-                  </div>
-
-                  <div className="bg-vibrant-pink/10 rounded-lg p-3 border border-vibrant-pink/20">
-                    <div className="text-vibrant-pink text-xs font-medium">Avg. Reading Time</div>
-                    <div className="text-white text-lg font-bold">18 min</div>
-                    <div className="text-soft-gray/60 text-xs">Daily engagement</div>
+                  <div className="text-right">
+                    <p className="text-sm font-medium mb-1">Revenue Shared</p>
+                    <p className="text-2xl font-bold text-electric-blue">70%</p>
                   </div>
                 </div>
               </div>
-
-              {/* Floating Analytics Elements */}
-              <div className="absolute top-6 right-6 w-2 h-2 bg-electric-blue rounded-full animate-pulse"></div>
-              <div className="absolute bottom-8 left-8 w-3 h-3 bg-vibrant-pink rounded-full animate-pulse" style={{ animationDelay: '1.5s' }}></div>
-              <div className="absolute top-1/3 right-4 w-1 h-1 bg-neon-green rounded-full animate-pulse" style={{ animationDelay: '3s' }}></div>
             </div>
           </div>
         </div>
@@ -281,11 +224,11 @@ const Universities = () => {
 
 
       {/* Final CTA */}
-      <section className="py-24" style={{ backgroundColor: '#7b004c' }}>
+      <section className="py-24" style={{ backgroundColor: '#1B9900' }}>
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-5xl sm:text-6xl font-display font-bold text-white mb-8">
-            Ready to transform <br />
-            <span className="text-vibrant-pink">campus news</span>?
+            Transform how students access news— <br />
+            <span className="text-vibrant-pink">Spotlight is the resource they'll use most.</span>
           </h2>
           <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
             Let's discuss custom pricing and implementation for your university.
@@ -294,7 +237,7 @@ const Universities = () => {
             <Link to="/contact">
               <Button
                 size="lg"
-                className="bg-white text-[#7b004c] hover:bg-gray-100 font-semibold text-lg px-10 py-5 rounded-full border-2 border-white"
+                className="bg-white text-[#1B9900] hover:bg-gray-100 font-semibold text-lg px-10 py-5 rounded-full border-2 border-white"
               >
                 <Handshake className="w-5 h-5 mr-2" />
                 Schedule consultation

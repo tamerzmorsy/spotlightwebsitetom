@@ -56,10 +56,8 @@ const Publishers = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-display font-bold mb-8 leading-[0.85] tracking-tight">
-            Revenue fading?
-            <br />
-            <span className="text-neon-green">Spotlight brings the win.</span>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-8 leading-[0.85] tracking-tight">
+            Aging Readership? Shedding Subscribers? <span className="text-neon-green">Spotlight brings the win.</span>
           </h1>
 
           {/* Subheadline */}
@@ -74,15 +72,12 @@ const Publishers = () => {
                 size="lg"
                 className="bg-neon-green text-midnight-black hover:bg-lime-400 font-semibold text-xl px-12 py-6 rounded-full"
               >
-                Become a partner*
+                Become a partner
               </Button>
             </Link>
           </div>
 
           {/* Feature highlight */}
-          <p className="text-base text-soft-gray/60 mb-16">
-            Standard terms. No hidden fees. Equal visibility for all partners.
-          </p>
         </div>
       </section>
 
@@ -93,9 +88,9 @@ const Publishers = () => {
           <div className="grid md:grid-cols-2 gap-16 items-center mb-32">
             <div>
               <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8 leading-tight">
-                Keep more of
+                Fresh Audience.
                 <br />
-                what you <span className="text-neon-green">earn.</span>
+                <span className="text-neon-green">Incremental Readership.</span>
               </h2>
               <p className="text-xl text-soft-gray/70 mb-8 leading-relaxed">
                 70% revenue share from subscriptions and advertising. No complex
@@ -118,28 +113,24 @@ const Publishers = () => {
                   </span>
                 </div>
               </div>
-              <Button
-                variant="outline"
-                className="border-neon-green text-neon-green hover:bg-neon-green hover:text-midnight-black font-medium px-8 py-4 rounded-full"
-              >
-                View revenue model
-              </Button>
             </div>
-            <div className="bg-gradient-to-br from-neon-green/20 to-electric-blue/20 rounded-3xl p-16 h-96 flex items-center justify-center">
-              <div className="text-center text-soft-gray/60">
-                <DollarSign className="w-16 h-16 mx-auto mb-4" />
-                <p className="text-lg">Revenue Dashboard</p>
-              </div>
+            <div className="bg-gradient-to-br from-neon-green/20 to-electric-blue/20 rounded-3xl overflow-hidden h-96 relative">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Ff9a2587e1b874b6e9d34bfb6b703b455%2Fe39b8a9e622d47f88f20045baf7e9669?format=webp&width=800"
+                alt="Students reading news on their mobile phones"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
 
           {/* Benefit 2: Fresh Audience */}
           <div className="grid md:grid-cols-2 gap-16 items-center mb-32">
-            <div className="bg-gradient-to-br from-electric-blue/20 to-vibrant-pink/20 rounded-3xl p-16 h-96 flex items-center justify-center order-2 md:order-1">
-              <div className="text-center text-soft-gray/60">
-                <Users className="w-16 h-16 mx-auto mb-4" />
-                <p className="text-lg">Audience Analytics</p>
-              </div>
+            <div className="bg-gradient-to-br from-electric-blue/20 to-vibrant-pink/20 rounded-3xl p-4 h-96 relative overflow-hidden order-2 md:order-1">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Ff9a2587e1b874b6e9d34bfb6b703b455%2Fcb5176d5a0a34d0cb16104e74dd637d3?format=webp&width=800"
+                alt="Students engaged with news on mobile devices"
+                className="w-full h-full object-cover rounded-2xl"
+              />
             </div>
             <div className="order-1 md:order-2">
               <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8 leading-tight">
@@ -152,30 +143,6 @@ const Publishers = () => {
                 journalism. University partnerships drive bulk subscriptions and
                 steady revenue streams.
               </p>
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
-                  <span className="text-soft-gray/80">250K+ active users</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
-                  <span className="text-soft-gray/80">
-                    500+ university partnerships
-                  </span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
-                  <span className="text-soft-gray/80">
-                    High engagement rates
-                  </span>
-                </div>
-              </div>
-              <Button
-                variant="outline"
-                className="border-neon-green text-neon-green hover:bg-neon-green hover:text-midnight-black font-medium px-8 py-4 rounded-full"
-              >
-                See audience data
-              </Button>
             </div>
           </div>
 
@@ -183,9 +150,9 @@ const Publishers = () => {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8 leading-tight">
-                Zero tech headaches.
+                Maximum reach.
                 <br />
-                <span className="text-neon-green">Maximum reach.</span>
+                <span className="text-neon-green">Only Upside.</span>
               </h2>
               <p className="text-xl text-soft-gray/70 mb-8 leading-relaxed">
                 We handle RSS feeds, app integration, and branding. You focus on
@@ -212,18 +179,13 @@ const Publishers = () => {
                   </span>
                 </div>
               </div>
-              <Button
-                variant="outline"
-                className="border-neon-green text-neon-green hover:bg-neon-green hover:text-midnight-black font-medium px-8 py-4 rounded-full"
-              >
-                Technical details
-              </Button>
             </div>
-            <div className="bg-gradient-to-br from-vibrant-pink/20 to-neon-green/20 rounded-3xl p-16 h-96 flex items-center justify-center">
-              <div className="text-center text-soft-gray/60">
-                <BarChart3 className="w-16 h-16 mx-auto mb-4" />
-                <p className="text-lg">Integration Dashboard</p>
-              </div>
+            <div className="bg-gradient-to-br from-neon-green/20 to-electric-blue/20 rounded-3xl overflow-hidden h-96 relative">
+              <img
+                src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                alt="Handshake representing business partnership"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -313,8 +275,8 @@ const Publishers = () => {
       <section className="py-24" style={{ backgroundColor: '#1B9900' }}>
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-5xl sm:text-6xl font-display font-bold text-white mb-8">
-            Ready to grow <br />
-            <span style={{ color: '#39FF14' }}>your revenue</span>?
+            Hundreds of publishers already signed. <br />
+            <span style={{ color: '#39FF14' }}>Don't get left behind.</span>
           </h2>
           <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
             Join the platform that's helping publishers thrive in the digital
@@ -330,16 +292,8 @@ const Publishers = () => {
                 Become a partner
               </Button>
             </Link>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-[#1B9900] font-semibold text-lg px-10 py-5 rounded-full"
-            >
-              Download media kit
-            </Button>
           </div>
           <p className="text-sm text-soft-gray/50 mt-8">
-            * Standard partnership terms apply.
           </p>
         </div>
       </section>

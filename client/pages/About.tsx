@@ -82,20 +82,117 @@ const About = () => {
                 access to trusted sources.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-electric-blue/20 to-vibrant-pink/20 rounded-3xl p-16 h-96 flex items-center justify-center">
-              <div className="text-center text-soft-gray/60">
-                <Target className="w-16 h-16 mx-auto mb-4" />
-                <p className="text-lg">Mission & Vision</p>
+            <div className="bg-gradient-to-br from-electric-blue/20 to-vibrant-pink/20 rounded-3xl p-12 h-96 relative overflow-hidden">
+              {/* Animated background elements */}
+              <div className="absolute inset-0 opacity-30">
+                <div className="absolute top-4 left-4 w-3 h-3 bg-electric-blue rounded-full animate-pulse"></div>
+                <div className="absolute top-12 right-8 w-2 h-2 bg-neon-green rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                <div className="absolute bottom-8 left-12 w-4 h-4 bg-vibrant-pink rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+                <div className="absolute bottom-4 right-4 w-2 h-2 bg-electric-blue rounded-full animate-pulse" style={{animationDelay: '1.5s'}}></div>
+              </div>
+
+              {/* Main content */}
+              <div className="relative z-10 h-full flex flex-col justify-center">
+                <div className="text-center mb-8">
+                  <Target className="w-12 h-12 mx-auto mb-4 text-electric-blue" />
+                  <h3 className="text-2xl font-display font-bold text-soft-gray mb-2">
+                    Our Vision
+                  </h3>
+                </div>
+
+                {/* Mission pillars */}
+                <div className="grid grid-cols-3 gap-6 text-center">
+                  <div className="group">
+                    <div className="w-12 h-12 bg-electric-blue/20 rounded-full flex items-center justify-center mx-auto mb-2 group-hover:bg-electric-blue/30 transition-colors">
+                      <Users className="w-6 h-6 text-electric-blue" />
+                    </div>
+                    <p className="text-sm font-medium text-soft-gray">Student-First</p>
+                  </div>
+                  <div className="group">
+                    <div className="w-12 h-12 bg-neon-green/20 rounded-full flex items-center justify-center mx-auto mb-2 group-hover:bg-neon-green/30 transition-colors">
+                      <Lightbulb className="w-6 h-6 text-neon-green" />
+                    </div>
+                    <p className="text-sm font-medium text-soft-gray">Algorithm-Free</p>
+                  </div>
+                  <div className="group">
+                    <div className="w-12 h-12 bg-vibrant-pink/20 rounded-full flex items-center justify-center mx-auto mb-2 group-hover:bg-vibrant-pink/30 transition-colors">
+                      <Heart className="w-6 h-6 text-vibrant-pink" />
+                    </div>
+                    <p className="text-sm font-medium text-soft-gray">Quality First</p>
+                  </div>
+                </div>
+
+                {/* Vision statement */}
+                <div className="mt-6 text-center">
+                  <p className="text-sm text-soft-gray/80 leading-relaxed">
+                    Building a new generation of readers and sustainable revenue streams for publishers.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Our Values */}
           <div className="grid md:grid-cols-2 gap-16 items-center mb-32">
-            <div className="bg-gradient-to-br from-neon-green/20 to-electric-blue/20 rounded-3xl p-16 h-96 flex items-center justify-center order-2 md:order-1">
-              <div className="text-center text-soft-gray/60">
-                <Heart className="w-16 h-16 mx-auto mb-4" />
-                <p className="text-lg">Core Values</p>
+            <div className="bg-gradient-to-br from-neon-green/20 to-electric-blue/20 rounded-3xl p-8 h-96 relative overflow-hidden order-2 md:order-1">
+              {/* Animated grid background */}
+              <div className="absolute inset-0 opacity-20">
+                <div className="absolute inset-0" style={{
+                  backgroundImage: `radial-gradient(circle at 20% 20%, rgba(57, 255, 20, 0.3) 2px, transparent 2px),
+                                   radial-gradient(circle at 80% 40%, rgba(0, 255, 255, 0.3) 2px, transparent 2px),
+                                   radial-gradient(circle at 40% 80%, rgba(255, 105, 180, 0.3) 2px, transparent 2px)`,
+                  backgroundSize: '40px 40px, 60px 60px, 50px 50px',
+                  animation: 'float 6s ease-in-out infinite'
+                }}></div>
+              </div>
+
+              {/* Core Values Content */}
+              <div className="relative z-10 h-full flex flex-col justify-center">
+                <div className="text-center mb-6">
+                  <Heart className="w-10 h-10 mx-auto mb-3 text-neon-green" />
+                  <h3 className="text-xl font-display font-bold text-soft-gray mb-4">
+                    Our Core Values
+                  </h3>
+                </div>
+
+                {/* Value Cards */}
+                <div className="space-y-4">
+                  <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-electric-blue/20 hover:border-electric-blue/40 transition-all duration-300 group">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-8 h-8 bg-electric-blue/20 rounded-full flex items-center justify-center group-hover:bg-electric-blue/30 transition-colors">
+                        <span className="text-xs font-bold text-electric-blue">C</span>
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-semibold text-electric-blue">Connection</h4>
+                        <p className="text-xs text-soft-gray/70">Bringing communities together</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-neon-green/20 hover:border-neon-green/40 transition-all duration-300 group">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-8 h-8 bg-neon-green/20 rounded-full flex items-center justify-center group-hover:bg-neon-green/30 transition-colors">
+                        <span className="text-xs font-bold text-neon-green">P</span>
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-semibold text-neon-green">Purpose</h4>
+                        <p className="text-xs text-soft-gray/70">Journalism with deeper meaning</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-electric-blue/20 hover:border-electric-blue/40 transition-all duration-300 group">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-8 h-8 bg-electric-blue/20 rounded-full flex items-center justify-center group-hover:bg-electric-blue/30 transition-colors">
+                        <span className="text-xs font-bold text-electric-blue">G</span>
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-semibold text-electric-blue">Growth</h4>
+                        <p className="text-xs text-soft-gray/70">Expanding perspectives daily</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="order-1 md:order-2">
@@ -142,12 +239,10 @@ const About = () => {
       <section className="py-24" style={{ backgroundColor: '#008888' }}>
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-5xl sm:text-6xl font-display font-bold text-white mb-8">
-            Ready to be part of <br />
-            <span className="text-electric-blue">the movement</span>?
+            The future of news <span className="text-electric-blue">starts here.</span>
           </h2>
           <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
-            Whether you're a student, publisher, or university, there's a place
-            for you in our mission.
+            No paywalls. No clickbait. Just trusted stories from hundreds of publishers. Join the movement—free.
           </p>
           <div className="flex justify-center">
             <Link to="/get-app">

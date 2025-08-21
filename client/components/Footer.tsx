@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl font-display font-bold text-electric-blue mb-4">
-              Spotlight News
+              SpotlightNews
             </h3>
             <p className="text-soft-gray/70 mb-6 max-w-md">
               Reinventing news for a new generation. Algorithm-free feeds, quality 
@@ -108,27 +108,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/blog" 
-                  className="text-soft-gray/70 hover:text-electric-blue transition-colors"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/contact" 
+                <Link
+                  to="/contact"
                   className="text-soft-gray/70 hover:text-electric-blue transition-colors"
                 >
                   Contact
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/campus-eligibility" 
-                  className="text-soft-gray/70 hover:text-electric-blue transition-colors"
-                >
-                  Campus Access
                 </Link>
               </li>
               <li>

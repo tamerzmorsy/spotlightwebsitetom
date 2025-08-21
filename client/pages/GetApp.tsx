@@ -21,7 +21,7 @@ const GetApp = () => {
           {/* Product Badge */}
           <div className="mb-8">
             <span className="inline-block text-electric-blue text-lg font-medium tracking-wide">
-              Spotlight News
+              SpotlightNews
             </span>
           </div>
 
@@ -71,7 +71,7 @@ const GetApp = () => {
             <div className="bg-gradient-to-br from-electric-blue/20 to-vibrant-pink/20 rounded-[3rem] p-2 mx-auto">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2Ff9a2587e1b874b6e9d34bfb6b703b455%2F718f6adb99e84d0286b3d4afe1886caf?format=webp&width=800"
-                alt="Spotlight News mobile app screenshot showing MyNews feed interface"
+                alt="SpotlightNews mobile app screenshot showing MyNews feed interface"
                 className="w-full rounded-[2.5rem] shadow-2xl"
               />
             </div>
@@ -134,23 +134,6 @@ const GetApp = () => {
             </div>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto pt-8 border-t border-soft-gray/10">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-soft-gray mb-1">4.8★</div>
-              <div className="text-soft-gray/50 text-sm">App Store rating</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-soft-gray mb-1">
-                250K+
-              </div>
-              <div className="text-soft-gray/50 text-sm">Downloads</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-soft-gray mb-1">500+</div>
-              <div className="text-soft-gray/50 text-sm">Universities</div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -194,9 +177,6 @@ const GetApp = () => {
             </a>
           </div>
 
-          <p className="text-sm text-soft-gray/50">
-            Free download. No credit card required.
-          </p>
         </div>
       </section>
 

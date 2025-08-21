@@ -238,38 +238,6 @@ const Publishers = () => {
         </div>
       </section>
 
-      {/* Partnership Stats */}
-      <section className="py-24">
-        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-display font-bold text-soft-gray mb-6">
-              Join <span className="text-neon-green">300+ publishers</span>
-              <br />
-              already winning.
-            </h2>
-          </div>
-
-          {/* Stats Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-neon-green mb-2">
-                300+
-              </div>
-              <div className="text-soft-gray/60">Partner publications</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-neon-green mb-2">70%</div>
-              <div className="text-soft-gray/60">Revenue share</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-neon-green mb-2">
-                500+
-              </div>
-              <div className="text-soft-gray/60">University partners</div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Final CTA */}
       <section className="py-24" style={{ backgroundColor: '#1B9900' }}>

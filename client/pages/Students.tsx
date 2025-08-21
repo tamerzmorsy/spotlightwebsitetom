@@ -302,10 +302,6 @@ const Students = () => {
             Ready to take control of <br />
             <span className="text-electric-blue">your feed</span>?
           </h2>
-          <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
-            Join thousands of students who've ditched the algorithm and built
-            better news habits.
-          </p>
           <div className="flex justify-center">
             <Link to="/get-app">
               <Button

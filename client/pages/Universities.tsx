@@ -111,44 +111,25 @@ const Universities = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-vibrant-pink/20 to-electric-blue/20 rounded-3xl p-8 h-96 flex items-center justify-center overflow-hidden relative">
-              {/* University Dashboard Mockup */}
-              <div className="w-full max-w-sm bg-midnight-black/80 rounded-2xl border border-electric-blue/30 backdrop-blur-sm">
-                {/* Header */}
-                <div className="flex items-center justify-between p-4 border-b border-electric-blue/20">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-electric-blue rounded-full"></div>
-                    <span className="text-electric-blue font-semibold text-sm">University Name</span>
+            <div className="bg-gradient-to-br from-neon-green/20 to-electric-blue/20 rounded-3xl overflow-hidden h-96 relative">
+              <img
+                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                alt="Diverse group of college students collaborating and studying together"
+                className="w-full h-full object-cover"
+              />
+              {/* Overlay with engagement metrics */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-midnight-black/90 via-midnight-black/60 to-transparent p-6">
+                <div className="flex items-center justify-between text-white">
+                  <div>
+                    <p className="text-sm font-medium mb-1">Students Reached</p>
+                    <p className="text-2xl font-bold text-neon-green">5,247+</p>
                   </div>
-                  <div className="text-neon-green text-xs">●  LIVE</div>
-                </div>
-
-                {/* Stats Cards */}
-                <div className="p-4 space-y-3">
-                  <div className="bg-electric-blue/10 rounded-lg p-3 border border-electric-blue/20">
-                    <div className="text-electric-blue text-xs font-medium">Active Students</div>
-                    <div className="text-white text-lg font-bold">5,247</div>
-                    <div className="text-neon-green text-xs">+12% this week</div>
-                  </div>
-
-                  <div className="bg-vibrant-pink/10 rounded-lg p-3 border border-vibrant-pink/20">
-                    <div className="text-vibrant-pink text-xs font-medium">Daily Engagement</div>
-                    <div className="text-white text-lg font-bold">89%</div>
-                    <div className="text-neon-green text-xs">+5% vs last month</div>
-                  </div>
-
-                  <div className="bg-neon-green/10 rounded-lg p-3 border border-neon-green/20">
-                    <div className="text-neon-green text-xs font-medium">News Sources</div>
-                    <div className="text-white text-lg font-bold">324</div>
-                    <div className="text-soft-gray/60 text-xs">Campus + Global</div>
+                  <div className="text-right">
+                    <p className="text-sm font-medium mb-1">Daily Engagement</p>
+                    <p className="text-2xl font-bold text-electric-blue">89%</p>
                   </div>
                 </div>
               </div>
-
-              {/* Floating Elements */}
-              <div className="absolute top-4 right-4 w-3 h-3 bg-neon-green rounded-full animate-pulse"></div>
-              <div className="absolute bottom-6 left-6 w-2 h-2 bg-electric-blue rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
-              <div className="absolute top-1/2 right-8 w-1 h-1 bg-vibrant-pink rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
             </div>
           </div>
 

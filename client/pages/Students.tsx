@@ -255,38 +255,30 @@ const Students = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-neon-green/20 to-electric-blue/20 rounded-3xl p-8 h-96 flex items-center justify-center">
-              {/* Sports Challenge Interface */}
-              <div className="text-center">
-                <h3 className="text-white text-xl font-semibold mb-2">🏆 Sports Challenge</h3>
-                <p className="text-electric-blue text-sm mb-6">March Madness Knowledge</p>
+            <div className="bg-gradient-to-br from-neon-green/20 to-electric-blue/20 rounded-3xl p-8 h-96 flex flex-col justify-center">
+              {/* Sports Challenges Header */}
+              <div className="text-center mb-8">
+                <h3 className="text-white text-xl font-semibold mb-2">Sports Challenges</h3>
+                <p className="text-soft-gray/80 text-sm">Participate in our sports challenges and win prizes!</p>
+              </div>
 
-                {/* Challenge Progress */}
-                <div className="space-y-4">
-                  {/* Progress Bar */}
-                  <div className="bg-midnight-black/50 rounded-full h-3 w-48 mx-auto">
-                    <div className="bg-gradient-to-r from-neon-green to-electric-blue h-3 rounded-full" style={{width: '75%'}}></div>
-                  </div>
-                  <p className="text-xs text-soft-gray/70">75% Complete</p>
-
-                  {/* Challenge Stats */}
-                  <div className="grid grid-cols-2 gap-4 mt-6">
-                    <div className="bg-neon-green/10 rounded-lg p-3 border border-neon-green/20">
-                      <div className="text-neon-green text-lg font-bold">12</div>
-                      <div className="text-xs text-soft-gray/60">Articles Read</div>
+              {/* NFL Challenge Card */}
+              <div className="bg-midnight-black/40 rounded-lg p-6 border border-electric-blue/20">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
+                      <span className="text-white text-lg">🏈</span>
                     </div>
-                    <div className="bg-electric-blue/10 rounded-lg p-3 border border-electric-blue/20">
-                      <div className="text-electric-blue text-lg font-bold">850</div>
-                      <div className="text-xs text-soft-gray/60">Points Earned</div>
+                    <div>
+                      <h4 className="text-white font-semibold">NFL Weekly Predictions -- Coming Soon</h4>
+                      <p className="text-soft-gray/70 text-sm mt-1">
+                        12 questions. Big plays. Bigger bragging rights. Take on the NFL Challenge and show who really runs Sundays.
+                      </p>
                     </div>
                   </div>
-
-                  {/* Current Prize */}
-                  <div className="mt-4 bg-gradient-to-r from-electric-blue/20 to-neon-green/20 rounded-lg p-3 border border-electric-blue/30">
-                    <div className="text-electric-blue text-sm font-medium">🎯 Current Prize</div>
-                    <div className="text-white font-bold">AirPods Pro</div>
-                    <div className="text-xs text-soft-gray/60">3 more articles to qualify</div>
-                  </div>
+                  <button className="bg-neon-green text-black px-4 py-2 rounded-lg font-medium text-sm hover:bg-neon-green/80 transition-colors">
+                    View
+                  </button>
                 </div>
               </div>
             </div>

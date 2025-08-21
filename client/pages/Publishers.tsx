@@ -57,9 +57,7 @@ const Publishers = () => {
 
           {/* Main Headline */}
           <h1 className="text-6xl sm:text-7xl lg:text-8xl font-display font-bold mb-8 leading-[0.85] tracking-tight">
-            Aging Readership? Shedding Subscribers?
-            <br />
-            <span className="text-neon-green">Spotlight brings the win.</span>
+            Aging Readership? Shedding Subscribers? <span className="text-neon-green">Spotlight brings the win.</span>
           </h1>
 
           {/* Subheadline */}

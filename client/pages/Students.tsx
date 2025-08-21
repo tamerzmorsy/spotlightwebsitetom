@@ -121,67 +121,96 @@ const Students = () => {
               </div>
             </div>
             <div className="bg-gradient-to-br from-electric-blue/20 to-vibrant-pink/20 rounded-3xl p-6 h-96 flex items-center justify-center overflow-hidden">
-              {/* Mobile Feed Interface Mockup */}
-              <div className="w-full max-w-xs bg-midnight-black/90 rounded-3xl border border-electric-blue/30 backdrop-blur-sm relative">
-                {/* Mobile Header */}
-                <div className="flex justify-between items-center px-4 py-3 border-b border-electric-blue/20">
-                  <span className="text-electric-blue font-bold text-lg">MyNews</span>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-vibrant-pink rounded-full"></div>
-                    <span className="text-xs text-soft-gray/70">🏆</span>
+              {/* News Feed Sections */}
+              <div className="w-full max-w-2xl bg-midnight-black/90 rounded-2xl border border-electric-blue/30 backdrop-blur-sm p-4 space-y-6">
+
+                {/* Semafor Section */}
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-electric-blue font-bold text-sm">Semafor</h3>
+                    <div className="flex items-center space-x-1">
+                      <div className="w-2 h-2 bg-neon-green rounded-full"></div>
+                      <div className="w-2 h-2 bg-vibrant-pink rounded-full"></div>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-4 gap-2">
+                    {/* Article 1 */}
+                    <div className="bg-gradient-to-br from-orange-500 to-blue-600 rounded-lg p-2 aspect-square">
+                      <div className="text-white text-xs font-semibold leading-tight">Business leaders concerned as Mandani's mayoral lead widens</div>
+                      <div className="text-orange-200 text-xs mt-1">about 4 hours ago | 1 min read</div>
+                    </div>
+
+                    {/* Article 2 */}
+                    <div className="bg-gradient-to-br from-gray-600 to-gray-800 rounded-lg p-2 aspect-square relative">
+                      <div className="absolute inset-0 bg-black/30 rounded-lg"></div>
+                      <div className="relative z-10">
+                        <div className="bg-gray-300 rounded-full p-1 w-6 h-6 mb-2 flex items-center justify-center">
+                          <span className="text-xs">💡</span>
+                        </div>
+                        <div className="text-white text-xs font-semibold">LIGHT BULB MOMENTS</div>
+                        <div className="text-white text-xs font-semibold leading-tight mt-1">What AI leaders can learn from Thomas Edison</div>
+                        <div className="text-gray-300 text-xs mt-1">about 4 hours ago | 3 min read</div>
+                      </div>
+                    </div>
+
+                    {/* Article 3 */}
+                    <div className="bg-gradient-to-br from-green-600 to-blue-500 rounded-lg p-2 aspect-square">
+                      <div className="text-white text-xs font-semibold leading-tight">Powell takes the mic in Wyoming battling inflation, job losses, and Trump</div>
+                      <div className="text-green-200 text-xs mt-1">about 5 hours ago | 3 min read</div>
+                    </div>
+
+                    {/* Article 4 */}
+                    <div className="bg-gradient-to-br from-blue-600 to-red-500 rounded-lg p-2 aspect-square">
+                      <div className="text-white text-xs font-semibold leading-tight">US agrees to cap tariffs on Europe at 15% in trade deal framework</div>
+                      <div className="text-blue-200 text-xs mt-1">about 3 hours ago | quick read</div>
+                    </div>
+                  </div>
+
+                  <div className="text-right mt-2">
+                    <span className="text-electric-blue text-xs font-medium">More From Semafor</span>
                   </div>
                 </div>
 
-                {/* News Feed */}
-                <div className="p-3 space-y-3 max-h-80 overflow-hidden">
-                  {/* Article 1 */}
-                  <div className="bg-electric-blue/10 rounded-lg border border-electric-blue/20 overflow-hidden">
-                    <div className="h-16 bg-gradient-to-r from-electric-blue/30 to-vibrant-pink/20 flex items-center justify-center">
-                      <div className="w-8 h-8 bg-white rounded-md flex items-center justify-center">
-                        <span className="text-midnight-black text-xs font-bold">📱</span>
-                      </div>
-                    </div>
-                    <div className="p-2">
-                      <div className="text-electric-blue text-xs font-medium">Bloomberg</div>
-                      <div className="text-white text-xs font-semibold leading-tight mb-1">Apple to bring blood oxygen feature to some US watch...</div>
-                      <div className="text-soft-gray/60 text-xs">Today • 2 min read</div>
+                {/* Sports Illustrated Section */}
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-neon-green font-bold text-sm">Sports Illustrated</h3>
+                    <div className="flex items-center space-x-1">
+                      <div className="w-2 h-2 bg-neon-green rounded-full"></div>
+                      <div className="w-2 h-2 bg-vibrant-pink rounded-full"></div>
                     </div>
                   </div>
 
-                  {/* Article 2 */}
-                  <div className="bg-vibrant-pink/10 rounded-lg border border-vibrant-pink/20 overflow-hidden">
-                    <div className="h-16 bg-gradient-to-r from-vibrant-pink/30 to-neon-green/20 flex items-center justify-center">
-                      <div className="w-8 h-8 bg-red-600 rounded-md flex items-center justify-center">
-                        <span className="text-white text-xs font-bold">🇺🇸</span>
-                      </div>
+                  <div className="grid grid-cols-4 gap-2">
+                    {/* Sports Article 1 */}
+                    <div className="bg-gradient-to-br from-red-600 to-red-800 rounded-lg p-2 aspect-square">
+                      <div className="text-white text-xs font-semibold leading-tight">Arsenal No. 10 Shirt History: Eberechi Eze Fit to Join Club Legends</div>
+                      <div className="text-red-200 text-xs mt-1">about 1 hour ago | 1 min read</div>
                     </div>
-                    <div className="p-2">
-                      <div className="text-vibrant-pink text-xs font-medium">Miami Herald</div>
-                      <div className="text-white text-xs font-semibold leading-tight mb-1">Trump hoping to achieve halt to Ukraine fighting...</div>
-                      <div className="text-soft-gray/60 text-xs">3h ago • 4 min read</div>
+
+                    {/* Sports Article 2 */}
+                    <div className="bg-gradient-to-br from-purple-600 to-pink-500 rounded-lg p-2 aspect-square">
+                      <div className="text-white text-xs font-semibold leading-tight">Orlando Pride Sign Mexico Star in World-Record Transfer for Women's Soccer</div>
+                      <div className="text-purple-200 text-xs mt-1">about 1 hour ago | 2 min read</div>
+                    </div>
+
+                    {/* Sports Article 3 */}
+                    <div className="bg-gradient-to-br from-blue-600 to-cyan-500 rounded-lg p-2 aspect-square">
+                      <div className="text-white text-xs font-semibold leading-tight">Five Takeaways From the Lions-Texans Joint Practice Amid Injury Status</div>
+                      <div className="text-blue-200 text-xs mt-1">about 4 hours ago | 6 min read</div>
+                    </div>
+
+                    {/* Sports Article 4 */}
+                    <div className="bg-gradient-to-br from-gray-700 to-gray-900 rounded-lg p-2 aspect-square">
+                      <div className="text-white text-xs font-semibold leading-tight">Jaguars Make Decision on Travis Hunter's Preseason Status Amid Injury</div>
+                      <div className="text-gray-300 text-xs mt-1">about 4 hours ago | 1 min read</div>
                     </div>
                   </div>
 
-                  {/* Article 3 (partial) */}
-                  <div className="bg-neon-green/10 rounded-lg border border-neon-green/20 overflow-hidden opacity-50">
-                    <div className="h-12 bg-gradient-to-r from-neon-green/30 to-electric-blue/20 flex items-center justify-center">
-                      <div className="w-6 h-6 bg-neon-green rounded-md flex items-center justify-center">
-                        <span className="text-midnight-black text-xs font-bold">💼</span>
-                      </div>
-                    </div>
-                    <div className="p-2">
-                      <div className="text-neon-green text-xs font-medium">Forbes</div>
-                      <div className="text-white text-xs font-semibold leading-tight">Tech startup raises $50M...</div>
-                    </div>
+                  <div className="text-right mt-2">
+                    <span className="text-neon-green text-xs font-medium">More From Sports Illustrated</span>
                   </div>
-                </div>
-
-                {/* Bottom Navigation Indicator */}
-                <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-1">
-                  <div className="w-1 h-1 bg-electric-blue rounded-full"></div>
-                  <div className="w-1 h-1 bg-soft-gray/30 rounded-full"></div>
-                  <div className="w-1 h-1 bg-soft-gray/30 rounded-full"></div>
-                  <div className="w-1 h-1 bg-soft-gray/30 rounded-full"></div>
                 </div>
               </div>
             </div>

@@ -170,32 +170,30 @@ const Universities = () => {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8 leading-tight">
-                Extend to alumni.
+                Save Local News.
                 <br />
-                <span className="text-vibrant-pink">Lifelong impact.</span>
+                <span className="text-neon-green">Strengthen Communities.</span>
               </h2>
               <p className="text-xl text-soft-gray/70 mb-8 leading-relaxed">
-                Keep graduates connected with quality journalism. Alumni access
-                extends your institutional impact while supporting news literacy
-                and civic engagement.
+                SpotlightNews shares revenue directly with local and college publishers, ensuring their survival while building the next generation of readers. Partnering with us means your institution supports real journalism, news literacy, and civic engagement at every level.
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
+                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
                   <span className="text-soft-gray/80">
-                    Alumni subscription options
+                    Direct revenue sharing with local and college outlets
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
+                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
                   <span className="text-soft-gray/80">
-                    Institutional mission alignment
+                    Sustainable support for struggling publications
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-vibrant-pink mr-3" />
+                  <CheckCircle className="w-5 h-5 text-neon-green mr-3" />
                   <span className="text-soft-gray/80">
-                    Ongoing engagement metrics
+                    Mission alignment: strengthen journalism and civic life
                   </span>
                 </div>
               </div>

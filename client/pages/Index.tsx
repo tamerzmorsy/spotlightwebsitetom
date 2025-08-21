@@ -394,7 +394,7 @@ const Index = () => {
       <section className="py-24" style={{ backgroundColor: '#008888' }}>
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-5xl sm:text-6xl font-display font-bold text-white mb-8">
-            Ditch toxic feeds? <br />
+            Ditch toxic feeds. <br />
             <span className="text-electric-blue">Get the news your way.</span>
           </h2>
           <div className="flex justify-center">

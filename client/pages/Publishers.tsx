@@ -180,11 +180,12 @@ const Publishers = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-vibrant-pink/20 to-neon-green/20 rounded-3xl p-16 h-96 flex items-center justify-center">
-              <div className="text-center text-soft-gray/60">
-                <BarChart3 className="w-16 h-16 mx-auto mb-4" />
-                <p className="text-lg">Integration Dashboard</p>
-              </div>
+            <div className="bg-gradient-to-br from-neon-green/20 to-electric-blue/20 rounded-3xl overflow-hidden h-96 relative">
+              <img
+                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1526&q=80"
+                alt="Business partnership and collaboration"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>

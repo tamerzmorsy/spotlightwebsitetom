@@ -21,7 +21,7 @@ const GetApp = () => {
           {/* Product Badge */}
           <div className="mb-8">
             <span className="inline-block text-electric-blue text-lg font-medium tracking-wide">
-              Spotlight News
+              SpotlightNews
             </span>
           </div>
 
@@ -71,7 +71,7 @@ const GetApp = () => {
             <div className="bg-gradient-to-br from-electric-blue/20 to-vibrant-pink/20 rounded-[3rem] p-2 mx-auto">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2Ff9a2587e1b874b6e9d34bfb6b703b455%2F718f6adb99e84d0286b3d4afe1886caf?format=webp&width=800"
-                alt="Spotlight News mobile app screenshot showing MyNews feed interface"
+                alt="SpotlightNews mobile app screenshot showing MyNews feed interface"
                 className="w-full rounded-[2.5rem] shadow-2xl"
               />
             </div>

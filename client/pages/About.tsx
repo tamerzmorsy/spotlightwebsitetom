@@ -82,10 +82,52 @@ const About = () => {
                 access to trusted sources.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-electric-blue/20 to-vibrant-pink/20 rounded-3xl p-16 h-96 flex items-center justify-center">
-              <div className="text-center text-soft-gray/60">
-                <Target className="w-16 h-16 mx-auto mb-4" />
-                <p className="text-lg">Mission & Vision</p>
+            <div className="bg-gradient-to-br from-electric-blue/20 to-vibrant-pink/20 rounded-3xl p-12 h-96 relative overflow-hidden">
+              {/* Animated background elements */}
+              <div className="absolute inset-0 opacity-30">
+                <div className="absolute top-4 left-4 w-3 h-3 bg-electric-blue rounded-full animate-pulse"></div>
+                <div className="absolute top-12 right-8 w-2 h-2 bg-neon-green rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                <div className="absolute bottom-8 left-12 w-4 h-4 bg-vibrant-pink rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+                <div className="absolute bottom-4 right-4 w-2 h-2 bg-electric-blue rounded-full animate-pulse" style={{animationDelay: '1.5s'}}></div>
+              </div>
+
+              {/* Main content */}
+              <div className="relative z-10 h-full flex flex-col justify-center">
+                <div className="text-center mb-8">
+                  <Target className="w-12 h-12 mx-auto mb-4 text-electric-blue" />
+                  <h3 className="text-2xl font-display font-bold text-soft-gray mb-2">
+                    Our Vision
+                  </h3>
+                </div>
+
+                {/* Mission pillars */}
+                <div className="grid grid-cols-3 gap-6 text-center">
+                  <div className="group">
+                    <div className="w-12 h-12 bg-electric-blue/20 rounded-full flex items-center justify-center mx-auto mb-2 group-hover:bg-electric-blue/30 transition-colors">
+                      <Users className="w-6 h-6 text-electric-blue" />
+                    </div>
+                    <p className="text-sm font-medium text-soft-gray">Student-First</p>
+                  </div>
+                  <div className="group">
+                    <div className="w-12 h-12 bg-neon-green/20 rounded-full flex items-center justify-center mx-auto mb-2 group-hover:bg-neon-green/30 transition-colors">
+                      <Lightbulb className="w-6 h-6 text-neon-green" />
+                    </div>
+                    <p className="text-sm font-medium text-soft-gray">Algorithm-Free</p>
+                  </div>
+                  <div className="group">
+                    <div className="w-12 h-12 bg-vibrant-pink/20 rounded-full flex items-center justify-center mx-auto mb-2 group-hover:bg-vibrant-pink/30 transition-colors">
+                      <Heart className="w-6 h-6 text-vibrant-pink" />
+                    </div>
+                    <p className="text-sm font-medium text-soft-gray">Quality First</p>
+                  </div>
+                </div>
+
+                {/* Vision statement */}
+                <div className="mt-6 text-center">
+                  <p className="text-sm text-soft-gray/80 leading-relaxed">
+                    Creating the future where students discover, engage with, and support quality journalism on their terms.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

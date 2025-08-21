@@ -134,10 +134,65 @@ const About = () => {
 
           {/* Our Values */}
           <div className="grid md:grid-cols-2 gap-16 items-center mb-32">
-            <div className="bg-gradient-to-br from-neon-green/20 to-electric-blue/20 rounded-3xl p-16 h-96 flex items-center justify-center order-2 md:order-1">
-              <div className="text-center text-soft-gray/60">
-                <Heart className="w-16 h-16 mx-auto mb-4" />
-                <p className="text-lg">Core Values</p>
+            <div className="bg-gradient-to-br from-neon-green/20 to-electric-blue/20 rounded-3xl p-8 h-96 relative overflow-hidden order-2 md:order-1">
+              {/* Animated grid background */}
+              <div className="absolute inset-0 opacity-20">
+                <div className="absolute inset-0" style={{
+                  backgroundImage: `radial-gradient(circle at 20% 20%, rgba(57, 255, 20, 0.3) 2px, transparent 2px),
+                                   radial-gradient(circle at 80% 40%, rgba(0, 255, 255, 0.3) 2px, transparent 2px),
+                                   radial-gradient(circle at 40% 80%, rgba(255, 105, 180, 0.3) 2px, transparent 2px)`,
+                  backgroundSize: '40px 40px, 60px 60px, 50px 50px',
+                  animation: 'float 6s ease-in-out infinite'
+                }}></div>
+              </div>
+
+              {/* Core Values Content */}
+              <div className="relative z-10 h-full flex flex-col justify-center">
+                <div className="text-center mb-6">
+                  <Heart className="w-10 h-10 mx-auto mb-3 text-neon-green" />
+                  <h3 className="text-xl font-display font-bold text-soft-gray mb-4">
+                    Our Core Values
+                  </h3>
+                </div>
+
+                {/* Value Cards */}
+                <div className="space-y-4">
+                  <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-electric-blue/20 hover:border-electric-blue/40 transition-all duration-300 group">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-8 h-8 bg-electric-blue/20 rounded-full flex items-center justify-center group-hover:bg-electric-blue/30 transition-colors">
+                        <span className="text-xs font-bold text-electric-blue">Q</span>
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-semibold text-electric-blue">Quality First</h4>
+                        <p className="text-xs text-soft-gray/70">Editorial integrity over algorithms</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-neon-green/20 hover:border-neon-green/40 transition-all duration-300 group">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-8 h-8 bg-neon-green/20 rounded-full flex items-center justify-center group-hover:bg-neon-green/30 transition-colors">
+                        <span className="text-xs font-bold text-neon-green">U</span>
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-semibold text-neon-green">User Control</h4>
+                        <p className="text-xs text-soft-gray/70">Readers choose their experience</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-vibrant-pink/20 hover:border-vibrant-pink/40 transition-all duration-300 group">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-8 h-8 bg-vibrant-pink/20 rounded-full flex items-center justify-center group-hover:bg-vibrant-pink/30 transition-colors">
+                        <span className="text-xs font-bold text-vibrant-pink">F</span>
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-semibold text-vibrant-pink">Fair Revenue</h4>
+                        <p className="text-xs text-soft-gray/70">70% to publishers</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="order-1 md:order-2">

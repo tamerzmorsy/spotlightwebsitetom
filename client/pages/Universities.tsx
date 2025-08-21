@@ -140,9 +140,8 @@ const Universities = () => {
                 <span className="text-vibrant-pink">Full support.</span>
               </h2>
               <p className="text-xl text-soft-gray/70 mb-8 leading-relaxed">
-                Following MSU's successful blueprint, we create branded landing
-                pages, promote at campus events, and deliver thousands of
-                engaged users.
+                Following Lehigh's successful blueprint, we create branded landing
+                pages, promote at campus events, and deliver engaged students.
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center">

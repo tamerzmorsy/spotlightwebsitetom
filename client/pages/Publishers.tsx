@@ -113,12 +113,6 @@ const Publishers = () => {
                   </span>
                 </div>
               </div>
-              <Button
-                variant="outline"
-                className="border-neon-green text-neon-green hover:bg-neon-green hover:text-midnight-black font-medium px-8 py-4 rounded-full"
-              >
-                View revenue model
-              </Button>
             </div>
             <div className="bg-gradient-to-br from-neon-green/20 to-electric-blue/20 rounded-3xl p-8 h-96 relative overflow-hidden">
               {/* Digital Wallet Interface */}

@@ -125,56 +125,53 @@ const Publishers = () => {
                 View revenue model
               </Button>
             </div>
-            <div className="bg-gradient-to-br from-neon-green/20 to-electric-blue/20 rounded-3xl p-12 h-96 relative overflow-hidden">
-              {/* Monopoly money pattern background */}
-              <div className="absolute inset-0 opacity-10">
-                <div className="absolute top-4 left-4 text-neon-green font-bold text-2xl">$500</div>
-                <div className="absolute top-4 right-4 text-electric-blue font-bold text-xl">$100</div>
-                <div className="absolute bottom-4 left-4 text-vibrant-pink font-bold text-xl">$50</div>
-                <div className="absolute bottom-4 right-4 text-neon-green font-bold text-lg">$20</div>
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-electric-blue font-bold text-3xl opacity-50">$1000</div>
-              </div>
-
-              {/* Monopoly Guy Character */}
-              <div className="relative z-10 h-full flex flex-col items-center justify-center">
-                {/* Top Hat */}
-                <div className="relative mb-2">
-                  <div className="w-16 h-12 bg-midnight-black rounded-t-lg border-2 border-soft-gray/30"></div>
-                  <div className="w-20 h-3 bg-midnight-black rounded-full border-2 border-soft-gray/30 -mt-1"></div>
+            <div className="bg-gradient-to-br from-neon-green/20 to-electric-blue/20 rounded-3xl p-8 h-96 relative overflow-hidden">
+              {/* Digital Wallet Interface */}
+              <div className="relative z-10 h-full flex flex-col">
+                {/* Wallet Header */}
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-8 h-8 bg-electric-blue/20 rounded-lg flex items-center justify-center">
+                      <DollarSign className="w-5 h-5 text-electric-blue" />
+                    </div>
+                    <span className="text-sm font-medium text-soft-gray">Revenue Wallet</span>
+                  </div>
+                  <div className="w-2 h-2 bg-neon-green rounded-full animate-pulse"></div>
                 </div>
 
-                {/* Head */}
-                <div className="relative">
-                  <div className="w-14 h-14 bg-soft-gray rounded-full border-2 border-soft-gray/50 relative">
-                    {/* Monocle */}
-                    <div className="absolute -right-2 top-3 w-6 h-6 border-2 border-electric-blue rounded-full bg-electric-blue/10"></div>
-                    {/* Eyes */}
-                    <div className="absolute top-4 left-3 w-2 h-2 bg-midnight-black rounded-full"></div>
-                    <div className="absolute top-4 right-3 w-2 h-2 bg-midnight-black rounded-full"></div>
-                    {/* Mustache */}
-                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-8 h-2 bg-midnight-black rounded-full"></div>
+                {/* Main Balance Display */}
+                <div className="text-center mb-8">
+                  <p className="text-sm text-soft-gray/60 mb-1">Monthly Revenue</p>
+                  <p className="text-4xl font-display font-bold text-neon-green mb-2">$24,750</p>
+                  <p className="text-xs text-soft-gray/70">↗️ +18.5% from last month</p>
+                </div>
+
+                {/* Stacked Bills Animation */}
+                <div className="flex justify-center mb-6">
+                  <div className="relative">
+                    {/* Stack of bills */}
+                    <div className="absolute w-16 h-10 bg-neon-green/30 rounded border border-neon-green/50 transform -rotate-3 animate-float" style={{animationDelay: '0s'}}></div>
+                    <div className="absolute w-16 h-10 bg-electric-blue/30 rounded border border-electric-blue/50 transform rotate-2 animate-float" style={{animationDelay: '0.5s'}}></div>
+                    <div className="w-16 h-10 bg-vibrant-pink/30 rounded border border-vibrant-pink/50 transform rotate-1 animate-float" style={{animationDelay: '1s'}}></div>
+
+                    {/* Floating coins */}
+                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-neon-green/40 rounded-full border-2 border-neon-green/60 flex items-center justify-center animate-bounce" style={{animationDelay: '0.2s'}}>
+                      <span className="text-xs text-neon-green font-bold">$</span>
+                    </div>
+                    <div className="absolute -bottom-1 -left-2 w-4 h-4 bg-electric-blue/40 rounded-full border border-electric-blue/60 animate-bounce" style={{animationDelay: '0.8s'}}></div>
                   </div>
                 </div>
 
-                {/* Body with suit */}
-                <div className="w-12 h-16 bg-midnight-black rounded-lg mt-2 relative">
-                  {/* Bow tie */}
-                  <div className="absolute top-1 left-1/2 transform -translate-x-1/2 w-4 h-2 bg-vibrant-pink rounded"></div>
-                  {/* Vest */}
-                  <div className="absolute top-3 left-1 right-1 bottom-1 bg-electric-blue/20 rounded"></div>
-                </div>
-
-                {/* Money bag */}
-                <div className="mt-4 relative">
-                  <div className="w-8 h-6 bg-neon-green/30 rounded-full border-2 border-neon-green/50 flex items-center justify-center">
-                    <DollarSign className="w-4 h-4 text-neon-green" />
+                {/* Revenue Breakdown */}
+                <div className="space-y-3 mt-auto">
+                  <div className="flex justify-between items-center bg-white/5 rounded-lg p-3">
+                    <span className="text-sm text-soft-gray/80">Your Share (70%)</span>
+                    <span className="text-sm font-semibold text-neon-green">$17,325</span>
                   </div>
-                </div>
-
-                {/* Text */}
-                <div className="mt-4 text-center">
-                  <p className="text-lg font-display font-bold text-electric-blue mb-1">Revenue Dashboard</p>
-                  <p className="text-sm text-soft-gray/70">70% to Publishers</p>
+                  <div className="flex justify-between items-center bg-white/5 rounded-lg p-3">
+                    <span className="text-sm text-soft-gray/80">Platform Fee</span>
+                    <span className="text-sm font-semibold text-soft-gray/60">$7,425</span>
+                  </div>
                 </div>
               </div>
             </div>

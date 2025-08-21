@@ -114,8 +114,8 @@ const Index = () => {
             <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-6">
               News that <span className="text-electric-blue">matters.</span>
             </h2>
-            <p className="text-xl text-soft-gray/70 max-w-2xl mx-auto">
-              Curate your perfect feed from 400+ trusted sources. No algorithms.
+            <p className="text-3xl text-soft-gray/70 max-w-2xl mx-auto font-light leading-relaxed">
+              Curate your perfect feed from hundreds of trusted sources. No algorithms.
               No noise.
             </p>
           </div>
@@ -305,7 +305,7 @@ const Index = () => {
                     <div className="w-12 h-12 bg-electric-blue/20 rounded-xl flex items-center justify-center mr-4">
                       <BookOpen className="w-6 h-6 text-electric-blue" />
                     </div>
-                    <span className="text-electric-blue text-sm font-medium">For Students</span>
+                    <span className="text-electric-blue text-sm font-medium">For You</span>
                   </div>
 
                   <h3 className="text-2xl font-display font-bold text-white mb-4">
@@ -363,7 +363,7 @@ const Index = () => {
                     <div className="w-12 h-12 bg-vibrant-pink/20 rounded-xl flex items-center justify-center mr-4">
                       <GraduationCap className="w-6 h-6 text-vibrant-pink" />
                     </div>
-                    <span className="text-vibrant-pink text-sm font-medium">For Universities</span>
+                    <span className="text-neon-green text-sm font-medium">For Colleges/Universities</span>
                   </div>
 
                   <h3 className="text-2xl font-display font-bold text-white mb-4">
@@ -392,8 +392,8 @@ const Index = () => {
       <section className="py-24" style={{ backgroundColor: '#008888' }}>
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-5xl sm:text-6xl font-display font-bold text-white mb-8">
-            Ready to rebel against <br />
-            <span className="text-electric-blue">bad feeds?</span>
+            Ditch toxic feeds? <br />
+            <span className="text-electric-blue">Get the news your way.</span>
           </h2>
           <div className="flex justify-center">
             <Link to="/get-app">
@@ -401,7 +401,7 @@ const Index = () => {
                 size="lg"
                 className="bg-white text-[#008888] hover:bg-gray-100 font-semibold text-lg px-10 py-5 rounded-full border-2 border-white"
               >
-                Download the app
+                Sign up free
               </Button>
             </Link>
           </div>

@@ -46,17 +46,7 @@ const Index = () => {
       <section className="relative pt-20 pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Video Background */}
         <video
-          ref={(video) => {
-            if (video) {
-              const handleLoadedData = () => {
-                setTimeout(() => {
-                  video.pause();
-                }, 5000); // Pause after 5 seconds
-              };
-              video.addEventListener('loadeddata', handleLoadedData);
-              return () => video.removeEventListener('loadeddata', handleLoadedData);
-            }
-          }}
+          ref={videoRef}
           autoPlay={true}
           muted={true}
           loop={false}

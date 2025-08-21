@@ -77,49 +77,94 @@ const Pricing = () => {
 
       {/* Pricing Cards - Clean Apple style */}
       <section className="py-24 bg-gray-900/30">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            {/* Free Plan */}
-            <div className="bg-gray-800/30 rounded-3xl p-12 text-center">
-              <h3 className="text-2xl font-display font-bold text-soft-gray mb-4">
-                Free
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Guest Plan */}
+            <div className="bg-gray-800/30 rounded-3xl p-8 text-center">
+              <h3 className="text-xl font-display font-bold text-soft-gray mb-2">
+                Guest
               </h3>
-              <div className="text-5xl font-display font-bold text-soft-gray mb-8">
-                $0
-                <span className="text-lg font-normal text-soft-gray/60">
-                  /month
-                </span>
-              </div>
+              <p className="text-sm text-soft-gray/60 mb-6">Free</p>
 
-              <div className="space-y-4 mb-12 text-left">
+              <div className="space-y-3 mb-8 text-left">
                 <div className="flex items-center">
-                  <Check className="w-5 h-5 text-electric-blue mr-3 flex-shrink-0" />
-                  <span className="text-soft-gray/80">
-                    Access to 100+ publications
+                  <Check className="w-4 h-4 text-electric-blue mr-3 flex-shrink-0" />
+                  <span className="text-sm text-soft-gray/80">
+                    Total control of news feed
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <Check className="w-5 h-5 text-electric-blue mr-3 flex-shrink-0" />
-                  <span className="text-soft-gray/80">
-                    Custom feed creation
+                  <Check className="w-4 h-4 text-electric-blue mr-3 flex-shrink-0" />
+                  <span className="text-sm text-soft-gray/80">
+                    Limited access to 50+ paywalled publications
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <Check className="w-5 h-5 text-electric-blue mr-3 flex-shrink-0" />
-                  <span className="text-soft-gray/80">
-                    Basic reading challenges
+                  <Check className="w-4 h-4 text-electric-blue mr-3 flex-shrink-0" />
+                  <span className="text-sm text-soft-gray/80">
+                    Unlimited access to 250+ other publications
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <Check className="w-5 h-5 text-electric-blue mr-3 flex-shrink-0" />
-                  <span className="text-soft-gray/80">MyStats tracking</span>
+                  <Check className="w-4 h-4 text-electric-blue mr-3 flex-shrink-0" />
+                  <span className="text-sm text-soft-gray/80">Play Sports Challenges</span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="w-4 h-4 text-electric-blue mr-3 flex-shrink-0" />
+                  <span className="text-sm text-soft-gray/80">Qualify for Promotions</span>
                 </div>
               </div>
 
               <Link to="/get-app">
                 <Button
                   variant="outline"
-                  className="w-full border-soft-gray/30 text-soft-gray hover:bg-soft-gray hover:text-midnight-black font-medium py-4 rounded-full"
+                  className="w-full border-soft-gray/30 text-soft-gray hover:bg-soft-gray hover:text-midnight-black font-medium py-3 rounded-full text-sm"
+                >
+                  Get started
+                </Button>
+              </Link>
+            </div>
+
+            {/* Basic Plan */}
+            <div className="bg-gray-800/30 rounded-3xl p-8 text-center">
+              <h3 className="text-xl font-display font-bold text-soft-gray mb-2">
+                Basic
+              </h3>
+              <p className="text-sm text-soft-gray/60 mb-6">Free with email registration</p>
+
+              <div className="space-y-3 mb-8 text-left">
+                <div className="flex items-center">
+                  <Check className="w-4 h-4 text-electric-blue mr-3 flex-shrink-0" />
+                  <span className="text-sm text-soft-gray/80">
+                    Total control of news feed
+                  </span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="w-4 h-4 text-electric-blue mr-3 flex-shrink-0" />
+                  <span className="text-sm text-soft-gray/80">
+                    Limited access to 50+ paywalled publications
+                  </span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="w-4 h-4 text-electric-blue mr-3 flex-shrink-0" />
+                  <span className="text-sm text-soft-gray/80">
+                    Unlimited access to 250+ other publications
+                  </span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="w-4 h-4 text-electric-blue mr-3 flex-shrink-0" />
+                  <span className="text-sm text-soft-gray/80">Play Sports Challenges</span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="w-4 h-4 text-electric-blue mr-3 flex-shrink-0" />
+                  <span className="text-sm text-soft-gray/80">Qualify for Promotions</span>
+                </div>
+              </div>
+
+              <Link to="/get-app">
+                <Button
+                  variant="outline"
+                  className="w-full border-soft-gray/30 text-soft-gray hover:bg-soft-gray hover:text-midnight-black font-medium py-3 rounded-full text-sm"
                 >
                   Get started
                 </Button>
@@ -127,59 +172,104 @@ const Pricing = () => {
             </div>
 
             {/* Premium Plan */}
-            <div className="bg-electric-blue/10 border border-electric-blue/30 rounded-3xl p-12 text-center relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <div className="bg-electric-blue text-midnight-black px-6 py-2 rounded-full text-sm font-medium">
+            <div className="bg-electric-blue/10 border border-electric-blue/30 rounded-3xl p-8 text-center relative">
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                <div className="bg-electric-blue text-midnight-black px-4 py-1 rounded-full text-xs font-medium">
                   Most Popular
                 </div>
               </div>
 
-              <h3 className="text-2xl font-display font-bold text-soft-gray mb-4">
+              <h3 className="text-xl font-display font-bold text-soft-gray mb-2">
                 Premium
               </h3>
-              <div className="text-5xl font-display font-bold text-soft-gray mb-8">
-                $8.99
-                <span className="text-lg font-normal text-soft-gray/60">
-                  /month
-                </span>
-              </div>
+              <p className="text-sm text-soft-gray/60 mb-6">$9.99/month or $99/year</p>
 
-              <div className="space-y-4 mb-12 text-left">
+              <div className="space-y-3 mb-8 text-left">
                 <div className="flex items-center">
-                  <Check className="w-5 h-5 text-electric-blue mr-3 flex-shrink-0" />
-                  <span className="text-soft-gray/80">All free features</span>
-                </div>
-                <div className="flex items-center">
-                  <Check className="w-5 h-5 text-electric-blue mr-3 flex-shrink-0" />
-                  <span className="text-soft-gray/80">
-                    Access to 300+ premium sources
+                  <Check className="w-4 h-4 text-electric-blue mr-3 flex-shrink-0" />
+                  <span className="text-sm text-soft-gray/80">
+                    Total control of news feed
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <Check className="w-5 h-5 text-electric-blue mr-3 flex-shrink-0" />
-                  <span className="text-soft-gray/80">
-                    No paywall restrictions
+                  <Check className="w-4 h-4 text-electric-blue mr-3 flex-shrink-0" />
+                  <span className="text-sm text-electric-blue">
+                    Unlimited access to 50+ paywalled publications
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <Check className="w-5 h-5 text-electric-blue mr-3 flex-shrink-0" />
-                  <span className="text-soft-gray/80">
-                    Premium challenges & rewards
+                  <Check className="w-4 h-4 text-electric-blue mr-3 flex-shrink-0" />
+                  <span className="text-sm text-electric-blue">
+                    Unlimited access to 250+ other publications
                   </span>
                 </div>
                 <div className="flex items-center">
-                  <Check className="w-5 h-5 text-electric-blue mr-3 flex-shrink-0" />
-                  <span className="text-soft-gray/80">Advanced analytics</span>
+                  <Check className="w-4 h-4 text-electric-blue mr-3 flex-shrink-0" />
+                  <span className="text-sm text-soft-gray/80">Play Sports Challenges</span>
                 </div>
                 <div className="flex items-center">
-                  <Check className="w-5 h-5 text-electric-blue mr-3 flex-shrink-0" />
-                  <span className="text-soft-gray/80">Priority support</span>
+                  <Check className="w-4 h-4 text-electric-blue mr-3 flex-shrink-0" />
+                  <span className="text-sm text-soft-gray/80">Qualify for Promotions</span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="w-4 h-4 text-electric-blue mr-3 flex-shrink-0" />
+                  <span className="text-sm text-electric-blue">No ads</span>
                 </div>
               </div>
 
               <Link to="/get-app">
-                <Button className="w-full bg-electric-blue text-midnight-black hover:bg-cyan-400 font-semibold py-4 rounded-full">
+                <Button className="w-full bg-electric-blue text-midnight-black hover:bg-cyan-400 font-semibold py-3 rounded-full text-sm">
                   Start free trial
+                </Button>
+              </Link>
+            </div>
+
+            {/* Premium+ Plan */}
+            <div className="bg-neon-green/10 border border-neon-green/30 rounded-3xl p-8 text-center">
+              <h3 className="text-xl font-display font-bold text-soft-gray mb-2">
+                Premium+
+              </h3>
+              <p className="text-sm text-soft-gray/60 mb-6">$13.99/month or $139.99/year</p>
+
+              <div className="space-y-3 mb-8 text-left">
+                <div className="flex items-center">
+                  <Check className="w-4 h-4 text-neon-green mr-3 flex-shrink-0" />
+                  <span className="text-sm text-soft-gray/80">
+                    Total control of news feed
+                  </span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="w-4 h-4 text-neon-green mr-3 flex-shrink-0" />
+                  <span className="text-sm text-neon-green">
+                    Unlimited access to 50+ paywalled publications
+                  </span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="w-4 h-4 text-neon-green mr-3 flex-shrink-0" />
+                  <span className="text-sm text-neon-green">
+                    Unlimited access to 250+ other publications
+                  </span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="w-4 h-4 text-neon-green mr-3 flex-shrink-0" />
+                  <span className="text-sm text-soft-gray/80">Play Sports Challenges</span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="w-4 h-4 text-neon-green mr-3 flex-shrink-0" />
+                  <span className="text-sm text-soft-gray/80">Qualify for Promotions</span>
+                </div>
+                <div className="flex items-center">
+                  <Check className="w-4 h-4 text-neon-green mr-3 flex-shrink-0" />
+                  <span className="text-sm text-neon-green">No ads</span>
+                </div>
+              </div>
+
+              <Link to="/get-app">
+                <Button
+                  variant="outline"
+                  className="w-full border-neon-green text-neon-green hover:bg-neon-green hover:text-midnight-black font-semibold py-3 rounded-full text-sm"
+                >
+                  Get started
                 </Button>
               </Link>
             </div>

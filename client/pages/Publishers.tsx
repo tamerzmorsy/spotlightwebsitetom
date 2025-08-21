@@ -179,10 +179,24 @@ const Publishers = () => {
 
           {/* Benefit 2: Fresh Audience */}
           <div className="grid md:grid-cols-2 gap-16 items-center mb-32">
-            <div className="bg-gradient-to-br from-electric-blue/20 to-vibrant-pink/20 rounded-3xl p-16 h-96 flex items-center justify-center order-2 md:order-1">
-              <div className="text-center text-soft-gray/60">
-                <Users className="w-16 h-16 mx-auto mb-4" />
-                <p className="text-lg">Audience Analytics</p>
+            <div className="bg-gradient-to-br from-electric-blue/20 to-vibrant-pink/20 rounded-3xl p-4 h-96 relative overflow-hidden order-2 md:order-1">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Ff9a2587e1b874b6e9d34bfb6b703b455%2F620ea2b624da4a828965a2ba6f059789?format=webp&width=800"
+                alt="Students engaged with news on mobile devices"
+                className="w-full h-full object-cover rounded-2xl"
+              />
+              {/* Overlay with analytics info */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-midnight-black/90 via-midnight-black/60 to-transparent p-6">
+                <div className="flex items-center justify-between text-white">
+                  <div>
+                    <p className="text-sm font-medium mb-1">Active Readers</p>
+                    <p className="text-2xl font-bold text-neon-green">250K+</p>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-sm font-medium mb-1">Engagement Rate</p>
+                    <p className="text-2xl font-bold text-electric-blue">87%</p>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="order-1 md:order-2">

@@ -174,19 +174,6 @@ const Publishers = () => {
                 alt="Students engaged with news on mobile devices"
                 className="w-full h-full object-cover rounded-2xl"
               />
-              {/* Overlay with analytics info */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-midnight-black/90 via-midnight-black/60 to-transparent p-6">
-                <div className="flex items-center justify-between text-white">
-                  <div>
-                    <p className="text-sm font-medium mb-1">Active Readers</p>
-                    <p className="text-2xl font-bold text-neon-green">250K+</p>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-sm font-medium mb-1">Engagement Rate</p>
-                    <p className="text-2xl font-bold text-electric-blue">87%</p>
-                  </div>
-                </div>
-              </div>
             </div>
             <div className="order-1 md:order-2">
               <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8 leading-tight">

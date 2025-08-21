@@ -160,11 +160,11 @@ const About = () => {
                   <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-electric-blue/20 hover:border-electric-blue/40 transition-all duration-300 group">
                     <div className="flex items-center space-x-3">
                       <div className="w-8 h-8 bg-electric-blue/20 rounded-full flex items-center justify-center group-hover:bg-electric-blue/30 transition-colors">
-                        <span className="text-xs font-bold text-electric-blue">Q</span>
+                        <span className="text-xs font-bold text-electric-blue">T</span>
                       </div>
                       <div>
-                        <h4 className="text-sm font-semibold text-electric-blue">Quality First</h4>
-                        <p className="text-xs text-soft-gray/70">Editorial integrity over algorithms</p>
+                        <h4 className="text-sm font-semibold text-electric-blue">Truth & Transparency</h4>
+                        <p className="text-xs text-soft-gray/70">Authentic stories that matter</p>
                       </div>
                     </div>
                   </div>
@@ -172,23 +172,23 @@ const About = () => {
                   <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-neon-green/20 hover:border-neon-green/40 transition-all duration-300 group">
                     <div className="flex items-center space-x-3">
                       <div className="w-8 h-8 bg-neon-green/20 rounded-full flex items-center justify-center group-hover:bg-neon-green/30 transition-colors">
-                        <span className="text-xs font-bold text-neon-green">U</span>
+                        <span className="text-xs font-bold text-neon-green">E</span>
                       </div>
                       <div>
-                        <h4 className="text-sm font-semibold text-neon-green">User Control</h4>
-                        <p className="text-xs text-soft-gray/70">Readers choose their experience</p>
+                        <h4 className="text-sm font-semibold text-neon-green">Empowerment</h4>
+                        <p className="text-xs text-soft-gray/70">Knowledge that inspires action</p>
                       </div>
                     </div>
                   </div>
 
-                  <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-vibrant-pink/20 hover:border-vibrant-pink/40 transition-all duration-300 group">
+                  <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-electric-blue/20 hover:border-electric-blue/40 transition-all duration-300 group">
                     <div className="flex items-center space-x-3">
-                      <div className="w-8 h-8 bg-vibrant-pink/20 rounded-full flex items-center justify-center group-hover:bg-vibrant-pink/30 transition-colors">
-                        <span className="text-xs font-bold text-vibrant-pink">F</span>
+                      <div className="w-8 h-8 bg-electric-blue/20 rounded-full flex items-center justify-center group-hover:bg-electric-blue/30 transition-colors">
+                        <span className="text-xs font-bold text-electric-blue">I</span>
                       </div>
                       <div>
-                        <h4 className="text-sm font-semibold text-vibrant-pink">Fair Revenue</h4>
-                        <p className="text-xs text-soft-gray/70">70% to publishers</p>
+                        <h4 className="text-sm font-semibold text-electric-blue">Innovation</h4>
+                        <p className="text-xs text-soft-gray/70">Reimagining what's possible</p>
                       </div>
                     </div>
                   </div>

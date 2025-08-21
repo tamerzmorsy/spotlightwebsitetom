@@ -239,12 +239,10 @@ const About = () => {
       <section className="py-24" style={{ backgroundColor: '#008888' }}>
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-5xl sm:text-6xl font-display font-bold text-white mb-8">
-            Ready to be part of <br />
-            <span className="text-electric-blue">the movement</span>?
+            The future of news <span className="text-electric-blue">starts here.</span>
           </h2>
           <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
-            Whether you're a student, publisher, or university, there's a place
-            for you in our mission.
+            No paywalls. No clickbait. Just trusted stories from hundreds of publishers. Join the movement—free.
           </p>
           <div className="flex justify-center">
             <Link to="/get-app">

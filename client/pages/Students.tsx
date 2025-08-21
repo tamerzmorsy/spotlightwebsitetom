@@ -144,16 +144,18 @@ const Students = () => {
                 {/* Featured Article */}
                 <div className="p-4">
                   <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden mb-4">
-                    <div className="h-32 bg-gradient-to-r from-gray-600 to-gray-700 flex items-center justify-center relative">
-                      <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
-                        <span className="text-gray-800 text-lg font-bold">🍎</span>
-                      </div>
+                    <div className="h-32 relative overflow-hidden">
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets%2Ff9a2587e1b874b6e9d34bfb6b703b455%2Fc9efe81232c847cb8bd3312f3d046ff6?format=webp&width=800"
+                        alt="Article featured image"
+                        className="w-full h-full object-cover"
+                      />
                       {/* Action buttons */}
                       <div className="absolute top-3 right-3 flex space-x-2">
-                        <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
+                        <div className="w-6 h-6 bg-black/40 rounded-full flex items-center justify-center backdrop-blur-sm">
                           <span className="text-xs">📤</span>
                         </div>
-                        <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
+                        <div className="w-6 h-6 bg-black/40 rounded-full flex items-center justify-center backdrop-blur-sm">
                           <span className="text-xs">🔖</span>
                         </div>
                       </div>

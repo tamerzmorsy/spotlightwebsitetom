@@ -78,9 +78,6 @@ const Publishers = () => {
           </div>
 
           {/* Feature highlight */}
-          <p className="text-base text-soft-gray/60 mb-16">
-            Standard terms. No hidden fees. Equal visibility for all partners.
-          </p>
         </div>
       </section>
 

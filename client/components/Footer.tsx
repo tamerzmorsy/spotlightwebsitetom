@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl font-display font-bold text-electric-blue mb-4">
-              Spotlight News
+              SpotlightNews
             </h3>
             <p className="text-soft-gray/70 mb-6 max-w-md">
               Reinventing news for a new generation. Algorithm-free feeds, quality 

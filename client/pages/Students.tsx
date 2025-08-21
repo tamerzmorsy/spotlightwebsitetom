@@ -143,13 +143,16 @@ const Students = () => {
 
                 {/* Featured Article */}
                 <div className="p-4">
-                  <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden mb-4">
-                    <div className="h-32 relative overflow-hidden">
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets%2Ff9a2587e1b874b6e9d34bfb6b703b455%2Fc9efe81232c847cb8bd3312f3d046ff6?format=webp&width=800"
-                        alt="Article featured image"
-                        className="w-full h-full object-cover"
-                      />
+                  <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden mb-4 shadow-lg">
+                    <div className="h-32 relative overflow-hidden bg-gradient-to-br from-electric-blue/10 to-neon-green/10">
+                      {/* Modern article header with gradient background */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-electric-blue/20 via-transparent to-neon-green/15"></div>
+
+                      {/* Breaking news badge */}
+                      <div className="absolute top-3 left-3 bg-red-500 text-white text-xs px-2 py-1 rounded-full font-semibold">
+                        BREAKING
+                      </div>
+
                       {/* Action buttons */}
                       <div className="absolute top-3 right-3 flex space-x-2">
                         <div className="w-6 h-6 bg-black/40 rounded-full flex items-center justify-center backdrop-blur-sm">
@@ -159,18 +162,28 @@ const Students = () => {
                           <span className="text-xs">🔖</span>
                         </div>
                       </div>
-                    </div>
-                    <div className="p-4">
-                      <div className="text-electric-blue text-sm font-medium mb-2">Reuters</div>
-                      <div className="text-white text-sm font-semibold leading-tight mb-2">
-                        Apple to bring blood oxygen feature to some US watch...
+
+                      {/* Large news icon/graphic */}
+                      <div className="absolute bottom-3 left-3 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/20">
+                        <span className="text-2xl">📱</span>
                       </div>
-                      <div className="text-gray-400 text-xs mb-3">By Stephen Nellis</div>
+                    </div>
+
+                    <div className="p-4">
+                      <div className="text-electric-blue text-sm font-medium mb-2">TechCrunch</div>
+                      <div className="text-white text-sm font-semibold leading-tight mb-2">
+                        Student News App Raises $50M to Transform Campus Media
+                      </div>
+                      <div className="text-gray-400 text-xs mb-3">By Sarah Chen</div>
                       <div className="text-gray-300 text-xs leading-relaxed mb-3">
-                        SAN FRANCISCO (Reuters) - Apple will bring a blood oxygen measurement feature to some of its watch mo...
+                        Revolutionary platform connects college students with personalized news feeds, challenging traditional media consumption...
                       </div>
                       <div className="flex justify-between items-center">
-                        <div className="text-gray-400 text-xs">Today at 9:57 AM • 1 min read</div>
+                        <div className="text-gray-400 text-xs">2 hours ago • 3 min read</div>
+                        <div className="flex items-center space-x-1">
+                          <span className="text-yellow-400 text-xs">⭐</span>
+                          <span className="text-gray-400 text-xs">4.8</span>
+                        </div>
                       </div>
                     </div>
                   </div>

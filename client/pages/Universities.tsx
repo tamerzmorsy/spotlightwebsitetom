@@ -274,7 +274,7 @@ const Universities = () => {
 
 
       {/* Final CTA */}
-      <section className="py-24" style={{ backgroundColor: '#7b004c' }}>
+      <section className="py-24" style={{ backgroundColor: '#1B9900' }}>
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-5xl sm:text-6xl font-display font-bold text-white mb-8">
             Transform how students access news— <br />
@@ -287,7 +287,7 @@ const Universities = () => {
             <Link to="/contact">
               <Button
                 size="lg"
-                className="bg-white text-[#7b004c] hover:bg-gray-100 font-semibold text-lg px-10 py-5 rounded-full border-2 border-white"
+                className="bg-white text-[#1B9900] hover:bg-gray-100 font-semibold text-lg px-10 py-5 rounded-full border-2 border-white"
               >
                 <Handshake className="w-5 h-5 mr-2" />
                 Schedule consultation

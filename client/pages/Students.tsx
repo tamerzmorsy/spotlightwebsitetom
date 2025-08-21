@@ -50,7 +50,7 @@ const Students = () => {
           {/* Product Badge */}
           <div className="mb-8">
             <span className="inline-block text-electric-blue text-lg font-medium tracking-wide">
-              For Students
+              For You
             </span>
           </div>
 
@@ -75,7 +75,7 @@ const Students = () => {
                 size="lg"
                 className="bg-electric-blue text-midnight-black hover:bg-cyan-400 font-semibold text-xl px-12 py-6 rounded-full"
               >
-                Get the app*
+                Get the app
               </Button>
             </Link>
           </div>
@@ -103,7 +103,7 @@ const Students = () => {
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-electric-blue mr-3" />
                   <span className="text-soft-gray/80">
-                    300+ trusted publications
+                    Hundreds of trusted publications
                   </span>
                 </div>
                 <div className="flex items-center">
@@ -255,63 +255,39 @@ const Students = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-vibrant-pink/20 to-neon-green/20 rounded-3xl p-8 h-96 flex items-center justify-center">
-              {/* Clean Reading Streak Calendar */}
+            <div className="bg-gradient-to-br from-neon-green/20 to-electric-blue/20 rounded-3xl p-8 h-96 flex items-center justify-center">
+              {/* Sports Challenge Interface */}
               <div className="text-center">
-                <h3 className="text-white text-xl font-semibold mb-2">Reading Streak</h3>
-                <p className="text-electric-blue text-sm mb-6">7 days strong 🔥</p>
+                <h3 className="text-white text-xl font-semibold mb-2">🏆 Sports Challenge</h3>
+                <p className="text-electric-blue text-sm mb-6">March Madness Knowledge</p>
 
-                {/* Calendar Grid */}
-                <div className="space-y-3">
-                  {/* Week Days Header */}
-                  <div className="grid grid-cols-7 gap-2 text-xs text-soft-gray/60 mb-2">
-                    <span>S</span>
-                    <span>M</span>
-                    <span>T</span>
-                    <span>W</span>
-                    <span>T</span>
-                    <span>F</span>
-                    <span>S</span>
+                {/* Challenge Progress */}
+                <div className="space-y-4">
+                  {/* Progress Bar */}
+                  <div className="bg-midnight-black/50 rounded-full h-3 w-48 mx-auto">
+                    <div className="bg-gradient-to-r from-neon-green to-electric-blue h-3 rounded-full" style={{width: '75%'}}></div>
                   </div>
+                  <p className="text-xs text-soft-gray/70">75% Complete</p>
 
-                  {/* Week 1 */}
-                  <div className="grid grid-cols-7 gap-2">
-                    <div className="w-8 h-8 bg-soft-gray/20 rounded-lg"></div>
-                    <div className="w-8 h-8 bg-soft-gray/20 rounded-lg"></div>
-                    <div className="w-8 h-8 bg-neon-green rounded-lg flex items-center justify-center">
-                      <div className="w-2 h-2 bg-midnight-black rounded-full"></div>
+                  {/* Challenge Stats */}
+                  <div className="grid grid-cols-2 gap-4 mt-6">
+                    <div className="bg-neon-green/10 rounded-lg p-3 border border-neon-green/20">
+                      <div className="text-neon-green text-lg font-bold">12</div>
+                      <div className="text-xs text-soft-gray/60">Articles Read</div>
                     </div>
-                    <div className="w-8 h-8 bg-neon-green rounded-lg flex items-center justify-center">
-                      <div className="w-2 h-2 bg-midnight-black rounded-full"></div>
-                    </div>
-                    <div className="w-8 h-8 bg-neon-green rounded-lg flex items-center justify-center">
-                      <div className="w-2 h-2 bg-midnight-black rounded-full"></div>
-                    </div>
-                    <div className="w-8 h-8 bg-neon-green rounded-lg flex items-center justify-center">
-                      <div className="w-2 h-2 bg-midnight-black rounded-full"></div>
-                    </div>
-                    <div className="w-8 h-8 bg-neon-green rounded-lg flex items-center justify-center">
-                      <div className="w-2 h-2 bg-midnight-black rounded-full"></div>
+                    <div className="bg-electric-blue/10 rounded-lg p-3 border border-electric-blue/20">
+                      <div className="text-electric-blue text-lg font-bold">850</div>
+                      <div className="text-xs text-soft-gray/60">Points Earned</div>
                     </div>
                   </div>
 
-                  {/* Week 2 */}
-                  <div className="grid grid-cols-7 gap-2">
-                    <div className="w-8 h-8 bg-soft-gray/20 rounded-lg"></div>
-                    <div className="w-8 h-8 bg-neon-green rounded-lg flex items-center justify-center">
-                      <div className="w-2 h-2 bg-midnight-black rounded-full"></div>
-                    </div>
-                    <div className="w-8 h-8 bg-electric-blue rounded-lg flex items-center justify-center border-2 border-white">
-                      <div className="w-2 h-2 bg-midnight-black rounded-full"></div>
-                    </div>
-                    <div className="w-8 h-8 bg-soft-gray/20 rounded-lg border border-electric-blue/40"></div>
-                    <div className="w-8 h-8 bg-soft-gray/20 rounded-lg"></div>
-                    <div className="w-8 h-8 bg-soft-gray/20 rounded-lg"></div>
-                    <div className="w-8 h-8 bg-soft-gray/20 rounded-lg"></div>
+                  {/* Current Prize */}
+                  <div className="mt-4 bg-gradient-to-r from-electric-blue/20 to-neon-green/20 rounded-lg p-3 border border-electric-blue/30">
+                    <div className="text-electric-blue text-sm font-medium">🎯 Current Prize</div>
+                    <div className="text-white font-bold">AirPods Pro</div>
+                    <div className="text-xs text-soft-gray/60">3 more articles to qualify</div>
                   </div>
                 </div>
-
-                <p className="text-xs text-soft-gray/60 mt-6">Today's goal: Read 3 articles</p>
               </div>
             </div>
           </div>

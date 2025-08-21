@@ -246,60 +246,6 @@ const Pricing = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-24">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl sm:text-5xl font-display font-bold text-soft-gray mb-16 text-center">
-            Frequently asked{" "}
-            <span className="text-electric-blue">questions.</span>
-          </h2>
-
-          <div className="space-y-8">
-            <div className="border-b border-soft-gray/10 pb-8">
-              <h3 className="text-xl font-semibold text-soft-gray mb-4">
-                How does the free trial work?
-              </h3>
-              <p className="text-soft-gray/70">
-                Start with full Premium access for 30 days. No credit card
-                required. After the trial, choose to continue with Premium or
-                switch to the free plan.
-              </p>
-            </div>
-
-            <div className="border-b border-soft-gray/10 pb-8">
-              <h3 className="text-xl font-semibold text-soft-gray mb-4">
-                How do publishers benefit?
-              </h3>
-              <p className="text-soft-gray/70">
-                Publishers receive 70% of subscription revenue from their
-                readers. This creates a sustainable model that rewards quality
-                journalism.
-              </p>
-            </div>
-
-            <div className="border-b border-soft-gray/10 pb-8">
-              <h3 className="text-xl font-semibold text-soft-gray mb-4">
-                Can I cancel anytime?
-              </h3>
-              <p className="text-soft-gray/70">
-                Yes, you can cancel your subscription at any time. You'll retain
-                access until the end of your billing period.
-              </p>
-            </div>
-
-            <div className="border-b border-soft-gray/10 pb-8">
-              <h3 className="text-xl font-semibold text-soft-gray mb-4">
-                What about student discounts?
-              </h3>
-              <p className="text-soft-gray/70">
-                Many universities offer bulk subscriptions for students. Check
-                if your campus is a partner, or contact us to bring Spotlight to
-                your university.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Final CTA */}
       <section className="py-24" style={{ backgroundColor: '#008888' }}>

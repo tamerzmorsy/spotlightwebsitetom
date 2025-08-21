@@ -134,23 +134,6 @@ const GetApp = () => {
             </div>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto pt-8 border-t border-soft-gray/10">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-soft-gray mb-1">4.8★</div>
-              <div className="text-soft-gray/50 text-sm">App Store rating</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-soft-gray mb-1">
-                250K+
-              </div>
-              <div className="text-soft-gray/50 text-sm">Downloads</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-soft-gray mb-1">500+</div>
-              <div className="text-soft-gray/50 text-sm">Universities</div>
-            </div>
-          </div>
         </div>
       </section>
 

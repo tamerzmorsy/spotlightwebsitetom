@@ -134,10 +134,10 @@ const Universities = () => {
               />
             </div>
             <div className="order-1 md:order-2">
-              <h2 className="text-5xl sm:text-6xl font-display font-bold text-soft-gray mb-8 leading-tight">
+              <h2 className="text-3xl sm:text-4xl font-display font-bold text-soft-gray mb-8 leading-tight">
                 Custom landing pages.
                 <br />
-                <span className="text-vibrant-pink">Full support.</span>
+                <span className="text-neon-green">Full support.</span>
               </h2>
               <p className="text-xl text-soft-gray/70 mb-8 leading-relaxed">
                 Following Lehigh's successful blueprint, we create branded landing

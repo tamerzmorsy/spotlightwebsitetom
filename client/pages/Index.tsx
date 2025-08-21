@@ -1,4 +1,5 @@
 import React from "react";
+import { useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
@@ -19,6 +20,24 @@ import {
 } from "lucide-react";
 
 const Index = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      const handleLoadedData = () => {
+        setTimeout(() => {
+          video.pause();
+        }, 5000); // Pause after 5 seconds
+      };
+
+      video.addEventListener('loadeddata', handleLoadedData);
+
+      return () => {
+        video.removeEventListener('loadeddata', handleLoadedData);
+      };
+    }
+  }, []);
   return (
     <div className="min-h-screen bg-midnight-black text-soft-gray">
       <Navigation />

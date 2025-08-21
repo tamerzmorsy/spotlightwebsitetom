@@ -344,9 +344,6 @@ const Pricing = () => {
             Ready to break through <br />
             <span className="text-electric-blue">the paywalls</span>?
           </h2>
-          <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
-            Start your free trial today. No credit card required.
-          </p>
           <Link to="/get-app">
             <Button
               size="lg"
@@ -355,9 +352,6 @@ const Pricing = () => {
               Try Premium free
             </Button>
           </Link>
-          <p className="text-sm text-white/70 mt-8">
-            * 30-day free trial. Cancel anytime.
-          </p>
         </div>
       </section>
 

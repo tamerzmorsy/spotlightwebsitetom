@@ -179,12 +179,6 @@ const Publishers = () => {
                   </span>
                 </div>
               </div>
-              <Button
-                variant="outline"
-                className="border-neon-green text-neon-green hover:bg-neon-green hover:text-midnight-black font-medium px-8 py-4 rounded-full"
-              >
-                Technical details
-              </Button>
             </div>
             <div className="bg-gradient-to-br from-vibrant-pink/20 to-neon-green/20 rounded-3xl p-16 h-96 flex items-center justify-center">
               <div className="text-center text-soft-gray/60">

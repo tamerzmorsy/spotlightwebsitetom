@@ -125,10 +125,45 @@ const Publishers = () => {
                 View revenue model
               </Button>
             </div>
-            <div className="bg-gradient-to-br from-neon-green/20 to-electric-blue/20 rounded-3xl p-16 h-96 flex items-center justify-center">
-              <div className="text-center text-soft-gray/60">
-                <DollarSign className="w-16 h-16 mx-auto mb-4" />
-                <p className="text-lg">Revenue Dashboard</p>
+            <div className="bg-[#121418] rounded-3xl overflow-hidden relative h-96">
+              {/* Revenue Dashboard Visualization */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="relative w-full h-full max-w-[540px] max-h-[320px]">
+                  {/* Background images with layered positioning */}
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/b1cb35e15899a0c16372a632b5c5103bfefb6c71?width=346"
+                    alt=""
+                    className="absolute top-2 left-1 w-[32%] h-[55%] object-cover opacity-20 rounded-lg"
+                  />
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/40dc7b5fa579344860f2447da3bf0931f9ee23fb?width=418"
+                    alt=""
+                    className="absolute -top-2 right-0 w-[39%] h-[60%] object-cover opacity-40 rounded-lg"
+                  />
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/89c1558f322ab5cafa9b4fa937d1be3764a34420?width=564"
+                    alt=""
+                    className="absolute top-[9%] left-[24%] w-[52%] h-[86%] object-cover mix-blend-lighten rounded-lg"
+                  />
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/c8f6a069d42d32c7d98820936b2d567ab293db6c?width=262"
+                    alt=""
+                    className="absolute bottom-4 left-[11%] w-[24%] h-[42%] object-cover opacity-20 rounded-lg"
+                  />
+                  <img
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/4adf0a2e146ddadd205d3d61b366904c55b8d2b6?width=172"
+                    alt=""
+                    className="absolute bottom-4 right-[7%] w-[16%] h-[28%] object-cover opacity-20 rounded-lg"
+                  />
+
+                  {/* Overlay content */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center text-white/80 bg-black/30 backdrop-blur-sm rounded-lg p-4">
+                      <DollarSign className="w-12 h-12 mx-auto mb-2 text-neon-green" />
+                      <p className="text-sm font-medium">Revenue Analytics</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

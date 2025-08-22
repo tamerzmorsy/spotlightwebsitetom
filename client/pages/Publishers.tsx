@@ -227,10 +227,14 @@ const Publishers = () => {
                 Technical details
               </Button>
             </div>
-            <div className="bg-gradient-to-br from-vibrant-pink/20 to-neon-green/20 rounded-3xl p-16 h-96 flex items-center justify-center">
-              <div className="text-center text-soft-gray/60">
-                <BarChart3 className="w-16 h-16 mx-auto mb-4" />
-                <p className="text-lg">Integration Dashboard</p>
+            <div className="bg-[#121418] rounded-3xl overflow-hidden relative h-96">
+              {/* RSS Feed Health & Integration Dashboard */}
+              <div className="absolute inset-0 flex items-center justify-center p-4">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Ff9a2587e1b874b6e9d34bfb6b703b455%2Fa88740f65f3947fda572461082787a6a?format=webp&width=800"
+                  alt="RSS Feed Health and Integration Dashboard"
+                  className="w-full h-full object-contain max-w-[540px] max-h-[320px] rounded-lg"
+                />
               </div>
             </div>
           </div>

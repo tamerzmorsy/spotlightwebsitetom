@@ -139,10 +139,14 @@ const Publishers = () => {
 
           {/* Benefit 2: Fresh Audience */}
           <div className="grid md:grid-cols-2 gap-16 items-center mb-32">
-            <div className="bg-gradient-to-br from-electric-blue/20 to-vibrant-pink/20 rounded-3xl p-16 h-96 flex items-center justify-center order-2 md:order-1">
-              <div className="text-center text-soft-gray/60">
-                <Users className="w-16 h-16 mx-auto mb-4" />
-                <p className="text-lg">Audience Analytics</p>
+            <div className="bg-[#121418] rounded-3xl overflow-hidden relative h-96 order-2 md:order-1">
+              {/* Journalism Metrics Dashboard */}
+              <div className="absolute inset-0 flex items-center justify-center p-4">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Ff9a2587e1b874b6e9d34bfb6b703b455%2F152acd9a385041b190085ea9152b057e?format=webp&width=800"
+                  alt="Journalism Metrics - Q1 Creator Economy Performance"
+                  className="w-full h-full object-contain max-w-[540px] max-h-[320px] rounded-lg"
+                />
               </div>
             </div>
             <div className="order-1 md:order-2">

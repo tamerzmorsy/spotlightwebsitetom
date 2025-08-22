@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
@@ -19,6 +19,15 @@ import {
 } from "lucide-react";
 
 const Index = () => {
+  const [showVideo, setShowVideo] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowVideo(false);
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <div className="min-h-screen bg-midnight-black text-soft-gray">
       <Navigation />
@@ -27,17 +36,6 @@ const Index = () => {
       <section className="relative pt-20 pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Video Background */}
         <video
-          ref={(video) => {
-            if (video) {
-              const handleLoadedData = () => {
-                setTimeout(() => {
-                  video.pause();
-                }, 5000); // Pause after 5 seconds
-              };
-              video.addEventListener('loadeddata', handleLoadedData);
-              return () => video.removeEventListener('loadeddata', handleLoadedData);
-            }
-          }}
           autoPlay={true}
           muted={true}
           loop={false}
@@ -46,7 +44,9 @@ const Index = () => {
           preload="auto"
           webkit-playsinline="true"
           data-object-fit="cover"
-          className="absolute inset-0 w-full h-full object-cover z-0"
+          className={`absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-1000 ${
+            showVideo ? 'opacity-100' : 'opacity-0'
+          }`}
           style={{
             width: '100%',
             height: '100%',

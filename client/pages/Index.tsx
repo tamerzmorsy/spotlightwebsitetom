@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
@@ -19,6 +19,15 @@ import {
 } from "lucide-react";
 
 const Index = () => {
+  const [showVideo, setShowVideo] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowVideo(false);
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <div className="min-h-screen bg-midnight-black text-soft-gray">
       <Navigation />

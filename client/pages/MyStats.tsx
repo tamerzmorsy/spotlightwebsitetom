@@ -355,7 +355,7 @@ const MyStats = () => {
       prize: "Wireless Charger",
       topUsers: [
         { rank: 1, name: "Alex Chen", score: 4, badge: "🏆" },
-        { rank: 2, name: "Sam Rodriguez", score: 4, badge: "���" },
+        { rank: 2, name: "Sam Rodriguez", score: 4, badge: "🥈" },
         { rank: 3, name: "Jordan Martinez", score: 3, badge: "🥉" }
       ],
       userRank: 8,
@@ -776,11 +776,11 @@ const MyStats = () => {
               .map((badge) => (
                 <Card
                   key={badge.id}
-                  className={`p-6 transition-all duration-300 hover:scale-105 ${
+                  className={`p-4 md:p-6 transition-all duration-300 hover:scale-105 hover:shadow-xl ${
                     badge.earned
-                      ? 'bg-gray-800/40 border-electric-blue/40 shadow-lg shadow-electric-blue/10'
-                      : 'bg-gray-800/20 border-gray-700/50 hover:border-electric-blue/30'
-                  }`}
+                      ? 'bg-gradient-to-br from-gray-800/60 to-gray-900/60 border-electric-blue/50 shadow-lg shadow-electric-blue/20 hover:shadow-electric-blue/30'
+                      : 'bg-gradient-to-br from-gray-800/30 to-gray-900/30 border-gray-700/40 hover:border-electric-blue/40 hover:bg-gray-800/50'
+                  } backdrop-blur-sm`}
                 >
                   <div className="text-center">
                     {/* Badge Icon with rarity glow */}

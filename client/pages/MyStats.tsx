@@ -355,7 +355,7 @@ const MyStats = () => {
       prize: "Wireless Charger",
       topUsers: [
         { rank: 1, name: "Alex Chen", score: 4, badge: "🏆" },
-        { rank: 2, name: "Sam Rodriguez", score: 4, badge: "🥈" },
+        { rank: 2, name: "Sam Rodriguez", score: 4, badge: "���" },
         { rank: 3, name: "Jordan Martinez", score: 3, badge: "🥉" }
       ],
       userRank: 8,
@@ -770,7 +770,7 @@ const MyStats = () => {
           </div>
 
           {/* Badges Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
             {badges
               .filter(badge => badgesTab === 'earned' ? badge.earned : !badge.earned)
               .map((badge) => (

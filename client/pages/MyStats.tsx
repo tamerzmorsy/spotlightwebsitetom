@@ -46,7 +46,7 @@ interface Badge {
   id: string;
   name: string;
   description: string;
-  icon: string;
+  icon: React.ReactElement;
   category: 'reading' | 'streak' | 'challenges' | 'social' | 'special';
   requirement: string;
   progress?: number;

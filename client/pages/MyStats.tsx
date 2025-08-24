@@ -732,10 +732,10 @@ const MyStats = () => {
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl sm:text-5xl font-display font-bold text-soft-gray mb-6">
-              Badges & <span className="text-electric-blue">Achievements</span>
+              Your <span className="text-electric-blue">Achievements</span>
             </h2>
             <p className="text-xl text-soft-gray/70">
-              Celebrate your reading milestones
+              Unlock badges as you level up your news game and share your bragging rights
             </p>
           </div>
 

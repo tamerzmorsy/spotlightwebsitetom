@@ -835,15 +835,18 @@ const MyStats = () => {
                     {/* Progress Bar for Available Badges */}
                     {!badge.earned && badge.progress !== undefined && badge.maxProgress && (
                       <div className="mt-3">
-                        <div className="flex items-center justify-between text-xs text-soft-gray/60 mb-1">
+                        <div className="flex items-center justify-between text-xs font-medium text-soft-gray/70 mb-2">
                           <span>Progress</span>
-                          <span>{badge.progress}/{badge.maxProgress}</span>
+                          <span className="text-electric-blue">{badge.progress}/{badge.maxProgress}</span>
                         </div>
-                        <div className="w-full bg-gray-700/50 rounded-full h-2">
+                        <div className="w-full bg-gray-700/40 rounded-full h-2.5 shadow-inner">
                           <div
-                            className="bg-electric-blue rounded-full h-2 transition-all duration-500"
+                            className="bg-gradient-to-r from-electric-blue to-neon-green rounded-full h-2.5 transition-all duration-700 shadow-sm shadow-electric-blue/30"
                             style={{ width: `${(badge.progress / badge.maxProgress) * 100}%` }}
                           />
+                        </div>
+                        <div className="text-xs text-electric-blue/70 mt-1 font-medium">
+                          {Math.round((badge.progress / badge.maxProgress) * 100)}% complete
                         </div>
                       </div>
                     )}

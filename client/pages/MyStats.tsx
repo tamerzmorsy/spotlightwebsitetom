@@ -810,15 +810,15 @@ const MyStats = () => {
                     </div>
 
                     {/* Badge Name */}
-                    <h3 className={`text-lg font-bold mb-2 ${
+                    <h3 className={`text-base md:text-lg font-bold mb-2 leading-tight ${
                       badge.earned ? 'text-soft-gray' : 'text-soft-gray/60'
                     }`}>
                       {badge.name}
                     </h3>
 
                     {/* Badge Description */}
-                    <p className={`text-sm mb-3 ${
-                      badge.earned ? 'text-soft-gray/70' : 'text-soft-gray/50'
+                    <p className={`text-xs md:text-sm mb-3 leading-relaxed ${
+                      badge.earned ? 'text-soft-gray/80' : 'text-soft-gray/50'
                     }`}>
                       {badge.description}
                     </p>

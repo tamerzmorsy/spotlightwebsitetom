@@ -824,10 +824,10 @@ const MyStats = () => {
                     </p>
 
                     {/* Requirement */}
-                    <div className={`text-xs rounded-full px-3 py-1 mb-3 inline-block ${
+                    <div className={`text-xs font-medium rounded-full px-3 py-1 mb-3 inline-block transition-all duration-300 ${
                       badge.earned
-                        ? 'bg-electric-blue/20 text-electric-blue border border-electric-blue/30'
-                        : 'bg-gray-700/50 text-soft-gray/60 border border-gray-600/50'
+                        ? 'bg-electric-blue/25 text-electric-blue border border-electric-blue/40 shadow-sm shadow-electric-blue/20'
+                        : 'bg-gray-700/40 text-soft-gray/60 border border-gray-600/40 hover:border-electric-blue/30'
                     }`}>
                       {badge.requirement}
                     </div>

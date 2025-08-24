@@ -784,20 +784,27 @@ const MyStats = () => {
                 >
                   <div className="text-center">
                     {/* Badge Icon with rarity glow */}
-                    <div className={`relative w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center text-3xl ${
+                    <div className={`relative w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 ${
                       badge.earned
-                        ? badge.rarity === 'legendary' ? 'bg-gradient-to-br from-purple-500/20 to-pink-500/20 ring-2 ring-purple-500/50' :
-                          badge.rarity === 'epic' ? 'bg-gradient-to-br from-orange-500/20 to-red-500/20 ring-2 ring-orange-500/50' :
-                          badge.rarity === 'rare' ? 'bg-gradient-to-br from-blue-500/20 to-cyan-500/20 ring-2 ring-blue-500/50' :
-                          'bg-gradient-to-br from-gray-500/20 to-gray-400/20 ring-2 ring-gray-500/50'
-                        : 'bg-gray-700/50'
+                        ? badge.rarity === 'legendary' ? 'bg-gradient-to-br from-electric-blue/30 to-vibrant-pink/30 ring-2 ring-electric-blue/60 shadow-lg shadow-electric-blue/20' :
+                          badge.rarity === 'epic' ? 'bg-gradient-to-br from-neon-green/30 to-electric-blue/30 ring-2 ring-neon-green/60 shadow-lg shadow-neon-green/20' :
+                          badge.rarity === 'rare' ? 'bg-gradient-to-br from-electric-blue/30 to-midnight-black/30 ring-2 ring-electric-blue/50' :
+                          'bg-gradient-to-br from-soft-gray/20 to-midnight-black/30 ring-2 ring-soft-gray/40'
+                        : 'bg-gray-700/30 border-2 border-gray-600/50'
                     }`}>
-                      <span className={badge.earned ? '' : 'grayscale opacity-50'}>
+                      <div className={`${badge.earned ? 'text-electric-blue' : 'text-gray-400 grayscale opacity-50'} transition-all duration-300`}>
                         {badge.icon}
-                      </span>
+                      </div>
                       {badge.earned && (
-                        <div className="absolute -top-1 -right-1 w-6 h-6 bg-electric-blue rounded-full flex items-center justify-center">
-                          <span className="text-xs">✓</span>
+                        <div className="absolute -top-1 -right-1 w-6 h-6 bg-electric-blue rounded-full flex items-center justify-center shadow-lg shadow-electric-blue/30 animate-pulse">
+                          <span className="text-xs font-bold text-midnight-black">✓</span>
+                        </div>
+                      )}
+                      {!badge.earned && badge.progress !== undefined && badge.maxProgress && (
+                        <div className="absolute inset-0 rounded-full" style={{
+                          background: `conic-gradient(from 0deg, #00FFFF ${(badge.progress / badge.maxProgress) * 360}deg, transparent ${(badge.progress / badge.maxProgress) * 360}deg)`
+                        }}>
+                          <div className="w-full h-full rounded-full bg-gray-800/80 m-0.5"></div>
                         </div>
                       )}
                     </div>

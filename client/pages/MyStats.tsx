@@ -31,7 +31,14 @@ import {
   Crown,
   GraduationCap,
   Building,
-  Briefcase
+  Briefcase,
+  Megaphone,
+  MapPin,
+  Share2,
+  Zap,
+  Globe,
+  Shield,
+  Eye
 } from "lucide-react";
 
 // Mock data structures that match real API responses

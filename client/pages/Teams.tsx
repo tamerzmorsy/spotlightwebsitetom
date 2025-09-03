@@ -677,6 +677,18 @@ const Teams = () => {
     setShowUnsplashPicker(false);
   };
 
+  // Join team functionality
+  const handleJoinTeam = (team: TeamRanking) => {
+    if (team.joinType === 'open') {
+      console.log(`Joining open team: ${team.name}`);
+      alert(`Successfully joined ${team.name}!`);
+    } else {
+      console.log(`Requesting to join restricted team: ${team.name}`);
+      alert(`Join request sent to ${team.name}!`);
+    }
+    setShowTeamModal(false);
+  };
+
   // Event handlers
   const handleCreateTeam = async () => {
     // Basic validation

@@ -139,6 +139,10 @@ const Teams = () => {
   const [isLoadingUnsplash, setIsLoadingUnsplash] = useState(false);
   const [unsplashError, setUnsplashError] = useState<string | null>(null);
 
+  // Save state
+  const [isSaving, setIsSaving] = useState(false);
+  const [saveSuccess, setSaveSuccess] = useState(false);
+
   // Members tab state
   const [membersSubTab, setMembersSubTab] = useState<'members' | 'requests'>('members');
   const [inviteEmail, setInviteEmail] = useState("");

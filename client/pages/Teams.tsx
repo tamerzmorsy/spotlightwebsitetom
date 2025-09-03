@@ -970,6 +970,57 @@ const Teams = () => {
     console.log("Joining competition:", competitionId);
   };
 
+  // Get current user's role in the team
+  const getCurrentUserRole = (): 'owner' | 'admin' | 'member' | null => {
+    // In this demo, the current user is represented by the first team member (id: "1")
+    // In a real app, you'd match against the authenticated user's ID
+    const currentUser = teamMembers.find(member => member.id === "1");
+    return currentUser?.role || null;
+  };
+
+  // Check if current user can edit the team (owner or admin)
+  const canEditTeam = (): boolean => {
+    const role = getCurrentUserRole();
+    return role === 'owner' || role === 'admin';
+  };
+
+  const handleLeaveTeam = async () => {
+    setIsLeavingTeam(true);
+
+    try {
+      // Simulate API call delay
+      await new Promise(resolve => setTimeout(resolve, 1500));
+
+      // In real app, this would make an API call:
+      // const response = await fetch(`/api/teams/${userTeam.id}/leave`, {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' }
+      // });
+
+      // Remove current user from team members
+      setTeamMembers(prev => prev.filter(member => member.id !== "1"));
+
+      // Update team member count
+      setUserTeam(prev => ({
+        ...prev,
+        memberCount: prev.memberCount - 1
+      }));
+
+      console.log(`Left team: ${userTeam.name}`);
+
+      // In a real app, you might redirect to teams page or show a success message
+      // For demo purposes, we'll just show an alert
+      alert(`You have successfully left ${userTeam.name}. You would normally be redirected to the teams page.`);
+
+    } catch (error) {
+      console.error("Error leaving team:", error);
+      setInviteError("Failed to leave team. Please try again.");
+    } finally {
+      setIsLeavingTeam(false);
+      setShowLeaveConfirm(false);
+    }
+  };
+
   const nextCompetition = () => {
     setCurrentCompetitionIndex((prev) => 
       prev === filteredCompetitions.length - 1 ? 0 : prev + 1

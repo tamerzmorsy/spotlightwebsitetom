@@ -673,6 +673,9 @@ const Teams = () => {
       setCoverImagePreview(userTeam.coverImage);
       setJoinType(userTeam.joinType);
       setMemberLimit(userTeam.maxMembers);
+      // Reset save states
+      setIsSaving(false);
+      setSaveSuccess(false);
     }
   }, [showCreateModal, userTeam]);
 

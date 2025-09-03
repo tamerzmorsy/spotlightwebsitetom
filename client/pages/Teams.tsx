@@ -1119,13 +1119,23 @@ const Teams = () => {
                   </div>
                 </div>
                 <div className="ml-8 flex-shrink-0">
-                  <Button
-                    onClick={() => setShowCreateModal(true)}
-                    className="bg-electric-blue text-midnight-black hover:bg-cyan-400 font-semibold px-8 py-4 rounded-full text-lg shadow-lg shadow-electric-blue/30 hover:shadow-electric-blue/50 transition-all duration-300 neon-glow-blue"
-                  >
-                    <Settings className="w-5 h-5 mr-2" />
-                    Edit
-                  </Button>
+                  {canEditTeam() ? (
+                    <Button
+                      onClick={() => setShowCreateModal(true)}
+                      className="bg-electric-blue text-midnight-black hover:bg-cyan-400 font-semibold px-8 py-4 rounded-full text-lg shadow-lg shadow-electric-blue/30 hover:shadow-electric-blue/50 transition-all duration-300 neon-glow-blue"
+                    >
+                      <Settings className="w-5 h-5 mr-2" />
+                      Edit
+                    </Button>
+                  ) : (
+                    <Button
+                      onClick={() => setShowLeaveConfirm(true)}
+                      className="bg-red-500 text-white hover:bg-red-600 font-semibold px-8 py-4 rounded-full text-lg shadow-lg shadow-red-500/30 hover:shadow-red-500/50 transition-all duration-300"
+                    >
+                      <ArrowUpDown className="w-5 h-5 mr-2 rotate-90" />
+                      Leave Team
+                    </Button>
+                  )}
                 </div>
               </div>
             </div>

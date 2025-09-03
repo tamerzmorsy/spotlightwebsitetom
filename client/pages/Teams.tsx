@@ -348,6 +348,90 @@ const Teams = () => {
     }
   ]);
 
+  const [teamRankings] = useState<TeamRanking[]>([
+    {
+      id: "team-1",
+      name: "University Updates",
+      avatar: "UU",
+      memberCount: 28,
+      totalPoints: 12840,
+      totalArticlesRead: 2840,
+      rank: 1,
+      category: "campus"
+    },
+    {
+      id: "team-2",
+      name: "Digital Innovators",
+      avatar: "DI",
+      memberCount: 25,
+      totalPoints: 11650,
+      totalArticlesRead: 2650,
+      rank: 2,
+      category: "tech"
+    },
+    {
+      id: "team-3",
+      name: "Campus News Crusaders",
+      avatar: "CN",
+      memberCount: 24,
+      totalPoints: 8420,
+      totalArticlesRead: 1247,
+      rank: 3,
+      isCurrentTeam: true,
+      category: "campus"
+    },
+    {
+      id: "team-4",
+      name: "Tech Enthusiasts",
+      avatar: "TE",
+      memberCount: 20,
+      totalPoints: 7750,
+      totalArticlesRead: 1750,
+      rank: 4,
+      category: "tech"
+    },
+    {
+      id: "team-5",
+      name: "Sports Central",
+      avatar: "SC",
+      memberCount: 22,
+      totalPoints: 7200,
+      totalArticlesRead: 1600,
+      rank: 5,
+      category: "sports"
+    },
+    {
+      id: "team-6",
+      name: "News Nerds",
+      avatar: "NN",
+      memberCount: 18,
+      totalPoints: 6850,
+      totalArticlesRead: 1370,
+      rank: 6,
+      category: "general"
+    },
+    {
+      id: "team-7",
+      name: "Study Squad",
+      avatar: "SS",
+      memberCount: 16,
+      totalPoints: 6120,
+      totalArticlesRead: 1224,
+      rank: 7,
+      category: "campus"
+    },
+    {
+      id: "team-8",
+      name: "Code & Coffee",
+      avatar: "CC",
+      memberCount: 19,
+      totalPoints: 5920,
+      totalArticlesRead: 1184,
+      rank: 8,
+      category: "tech"
+    }
+  ]);
+
   // Computed values
   const sortedMembers = useMemo(() => {
     return [...teamMembers].sort((a, b) => {

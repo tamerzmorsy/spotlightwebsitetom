@@ -235,16 +235,20 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
           <div className="fixed top-14 left-0 right-0 bg-midnight-black/95 backdrop-blur-md z-40 md:hidden">
             <div className="max-w-8xl mx-auto px-4 py-8">
               <div className="flex flex-col space-y-6">
-                {navigationLinks.map((link) => (
-                  <Link
-                    key={link.path}
-                    to={link.path}
-                    className="text-soft-gray/80 hover:text-soft-gray transition-colors text-lg font-medium py-2"
-                    onClick={closeMenu}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
+                {navigationLinks.map((link) => {
+                  const IconComponent = link.icon;
+                  return (
+                    <Link
+                      key={link.path}
+                      to={link.path}
+                      className="text-soft-gray/80 hover:text-soft-gray transition-colors text-lg font-medium py-2 flex items-center space-x-3"
+                      onClick={closeMenu}
+                    >
+                      <IconComponent className="w-5 h-5" />
+                      <span>{link.label}</span>
+                    </Link>
+                  );
+                })}
 
                 {/* Teams Section for Mobile - only show for authenticated users */}
                 {isAuthenticated && (

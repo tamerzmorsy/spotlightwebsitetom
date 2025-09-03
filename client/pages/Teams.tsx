@@ -622,6 +622,19 @@ const Teams = () => {
       return;
     }
 
+    // Check if any changes were made
+    const hasChanges =
+      teamName.trim() !== userTeam.name ||
+      teamDescription.trim() !== userTeam.description ||
+      (coverImagePreview && coverImagePreview !== userTeam.coverImage) ||
+      joinType !== userTeam.joinType ||
+      memberLimit !== userTeam.maxMembers;
+
+    if (!hasChanges) {
+      alert("No changes detected");
+      return;
+    }
+
     setIsSaving(true);
 
     try {

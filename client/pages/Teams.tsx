@@ -471,9 +471,94 @@ const Teams = () => {
     return competitions.filter(comp => comp.status === competitionFilter);
   }, [competitions, competitionFilter]);
 
+  // Drag and drop handlers
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragOver(true);
+  };
+
+  const handleDragLeave = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragOver(false);
+  };
+
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragOver(false);
+
+    const files = Array.from(e.dataTransfer.files);
+    const imageFile = files.find(file => file.type.startsWith('image/'));
+
+    if (imageFile) {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        setCoverImagePreview(event.target?.result as string);
+      };
+      reader.readAsDataURL(imageFile);
+    }
+  };
+
+  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file && file.type.startsWith('image/')) {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        setCoverImagePreview(event.target?.result as string);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  // Unsplash API integration
+  const searchUnsplashImages = async (query: string) => {
+    setIsLoadingUnsplash(true);
+    try {
+      // Using Unsplash API - you'll need to set up API keys
+      const response = await fetch(
+        `https://api.unsplash.com/search/photos?query=${encodeURIComponent(query)}&per_page=12&orientation=landscape`,
+        {
+          headers: {
+            'Authorization': 'Client-ID YOUR_UNSPLASH_ACCESS_KEY' // Replace with actual key
+          }
+        }
+      );
+      const data = await response.json();
+      setUnsplashImages(data.results || []);
+    } catch (error) {
+      console.error('Error fetching Unsplash images:', error);
+      // Fallback with mock data for demo
+      setUnsplashImages([
+        {
+          id: '1',
+          urls: { regular: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80' },
+          alt_description: 'Team collaboration',
+          user: { name: 'John Doe' }
+        },
+        {
+          id: '2',
+          urls: { regular: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80' },
+          alt_description: 'Office teamwork',
+          user: { name: 'Jane Smith' }
+        },
+        {
+          id: '3',
+          urls: { regular: 'https://images.unsplash.com/photo-1515378791036-0648a814c963?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80' },
+          alt_description: 'People meeting',
+          user: { name: 'Alex Johnson' }
+        }
+      ]);
+    }
+    setIsLoadingUnsplash(false);
+  };
+
+  const selectUnsplashImage = (imageUrl: string) => {
+    setCoverImagePreview(imageUrl);
+    setShowUnsplashPicker(false);
+  };
+
   // Event handlers
   const handleCreateTeam = () => {
-    console.log("Editing team:", { teamName, teamDescription, joinType, memberLimit });
+    console.log("Editing team:", { teamName, teamDescription, joinType, memberLimit, coverImage: coverImagePreview });
     setShowCreateModal(false);
     // In real app, this would make an API call to update team
   };

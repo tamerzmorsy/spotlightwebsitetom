@@ -517,7 +517,7 @@ const Teams = () => {
         `https://api.unsplash.com/search/photos?query=${encodeURIComponent(query)}&per_page=12&orientation=landscape`,
         {
           headers: {
-            'Authorization': 'Client-ID QGwEQbEvd0A2mqBLtOkW6G8yp5OBN0ILpxMHhMKKZ2w' // Temporary demo key - replace with your own
+            'Authorization': 'Client-ID Lras8-LGdNyxv0YGEJa8p2pAaLX4mIGs_ySlB6GRq5I'
           }
         }
       );

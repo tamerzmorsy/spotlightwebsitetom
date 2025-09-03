@@ -71,6 +71,12 @@ export default {
         "vibrant-pink": "#FF69B4",
         "midnight-black": "#121212",
         "soft-gray": "#E0E0E0",
+        // Teams Page Color Palette
+        "deep-teal": "#1A3C34",
+        "light-gray": "#F5F5F5",
+        "soft-white": "#FFFFFF",
+        "warm-orange": "#F4A261",
+        "subtle-red": "#D00000",
       },
       borderRadius: {
         lg: "var(--radius)",

@@ -2604,6 +2604,67 @@ const Teams = () => {
         </div>
       )}
 
+      {/* Leave Team Confirmation Modal */}
+      {showLeaveConfirm && (
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+          <Card className="bg-gray-800/95 border-red-500/30 p-6 max-w-md w-full">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-xl font-bold text-red-400 flex items-center">
+                <X className="w-5 h-5 mr-2" />
+                Leave Team
+              </h2>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setShowLeaveConfirm(false)}
+                className="text-soft-gray hover:text-electric-blue"
+              >
+                <X className="w-5 h-5" />
+              </Button>
+            </div>
+
+            <div className="mb-6">
+              <p className="text-soft-gray mb-4">
+                Are you sure you want to leave <span className="font-semibold text-electric-blue">{userTeam.name}</span>?
+              </p>
+              <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-3">
+                <p className="text-red-400 text-sm">
+                  ⚠️ You will lose access to team discussions, leaderboards, and competitions. You'll need to request to rejoin if this is a restricted team.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex space-x-3">
+              <Button
+                variant="outline"
+                onClick={() => setShowLeaveConfirm(false)}
+                disabled={isLeavingTeam}
+                className="flex-1 border-electric-blue/30 text-electric-blue hover:bg-electric-blue/10"
+              >
+                Cancel
+              </Button>
+              <Button
+                onClick={handleLeaveTeam}
+                disabled={isLeavingTeam}
+                className="flex-1 bg-red-500 text-white hover:bg-red-600 font-semibold"
+              >
+                {isLeavingTeam ? (
+                  <>
+                    <div className="w-4 h-4 mr-2 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                    Leaving...
+                  </>
+                ) : (
+                  <>
+                    <ArrowUpDown className="w-4 h-4 mr-2 rotate-90" />
+                    Leave Team
+                  </>
+                )}
+              </Button>
+            </div>
+          </Card>
+        </div>
+      )}
+
       <Footer />
     </div>
   );

@@ -137,6 +137,7 @@ const Teams = () => {
   const [unsplashImages, setUnsplashImages] = useState<any[]>([]);
   const [unsplashQuery, setUnsplashQuery] = useState("");
   const [isLoadingUnsplash, setIsLoadingUnsplash] = useState(false);
+  const [unsplashError, setUnsplashError] = useState<string | null>(null);
 
   // Members tab state
   const [membersSubTab, setMembersSubTab] = useState<'members' | 'requests'>('members');

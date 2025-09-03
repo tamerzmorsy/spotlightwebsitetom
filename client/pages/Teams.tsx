@@ -881,12 +881,87 @@ const Teams = () => {
     }
   };
 
-  const handleApproveRequest = (requestId: string) => {
-    console.log("Approving request:", requestId);
+  const handleApproveRequest = async (requestId: string) => {
+    const request = joinRequests.find(r => r.id === requestId);
+    if (!request) return;
+
+    setProcessingRequest(requestId);
+
+    try {
+      // Simulate API call delay
+      await new Promise(resolve => setTimeout(resolve, 1000));
+
+      // In real app, this would make an API call:
+      // const response = await fetch(`/api/teams/${userTeam.id}/requests/${requestId}/approve`, {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' }
+      // });
+
+      // Remove from join requests and add to team members
+      setJoinRequests(prev => prev.filter(r => r.id !== requestId));
+
+      // Add new member to team
+      const newMember: TeamMember = {
+        id: `member-${Date.now()}`,
+        name: request.userName,
+        avatar: request.userAvatar,
+        articlesRead: request.articlesRead,
+        points: request.points,
+        currentStreak: 1,
+        joinDate: new Date().toISOString().split('T')[0],
+        role: 'member',
+        isOnline: true
+      };
+
+      setTeamMembers(prev => [...prev, newMember]);
+
+      // Update team member count
+      setUserTeam(prev => ({
+        ...prev,
+        memberCount: prev.memberCount + 1
+      }));
+
+      setRequestSuccess(`${request.userName} has been approved and added to the team!`);
+      setTimeout(() => setRequestSuccess(null), 4000);
+
+      console.log(`Approved request from ${request.userName}`);
+    } catch (error) {
+      console.error("Error approving request:", error);
+      setInviteError("Failed to approve request. Please try again.");
+    } finally {
+      setProcessingRequest(null);
+    }
   };
 
-  const handleRejectRequest = (requestId: string) => {
-    console.log("Rejecting request:", requestId);
+  const handleRejectRequest = async (requestId: string) => {
+    const request = joinRequests.find(r => r.id === requestId);
+    if (!request) return;
+
+    setProcessingRequest(requestId);
+
+    try {
+      // Simulate API call delay
+      await new Promise(resolve => setTimeout(resolve, 800));
+
+      // In real app, this would make an API call:
+      // const response = await fetch(`/api/teams/${userTeam.id}/requests/${requestId}/reject`, {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' }
+      // });
+
+      // Remove from join requests
+      setJoinRequests(prev => prev.filter(r => r.id !== requestId));
+
+      setRequestSuccess(`${request.userName}'s request has been declined.`);
+      setTimeout(() => setRequestSuccess(null), 3000);
+
+      console.log(`Rejected request from ${request.userName}`);
+    } catch (error) {
+      console.error("Error rejecting request:", error);
+      setInviteError("Failed to reject request. Please try again.");
+    } finally {
+      setProcessingRequest(null);
+    }
   };
 
   const handleJoinCompetition = (competitionId: string) => {

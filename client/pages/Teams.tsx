@@ -517,10 +517,9 @@ const Teams = () => {
       console.log('Fetching from URL:', url);
 
       const response = await fetch(url, {
+        method: 'GET',
         headers: {
-          'Authorization': 'Client-ID Lras8-LGdNyxv0YGEJa8p2pAaLX4mIGs_ySlB6GRq5I',
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
+          'Authorization': 'Client-ID Lras8-LGdNyxv0YGEJa8p2pAaLX4mIGs_ySlB6GRq5I'
         }
       });
 

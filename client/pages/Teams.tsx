@@ -103,6 +103,18 @@ interface JoinRequest {
   requestDate: string;
 }
 
+interface TeamRanking {
+  id: string;
+  name: string;
+  avatar: string;
+  memberCount: number;
+  totalPoints: number;
+  totalArticlesRead: number;
+  rank: number;
+  isCurrentTeam?: boolean;
+  category: 'campus' | 'tech' | 'sports' | 'general';
+}
+
 const Teams = () => {
   const { user, isAuthenticated } = useAuth();
   

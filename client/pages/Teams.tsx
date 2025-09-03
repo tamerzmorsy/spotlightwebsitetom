@@ -772,7 +772,7 @@ const Teams = () => {
         )}
 
         {/* Full-width immersive hero */}
-        <div className="relative h-96 bg-gradient-to-r from-electric-blue/20 to-electric-blue/10 overflow-hidden">
+        <div className="relative h-80 sm:h-96 lg:h-[28rem] xl:h-[32rem] bg-gradient-to-r from-electric-blue/20 to-electric-blue/10 overflow-hidden">
           <img
             src={userTeam.coverImage}
             alt="Team cover"

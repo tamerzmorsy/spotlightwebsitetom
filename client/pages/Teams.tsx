@@ -1722,16 +1722,36 @@ const Teams = () => {
               <Button
                 variant="outline"
                 onClick={() => setShowCreateModal(false)}
+                disabled={isSaving}
                 className="border-electric-blue/30 text-electric-blue hover:bg-electric-blue/10"
               >
                 Cancel
               </Button>
               <Button
                 onClick={handleCreateTeam}
-                className="bg-electric-blue text-midnight-black hover:bg-cyan-400 font-semibold px-8 py-3"
+                disabled={isSaving}
+                className={`font-semibold px-8 py-3 transition-all duration-300 ${
+                  saveSuccess
+                    ? 'bg-neon-green text-midnight-black hover:bg-lime-400'
+                    : 'bg-electric-blue text-midnight-black hover:bg-cyan-400'
+                }`}
               >
-                <Check className="w-5 h-5 mr-2" />
-                Save Changes
+                {isSaving ? (
+                  <>
+                    <div className="w-5 h-5 mr-2 border-2 border-midnight-black border-t-transparent rounded-full animate-spin" />
+                    Saving...
+                  </>
+                ) : saveSuccess ? (
+                  <>
+                    <Check className="w-5 h-5 mr-2" />
+                    Saved!
+                  </>
+                ) : (
+                  <>
+                    <Check className="w-5 h-5 mr-2" />
+                    Save Changes
+                  </>
+                )}
               </Button>
             </div>
           </Card>

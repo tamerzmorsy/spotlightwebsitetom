@@ -1640,6 +1640,16 @@ const Teams = () => {
                     </div>
                   </div>
 
+                  {/* Request Success Message */}
+                  {requestSuccess && (
+                    <div className="p-3 bg-neon-green/20 border border-neon-green/40 rounded-lg mb-6">
+                      <div className="flex items-center">
+                        <Check className="w-4 h-4 text-neon-green mr-2" />
+                        <p className="text-neon-green text-sm font-semibold">{requestSuccess}</p>
+                      </div>
+                    </div>
+                  )}
+
                   {membersSubTab === 'members' && (
                     <div className="max-h-96 overflow-y-auto space-y-3">
                       {teamMembers.map((member) => (

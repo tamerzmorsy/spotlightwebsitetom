@@ -92,6 +92,48 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
                 {link.label}
               </Link>
             ))}
+
+            {/* Teams Dropdown - only show for authenticated users */}
+            {isAuthenticated && (
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant="ghost"
+                    className={`flex items-center space-x-1 ${
+                      location.pathname.startsWith('/teams')
+                        ? 'text-electric-blue'
+                        : 'text-soft-gray/70 hover:text-soft-gray'
+                    } transition-colors font-medium text-sm`}
+                  >
+                    <Users className="w-4 h-4" />
+                    <span>Teams</span>
+                    <ChevronDown className="w-3 h-3" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="bg-gray-800 border-gray-700 text-soft-gray min-w-48">
+                  <DropdownMenuItem asChild>
+                    <Link to="/teams" className="flex items-center cursor-pointer">
+                      <Users className="w-4 h-4 mr-2" />
+                      All Teams
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator className="bg-gray-700" />
+                  <div className="px-2 py-1.5 text-xs text-soft-gray/60 font-medium uppercase tracking-wider">
+                    My Teams ({userTeams.length})
+                  </div>
+                  {userTeams.map((team) => (
+                    <DropdownMenuItem key={team.id} asChild>
+                      <Link to={team.path} className="flex items-center cursor-pointer">
+                        <div className="w-6 h-6 bg-electric-blue text-midnight-black rounded-full flex items-center justify-center text-xs font-bold mr-2">
+                          {team.name.charAt(0)}
+                        </div>
+                        <span className="truncate">{team.name}</span>
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            )}
           </div>
 
           {/* Desktop CTA */}

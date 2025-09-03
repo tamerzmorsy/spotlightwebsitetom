@@ -1903,6 +1903,249 @@ const Teams = () => {
         </div>
       )}
 
+      {/* Team View Modal */}
+      {showTeamModal && selectedTeam && (
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+          <Card className="bg-gray-800/95 border-electric-blue/30 p-0 max-w-4xl w-full max-h-[90vh] overflow-hidden">
+            {/* Team Cover Header */}
+            <div className="relative h-48 bg-gradient-to-r from-electric-blue/20 to-electric-blue/10 overflow-hidden">
+              <img
+                src={selectedTeam.coverImage}
+                alt={`${selectedTeam.name} cover`}
+                className="w-full h-full object-cover opacity-60"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 to-transparent" />
+              <div className="absolute top-4 right-4">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setShowTeamModal(false)}
+                  className="bg-gray-900/80 text-soft-gray hover:text-electric-blue backdrop-blur-sm"
+                >
+                  <X className="w-5 h-5" />
+                </Button>
+              </div>
+              <div className="absolute bottom-4 left-6 right-6">
+                <div className="flex items-end justify-between">
+                  <div>
+                    <h2 className="text-2xl font-bold text-white mb-2">
+                      {selectedTeam.name}
+                    </h2>
+                    <p className="text-soft-gray/90 mb-3 max-w-2xl">
+                      {selectedTeam.description}
+                    </p>
+                    <div className="flex items-center space-x-4 text-sm text-soft-gray/80">
+                      <span className="flex items-center">
+                        <Users className="w-4 h-4 mr-1" />
+                        {selectedTeam.memberCount} members
+                      </span>
+                      <span className="flex items-center">
+                        <Trophy className="w-4 h-4 mr-1" />
+                        Rank #{selectedTeam.rank}
+                      </span>
+                      <span className="flex items-center">
+                        <Star className="w-4 h-4 mr-1" />
+                        {selectedTeam.totalPoints.toLocaleString()} points
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Badge className={`${
+                      selectedTeam.joinType === 'open'
+                        ? 'bg-neon-green/20 text-neon-green border-neon-green/40'
+                        : 'bg-yellow-500/20 text-yellow-400 border-yellow-500/40'
+                    } font-semibold px-3 py-1`}>
+                      {selectedTeam.joinType === 'open' ? 'Open Team' : 'Restricted'}
+                    </Badge>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Modal Content */}
+            <div className="p-6 overflow-y-auto max-h-96">
+              <div className="grid lg:grid-cols-3 gap-6">
+                {/* Team Info & Join Section */}
+                <div className="lg:col-span-1">
+                  <div className="space-y-6">
+                    {/* Join Requirements */}
+                    {selectedTeam.joinType === 'restricted' && (
+                      <Card className="bg-gray-700/30 border-yellow-500/30 p-4">
+                        <h3 className="text-lg font-semibold text-yellow-400 mb-3 flex items-center">
+                          <Shield className="w-5 h-5 mr-2" />
+                          Join Requirements
+                        </h3>
+                        <div className="space-y-2 text-sm">
+                          <div className="flex justify-between items-center">
+                            <span className="text-soft-gray/70">Minimum Articles:</span>
+                            <span className="font-semibold text-yellow-400">{selectedTeam.minArticles}</span>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-soft-gray/70">Minimum Points:</span>
+                            <span className="font-semibold text-yellow-400">{selectedTeam.minPoints}</span>
+                          </div>
+                        </div>
+                      </Card>
+                    )}
+
+                    {/* Join CTA */}
+                    {!selectedTeam.isCurrentTeam && (
+                      <Card className="bg-gray-700/30 border-electric-blue/30 p-4">
+                        <h3 className="text-lg font-semibold text-electric-blue mb-3">
+                          Join This Team
+                        </h3>
+                        {selectedTeam.joinType === 'open' ? (
+                          <Button className="w-full bg-neon-green text-midnight-black hover:bg-lime-400 font-semibold py-3">
+                            <UserPlus className="w-5 h-5 mr-2" />
+                            Join Team
+                          </Button>
+                        ) : (
+                          // Check if user meets requirements (mock logic)
+                          stats.articlesRead.total >= (selectedTeam.minArticles || 0) &&
+                          (stats.articlesRead.total * 6) >= (selectedTeam.minPoints || 0) ? (
+                            <Button className="w-full bg-neon-green text-midnight-black hover:bg-lime-400 font-semibold py-3">
+                              <UserPlus className="w-5 h-5 mr-2" />
+                              Request to Join
+                            </Button>
+                          ) : (
+                            <div>
+                              <Button
+                                disabled
+                                className="w-full bg-gray-600 text-gray-400 cursor-not-allowed py-3 mb-3"
+                              >
+                                <X className="w-5 h-5 mr-2" />
+                                Requirements Not Met
+                              </Button>
+                              <p className="text-xs text-red-400">
+                                You need {selectedTeam.minArticles} articles and {selectedTeam.minPoints} points to join.
+                              </p>
+                            </div>
+                          )
+                        )}
+                      </Card>
+                    )}
+
+                    {selectedTeam.isCurrentTeam && (
+                      <Card className="bg-electric-blue/10 border-electric-blue/30 p-4">
+                        <div className="flex items-center text-electric-blue">
+                          <Check className="w-5 h-5 mr-2" />
+                          <span className="font-semibold">Your Current Team</span>
+                        </div>
+                      </Card>
+                    )}
+
+                    {/* Team Stats */}
+                    <Card className="bg-gray-700/30 border-electric-blue/30 p-4">
+                      <h3 className="text-lg font-semibold text-electric-blue mb-3">Team Stats</h3>
+                      <div className="space-y-3">
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm text-soft-gray/70">Total Points</span>
+                          <span className="font-semibold text-electric-blue">{selectedTeam.totalPoints.toLocaleString()}</span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm text-soft-gray/70">Articles Read</span>
+                          <span className="font-semibold text-neon-green">{selectedTeam.totalArticlesRead}</span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm text-soft-gray/70">Global Rank</span>
+                          <span className="font-semibold text-yellow-500">#{selectedTeam.rank}</span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm text-soft-gray/70">Category</span>
+                          <Badge className={`${
+                            selectedTeam.category === 'campus' ? 'bg-neon-green/20 text-neon-green border-neon-green/40' :
+                            selectedTeam.category === 'tech' ? 'bg-electric-blue/20 text-electric-blue border-electric-blue/40' :
+                            selectedTeam.category === 'sports' ? 'bg-orange-500/20 text-orange-500 border-orange-500/40' :
+                            'bg-vibrant-pink/20 text-vibrant-pink border-vibrant-pink/40'
+                          } font-medium capitalize`}>
+                            {selectedTeam.category}
+                          </Badge>
+                        </div>
+                      </div>
+                    </Card>
+                  </div>
+                </div>
+
+                {/* Members Leaderboard */}
+                <div className="lg:col-span-2">
+                  <Card className="bg-gray-700/30 border-electric-blue/30 p-4">
+                    <h3 className="text-lg font-semibold text-electric-blue mb-4 flex items-center">
+                      <Users className="w-5 h-5 mr-2" />
+                      Team Members ({selectedTeam.members.length})
+                    </h3>
+
+                    <div className="overflow-y-auto max-h-64">
+                      <table className="w-full text-sm">
+                        <thead className="bg-gray-800/50">
+                          <tr>
+                            <th className="px-3 py-2 text-left text-xs font-semibold text-electric-blue">Rank</th>
+                            <th className="px-3 py-2 text-left text-xs font-semibold text-electric-blue">Member</th>
+                            <th className="px-3 py-2 text-left text-xs font-semibold text-electric-blue">Articles</th>
+                            <th className="px-3 py-2 text-left text-xs font-semibold text-electric-blue">Points</th>
+                            <th className="px-3 py-2 text-left text-xs font-semibold text-electric-blue">Streak</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {selectedTeam.members
+                            .sort((a, b) => b.points - a.points)
+                            .slice(0, 10)
+                            .map((member, index) => (
+                            <tr key={member.id} className="border-t border-gray-700/50 hover:bg-gray-800/30">
+                              <td className="px-3 py-2">
+                                <span className={`font-bold ${
+                                  index === 0 ? 'text-yellow-500' :
+                                  index === 1 ? 'text-gray-400' :
+                                  index === 2 ? 'text-orange-600' : 'text-soft-gray'
+                                }`}>
+                                  #{index + 1}
+                                </span>
+                              </td>
+                              <td className="px-3 py-2">
+                                <div className="flex items-center space-x-2">
+                                  <div className="relative">
+                                    <div className="w-6 h-6 bg-electric-blue text-midnight-black rounded-full flex items-center justify-center text-xs font-semibold">
+                                      {member.avatar}
+                                    </div>
+                                    {member.isOnline && (
+                                      <div className="absolute -bottom-0.5 -right-0.5 w-2 h-2 bg-neon-green rounded-full border border-gray-800" />
+                                    )}
+                                  </div>
+                                  <div>
+                                    <div className="flex items-center space-x-1">
+                                      <span className="font-medium text-soft-gray text-xs">{member.name}</span>
+                                      {member.role === 'owner' && <Crown className="w-3 h-3 text-yellow-500" />}
+                                      {member.role === 'admin' && <Shield className="w-3 h-3 text-electric-blue" />}
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td className="px-3 py-2 font-medium text-soft-gray">{member.articlesRead}</td>
+                              <td className="px-3 py-2 font-bold text-electric-blue">{member.points}</td>
+                              <td className="px-3 py-2">
+                                <div className="flex items-center space-x-1">
+                                  <Flame className="w-3 h-3 text-orange-500" />
+                                  <span className="text-soft-gray">{member.currentStreak}</span>
+                                </div>
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+
+                    {selectedTeam.members.length > 10 && (
+                      <p className="text-xs text-soft-gray/60 mt-3 text-center">
+                        Showing top 10 members of {selectedTeam.members.length}
+                      </p>
+                    )}
+                  </Card>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
+      )}
+
       {/* Unsplash Image Picker Modal */}
       {showUnsplashPicker && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4">

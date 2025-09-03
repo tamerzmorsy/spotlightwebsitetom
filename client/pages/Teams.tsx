@@ -513,23 +513,35 @@ const Teams = () => {
   const searchUnsplashImages = async (query: string) => {
     setIsLoadingUnsplash(true);
     try {
-      const response = await fetch(
-        `https://api.unsplash.com/search/photos?query=${encodeURIComponent(query)}&per_page=12&orientation=landscape`,
-        {
-          headers: {
-            'Authorization': 'Client-ID Lras8-LGdNyxv0YGEJa8p2pAaLX4mIGs_ySlB6GRq5I'
-          }
+      const url = `https://api.unsplash.com/search/photos?query=${encodeURIComponent(query)}&per_page=12&orientation=landscape`;
+      console.log('Fetching from URL:', url);
+
+      const response = await fetch(url, {
+        headers: {
+          'Authorization': 'Client-ID Lras8-LGdNyxv0YGEJa8p2pAaLX4mIGs_ySlB6GRq5I',
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
         }
-      );
+      });
+
+      console.log('Response status:', response.status);
+      console.log('Response headers:', response.headers);
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        const errorText = await response.text();
+        console.error('Unsplash API Error Response:', errorText);
+        throw new Error(`HTTP error! status: ${response.status}, message: ${errorText}`);
       }
 
       const data = await response.json();
+      console.log('Unsplash API Success:', data);
       setUnsplashImages(data.results || []);
     } catch (error) {
       console.error('Error fetching Unsplash images:', error);
+
+      // Show error message to user
+      console.log('Using fallback images due to API error');
+
       // Fallback with mock data for demo
       setUnsplashImages([
         {
@@ -549,6 +561,24 @@ const Teams = () => {
           urls: { regular: 'https://images.unsplash.com/photo-1515378791036-0648a814c963?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80' },
           alt_description: 'People meeting',
           user: { name: 'Alex Johnson' }
+        },
+        {
+          id: '4',
+          urls: { regular: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80' },
+          alt_description: 'Team brainstorming',
+          user: { name: 'Sarah Wilson' }
+        },
+        {
+          id: '5',
+          urls: { regular: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80' },
+          alt_description: 'Office collaboration',
+          user: { name: 'Mike Chen' }
+        },
+        {
+          id: '6',
+          urls: { regular: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80' },
+          alt_description: 'Team working together',
+          user: { name: 'Emily Davis' }
         }
       ]);
     }

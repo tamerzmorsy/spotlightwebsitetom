@@ -1712,17 +1712,27 @@ const Teams = () => {
                               <Button
                                 size="sm"
                                 onClick={() => handleApproveRequest(request.id)}
-                                className="bg-neon-green text-midnight-black hover:bg-neon-green/80"
+                                disabled={processingRequest === request.id}
+                                className="bg-neon-green text-midnight-black hover:bg-neon-green/80 disabled:opacity-50"
                               >
-                                <Check className="w-4 h-4" />
+                                {processingRequest === request.id ? (
+                                  <div className="w-4 h-4 border-2 border-midnight-black border-t-transparent rounded-full animate-spin" />
+                                ) : (
+                                  <Check className="w-4 h-4" />
+                                )}
                               </Button>
                               <Button
                                 size="sm"
                                 variant="outline"
                                 onClick={() => handleRejectRequest(request.id)}
-                                className="border-red-500/30 text-red-400 hover:bg-red-500/10"
+                                disabled={processingRequest === request.id}
+                                className="border-red-500/30 text-red-400 hover:bg-red-500/10 disabled:opacity-50"
                               >
-                                <X className="w-4 h-4" />
+                                {processingRequest === request.id ? (
+                                  <div className="w-4 h-4 border-2 border-red-400 border-t-transparent rounded-full animate-spin" />
+                                ) : (
+                                  <X className="w-4 h-4" />
+                                )}
                               </Button>
                             </div>
                           </div>

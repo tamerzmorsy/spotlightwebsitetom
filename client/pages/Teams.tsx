@@ -380,7 +380,15 @@ const Teams = () => {
       totalPoints: 12840,
       totalArticlesRead: 2840,
       rank: 1,
-      category: "campus"
+      category: "campus",
+      joinType: "open",
+      description: "Your source for breaking university news and campus announcements",
+      coverImage: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+      members: [
+        { id: "m1", name: "Maria Garcia", avatar: "MG", articlesRead: 234, points: 1520, currentStreak: 18, joinDate: "2024-01-01", role: "owner", isOnline: true },
+        { id: "m2", name: "James Wilson", avatar: "JW", articlesRead: 198, points: 1380, currentStreak: 15, joinDate: "2024-01-02", role: "admin", isOnline: true },
+        { id: "m3", name: "Lisa Chen", avatar: "LC", articlesRead: 187, points: 1250, currentStreak: 12, joinDate: "2024-01-05", role: "member", isOnline: false }
+      ]
     },
     {
       id: "team-2",
@@ -390,7 +398,17 @@ const Teams = () => {
       totalPoints: 11650,
       totalArticlesRead: 2650,
       rank: 2,
-      category: "tech"
+      category: "tech",
+      joinType: "restricted",
+      minArticles: 50,
+      minPoints: 500,
+      description: "Tech enthusiasts exploring the future of digital innovation and emerging technologies",
+      coverImage: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+      members: [
+        { id: "m4", name: "David Kim", avatar: "DK", articlesRead: 189, points: 1420, currentStreak: 22, joinDate: "2024-01-03", role: "owner", isOnline: true },
+        { id: "m5", name: "Anna Rodriguez", avatar: "AR", articlesRead: 176, points: 1320, currentStreak: 14, joinDate: "2024-01-04", role: "admin", isOnline: false },
+        { id: "m6", name: "Mike Johnson", avatar: "MJ", articlesRead: 165, points: 1180, currentStreak: 8, joinDate: "2024-01-07", role: "member", isOnline: true }
+      ]
     },
     {
       id: "team-3",
@@ -401,7 +419,13 @@ const Teams = () => {
       totalArticlesRead: 1247,
       rank: 3,
       isCurrentTeam: true,
-      category: "campus"
+      category: "campus",
+      joinType: "restricted",
+      minArticles: 20,
+      minPoints: 200,
+      description: "Staying informed about campus events and breaking news that matters to our university community",
+      coverImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+      members: teamMembers
     },
     {
       id: "team-4",
@@ -411,7 +435,14 @@ const Teams = () => {
       totalPoints: 7750,
       totalArticlesRead: 1750,
       rank: 4,
-      category: "tech"
+      category: "tech",
+      joinType: "open",
+      description: "Passionate about technology trends, gadgets, and the latest in software development",
+      coverImage: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+      members: [
+        { id: "m7", name: "Sarah Lee", avatar: "SL", articlesRead: 145, points: 980, currentStreak: 11, joinDate: "2024-01-08", role: "owner", isOnline: true },
+        { id: "m8", name: "Tom Brown", avatar: "TB", articlesRead: 132, points: 890, currentStreak: 9, joinDate: "2024-01-10", role: "member", isOnline: false }
+      ]
     },
     {
       id: "team-5",
@@ -421,7 +452,14 @@ const Teams = () => {
       totalPoints: 7200,
       totalArticlesRead: 1600,
       rank: 5,
-      category: "sports"
+      category: "sports",
+      joinType: "open",
+      description: "All things sports - from college athletics to professional leagues and everything in between",
+      coverImage: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+      members: [
+        { id: "m9", name: "Carlos Martinez", avatar: "CM", articlesRead: 134, points: 920, currentStreak: 16, joinDate: "2024-01-12", role: "owner", isOnline: true },
+        { id: "m10", name: "Emma Davis", avatar: "ED", articlesRead: 128, points: 850, currentStreak: 7, joinDate: "2024-01-15", role: "member", isOnline: true }
+      ]
     },
     {
       id: "team-6",
@@ -431,7 +469,16 @@ const Teams = () => {
       totalPoints: 6850,
       totalArticlesRead: 1370,
       rank: 6,
-      category: "general"
+      category: "general",
+      joinType: "restricted",
+      minArticles: 30,
+      minPoints: 300,
+      description: "Dedicated news readers exploring diverse topics and staying current with global events",
+      coverImage: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+      members: [
+        { id: "m11", name: "Rachel Green", avatar: "RG", articlesRead: 142, points: 980, currentStreak: 13, joinDate: "2024-01-18", role: "owner", isOnline: false },
+        { id: "m12", name: "Alex Thompson", avatar: "AT", articlesRead: 126, points: 820, currentStreak: 9, joinDate: "2024-01-20", role: "member", isOnline: true }
+      ]
     },
     {
       id: "team-7",
@@ -441,7 +488,14 @@ const Teams = () => {
       totalPoints: 6120,
       totalArticlesRead: 1224,
       rank: 7,
-      category: "campus"
+      category: "campus",
+      joinType: "open",
+      description: "Students helping students stay informed about academic news and campus life",
+      coverImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+      members: [
+        { id: "m13", name: "Kevin Park", avatar: "KP", articlesRead: 118, points: 780, currentStreak: 6, joinDate: "2024-01-22", role: "owner", isOnline: true },
+        { id: "m14", name: "Nina Cooper", avatar: "NC", articlesRead: 104, points: 690, currentStreak: 4, joinDate: "2024-01-25", role: "member", isOnline: false }
+      ]
     },
     {
       id: "team-8",
@@ -451,7 +505,16 @@ const Teams = () => {
       totalPoints: 5920,
       totalArticlesRead: 1184,
       rank: 8,
-      category: "tech"
+      category: "tech",
+      joinType: "restricted",
+      minArticles: 40,
+      minPoints: 400,
+      description: "Developers and programmers discussing tech news over virtual coffee breaks",
+      coverImage: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+      members: [
+        { id: "m15", name: "Oliver Zhang", avatar: "OZ", articlesRead: 125, points: 850, currentStreak: 14, joinDate: "2024-01-28", role: "owner", isOnline: true },
+        { id: "m16", name: "Sophie Williams", avatar: "SW", articlesRead: 112, points: 740, currentStreak: 8, joinDate: "2024-01-30", role: "member", isOnline: true }
+      ]
     }
   ]);
 

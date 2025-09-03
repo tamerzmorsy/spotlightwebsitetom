@@ -163,6 +163,8 @@ const Teams = () => {
   const [showCopySuccess, setShowCopySuccess] = useState(false);
   const [processingRequest, setProcessingRequest] = useState<string | null>(null);
   const [requestSuccess, setRequestSuccess] = useState<string | null>(null);
+  const [isLeavingTeam, setIsLeavingTeam] = useState(false);
+  const [showLeaveConfirm, setShowLeaveConfirm] = useState(false);
 
   // Leaderboard State
   const [sortBy, setSortBy] = useState<'articles' | 'points' | 'streak'>('points');

@@ -1317,6 +1317,20 @@ const Teams = () => {
                               {team.category}
                             </Badge>
                           </td>
+                          <td className="px-6 py-4">
+                            <Button
+                              variant="ghost"
+                              size="sm"
+                              onClick={() => {
+                                setSelectedTeam(team);
+                                setShowTeamModal(true);
+                              }}
+                              className="text-electric-blue hover:bg-electric-blue/10 hover:text-cyan-400"
+                              aria-label={`View ${team.name} details`}
+                            >
+                              <Eye className="w-4 h-4" />
+                            </Button>
+                          </td>
                         </tr>
                       ))}
                     </tbody>

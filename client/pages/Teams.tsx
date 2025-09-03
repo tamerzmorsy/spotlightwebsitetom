@@ -323,14 +323,14 @@ const Teams = () => {
       description: "Read 120 international news articles and expand your global perspective",
       startDate: "2024-03-15",
       endDate: "2024-04-15",
-      status: "upcoming", 
+      status: "upcoming",
       participants: 0,
       prize: "Mechanical Keyboard & Trophy",
       prizeIcon: "🌍",
       topTeams: [],
       category: "general"
     }
-  ];
+  ]);
 
   // Computed values
   const sortedMembers = useMemo(() => {

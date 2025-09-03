@@ -1559,8 +1559,13 @@ const Teams = () => {
                     value={teamName}
                     onChange={(e) => setTeamName(e.target.value)}
                     placeholder="Enter team name"
-                    className="bg-gray-800/50 border-electric-blue/30 text-soft-gray focus:border-electric-blue"
+                    className={`bg-gray-800/50 text-soft-gray focus:border-electric-blue ${
+                      teamName.trim() === '' ? 'border-red-500/50' : 'border-electric-blue/30'
+                    }`}
                   />
+                  {teamName.trim() === '' && (
+                    <p className="text-red-400 text-xs mt-1">Team name is required</p>
+                  )}
                 </div>
 
                 <div>

@@ -1578,9 +1578,14 @@ const Teams = () => {
                     placeholder="Describe your team's purpose (max 150 characters)"
                     maxLength={150}
                     rows={3}
-                    className="bg-gray-800/50 border-electric-blue/30 text-soft-gray focus:border-electric-blue"
+                    className={`bg-gray-800/50 text-soft-gray focus:border-electric-blue ${
+                      teamDescription.length > 150 ? 'border-red-500/50' : 'border-electric-blue/30'
+                    }`}
                   />
-                  <p className="text-xs text-soft-gray/60 mt-1">
+                  <p className={`text-xs mt-1 ${
+                    teamDescription.length > 150 ? 'text-red-400' :
+                    teamDescription.length > 120 ? 'text-yellow-400' : 'text-soft-gray/60'
+                  }`}>
                     {teamDescription.length}/150 characters
                   </p>
                 </div>

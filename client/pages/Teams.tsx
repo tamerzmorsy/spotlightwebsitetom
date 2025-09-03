@@ -1538,6 +1538,16 @@ const Teams = () => {
               </Button>
             </div>
 
+            {/* Success Message */}
+            {saveSuccess && (
+              <div className="mb-6 p-4 bg-neon-green/20 border border-neon-green/40 rounded-lg">
+                <div className="flex items-center">
+                  <Check className="w-5 h-5 text-neon-green mr-2" />
+                  <p className="text-neon-green font-semibold">Team updated successfully! Changes will appear shortly.</p>
+                </div>
+              </div>
+            )}
+
             <div className="grid md:grid-cols-2 gap-8">
               {/* Form Fields */}
               <div className="space-y-6">

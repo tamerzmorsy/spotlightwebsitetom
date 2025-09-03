@@ -280,7 +280,7 @@ const Teams = () => {
     }
   ]);
 
-  const [joinRequests] = useState<JoinRequest[]>([
+  const [joinRequests, setJoinRequests] = useState<JoinRequest[]>([
     {
       id: "req-1",
       userName: "Emma Wilson",

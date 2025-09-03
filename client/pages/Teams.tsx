@@ -107,7 +107,7 @@ const Teams = () => {
   const { user, isAuthenticated } = useAuth();
   
   // Main page state
-  const [activeTab, setActiveTab] = useState<'leaderboard' | 'members'>('leaderboard');
+  const [activeTab, setActiveTab] = useState<'leaderboard' | 'ranking' | 'members'>('leaderboard');
   const [showCreateModal, setShowCreateModal] = useState(false);
   
   // Team Creation Form State

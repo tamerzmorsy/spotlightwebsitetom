@@ -466,10 +466,21 @@ const Teams = () => {
 
   // Event handlers
   const handleCreateTeam = () => {
-    console.log("Creating team:", { teamName, teamDescription, joinType, memberLimit });
+    console.log("Editing team:", { teamName, teamDescription, joinType, memberLimit });
     setShowCreateModal(false);
-    // In real app, this would make an API call
+    // In real app, this would make an API call to update team
   };
+
+  // Pre-populate form when opening edit modal
+  React.useEffect(() => {
+    if (showCreateModal) {
+      setTeamName(userTeam.name);
+      setTeamDescription(userTeam.description);
+      setCoverImagePreview(userTeam.coverImage);
+      setJoinType(userTeam.joinType);
+      setMemberLimit(userTeam.maxMembers);
+    }
+  }, [showCreateModal, userTeam]);
 
   const handleInviteFriend = () => {
     console.log("Inviting friend:", inviteEmail);

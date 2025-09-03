@@ -430,57 +430,62 @@ const Teams = () => {
       <Navigation />
 
       {/* Team Hero Section */}
-      <section className="py-16 bg-gray-900/30">
-        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Team Cover & Info */}
-          <Card className="bg-gray-800/30 border-electric-blue/30 overflow-hidden shadow-lg">
-            <div className="relative h-64 bg-gradient-to-r from-electric-blue/20 to-electric-blue/10">
-              <img
-                src={userTeam.coverImage}
-                alt="Team cover"
-                className="w-full h-full object-cover opacity-60"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="flex items-end justify-between">
-                  <div>
-                    <h1 className="text-3xl font-bold text-soft-gray mb-2">
-                      {userTeam.name}
-                    </h1>
-                    <p className="text-soft-gray/90 mb-4 max-w-2xl">
-                      {userTeam.description}
-                    </p>
-                    <div className="flex items-center space-x-6 text-sm text-soft-gray/80">
-                      <span className="flex items-center">
-                        <Users className="w-4 h-4 mr-1" />
-                        {userTeam.memberCount}/{userTeam.maxMembers} members
-                      </span>
-                      <span className="flex items-center">
-                        <Trophy className="w-4 h-4 mr-1" />
-                        Rank #{userTeam.rank}
-                      </span>
-                      <span className="flex items-center">
-                        <BookOpen className="w-4 h-4 mr-1" />
-                        {userTeam.totalArticlesRead} articles read
-                      </span>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <Badge className="bg-neon-green/20 text-neon-green border-neon-green/40 font-semibold px-3 py-1">
+      <section className="relative">
+        {/* Full-width immersive hero */}
+        <div className="relative h-96 bg-gradient-to-r from-electric-blue/20 to-electric-blue/10 overflow-hidden">
+          <img
+            src={userTeam.coverImage}
+            alt="Team cover"
+            className="w-full h-full object-cover opacity-70"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/50 to-gray-900/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-electric-blue/10 to-transparent" />
+
+          {/* Content overlay */}
+          <div className="absolute inset-0 flex items-end">
+            <div className="w-full max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+              <div className="flex items-end justify-between">
+                <div className="flex-1">
+                  <div className="mb-4">
+                    <Badge className="bg-neon-green/30 text-neon-green border-neon-green/50 font-semibold px-4 py-2 backdrop-blur-sm">
                       {userTeam.joinType === 'open' ? 'Open Team' : 'Restricted'}
                     </Badge>
-                    <Button
-                      onClick={() => setShowCreateModal(true)}
-                      className="bg-electric-blue text-midnight-black hover:bg-cyan-400 font-semibold px-6 py-2 rounded-full"
-                    >
-                      <Plus className="w-4 h-4 mr-2" />
-                      Create Team
-                    </Button>
                   </div>
+                  <h1 className="text-4xl sm:text-5xl font-display font-bold text-soft-gray mb-4 text-glow-blue">
+                    {userTeam.name}
+                  </h1>
+                  <p className="text-lg text-soft-gray/90 mb-6 max-w-3xl leading-relaxed">
+                    {userTeam.description}
+                  </p>
+                  <div className="flex flex-wrap items-center gap-6 text-soft-gray/90">
+                    <div className="flex items-center bg-gray-900/50 backdrop-blur-sm rounded-full px-4 py-2 border border-electric-blue/30">
+                      <Users className="w-5 h-5 mr-2 text-electric-blue" />
+                      <span className="font-semibold">{userTeam.memberCount}/{userTeam.maxMembers}</span>
+                      <span className="ml-1 text-sm">members</span>
+                    </div>
+                    <div className="flex items-center bg-gray-900/50 backdrop-blur-sm rounded-full px-4 py-2 border border-yellow-500/30">
+                      <Trophy className="w-5 h-5 mr-2 text-yellow-500" />
+                      <span className="font-semibold">Rank #{userTeam.rank}</span>
+                    </div>
+                    <div className="flex items-center bg-gray-900/50 backdrop-blur-sm rounded-full px-4 py-2 border border-neon-green/30">
+                      <BookOpen className="w-5 h-5 mr-2 text-neon-green" />
+                      <span className="font-semibold">{userTeam.totalArticlesRead}</span>
+                      <span className="ml-1 text-sm">articles read</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="ml-8 flex-shrink-0">
+                  <Button
+                    onClick={() => setShowCreateModal(true)}
+                    className="bg-electric-blue text-midnight-black hover:bg-cyan-400 font-semibold px-8 py-4 rounded-full text-lg shadow-lg shadow-electric-blue/30 hover:shadow-electric-blue/50 transition-all duration-300 neon-glow-blue"
+                  >
+                    <Plus className="w-5 h-5 mr-2" />
+                    Create Team
+                  </Button>
                 </div>
               </div>
             </div>
-          </Card>
+          </div>
         </div>
       </section>
 

@@ -574,6 +574,14 @@ const Teams = () => {
     }
   }, [showCreateModal, userTeam]);
 
+  // Load default images when Unsplash picker opens
+  React.useEffect(() => {
+    if (showUnsplashPicker && unsplashImages.length === 0) {
+      setUnsplashQuery("teamwork");
+      searchUnsplashImages("teamwork");
+    }
+  }, [showUnsplashPicker]);
+
   const handleInviteFriend = () => {
     console.log("Inviting friend:", inviteEmail);
     setInviteEmail("");

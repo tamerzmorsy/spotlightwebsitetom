@@ -7,6 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "@/lib/auth";
+import { TeamsProvider } from "@/lib/teams";
 import Index from "./pages/Index";
 import Students from "./pages/Students";
 import Publishers from "./pages/Publishers";

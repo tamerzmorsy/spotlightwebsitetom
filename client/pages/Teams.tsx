@@ -604,10 +604,65 @@ const Teams = () => {
   };
 
   // Event handlers
-  const handleCreateTeam = () => {
-    console.log("Editing team:", { teamName, teamDescription, joinType, memberLimit, coverImage: coverImagePreview });
-    setShowCreateModal(false);
-    // In real app, this would make an API call to update team
+  const handleCreateTeam = async () => {
+    // Basic validation
+    if (!teamName.trim()) {
+      alert("Team name is required");
+      return;
+    }
+
+    if (teamDescription.trim().length > 150) {
+      alert("Description must be 150 characters or less");
+      return;
+    }
+
+    if (memberLimit < 10 || memberLimit > 50) {
+      alert("Member limit must be between 10 and 50");
+      return;
+    }
+
+    setIsSaving(true);
+
+    try {
+      // Simulate API call delay
+      await new Promise(resolve => setTimeout(resolve, 1000));
+
+      // Update the team data
+      const updatedTeam: Team = {
+        ...userTeam,
+        name: teamName.trim(),
+        description: teamDescription.trim(),
+        coverImage: coverImagePreview || userTeam.coverImage,
+        joinType: joinType,
+        maxMembers: memberLimit
+      };
+
+      setUserTeam(updatedTeam);
+
+      // Show success feedback
+      setSaveSuccess(true);
+      setTimeout(() => setSaveSuccess(false), 3000);
+
+      console.log("Team updated successfully:", updatedTeam);
+
+      // Close modal after successful save
+      setTimeout(() => {
+        setShowCreateModal(false);
+      }, 1500);
+
+      // In real app, this would make an API call to update team
+      // const response = await fetch(`/api/teams/${userTeam.id}`, {
+      //   method: 'PUT',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(updatedTeam)
+      // });
+
+    } catch (error) {
+      console.error("Error saving team:", error);
+      alert("Failed to save changes. Please try again.");
+    } finally {
+      setIsSaving(false);
+    }
   };
 
   // Pre-populate form when opening edit modal

@@ -189,7 +189,7 @@ const Teams = () => {
     owner: "currentUser"
   });
 
-  const [teamMembers] = useState<TeamMember[]>([
+  const [teamMembers, setTeamMembers] = useState<TeamMember[]>([
     {
       id: "1",
       name: "Alex Rivera",

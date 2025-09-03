@@ -1641,10 +1641,14 @@ const Teams = () => {
                     onChange={(e) => setMemberLimit(Number(e.target.value))}
                     min={10}
                     max={50}
-                    className="bg-gray-800/50 border-electric-blue/30 text-soft-gray focus:border-electric-blue"
+                    className={`bg-gray-800/50 text-soft-gray focus:border-electric-blue ${
+                      memberLimit < 10 || memberLimit > 50 ? 'border-red-500/50' : 'border-electric-blue/30'
+                    }`}
                   />
-                  <p className="text-xs text-soft-gray/60 mt-1">
-                    Range: 10-50 members
+                  <p className={`text-xs mt-1 ${
+                    memberLimit < 10 || memberLimit > 50 ? 'text-red-400' : 'text-soft-gray/60'
+                  }`}>
+                    Range: 10-50 members {memberLimit < 10 || memberLimit > 50 ? '(Invalid)' : ''}
                   </p>
                 </div>
               </div>

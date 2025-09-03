@@ -123,8 +123,17 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
                   </div>
                   {userTeams.map((team) => (
                     <DropdownMenuItem key={team.id} asChild>
-                      <Link to={team.path} className="flex items-center cursor-pointer">
-                        <div className="w-6 h-6 bg-electric-blue text-midnight-black rounded-full flex items-center justify-center text-xs font-bold mr-2">
+                      <Link
+                        to={team.path}
+                        className={`flex items-center cursor-pointer ${
+                          location.pathname === team.path ? 'bg-electric-blue/10 text-electric-blue' : ''
+                        }`}
+                      >
+                        <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-2 ${
+                          location.pathname === team.path
+                            ? 'bg-electric-blue text-midnight-black'
+                            : 'bg-gray-700 text-soft-gray'
+                        }`}>
                           {team.name.charAt(0)}
                         </div>
                         <span className="truncate">{team.name}</span>

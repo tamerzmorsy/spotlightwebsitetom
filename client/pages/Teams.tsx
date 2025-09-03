@@ -1626,6 +1626,144 @@ const Teams = () => {
         </div>
       )}
 
+      {/* Unsplash Image Picker Modal */}
+      {showUnsplashPicker && (
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+          <Card className="bg-gray-800/95 border-electric-blue/30 p-6 max-w-6xl w-full max-h-[90vh] overflow-hidden">
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-2xl font-bold text-electric-blue">Choose from Unsplash</h2>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setShowUnsplashPicker(false)}
+                className="text-soft-gray hover:text-electric-blue"
+              >
+                <X className="w-5 h-5" />
+              </Button>
+            </div>
+
+            {/* Search Bar */}
+            <div className="mb-6">
+              <div className="flex space-x-3">
+                <Input
+                  placeholder="Search for team images (e.g., collaboration, teamwork, meeting)"
+                  value={unsplashQuery}
+                  onChange={(e) => setUnsplashQuery(e.target.value)}
+                  className="bg-gray-800/50 border-electric-blue/30 text-soft-gray focus:border-electric-blue"
+                  onKeyPress={(e) => e.key === 'Enter' && searchUnsplashImages(unsplashQuery)}
+                />
+                <Button
+                  onClick={() => searchUnsplashImages(unsplashQuery)}
+                  disabled={isLoadingUnsplash || !unsplashQuery.trim()}
+                  className="bg-electric-blue text-midnight-black hover:bg-cyan-400 px-6"
+                >
+                  {isLoadingUnsplash ? (
+                    <div className="w-4 h-4 border-2 border-midnight-black border-t-transparent rounded-full animate-spin" />
+                  ) : (
+                    <>
+                      <Eye className="w-4 h-4 mr-2" />
+                      Search
+                    </>
+                  )}
+                </Button>
+              </div>
+
+              {/* Quick search suggestions */}
+              <div className="flex flex-wrap gap-2 mt-3">
+                <span className="text-sm text-soft-gray/60">Popular:</span>
+                {['teamwork', 'collaboration', 'meeting', 'office', 'students', 'workspace'].map((suggestion) => (
+                  <Button
+                    key={suggestion}
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => {
+                      setUnsplashQuery(suggestion);
+                      searchUnsplashImages(suggestion);
+                    }}
+                    className="text-xs text-electric-blue hover:bg-electric-blue/10 px-3 py-1 h-auto"
+                  >
+                    {suggestion}
+                  </Button>
+                ))}
+              </div>
+            </div>
+
+            {/* Image Grid */}
+            <div className="overflow-y-auto max-h-96">
+              {isLoadingUnsplash ? (
+                <div className="flex items-center justify-center py-12">
+                  <div className="text-center">
+                    <div className="w-8 h-8 border-2 border-electric-blue border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+                    <p className="text-soft-gray/70">Searching Unsplash...</p>
+                  </div>
+                </div>
+              ) : unsplashImages.length > 0 ? (
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                  {unsplashImages.map((image) => (
+                    <div
+                      key={image.id}
+                      className="relative group cursor-pointer rounded-lg overflow-hidden hover:ring-2 hover:ring-electric-blue/50 transition-all duration-300"
+                      onClick={() => selectUnsplashImage(image.urls.regular)}
+                    >
+                      <img
+                        src={image.urls.regular}
+                        alt={image.alt_description || 'Unsplash image'}
+                        className="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="absolute bottom-2 left-2 right-2">
+                          <p className="text-white text-xs font-medium truncate">
+                            {image.alt_description || 'Team image'}
+                          </p>
+                          <p className="text-white/70 text-xs">
+                            by {image.user?.name || 'Unknown'}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="absolute inset-0 bg-electric-blue/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div className="bg-electric-blue text-midnight-black px-3 py-1 rounded-full text-sm font-semibold">
+                          Select
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="text-center py-12">
+                  <Upload className="w-12 h-12 text-soft-gray/30 mx-auto mb-4" />
+                  <p className="text-soft-gray/70 mb-2">Search for images to get started</p>
+                  <p className="text-soft-gray/50 text-sm">
+                    Try searching for "teamwork", "collaboration", or "meeting"
+                  </p>
+                </div>
+              )}
+            </div>
+
+            {/* Footer */}
+            <div className="flex items-center justify-between mt-6 pt-4 border-t border-electric-blue/10">
+              <p className="text-xs text-soft-gray/60">
+                Images provided by{' '}
+                <a
+                  href="https://unsplash.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-electric-blue hover:underline"
+                >
+                  Unsplash
+                </a>
+              </p>
+              <Button
+                variant="outline"
+                onClick={() => setShowUnsplashPicker(false)}
+                className="border-electric-blue/30 text-electric-blue hover:bg-electric-blue/10"
+              >
+                Cancel
+              </Button>
+            </div>
+          </Card>
+        </div>
+      )}
+
       <Footer />
     </div>
   );

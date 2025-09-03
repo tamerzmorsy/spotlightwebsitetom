@@ -49,11 +49,11 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
 
   // Navigation links for non-authenticated users (marketing pages)
   const publicNavigationLinks = [
-    { path: "/students", label: "Students" },
-    { path: "/publishers", label: "Publishers" },
-    { path: "/universities", label: "Universities" },
-    { path: "/pricing", label: "Pricing" },
-    { path: "/about", label: "About" },
+    { path: "/students", label: "Students", icon: Users },
+    { path: "/publishers", label: "Publishers", icon: Newspaper },
+    { path: "/universities", label: "Universities", icon: TrendingUp },
+    { path: "/pricing", label: "Pricing", icon: BarChart3 },
+    { path: "/about", label: "About", icon: User },
   ];
 
   // Navigation links for authenticated users (app pages)

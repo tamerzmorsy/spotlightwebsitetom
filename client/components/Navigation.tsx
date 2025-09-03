@@ -83,15 +83,19 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navigationLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={getLinkClasses(link.path)}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navigationLinks.map((link) => {
+              const IconComponent = link.icon;
+              return (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={`${getLinkClasses(link.path)} flex items-center space-x-2`}
+                >
+                  <IconComponent className="w-4 h-4" />
+                  <span>{link.label}</span>
+                </Link>
+              );
+            })}
 
             {/* Teams Dropdown - only show for authenticated users */}
             {isAuthenticated && (

@@ -201,7 +201,7 @@ const Teams = () => {
       points: 980,
       currentStreak: 12,
       joinDate: "2024-01-15",
-      role: "owner",
+      role: "member",
       isOnline: true
     },
     {

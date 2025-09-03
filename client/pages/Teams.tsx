@@ -1741,6 +1741,16 @@ const Teams = () => {
               </div>
             </div>
 
+            {/* Error Message */}
+            {unsplashError && (
+              <div className="mb-4 p-3 bg-yellow-900/30 border border-yellow-500/30 rounded-lg">
+                <div className="flex items-center">
+                  <div className="w-4 h-4 border-2 border-yellow-500 border-t-transparent rounded-full animate-spin mr-2" />
+                  <p className="text-yellow-400 text-sm">{unsplashError}</p>
+                </div>
+              </div>
+            )}
+
             {/* Image Grid */}
             <div className="overflow-y-auto max-h-96">
               {isLoadingUnsplash ? (

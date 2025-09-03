@@ -131,6 +131,13 @@ const Teams = () => {
   const [minArticles, setMinArticles] = useState(10);
   const [minPoints, setMinPoints] = useState(100);
 
+  // Image upload and Unsplash state
+  const [isDragOver, setIsDragOver] = useState(false);
+  const [showUnsplashPicker, setShowUnsplashPicker] = useState(false);
+  const [unsplashImages, setUnsplashImages] = useState<any[]>([]);
+  const [unsplashQuery, setUnsplashQuery] = useState("");
+  const [isLoadingUnsplash, setIsLoadingUnsplash] = useState(false);
+
   // Members tab state
   const [membersSubTab, setMembersSubTab] = useState<'members' | 'requests'>('members');
   const [inviteEmail, setInviteEmail] = useState("");

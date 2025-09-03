@@ -513,15 +513,19 @@ const Teams = () => {
   const searchUnsplashImages = async (query: string) => {
     setIsLoadingUnsplash(true);
     try {
-      // Using Unsplash API - you'll need to set up API keys
       const response = await fetch(
         `https://api.unsplash.com/search/photos?query=${encodeURIComponent(query)}&per_page=12&orientation=landscape`,
         {
           headers: {
-            'Authorization': 'Client-ID YOUR_UNSPLASH_ACCESS_KEY' // Replace with actual key
+            'Authorization': 'Client-ID QGwEQbEvd0A2mqBLtOkW6G8yp5OBN0ILpxMHhMKKZ2w' // Temporary demo key - replace with your own
           }
         }
       );
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
       const data = await response.json();
       setUnsplashImages(data.results || []);
     } catch (error) {

@@ -233,6 +233,38 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
                   </Link>
                 ))}
 
+                {/* Teams Section for Mobile - only show for authenticated users */}
+                {isAuthenticated && (
+                  <div className="space-y-3">
+                    <Link
+                      to="/teams"
+                      className="text-soft-gray/80 hover:text-soft-gray transition-colors text-lg font-medium py-2 flex items-center"
+                      onClick={closeMenu}
+                    >
+                      <Users className="w-5 h-5 mr-3" />
+                      All Teams
+                    </Link>
+                    <div className="pl-8 space-y-2">
+                      <div className="text-xs text-soft-gray/60 font-medium uppercase tracking-wider">
+                        My Teams ({userTeams.length})
+                      </div>
+                      {userTeams.map((team) => (
+                        <Link
+                          key={team.id}
+                          to={team.path}
+                          className="text-soft-gray/70 hover:text-soft-gray transition-colors text-base font-medium py-1 flex items-center"
+                          onClick={closeMenu}
+                        >
+                          <div className="w-5 h-5 bg-electric-blue text-midnight-black rounded-full flex items-center justify-center text-xs font-bold mr-3">
+                            {team.name.charAt(0)}
+                          </div>
+                          <span className="truncate">{team.name}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 {/* Mobile CTA */}
                 <div className="pt-6 border-t border-soft-gray/10">
                   {isAuthenticated ? (

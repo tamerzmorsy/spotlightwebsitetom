@@ -104,7 +104,7 @@ const TeamDetail: React.FC = () => {
       <div className="min-h-screen bg-midnight-black text-soft-gray">
         <Navigation />
         <div className="max-w-4xl mx-auto px-4 py-16 text-center">
-          <h1 className="text-3xl font-display font-bold text-vibrant-pink mb-4">Team not found</n1>
+          <h1 className="text-3xl font-display font-bold text-vibrant-pink mb-4">Team not found</h1>
           <p className="text-soft-gray/70 mb-6">The team you’re looking for doesn’t exist or the link is incorrect.</p>
           <Link to="/teams">
             <Button className="bg-electric-blue text-midnight-black hover:bg-cyan-400 font-semibold">

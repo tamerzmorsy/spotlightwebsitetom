@@ -838,6 +838,47 @@ const Teams = () => {
     }
   };
 
+  const handleCopyTeamLink = async () => {
+    const teamLink = `${window.location.origin}/teams/${userTeam.name.toLowerCase().replace(/\s+/g, '-')}`;
+
+    try {
+      if (navigator.clipboard) {
+        await navigator.clipboard.writeText(teamLink);
+        setShowCopySuccess(true);
+        setTimeout(() => setShowCopySuccess(false), 2000);
+      } else {
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = teamLink;
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        setShowCopySuccess(true);
+        setTimeout(() => setShowCopySuccess(false), 2000);
+      }
+      console.log("Team link copied:", teamLink);
+    } catch (error) {
+      console.error("Failed to copy link:", error);
+      setInviteError("Failed to copy link. Please try again.");
+    }
+  };
+
+  const handleSMSShare = () => {
+    const teamLink = `${window.location.origin}/teams/${userTeam.name.toLowerCase().replace(/\s+/g, '-')}`;
+    const message = `Hey! Join our team "${userTeam.name}" on Spotlight News! ${teamLink}`;
+    const smsUrl = `sms:?body=${encodeURIComponent(message)}`;
+
+    try {
+      window.open(smsUrl, '_self');
+      console.log("SMS share opened for team:", userTeam.name);
+    } catch (error) {
+      console.error("Failed to open SMS:", error);
+      setInviteError("Unable to open SMS app. Please try copying the link instead.");
+    }
+  };
+
   const handleApproveRequest = (requestId: string) => {
     console.log("Approving request:", requestId);
   };

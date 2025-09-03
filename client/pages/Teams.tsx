@@ -113,6 +113,12 @@ interface TeamRanking {
   rank: number;
   isCurrentTeam?: boolean;
   category: 'campus' | 'tech' | 'sports' | 'general';
+  joinType: 'open' | 'restricted';
+  minArticles?: number;
+  minPoints?: number;
+  description: string;
+  coverImage: string;
+  members: TeamMember[];
 }
 
 const Teams = () => {

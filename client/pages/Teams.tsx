@@ -1669,19 +1669,65 @@ const Teams = () => {
                     Invite Friends
                   </h3>
                   <div className="space-y-4">
+                    {/* Success Message */}
+                    {inviteSuccess && (
+                      <div className="p-3 bg-neon-green/20 border border-neon-green/40 rounded-lg">
+                        <div className="flex items-center">
+                          <Check className="w-4 h-4 text-neon-green mr-2" />
+                          <p className="text-neon-green text-sm font-semibold">Invitation sent successfully!</p>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Error Message */}
+                    {inviteError && (
+                      <div className="p-3 bg-red-900/30 border border-red-500/40 rounded-lg">
+                        <div className="flex items-center">
+                          <X className="w-4 h-4 text-red-400 mr-2" />
+                          <p className="text-red-400 text-sm">{inviteError}</p>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Copy Success */}
+                    {showCopySuccess && (
+                      <div className="p-3 bg-electric-blue/20 border border-electric-blue/40 rounded-lg">
+                        <div className="flex items-center">
+                          <Check className="w-4 h-4 text-electric-blue mr-2" />
+                          <p className="text-electric-blue text-sm font-semibold">Team link copied to clipboard!</p>
+                        </div>
+                      </div>
+                    )}
+
                     <Input
                       type="email"
                       placeholder="Enter friend's email"
                       value={inviteEmail}
-                      onChange={(e) => setInviteEmail(e.target.value)}
-                      className="bg-gray-800/50 border-electric-blue/30 text-soft-gray focus:border-electric-blue"
+                      onChange={(e) => {
+                        setInviteEmail(e.target.value);
+                        if (inviteError) setInviteError(null);
+                      }}
+                      className={`bg-gray-800/50 text-soft-gray focus:border-electric-blue ${
+                        inviteError ? 'border-red-500/50' : 'border-electric-blue/30'
+                      }`}
+                      disabled={isInviting}
                     />
                     <Button
                       onClick={handleInviteFriend}
-                      className="w-full bg-neon-green text-midnight-black hover:bg-lime-400 transition-all duration-300"
+                      disabled={isInviting || !inviteEmail.trim()}
+                      className="w-full bg-neon-green text-midnight-black hover:bg-lime-400 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      <UserPlus className="w-4 h-4 mr-2" />
-                      Send Invite
+                      {isInviting ? (
+                        <>
+                          <div className="w-4 h-4 mr-2 border-2 border-midnight-black border-t-transparent rounded-full animate-spin" />
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          <UserPlus className="w-4 h-4 mr-2" />
+                          Send Invite
+                        </>
+                      )}
                     </Button>
                     <div className="pt-4 border-t border-electric-blue/10">
                       <p className="text-sm text-soft-gray/70 mb-3">Quick share:</p>
@@ -1689,14 +1735,16 @@ const Teams = () => {
                         <Button
                           size="sm"
                           variant="outline"
+                          onClick={handleCopyTeamLink}
                           className="flex-1 border-electric-blue/30 text-electric-blue hover:bg-electric-blue/10"
                         >
                           <Share2 className="w-4 h-4 mr-1" />
-                          Link
+                          {showCopySuccess ? 'Copied!' : 'Link'}
                         </Button>
                         <Button
                           size="sm"
                           variant="outline"
+                          onClick={handleSMSShare}
                           className="flex-1 border-electric-blue/30 text-electric-blue hover:bg-electric-blue/10"
                         >
                           <MessageCircle className="w-4 h-4 mr-1" />

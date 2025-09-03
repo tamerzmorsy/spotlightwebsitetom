@@ -261,10 +261,18 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
                         <Link
                           key={team.id}
                           to={team.path}
-                          className="text-soft-gray/70 hover:text-soft-gray transition-colors text-base font-medium py-1 flex items-center"
+                          className={`text-base font-medium py-1 flex items-center transition-colors ${
+                            location.pathname === team.path
+                              ? 'text-electric-blue'
+                              : 'text-soft-gray/70 hover:text-soft-gray'
+                          }`}
                           onClick={closeMenu}
                         >
-                          <div className="w-5 h-5 bg-electric-blue text-midnight-black rounded-full flex items-center justify-center text-xs font-bold mr-3">
+                          <div className={`w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold mr-3 ${
+                            location.pathname === team.path
+                              ? 'bg-electric-blue text-midnight-black'
+                              : 'bg-gray-700 text-soft-gray'
+                          }`}>
                             {team.name.charAt(0)}
                           </div>
                           <span className="truncate">{team.name}</span>

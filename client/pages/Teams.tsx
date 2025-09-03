@@ -794,9 +794,48 @@ const Teams = () => {
     }
   }, [showUnsplashPicker]);
 
-  const handleInviteFriend = () => {
-    console.log("Inviting friend:", inviteEmail);
-    setInviteEmail("");
+  const handleInviteFriend = async () => {
+    // Validate email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!inviteEmail.trim()) {
+      setInviteError("Please enter an email address");
+      return;
+    }
+    if (!emailRegex.test(inviteEmail)) {
+      setInviteError("Please enter a valid email address");
+      return;
+    }
+
+    setIsInviting(true);
+    setInviteError(null);
+
+    try {
+      // Simulate API call delay
+      await new Promise(resolve => setTimeout(resolve, 1500));
+
+      // In real app, this would make an API call:
+      // const response = await fetch('/api/teams/invite', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({
+      //     teamId: userTeam.id,
+      //     email: inviteEmail,
+      //     inviterName: user?.firstName
+      //   })
+      // });
+
+      // Show success feedback
+      setInviteSuccess(true);
+      setInviteEmail("");
+      setTimeout(() => setInviteSuccess(false), 3000);
+
+      console.log(`Invitation sent to ${inviteEmail} for team: ${userTeam.name}`);
+    } catch (error) {
+      console.error("Error sending invite:", error);
+      setInviteError("Failed to send invitation. Please try again.");
+    } finally {
+      setIsInviting(false);
+    }
   };
 
   const handleApproveRequest = (requestId: string) => {

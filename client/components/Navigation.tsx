@@ -22,7 +22,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
 
   // Mock data for teams user has joined
   const userTeams = [
-    { id: "team-1", name: "Campus News Crusaders", path: "/teams" },
+    { id: "team-1", name: "Campus News Crusaders", path: "/teams", isPrimary: true },
     { id: "team-4", name: "Tech Enthusiasts", path: "/teams/tech-enthusiasts" },
     { id: "team-7", name: "Study Squad", path: "/teams/study-squad" }
   ];

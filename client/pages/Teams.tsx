@@ -1524,13 +1524,22 @@ const Teams = () => {
                 <label className="block text-sm font-medium text-electric-blue mb-2">
                   Cover Image
                 </label>
-                <div className="border-2 border-dashed border-electric-blue/30 rounded-lg p-6 text-center hover:border-electric-blue/50 transition-colors">
+                <div
+                  className={`border-2 border-dashed rounded-lg p-6 text-center transition-all duration-300 ${
+                    isDragOver
+                      ? 'border-electric-blue bg-electric-blue/10 scale-105'
+                      : 'border-electric-blue/30 hover:border-electric-blue/50'
+                  }`}
+                  onDragOver={handleDragOver}
+                  onDragLeave={handleDragLeave}
+                  onDrop={handleDrop}
+                >
                   {coverImagePreview ? (
                     <div className="relative">
                       <img
                         src={coverImagePreview}
                         alt="Cover preview"
-                        className="w-full h-32 object-cover rounded-lg ring-2 ring-electric-blue/50"
+                        className="w-full h-40 object-cover rounded-lg ring-2 ring-electric-blue/50"
                       />
                       <Button
                         variant="ghost"
@@ -1543,21 +1552,54 @@ const Teams = () => {
                     </div>
                   ) : (
                     <div>
-                      <Upload className="w-12 h-12 text-electric-blue/50 mx-auto mb-4" />
-                      <p className="text-electric-blue/70 mb-2">
-                        Upload team cover image
+                      <Upload className={`w-12 h-12 mx-auto mb-4 transition-colors ${
+                        isDragOver ? 'text-electric-blue' : 'text-electric-blue/50'
+                      }`} />
+                      <p className={`mb-2 transition-colors ${
+                        isDragOver ? 'text-electric-blue font-semibold' : 'text-electric-blue/70'
+                      }`}>
+                        {isDragOver ? 'Drop your image here' : 'Drag and drop your image here'}
                       </p>
                       <p className="text-xs text-soft-gray/60 mb-4">
-                        Recommended: 1920x1080px, max 5MB
+                        Recommended: 1920x1080px, max 5MB. Supports JPG, PNG, WebP
                       </p>
-                      <Button
-                        type="button"
-                        variant="outline"
-                        className="border-electric-blue text-electric-blue hover:bg-electric-blue/10"
-                        onClick={() => setCoverImagePreview("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")}
-                      >
-                        Choose File
-                      </Button>
+                      <div className="space-y-3">
+                        <div>
+                          <input
+                            type="file"
+                            accept="image/*"
+                            onChange={handleFileSelect}
+                            className="hidden"
+                            id="file-upload"
+                          />
+                          <Button
+                            type="button"
+                            variant="outline"
+                            className="border-electric-blue text-electric-blue hover:bg-electric-blue/10"
+                            onClick={() => document.getElementById('file-upload')?.click()}
+                          >
+                            <Upload className="w-4 h-4 mr-2" />
+                            Choose File
+                          </Button>
+                        </div>
+                        <div className="relative">
+                          <div className="absolute inset-0 flex items-center">
+                            <div className="w-full border-t border-gray-600"></div>
+                          </div>
+                          <div className="relative flex justify-center text-xs">
+                            <span className="bg-gray-800 px-2 text-soft-gray/60">or</span>
+                          </div>
+                        </div>
+                        <Button
+                          type="button"
+                          variant="outline"
+                          className="border-neon-green text-neon-green hover:bg-neon-green/10"
+                          onClick={() => setShowUnsplashPicker(true)}
+                        >
+                          <Eye className="w-4 h-4 mr-2" />
+                          Choose from Unsplash
+                        </Button>
+                      </div>
                     </div>
                   )}
                 </div>

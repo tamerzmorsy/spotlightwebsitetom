@@ -19,6 +19,7 @@ import CampusEligibility from "./pages/CampusEligibility";
 import Login from "./pages/Login";
 import Onboarding from "./pages/Onboarding";
 import MyStats from "./pages/MyStats";
+import Teams from "./pages/Teams";
 import Challenge from "./pages/Challenge";
 import GetApp from "./pages/GetApp";
 import Privacy from "./pages/Privacy";

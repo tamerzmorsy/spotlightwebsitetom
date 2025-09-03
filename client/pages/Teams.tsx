@@ -157,6 +157,10 @@ const Teams = () => {
   // Members tab state
   const [membersSubTab, setMembersSubTab] = useState<'members' | 'requests'>('members');
   const [inviteEmail, setInviteEmail] = useState("");
+  const [isInviting, setIsInviting] = useState(false);
+  const [inviteSuccess, setInviteSuccess] = useState(false);
+  const [inviteError, setInviteError] = useState<string | null>(null);
+  const [showCopySuccess, setShowCopySuccess] = useState(false);
 
   // Leaderboard State
   const [sortBy, setSortBy] = useState<'articles' | 'points' | 'streak'>('points');

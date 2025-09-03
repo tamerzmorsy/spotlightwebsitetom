@@ -161,6 +161,8 @@ const Teams = () => {
   const [inviteSuccess, setInviteSuccess] = useState(false);
   const [inviteError, setInviteError] = useState<string | null>(null);
   const [showCopySuccess, setShowCopySuccess] = useState(false);
+  const [processingRequest, setProcessingRequest] = useState<string | null>(null);
+  const [requestSuccess, setRequestSuccess] = useState<string | null>(null);
 
   // Leaderboard State
   const [sortBy, setSortBy] = useState<'articles' | 'points' | 'streak'>('points');

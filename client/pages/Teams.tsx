@@ -1133,7 +1133,7 @@ const Teams = () => {
                       onClick={() => setShowLeaveConfirm(true)}
                       className="bg-red-500 text-white hover:bg-red-600 font-semibold px-8 py-4 rounded-full text-lg shadow-lg shadow-red-500/30 hover:shadow-red-500/50 transition-all duration-300"
                     >
-                      <ArrowUpDown className="w-5 h-5 mr-2 rotate-90" />
+                      <LogOut className="w-5 h-5 mr-2" />
                       Leave Team
                     </Button>
                   )}

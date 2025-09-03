@@ -58,10 +58,10 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
 
   // Navigation links for authenticated users (app pages)
   const authenticatedNavigationLinks = [
-    { path: "/my-news", label: "My News" },
-    { path: "/explore", label: "Explore" },
-    { path: "/my-library", label: "My Library" },
-    { path: "/my-stats", label: "My Stats" },
+    { path: "/my-news", label: "My News", icon: Newspaper },
+    { path: "/explore", label: "Explore", icon: Compass },
+    { path: "/my-library", label: "My Library", icon: BookmarkPlus },
+    { path: "/my-stats", label: "My Stats", icon: BarChart3 },
   ];
 
   // Choose which navigation links to show

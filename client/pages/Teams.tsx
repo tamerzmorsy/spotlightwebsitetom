@@ -467,6 +467,11 @@ const Teams = () => {
                       <Trophy className="w-5 h-5 mr-2 text-yellow-500" />
                       <span className="font-semibold">Rank #{userTeam.rank}</span>
                     </div>
+                    <div className="flex items-center bg-gray-900/50 backdrop-blur-sm rounded-full px-4 py-2 border border-vibrant-pink/30">
+                      <Star className="w-5 h-5 mr-2 text-vibrant-pink" />
+                      <span className="font-semibold">{userTeam.totalPoints.toLocaleString()}</span>
+                      <span className="ml-1 text-sm">total points</span>
+                    </div>
                     <div className="flex items-center bg-gray-900/50 backdrop-blur-sm rounded-full px-4 py-2 border border-neon-green/30">
                       <BookOpen className="w-5 h-5 mr-2 text-neon-green" />
                       <span className="font-semibold">{userTeam.totalArticlesRead}</span>

@@ -513,6 +513,8 @@ const Teams = () => {
   // Unsplash API integration
   const searchUnsplashImages = async (query: string) => {
     setIsLoadingUnsplash(true);
+    setUnsplashError(null);
+
     try {
       const url = `https://api.unsplash.com/search/photos?query=${encodeURIComponent(query)}&per_page=12&orientation=landscape`;
       console.log('Fetching from URL:', url);
@@ -525,22 +527,29 @@ const Teams = () => {
       });
 
       console.log('Response status:', response.status);
-      console.log('Response headers:', response.headers);
 
       if (!response.ok) {
         const errorText = await response.text();
         console.error('Unsplash API Error Response:', errorText);
+
+        if (response.status === 401) {
+          setUnsplashError('API key authentication failed. Using demo images instead.');
+        } else {
+          setUnsplashError(`Unsplash API error (${response.status}). Using demo images instead.`);
+        }
         throw new Error(`HTTP error! status: ${response.status}, message: ${errorText}`);
       }
 
       const data = await response.json();
       console.log('Unsplash API Success:', data);
       setUnsplashImages(data.results || []);
+      setUnsplashError(null);
     } catch (error) {
       console.error('Error fetching Unsplash images:', error);
 
-      // Show error message to user
-      console.log('Using fallback images due to API error');
+      if (!unsplashError) {
+        setUnsplashError('Unable to connect to Unsplash. Using demo images instead.');
+      }
 
       // Fallback with mock data for demo
       setUnsplashImages([

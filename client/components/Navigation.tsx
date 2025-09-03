@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, User, LogOut, Settings, BarChart3, ChevronDown, Users, Newspaper, Compass, BookmarkPlus, TrendingUp, LucideIcon } from "lucide-react";
 import { useAuth } from "@/lib/auth";
+import { useTeams } from "@/lib/teams";
 import {
   DropdownMenu,
   DropdownMenuContent,

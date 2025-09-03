@@ -20,6 +20,13 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
   const location = useLocation();
   const { user, isAuthenticated, logout } = useAuth();
 
+  // Mock data for teams user has joined
+  const userTeams = [
+    { id: "team-1", name: "Campus News Crusaders", path: "/teams" },
+    { id: "team-4", name: "Tech Enthusiasts", path: "/teams/tech-enthusiasts" },
+    { id: "team-7", name: "Study Squad", path: "/teams/study-squad" }
+  ];
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };

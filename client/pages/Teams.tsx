@@ -933,6 +933,175 @@ const Teams = () => {
             </div>
           )}
 
+          {/* Ranking Tab Content - Team Leaderboard */}
+          {activeTab === 'ranking' && (
+            <div>
+              <Card className="bg-gray-800/30 border-electric-blue/30 shadow-lg">
+                <div className="p-6 border-b border-electric-blue/10">
+                  <h3 className="text-2xl font-semibold text-electric-blue mb-2">
+                    Team Rankings
+                  </h3>
+                  <p className="text-soft-gray/70">
+                    See how teams rank by combined points and performance
+                  </p>
+                </div>
+
+                {/* Team Rankings Table */}
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead className="bg-gray-800/50">
+                      <tr>
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-electric-blue">
+                          Rank
+                        </th>
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-electric-blue">
+                          Team
+                        </th>
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-electric-blue">
+                          Members
+                        </th>
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-electric-blue">
+                          Total Points
+                        </th>
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-electric-blue">
+                          Articles Read
+                        </th>
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-electric-blue">
+                          Category
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {teamRankings.map((team, index) => (
+                        <tr
+                          key={team.id}
+                          className={`border-t border-gray-700/50 hover:bg-gray-800/30 transition-colors ${
+                            team.isCurrentTeam ? "bg-electric-blue/10 border-electric-blue/30" : ""
+                          }`}
+                        >
+                          <td className="px-6 py-4">
+                            <div className="flex items-center">
+                              <span className={`font-bold text-lg ${
+                                index === 0 ? 'text-yellow-500' :
+                                index === 1 ? 'text-gray-400' :
+                                index === 2 ? 'text-orange-600' :
+                                team.isCurrentTeam ? 'text-electric-blue' : 'text-soft-gray'
+                              }`}>
+                                #{team.rank}
+                              </span>
+                              {index <= 2 && (
+                                <span className="ml-2">
+                                  {index === 0 ? '🏆' : index === 1 ? '🥈' : '🥉'}
+                                </span>
+                              )}
+                            </div>
+                          </td>
+                          <td className="px-6 py-4">
+                            <div className="flex items-center space-x-3">
+                              <div className={`w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold ${
+                                team.isCurrentTeam
+                                  ? 'bg-electric-blue text-midnight-black'
+                                  : team.category === 'campus' ? 'bg-neon-green/20 text-neon-green border border-neon-green/40' :
+                                    team.category === 'tech' ? 'bg-electric-blue/20 text-electric-blue border border-electric-blue/40' :
+                                    team.category === 'sports' ? 'bg-orange-500/20 text-orange-500 border border-orange-500/40' :
+                                    'bg-vibrant-pink/20 text-vibrant-pink border border-vibrant-pink/40'
+                              }`}>
+                                {team.avatar}
+                              </div>
+                              <div>
+                                <div className="flex items-center space-x-2">
+                                  <span className={`font-semibold ${
+                                    team.isCurrentTeam ? 'text-electric-blue' : 'text-soft-gray'
+                                  }`}>
+                                    {team.name}
+                                  </span>
+                                  {team.isCurrentTeam && (
+                                    <Badge className="bg-electric-blue/20 text-electric-blue border-electric-blue/30 text-xs">
+                                      Your Team
+                                    </Badge>
+                                  )}
+                                </div>
+                                <p className="text-xs text-soft-gray/60 capitalize">
+                                  {team.category} focused
+                                </p>
+                              </div>
+                            </div>
+                          </td>
+                          <td className="px-6 py-4">
+                            <div className="flex items-center space-x-2">
+                              <Users className="w-4 h-4 text-electric-blue" />
+                              <span className="font-medium text-soft-gray">
+                                {team.memberCount}
+                              </span>
+                            </div>
+                          </td>
+                          <td className="px-6 py-4">
+                            <div className="flex items-center space-x-3">
+                              <span className="font-bold text-electric-blue text-lg">
+                                {team.totalPoints.toLocaleString()}
+                              </span>
+                              <div className="flex-1 bg-gray-700 rounded-full h-3 w-24">
+                                <div
+                                  className="bg-gradient-to-r from-electric-blue to-vibrant-pink rounded-full h-3 transition-all duration-300"
+                                  style={{ width: `${(team.totalPoints / Math.max(...teamRankings.map(t => t.totalPoints))) * 100}%` }}
+                                />
+                              </div>
+                            </div>
+                          </td>
+                          <td className="px-6 py-4">
+                            <div className="flex items-center space-x-2">
+                              <BookOpen className="w-4 h-4 text-neon-green" />
+                              <span className="font-medium text-soft-gray">
+                                {team.totalArticlesRead}
+                              </span>
+                            </div>
+                          </td>
+                          <td className="px-6 py-4">
+                            <Badge className={`${
+                              team.category === 'campus' ? 'bg-neon-green/20 text-neon-green border-neon-green/40' :
+                              team.category === 'tech' ? 'bg-electric-blue/20 text-electric-blue border-electric-blue/40' :
+                              team.category === 'sports' ? 'bg-orange-500/20 text-orange-500 border-orange-500/40' :
+                              'bg-vibrant-pink/20 text-vibrant-pink border-vibrant-pink/40'
+                            } font-medium capitalize`}>
+                              {team.category}
+                            </Badge>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+
+                <div className="p-6 border-t border-electric-blue/10 text-center">
+                  <div className="flex items-center justify-center space-x-8 mb-4">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-electric-blue mb-1">
+                        #{userTeam.rank}
+                      </div>
+                      <div className="text-sm text-soft-gray/70">Your Team Rank</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-vibrant-pink mb-1">
+                        {userTeam.totalPoints.toLocaleString()}
+                      </div>
+                      <div className="text-sm text-soft-gray/70">Total Points</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-neon-green mb-1">
+                        {userTeam.totalArticlesRead}
+                      </div>
+                      <div className="text-sm text-soft-gray/70">Articles Read</div>
+                    </div>
+                  </div>
+                  <Button className="bg-neon-green text-midnight-black hover:bg-lime-400 font-semibold px-8 py-3 rounded-full transition-all duration-300">
+                    <TrendingUp className="w-5 h-5 mr-2" />
+                    Improve Team Ranking
+                  </Button>
+                </div>
+              </Card>
+            </div>
+          )}
+
           {/* Members Tab Content */}
           {activeTab === 'members' && (
             <div className="grid lg:grid-cols-3 gap-8">

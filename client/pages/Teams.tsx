@@ -986,6 +986,18 @@ const Teams = () => {
   };
 
   const handleLeaveTeam = async () => {
+    const currentRole = getCurrentUserRole();
+
+    // Safety check: Team owner cannot leave if they're the only owner
+    if (currentRole === 'owner') {
+      const otherOwners = teamMembers.filter(member => member.role === 'owner' && member.id !== "1");
+      if (otherOwners.length === 0) {
+        setInviteError("As the team owner, you cannot leave the team. Please transfer ownership to another member first or delete the team.");
+        setShowLeaveConfirm(false);
+        return;
+      }
+    }
+
     setIsLeavingTeam(true);
 
     try {

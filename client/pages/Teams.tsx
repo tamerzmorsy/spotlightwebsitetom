@@ -2656,7 +2656,7 @@ const Teams = () => {
                   </>
                 ) : (
                   <>
-                    <ArrowUpDown className="w-4 h-4 mr-2 rotate-90" />
+                    <LogOut className="w-4 h-4 mr-2" />
                     Leave Team
                   </>
                 )}

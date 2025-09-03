@@ -152,8 +152,8 @@ const Teams = () => {
   const [currentCompetitionIndex, setCurrentCompetitionIndex] = useState(0);
   const [competitionFilter, setCompetitionFilter] = useState<'all' | 'active' | 'upcoming'>('active');
 
-  // Mock data
-  const [userTeam] = useState<Team>({
+  // Mock data - now editable
+  const [userTeam, setUserTeam] = useState<Team>({
     id: "team-1",
     name: "Campus News Crusaders",
     description: "Staying informed about campus events and breaking news that matters to our university community",

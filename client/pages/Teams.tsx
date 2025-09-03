@@ -644,6 +644,10 @@ const Teams = () => {
       setSaveSuccess(true);
       setTimeout(() => setSaveSuccess(false), 3000);
 
+      // Show team updated notification
+      setTeamUpdated(true);
+      setTimeout(() => setTeamUpdated(false), 5000);
+
       console.log("Team updated successfully:", updatedTeam);
 
       // Close modal after successful save

@@ -1571,45 +1571,47 @@ const Teams = () => {
                       <p className="text-xs text-soft-gray/60 mb-4">
                         Recommended: 1920x1080px, max 5MB. Supports JPG, PNG, WebP
                       </p>
-                      <div className="space-y-3">
-                        <div>
-                          <input
-                            type="file"
-                            accept="image/*"
-                            onChange={handleFileSelect}
-                            className="hidden"
-                            id="file-upload"
-                          />
-                          <Button
-                            type="button"
-                            variant="outline"
-                            className="border-electric-blue text-electric-blue hover:bg-electric-blue/10"
-                            onClick={() => document.getElementById('file-upload')?.click()}
-                          >
-                            <Upload className="w-4 h-4 mr-2" />
-                            Choose File
-                          </Button>
-                        </div>
-                        <div className="relative">
-                          <div className="absolute inset-0 flex items-center">
-                            <div className="w-full border-t border-gray-600"></div>
-                          </div>
-                          <div className="relative flex justify-center text-xs">
-                            <span className="bg-gray-800 px-2 text-soft-gray/60">or</span>
-                          </div>
-                        </div>
+                      <div>
+                        <input
+                          type="file"
+                          accept="image/*"
+                          onChange={handleFileSelect}
+                          className="hidden"
+                          id="file-upload"
+                        />
                         <Button
                           type="button"
                           variant="outline"
-                          className="border-neon-green text-neon-green hover:bg-neon-green/10"
-                          onClick={() => setShowUnsplashPicker(true)}
+                          className="border-electric-blue text-electric-blue hover:bg-electric-blue/10"
+                          onClick={() => document.getElementById('file-upload')?.click()}
                         >
-                          <Eye className="w-4 h-4 mr-2" />
-                          Choose from Unsplash
+                          <Upload className="w-4 h-4 mr-2" />
+                          Choose File
                         </Button>
                       </div>
                     </div>
                   )}
+                </div>
+
+                {/* Unsplash CTA - Always visible outside drop zone */}
+                <div className="mt-4 text-center">
+                  <div className="relative">
+                    <div className="absolute inset-0 flex items-center">
+                      <div className="w-full border-t border-gray-600"></div>
+                    </div>
+                    <div className="relative flex justify-center text-xs">
+                      <span className="bg-gray-800 px-2 text-soft-gray/60">or</span>
+                    </div>
+                  </div>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    className="border-neon-green text-neon-green hover:bg-neon-green/10 mt-3"
+                    onClick={() => setShowUnsplashPicker(true)}
+                  >
+                    <Eye className="w-4 h-4 mr-2" />
+                    Choose from Unsplash
+                  </Button>
                 </div>
               </div>
             </div>

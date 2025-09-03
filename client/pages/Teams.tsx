@@ -142,6 +142,7 @@ const Teams = () => {
   // Save state
   const [isSaving, setIsSaving] = useState(false);
   const [saveSuccess, setSaveSuccess] = useState(false);
+  const [teamUpdated, setTeamUpdated] = useState(false);
 
   // Members tab state
   const [membersSubTab, setMembersSubTab] = useState<'members' | 'requests'>('members');

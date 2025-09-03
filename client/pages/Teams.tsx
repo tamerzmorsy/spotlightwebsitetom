@@ -599,7 +599,7 @@ const Teams = () => {
               <Button
                 variant={activeTab === 'leaderboard' ? 'default' : 'ghost'}
                 onClick={() => setActiveTab('leaderboard')}
-                className={`rounded-full px-8 py-3 transition-all ${
+                className={`rounded-full px-6 py-3 transition-all ${
                   activeTab === 'leaderboard'
                     ? 'bg-electric-blue text-midnight-black'
                     : 'text-soft-gray hover:text-electric-blue'
@@ -609,9 +609,21 @@ const Teams = () => {
                 Leaderboard
               </Button>
               <Button
+                variant={activeTab === 'ranking' ? 'default' : 'ghost'}
+                onClick={() => setActiveTab('ranking')}
+                className={`rounded-full px-6 py-3 transition-all ${
+                  activeTab === 'ranking'
+                    ? 'bg-electric-blue text-midnight-black'
+                    : 'text-soft-gray hover:text-electric-blue'
+                }`}
+              >
+                <Flag className="w-5 h-5 mr-2" />
+                Ranking
+              </Button>
+              <Button
                 variant={activeTab === 'members' ? 'default' : 'ghost'}
                 onClick={() => setActiveTab('members')}
-                className={`rounded-full px-8 py-3 transition-all ${
+                className={`rounded-full px-6 py-3 transition-all ${
                   activeTab === 'members'
                     ? 'bg-electric-blue text-midnight-black'
                     : 'text-soft-gray hover:text-electric-blue'

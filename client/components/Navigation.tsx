@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, User, LogOut, Settings, BarChart3, ChevronDown, Users, Newspaper, Compass, BookmarkPlus, TrendingUp } from "lucide-react";
+import { Menu, X, User, LogOut, Settings, BarChart3, ChevronDown, Users, Newspaper, Compass, BookmarkPlus, TrendingUp, LucideIcon } from "lucide-react";
 import { useAuth } from "@/lib/auth";
 import {
   DropdownMenu,
@@ -13,6 +13,12 @@ import {
 
 interface NavigationProps {
   currentPage?: string;
+}
+
+interface NavigationLink {
+  path: string;
+  label: string;
+  icon: LucideIcon;
 }
 
 const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {

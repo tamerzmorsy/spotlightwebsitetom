@@ -137,13 +137,13 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
                   {userTeams.map((team) => (
                     <DropdownMenuItem key={team.id} asChild>
                       <Link
-                        to={team.path}
+                        to="/teams"
                         className={`flex items-center cursor-pointer ${
-                          location.pathname === team.path ? 'bg-electric-blue/10 text-electric-blue' : ''
+                          location.pathname === '/teams' ? 'bg-electric-blue/10 text-electric-blue' : ''
                         }`}
                       >
                         <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-2 ${
-                          location.pathname === team.path
+                          location.pathname === '/teams'
                             ? 'bg-electric-blue text-midnight-black'
                             : 'bg-gray-700 text-soft-gray'
                         }`}>

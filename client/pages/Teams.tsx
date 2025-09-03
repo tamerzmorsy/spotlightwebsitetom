@@ -41,7 +41,8 @@ import {
   Eye,
   Download,
   MessageCircle,
-  ThumbsUp
+  ThumbsUp,
+  LogOut
 } from "lucide-react";
 
 // Mock data interfaces

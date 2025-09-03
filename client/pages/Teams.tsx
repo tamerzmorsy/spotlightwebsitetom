@@ -748,6 +748,16 @@ const Teams = () => {
 
       {/* Team Hero Section */}
       <section className="relative">
+        {/* Team Updated Notification */}
+        {teamUpdated && (
+          <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-50 bg-neon-green/90 text-midnight-black px-6 py-3 rounded-full shadow-lg shadow-neon-green/30 animate-pulse">
+            <div className="flex items-center space-x-2">
+              <Check className="w-5 h-5" />
+              <span className="font-semibold">Team updated successfully!</span>
+            </div>
+          </div>
+        )}
+
         {/* Full-width immersive hero */}
         <div className="relative h-96 bg-gradient-to-r from-electric-blue/20 to-electric-blue/10 overflow-hidden">
           <img

@@ -2007,7 +2007,10 @@ const Teams = () => {
                           Join This Team
                         </h3>
                         {selectedTeam.joinType === 'open' ? (
-                          <Button className="w-full bg-neon-green text-midnight-black hover:bg-lime-400 font-semibold py-3">
+                          <Button
+                            onClick={() => handleJoinTeam(selectedTeam)}
+                            className="w-full bg-neon-green text-midnight-black hover:bg-lime-400 font-semibold py-3"
+                          >
                             <UserPlus className="w-5 h-5 mr-2" />
                             Join Team
                           </Button>
@@ -2015,7 +2018,10 @@ const Teams = () => {
                           // Check if user meets requirements (mock logic)
                           stats.articlesRead.total >= (selectedTeam.minArticles || 0) &&
                           (stats.articlesRead.total * 6) >= (selectedTeam.minPoints || 0) ? (
-                            <Button className="w-full bg-neon-green text-midnight-black hover:bg-lime-400 font-semibold py-3">
+                            <Button
+                              onClick={() => handleJoinTeam(selectedTeam)}
+                              className="w-full bg-neon-green text-midnight-black hover:bg-lime-400 font-semibold py-3"
+                            >
                               <UserPlus className="w-5 h-5 mr-2" />
                               Request to Join
                             </Button>

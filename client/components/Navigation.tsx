@@ -54,7 +54,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
   };
 
   // Navigation links for non-authenticated users (marketing pages)
-  const publicNavigationLinks = [
+  const publicNavigationLinks: NavigationLink[] = [
     { path: "/students", label: "Students", icon: Users },
     { path: "/publishers", label: "Publishers", icon: Newspaper },
     { path: "/universities", label: "Universities", icon: TrendingUp },
@@ -63,7 +63,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
   ];
 
   // Navigation links for authenticated users (app pages)
-  const authenticatedNavigationLinks = [
+  const authenticatedNavigationLinks: NavigationLink[] = [
     { path: "/my-news", label: "My News", icon: Newspaper },
     { path: "/explore", label: "Explore", icon: Compass },
     { path: "/my-library", label: "My Library", icon: BookmarkPlus },

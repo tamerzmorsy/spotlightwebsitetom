@@ -791,7 +791,7 @@ const Teams = () => {
                       {userTeam.joinType === 'open' ? 'Open Team' : 'Restricted'}
                     </Badge>
                   </div>
-                  <h1 className="text-4xl sm:text-5xl font-display font-bold text-soft-gray mb-4 text-glow-blue">
+                  <h1 className="text-4xl sm:text-5xl font-display font-bold text-white mb-4 text-glow-blue">
                     {userTeam.name}
                   </h1>
                   <p className="text-lg text-soft-gray/90 mb-6 max-w-3xl leading-relaxed">

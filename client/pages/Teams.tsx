@@ -166,6 +166,8 @@ const Teams = () => {
   const [requestSuccess, setRequestSuccess] = useState<string | null>(null);
   const [isLeavingTeam, setIsLeavingTeam] = useState(false);
   const [showLeaveConfirm, setShowLeaveConfirm] = useState(false);
+  const [manualCopyVisible, setManualCopyVisible] = useState(false);
+  const manualCopyRef = React.useRef<HTMLInputElement>(null);
 
   // Leaderboard State
   const [sortBy, setSortBy] = useState<'articles' | 'points' | 'streak'>('points');
@@ -559,6 +561,15 @@ const Teams = () => {
     return competitions.filter(comp => comp.status === competitionFilter);
   }, [competitions, competitionFilter]);
 
+  const teamShareLink = React.useMemo(() => {
+    const slug = userTeam.name.toLowerCase().replace(/\s+/g, '-');
+    try {
+      return new URL(`/teams/${slug}`, window.location.origin).toString();
+    } catch {
+      return `${window.location.origin}/teams/${slug}`;
+    }
+  }, [userTeam.name]);
+
   // Drag and drop handlers
   const handleDragOver = (e: React.DragEvent) => {
     e.preventDefault();
@@ -844,29 +855,51 @@ const Teams = () => {
   };
 
   const handleCopyTeamLink = async () => {
-    const teamLink = `${window.location.origin}/teams/${userTeam.name.toLowerCase().replace(/\s+/g, '-')}`;
+    const teamLink = teamShareLink;
 
     try {
-      if (navigator.clipboard) {
+      if (window.isSecureContext && 'clipboard' in navigator && window.top === window.self) {
         await navigator.clipboard.writeText(teamLink);
+        setInviteError(null);
+        setManualCopyVisible(false);
         setShowCopySuccess(true);
         setTimeout(() => setShowCopySuccess(false), 2000);
-      } else {
-        // Fallback for older browsers
-        const textArea = document.createElement('textarea');
-        textArea.value = teamLink;
-        document.body.appendChild(textArea);
-        textArea.focus();
-        textArea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textArea);
-        setShowCopySuccess(true);
-        setTimeout(() => setShowCopySuccess(false), 2000);
+        console.log("Team link copied:", teamLink);
+        return;
       }
-      console.log("Team link copied:", teamLink);
+
+      const textArea = document.createElement('textarea');
+      textArea.value = teamLink;
+      textArea.setAttribute('readonly', '');
+      textArea.style.position = 'fixed';
+      textArea.style.top = '0';
+      textArea.style.left = '0';
+      textArea.style.opacity = '0';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      const successful = document.execCommand('copy');
+      document.body.removeChild(textArea);
+
+      if (successful) {
+        setInviteError(null);
+        setManualCopyVisible(false);
+        setShowCopySuccess(true);
+        setTimeout(() => setShowCopySuccess(false), 2000);
+        console.log("Team link copied (fallback):", teamLink);
+        return;
+      }
+
+      throw new Error('Copy via execCommand failed');
     } catch (error) {
       console.error("Failed to copy link:", error);
-      setInviteError("Failed to copy link. Please try again.");
+      setManualCopyVisible(true);
+      setShowCopySuccess(false);
+      setInviteError("Copy blocked by browser. Use the box below and press Ctrl/Cmd+C.");
+      setTimeout(() => {
+        manualCopyRef.current?.focus();
+        manualCopyRef.current?.select();
+      }, 0);
     }
   };
 
@@ -1924,6 +1957,32 @@ const Teams = () => {
                           SMS
                         </Button>
                       </div>
+
+                      {manualCopyVisible && (
+                        <div className="mt-3 space-y-2">
+                          <p className="text-xs text-soft-gray/70">Select and copy this link:</p>
+                          <div className="flex items-center space-x-2">
+                            <Input
+                              ref={manualCopyRef}
+                              value={teamShareLink}
+                              readOnly
+                              onFocus={(e) => e.currentTarget.select()}
+                              className="bg-gray-800/50 text-soft-gray border-electric-blue/30 flex-1"
+                            />
+                            <Button
+                              size="sm"
+                              variant="outline"
+                              onClick={() => {
+                                manualCopyRef.current?.focus();
+                                manualCopyRef.current?.select();
+                              }}
+                              className="border-electric-blue/30 text-electric-blue hover:bg-electric-blue/10"
+                            >
+                              Select
+                            </Button>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </Card>

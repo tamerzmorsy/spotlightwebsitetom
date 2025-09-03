@@ -26,13 +26,15 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const { user, isAuthenticated, logout } = useAuth();
+  const { joinedTeams } = useTeams();
 
-  // Mock data for teams user has joined
-  const userTeams = [
-    { id: "team-1", name: "Campus News Crusaders", path: "/teams", isPrimary: true },
-    { id: "team-4", name: "Tech Enthusiasts", path: "/teams/tech-enthusiasts" },
-    { id: "team-7", name: "Study Squad", path: "/teams/study-squad" }
-  ];
+  // Transform teams for navigation dropdown
+  const userTeams = joinedTeams.map(team => ({
+    id: team.id,
+    name: team.name,
+    path: team.path,
+    isPrimary: team.isPrimary || false
+  }));
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);

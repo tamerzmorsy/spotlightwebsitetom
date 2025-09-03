@@ -1217,6 +1217,9 @@ const Teams = () => {
                         <th className="px-6 py-4 text-left text-sm font-semibold text-electric-blue">
                           Category
                         </th>
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-electric-blue">
+                          Actions
+                        </th>
                       </tr>
                     </thead>
                     <tbody>

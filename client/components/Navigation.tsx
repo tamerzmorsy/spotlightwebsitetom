@@ -55,6 +55,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
     { path: "/explore", label: "Explore" },
     { path: "/my-library", label: "My Library" },
     { path: "/my-stats", label: "My Stats" },
+    { path: "/teams", label: "Teams" },
   ];
 
   // Choose which navigation links to show

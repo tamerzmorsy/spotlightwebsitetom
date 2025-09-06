@@ -63,30 +63,10 @@ export default function PublisherListStatic() {
     <div className="min-h-screen" style={{ backgroundColor: '#1C2526', color: '#FFFFFF' }}>
       <Navigation />
 
-      {/* Hero */}
-      <div className="w-full relative">
-        <div className="w-full h-[360px]" style={{ backgroundColor: '#0b1f1f' }} />
-        <div className="absolute inset-0 flex items-center">
-          <div className="max-w-[840px] mx-auto px-6 py-8 text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl font-display font-bold text-white">Publisher Directory</h1>
-            <h3 className="mt-3 text-lg text-soft-gray/80">Discover publishers from campus papers to global newsrooms — all in one trusted place.</h3>
-          </div>
-        </div>
-      </div>
 
       <main>
         <div style={{ maxWidth: 1200, margin: '0 auto', padding: '24px 20px' }}>
           {/* Hero banner (above search row) */}
-          <section style={{ height: '38vh', minHeight: 320, maxHeight: 520, position: 'relative', marginBottom: 24, borderRadius: 12, overflow: 'hidden', backgroundSize: 'cover', backgroundPosition: 'center', backgroundImage: "url('https://placehold.co/1600x900/png?text=Hero')" }}>
-            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,.15) 100%)' }} />
-            <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center' }}>
-              <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 20px' }}>
-                <h1 style={{ color: '#FFFFFF', fontSize: '36px', fontWeight: 700, margin: 0 }}>Publisher Directory</h1>
-                <p style={{ color: '#FFFFFF', opacity: 0.85, marginTop: 8, fontSize: 16 }}>From your campus to the world — explore every newsroom in one feed.</p>
-              </div>
-            </div>
-          </section>
-
           {/* Search Row (sticky on mobile) */}
           <section>
             <div className="grid grid-cols-1 md:[grid-template-columns:1fr_220px]" style={{ gap: 12 }}>

@@ -68,8 +68,8 @@ export default function PublisherListStatic() {
                 className="flex items-center gap-4 py-3 hover:bg-[rgba(0,196,204,0.06)]"
                 style={{ paddingTop: 12, paddingBottom: 12, borderBottom: '1px solid rgba(237,239,241,0.06)' }}
               >
-                <div className="w-14 h-14 rounded-full overflow-hidden flex-shrink-0" style={{ width: 56, height: 56 }}>
-                  <img src={item.img} alt={`${item.name} logo`} loading="lazy" decoding="async" className="w-full h-full object-contain" />
+                <div className="w-14 h-14 rounded-full bg-gray-800 flex items-center justify-center flex-shrink-0" style={{ width: 56, height: 56 }}>
+                  <span className="text-soft-gray font-medium">{item.name.split(' ').map(s=>s[0]).slice(0,2).join('').toUpperCase()}</span>
                 </div>
                 <div className="font-semibold">{item.name}</div>
               </div>

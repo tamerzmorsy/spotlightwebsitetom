@@ -1,7 +1,8 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useRef, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const ITEMS = [
   { img: "https://placehold.co/96x96/svg?text=PI", name: "Philadelphia Inquirer" },
@@ -24,59 +25,138 @@ const ITEMS = [
   { img: "https://placehold.co/96x96/svg?text=SD", name: "The Stanford Daily" },
 ];
 
+function slugify(name: string) {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+}
+
 export default function PublisherListStatic() {
   const [q, setQ] = useState("");
+  const [category, setCategory] = useState<"All" | "Campus" | "Local" | "National" | "Global">("All");
+  const [visible, setVisible] = useState(8);
+  const sentinelRef = useRef<HTMLDivElement | null>(null);
+
   const lower = q.trim().toLowerCase();
-  const items = useMemo(() => {
-    if (!lower) return ITEMS;
-    return ITEMS.filter((it) => it.name.toLowerCase().includes(lower));
-  }, [lower]);
+  const filtered = useMemo(() => {
+    let list = ITEMS.slice();
+    if (lower) list = list.filter((it) => it.name.toLowerCase().includes(lower));
+    // Static items don't have categories; if category != All we just simulate by name (no-op)
+    return list;
+  }, [lower, category]);
+
+  const visibleItems = filtered.slice(0, visible);
+  const hasMore = visible < filtered.length;
+
+  useEffect(() => {
+    if (!sentinelRef.current) return;
+    if (!('IntersectionObserver' in window)) return;
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && hasMore) {
+          setVisible((v) => Math.min(v + 8, filtered.length));
+        }
+      });
+    });
+    io.observe(sentinelRef.current);
+    return () => io.disconnect();
+  }, [sentinelRef.current, hasMore, filtered.length]);
 
   return (
-    <div style={{ backgroundColor: '#1C2526', color: '#EDEFF1' }} className="min-h-screen">
+    <div className="min-h-screen" style={{ backgroundColor: '#1C2526', color: '#FFFFFF' }}>
       <Navigation />
-      <main className="max-w-[840px] mx-auto p-6" style={{ padding: 24 }}>
-        <header className="mb-6 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-          <div className="md:col-span-2">
-            <h1 className="text-3xl font-display font-bold mb-2">Publisher List</h1>
-            <p className="text-soft-gray/80">Campus, local, and global newsrooms — all in one trusted feed.</p>
-            <div className="mt-4 max-w-md">
+
+      {/* Full-width hero */}
+      <div className="w-full relative">
+        <div
+          className="w-full h-44 md:h-64 bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "linear-gradient(to bottom, rgba(12,14,15,0.65), rgba(12,14,15,0.2)), url('https://cdn.builder.io/api/v1/image/assets%2Ff9a2587e1b874b6e9d34bfb6b703b455%2F93f590eec3684d129be0a4d274bd2174?format=webp&width=1600')",
+          }}
+        />
+        <div className="absolute inset-0 flex items-center">
+          <div className="max-w-[840px] mx-auto px-6 py-6">
+            <h1 className="text-3xl md:text-4xl font-display font-bold text-white">Publisher Directory</h1>
+            <h3 className="mt-2 text-md text-soft-gray/80">Explore campus, local, and global newsrooms — all in one trusted feed.</h3>
+            <div className="mt-4">
+              <Button onClick={() => { try { window.analytics?.track('cta_create_account'); } catch(e){} }} className="bg-[#00C4CC] text-midnight-black">
+                Create Free Account
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <main className="max-w-[840px] mx-auto p-6 mt-6" style={{ padding: 24 }}>
+        {/* Search + Filters */}
+        <div className="sticky top-16 bg-transparent z-10">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+            <div className="flex-1">
               <input
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
                 placeholder="Search publishers..."
-                className="w-full rounded-md bg-gray-800/40 border border-soft-gray/10 text-soft-gray px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#00C4CC]"
+                className="w-full rounded-md bg-gray-800/30 border border-soft-gray/10 text-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#00C4CC]"
                 aria-label="Search publishers"
               />
             </div>
-          </div>
 
-          <div className="md:col-span-1 flex justify-end">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets%2Ff9a2587e1b874b6e9d34bfb6b703b455%2F93f590eec3684d129be0a4d274bd2174?format=webp&width=800"
-              alt="Publishers hero"
-              className="w-full max-w-sm rounded-lg object-cover shadow-md"
-            />
+            <div className="mt-3 md:mt-0 flex items-center gap-2 flex-wrap">
+              {(["All", "Campus", "Local", "National", "Global"] as const).map((c) => (
+                <button
+                  key={c}
+                  onClick={() => setCategory(c)}
+                  aria-pressed={category === c}
+                  className={`px-3 py-2 rounded-full text-sm font-medium ${category === c ? 'bg-[#00C4CC] text-midnight-black' : 'bg-gray-800/30 text-white hover:bg-gray-800/40'}`}
+                >
+                  {c}
+                </button>
+              ))}
+            </div>
           </div>
-        </header>
+        </div>
 
+        {/* Grid */}
         <section>
-          <div className="flex flex-col">
-            {items.map((item, idx) => (
-              <div
-                key={idx}
-                className="flex items-center gap-4 py-3 hover:bg-[rgba(0,196,204,0.06)]"
-                style={{ paddingTop: 12, paddingBottom: 12, borderBottom: '1px solid rgba(237,239,241,0.06)' }}
-              >
-                <div className="w-14 h-14 rounded-full bg-gray-800 flex items-center justify-center flex-shrink-0" style={{ width: 56, height: 56 }}>
-                  <span className="text-soft-gray font-medium">{item.name.split(' ').map(s=>s[0]).slice(0,2).join('').toUpperCase()}</span>
-                </div>
-                <div className="font-semibold">{item.name}</div>
-              </div>
-            ))}
-          </div>
+          {visibleItems.length === 0 ? (
+            <div className="py-20 text-center text-soft-gray/70">
+              <div className="mb-4">No publishers found. Try another filter.</div>
+              <div className="mx-auto w-40 h-24 bg-gray-800 rounded-md" />
+            </div>
+          ) : (
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              {visibleItems.map((item) => {
+                const slug = slugify(item.name);
+                return (
+                  <Link to={`/publisher/${slug}`} key={item.name} className="block">
+                    <div className="bg-[#0e1414] rounded-2xl p-4 shadow-md transform transition hover:scale-[1.02] hover:shadow-lg" style={{ borderRadius: '1rem' }}>
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center overflow-hidden">
+                          <span className="text-soft-gray font-medium">{item.name.split(' ').map(s=>s[0]).slice(0,2).join('').toUpperCase()}</span>
+                        </div>
+                        <div className="flex-1">
+                          <div className="font-semibold text-white truncate">{item.name}</div>
+                          <div className="text-sm text-soft-gray/70 truncate">{item.tagline || ''}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          )}
+
+          <div ref={sentinelRef} />
+
+          {hasMore && (
+            <div className="flex justify-center mt-8">
+              <button onClick={() => setVisible((v) => Math.min(v + 8, filtered.length))} className="px-4 py-2 rounded-full bg-[#00C4CC] text-midnight-black">
+                Load more
+              </button>
+            </div>
+          )}
         </section>
       </main>
+
       <Footer />
     </div>
   );

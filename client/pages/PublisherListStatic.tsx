@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo, useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
@@ -25,20 +25,47 @@ const ITEMS = [
 ];
 
 export default function PublisherListStatic() {
+  const [q, setQ] = useState("");
+  const lower = q.trim().toLowerCase();
+  const items = useMemo(() => {
+    if (!lower) return ITEMS;
+    return ITEMS.filter((it) => it.name.toLowerCase().includes(lower));
+  }, [lower]);
+
   return (
     <div style={{ backgroundColor: '#1C2526', color: '#EDEFF1' }} className="min-h-screen">
       <Navigation />
       <main className="max-w-[840px] mx-auto p-6" style={{ padding: 24 }}>
-        <header className="mb-4">
-          <h1 className="text-3xl font-display font-bold mb-2">Publisher List</h1>
+        <header className="mb-6 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+          <div className="md:col-span-2">
+            <h1 className="text-3xl font-display font-bold mb-2">Publisher List</h1>
+            <p className="text-soft-gray/80">Campus, local, and global newsrooms — all in one trusted feed.</p>
+            <div className="mt-4 max-w-md">
+              <input
+                value={q}
+                onChange={(e) => setQ(e.target.value)}
+                placeholder="Search publishers..."
+                className="w-full rounded-md bg-gray-800/40 border border-soft-gray/10 text-soft-gray px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#00C4CC]"
+                aria-label="Search publishers"
+              />
+            </div>
+          </div>
+
+          <div className="md:col-span-1 flex justify-end">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2Ff9a2587e1b874b6e9d34bfb6b703b455%2F93f590eec3684d129be0a4d274bd2174?format=webp&width=800"
+              alt="Publishers hero"
+              className="w-full max-w-sm rounded-lg object-cover shadow-md"
+            />
+          </div>
         </header>
 
         <section>
           <div className="flex flex-col">
-            {ITEMS.map((item, idx) => (
+            {items.map((item, idx) => (
               <div
                 key={idx}
-                className="flex items-center gap-4 py-3"
+                className="flex items-center gap-4 py-3 hover:bg-[rgba(0,196,204,0.06)]"
                 style={{ paddingTop: 12, paddingBottom: 12, borderBottom: '1px solid rgba(237,239,241,0.06)' }}
               >
                 <div className="w-14 h-14 rounded-full overflow-hidden flex-shrink-0" style={{ width: 56, height: 56 }}>

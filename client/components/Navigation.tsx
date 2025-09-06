@@ -29,7 +29,8 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
   };
 
   const isCurrentPage = (path: string) => {
-    return location.pathname === path;
+    // Consider the route active if the current pathname equals or starts with the path
+    return location.pathname === path || location.pathname.startsWith(path + (path.endsWith('/') ? '' : ''));
   };
 
   const getLinkClasses = (path: string) => {
@@ -46,7 +47,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
     { path: "/publishers", label: "Publishers" },
     { path: "/universities", label: "Colleges/Universities" },
     { path: "/pricing", label: "Pricing" },
-    { path: "/publisher-list", label: "Publisher List" },
+    { path: "/publisher-list-static", label: "Publisher List" },
     { path: "/about", label: "About" },
   ];
 

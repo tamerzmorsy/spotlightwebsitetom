@@ -15,6 +15,7 @@ import Universities from "./pages/Universities";
 import About from "./pages/About";
 import Pricing from "./pages/Pricing";
 import PublisherList from "./pages/PublisherList";
+import PublisherListStatic from "./pages/PublisherListStatic";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import CampusEligibility from "./pages/CampusEligibility";

@@ -67,6 +67,16 @@ export default function PublisherListStatic() {
       <main>
         <div style={{ maxWidth: 1200, margin: '0 auto', padding: '24px 20px' }}>
           {/* Hero banner (above search row) */}
+          {/* Hero — solid color */}
+          <section style={{ marginBottom: 24 }}>
+            <div style={{ width: '100%', height: '38vh', minHeight: 320, maxHeight: 520, backgroundColor: '#0b1f1f', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: 12 }}>
+              <div style={{ textAlign: 'center', padding: '0 20px' }}>
+                <h1 style={{ color: '#FFFFFF', fontSize: 36, fontWeight: 700, margin: 0 }}>Publisher Directory</h1>
+                <p style={{ color: '#FFFFFF', opacity: 0.85, marginTop: 8 }}>From your campus to the world — explore every newsroom in one feed.</p>
+              </div>
+            </div>
+          </section>
+
           {/* Search Row (sticky on mobile) */}
           <section>
             <div className="grid grid-cols-1 md:[grid-template-columns:1fr_220px]" style={{ gap: 12 }}>

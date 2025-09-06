@@ -70,9 +70,9 @@ export default function PublisherListStatic() {
           {/* Hero — solid color */}
           <section style={{ marginBottom: 24 }}>
             <div style={{ width: '100%', height: '38vh', minHeight: 320, maxHeight: 520, backgroundColor: '#0b1f1f', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: 12 }}>
-              <div style={{ textAlign: 'center', padding: '0 20px' }}>
-                <h1 style={{ color: '#FFFFFF', fontSize: 36, fontWeight: 700, margin: 0 }}>Publisher Directory</h1>
-                <p style={{ color: '#FFFFFF', opacity: 0.85, marginTop: 8 }}>Meet the publishers who power Spotlight — from campus newsrooms to global outlets.</p>
+              <div style={{ textAlign: 'center', padding: '0 20px' }} className="relative z-20 mx-auto max-w-8xl">
+                <h1 className="text-6xl sm:text-7xl lg:text-8xl font-display font-bold mb-4 leading-[0.85] tracking-tight text-white">Publisher Directory</h1>
+                <p className="text-2xl sm:text-3xl text-soft-gray/80 mb-2 font-light leading-relaxed">Meet the publishers who power Spotlight — from campus newsrooms to global outlets.</p>
               </div>
             </div>
           </section>

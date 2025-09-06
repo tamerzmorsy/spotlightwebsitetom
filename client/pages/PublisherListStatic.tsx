@@ -69,7 +69,7 @@ export default function PublisherListStatic() {
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-[840px] mx-auto px-6 py-8 text-center md:text-left">
             <h1 className="text-4xl md:text-5xl font-display font-bold text-white">Publisher Directory</h1>
-            <h3 className="mt-3 text-lg text-soft-gray/80">Explore campus, local, and global newsrooms — all in one trusted feed.</h3>
+            <h3 className="mt-3 text-lg text-soft-gray/80">Discover publishers from campus papers to global newsrooms — all in one trusted place.</h3>
             <div className="mt-6">
               <a href="/signup" className="inline-block bg-[#00C4CC] text-white font-semibold px-5 py-3 rounded-full shadow">Create Free Account</a>
             </div>

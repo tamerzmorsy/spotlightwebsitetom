@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, User, LogOut, Settings, BarChart3 } from "lucide-react";
@@ -29,7 +29,8 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
   };
 
   const isCurrentPage = (path: string) => {
-    return location.pathname === path;
+    // Consider the route active if the current pathname equals or starts with the path
+    return location.pathname === path || location.pathname.startsWith(path + (path.endsWith('/') ? '' : ''));
   };
 
   const getLinkClasses = (path: string) => {
@@ -46,6 +47,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
     { path: "/publishers", label: "Publishers" },
     { path: "/universities", label: "Colleges/Universities" },
     { path: "/pricing", label: "Pricing" },
+    { path: "/publisher-list-static", label: "Publisher List" },
     { path: "/about", label: "About" },
   ];
 
@@ -59,6 +61,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
 
   // Choose which navigation links to show
   const navigationLinks = isAuthenticated ? authenticatedNavigationLinks : publicNavigationLinks;
+
 
   return (
     <nav className="bg-midnight-black/95 backdrop-blur-sm sticky top-0 z-50 border-b border-soft-gray/10">
@@ -77,11 +80,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navigationLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={getLinkClasses(link.path)}
-              >
+              <Link key={link.path} to={link.path} className={getLinkClasses(link.path)}>
                 {link.label}
               </Link>
             ))}

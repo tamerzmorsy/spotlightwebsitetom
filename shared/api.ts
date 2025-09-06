@@ -11,3 +11,19 @@ export interface DemoResponse {
   message: string;
   timestamp?: string;
 }
+
+export type PublisherCategory = "Campus" | "Local" | "National" | "Global";
+
+export interface Publisher {
+  id: string;
+  name: string;
+  domain: string;
+  category: PublisherCategory;
+  tagline?: string;
+}
+
+export interface PublishersResponse {
+  items: Publisher[];
+  nextCursor: number | null;
+  total: number;
+}

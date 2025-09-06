@@ -10,9 +10,12 @@ import { AuthProvider } from "@/lib/auth";
 import Index from "./pages/Index";
 import Students from "./pages/Students";
 import Publishers from "./pages/Publishers";
+import OurPublishers from "./pages/OurPublishers";
 import Universities from "./pages/Universities";
 import About from "./pages/About";
 import Pricing from "./pages/Pricing";
+import PublisherList from "./pages/PublisherList";
+import PublisherListStatic from "./pages/PublisherListStatic";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import CampusEligibility from "./pages/CampusEligibility";
@@ -38,6 +41,9 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/students" element={<Students />} />
           <Route path="/publishers" element={<Publishers />} />
+          <Route path="/publisher-list" element={<PublisherList />} />
+          <Route path="/publisher-list-static" element={<PublisherListStatic />} />
+          <Route path="/our-publishers" element={<OurPublishers />} />
           <Route path="/universities" element={<Universities />} />
           <Route path="/about" element={<About />} />
           <Route path="/pricing" element={<Pricing />} />

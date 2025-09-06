@@ -83,9 +83,6 @@ export default function PublisherListStatic() {
               <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 20px' }}>
                 <h1 style={{ color: '#FFFFFF', fontSize: '36px', fontWeight: 700, margin: 0 }}>Publisher Directory</h1>
                 <p style={{ color: '#FFFFFF', opacity: 0.85, marginTop: 8, fontSize: 16 }}>From your campus to the world — explore every newsroom in one feed.</p>
-                <div style={{ marginTop: 16 }}>
-                  <a href="/signup" style={{ backgroundColor: '#00C4CC', color: '#FFFFFF', padding: '10px 18px', borderRadius: 999, display: 'inline-block', fontWeight: 600 }}>Create Free Account</a>
-                </div>
               </div>
             </div>
           </section>

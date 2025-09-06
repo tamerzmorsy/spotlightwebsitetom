@@ -62,15 +62,6 @@ export default function PublisherList() {
           <div className="text-sm text-soft-gray/70">{total !== null ? `${total} publishers` : 'Loading total...'}</div>
         </header>
 
-        <div className="mb-4">
-          <input
-            value={q}
-            onChange={(e) => setQ(e.target.value)}
-            placeholder="Search publishers..."
-            className="w-full rounded-md bg-gray-800/40 border border-soft-gray/10 text-soft-gray px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#00C4CC]"
-            aria-label="Search publishers"
-          />
-        </div>
 
         <section aria-live="polite">
           {isLoading && (

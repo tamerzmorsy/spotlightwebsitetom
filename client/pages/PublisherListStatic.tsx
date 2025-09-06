@@ -115,7 +115,7 @@ export default function PublisherListStatic() {
               <div className="text-lg">No publishers found. Try another filter.</div>
             </div>
           ) : (
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {visibleItems.map((item) => {
                 const slug = slugify(item.name);
                 return (

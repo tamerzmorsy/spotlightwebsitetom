@@ -65,13 +65,7 @@ export default function PublisherListStatic() {
 
       {/* Hero */}
       <div className="w-full relative">
-        <div
-          className="w-full h-[360px] bg-cover bg-center"
-          style={{
-            backgroundImage:
-              "linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.15)), url('https://cdn.builder.io/api/v1/image/assets%2Ff9a2587e1b874b6e9d34bfb6b703b455%2F93f590eec3684d129be0a4d274bd2174?format=webp&width=1600')",
-          }}
-        />
+        <div className="w-full h-[360px]" style={{ backgroundColor: '#0b1f1f' }} />
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-[840px] mx-auto px-6 py-8 text-center md:text-left">
             <h1 className="text-4xl md:text-5xl font-display font-bold text-white">Publisher Directory</h1>

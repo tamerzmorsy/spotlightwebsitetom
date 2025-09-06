@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, User, LogOut, Settings, BarChart3, ChevronDown, ChevronRight } from "lucide-react";
+import { Menu, X, User, LogOut, Settings, BarChart3 } from "lucide-react";
 import { useAuth } from "@/lib/auth";
 import {
   DropdownMenu,
@@ -60,39 +60,6 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
   // Choose which navigation links to show
   const navigationLinks = isAuthenticated ? authenticatedNavigationLinks : publicNavigationLinks;
 
-  // Publishers dropdown state and refs
-  const [publishersOpen, setPublishersOpen] = useState(false);
-  const [mobilePublishersOpen, setMobilePublishersOpen] = useState(false);
-  const publishersRef = useRef<HTMLDivElement | null>(null);
-
-  const publishersFilters = [
-    { label: "All Publishers", href: "/publishers", category: "All" },
-    { label: "Campus", href: "/publishers?category=Campus", category: "Campus" },
-    { label: "Local", href: "/publishers?category=Local", category: "Local" },
-    { label: "National", href: "/publishers?category=National", category: "National" },
-    { label: "Global", href: "/publishers?category=Global", category: "Global" },
-  ];
-
-  useEffect(() => {
-    function onDocClick(e: MouseEvent) {
-      const target = e.target as Node;
-      if (publishersRef.current && !publishersRef.current.contains(target)) {
-        setPublishersOpen(false);
-      }
-    }
-    function onKey(e: KeyboardEvent) {
-      if (e.key === "Escape") {
-        setPublishersOpen(false);
-        setMobilePublishersOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", onDocClick);
-    document.addEventListener("keydown", onKey);
-    return () => {
-      document.removeEventListener("mousedown", onDocClick);
-      document.removeEventListener("keydown", onKey);
-    };
-  }, []);
 
   return (
     <nav className="bg-midnight-black/95 backdrop-blur-sm sticky top-0 z-50 border-b border-soft-gray/10">
@@ -109,73 +76,12 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8 relative">
-            {navigationLinks.map((link) => {
-              // Special-case the publishers item to show a hover dropdown
-              if (link.path === "/publishers") {
-                return (
-                  <div
-                    key={link.path}
-                    className="relative"
-                    onMouseEnter={() => setPublishersOpen(true)}
-                    onMouseLeave={() => setPublishersOpen(false)}
-                    onFocus={() => setPublishersOpen(true)}
-                  >
-                    <div className="flex items-center gap-2">
-                      <Link
-                        to={link.path}
-                        className={location.pathname.startsWith('/publishers') ? `${getLinkClasses(link.path)} text-electric-blue` : getLinkClasses(link.path)}
-                        onClick={() => { try { window.analytics?.track('nav_publishers_click'); } catch(e) {} }}
-                      >
-                        {link.label}
-                      </Link>
-                      <button
-                        aria-haspopup="true"
-                        aria-expanded={publishersOpen}
-                        onClick={() => setPublishersOpen((s) => !s)}
-                        className="text-soft-gray/70 hover:text-soft-gray p-1"
-                      >
-                        <ChevronDown className="w-4 h-4" />
-                      </button>
-                    </div>
-
-                    {/* Dropdown panel */}
-                    {publishersOpen && (
-                      <div
-                        ref={publishersRef}
-                        role="menu"
-                        aria-label="Publishers filters"
-                        className="absolute left-0 mt-2 w-56 bg-midnight-black/95 border border-soft-gray/10 rounded-lg shadow-lg py-2 z-50"
-                      >
-                        {publishersFilters.map((f) => (
-                          <Link
-                            key={f.label}
-                            to={f.href}
-                            role="menuitem"
-                            onClick={() => { try { window.analytics?.track('nav_publishers_filter', { category: f.category || 'All' }); } catch (e) {} setPublishersOpen(false); }}
-                            className="block px-4 py-2 text-soft-gray hover:text-electric-blue text-md"
-                          >
-                            <div className="flex justify-between items-center">
-                              <span>{f.label}</span>
-                              {typeof f.stat === 'number' && (
-                                <span className="ml-2 text-xs text-soft-gray/60">• {f.stat}</span>
-                              )}
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                );
-              }
-
-              // Default link rendering
-              return (
-                <Link key={link.path} to={link.path} className={getLinkClasses(link.path)}>
-                  {link.label}
-                </Link>
-              );
-            })}
+          <div className="hidden md:flex items-center space-x-8">
+            {navigationLinks.map((link) => (
+              <Link key={link.path} to={link.path} className={getLinkClasses(link.path)}>
+                {link.label}
+              </Link>
+            ))}
           </div>
 
           {/* Desktop CTA */}
@@ -264,43 +170,16 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
           <div className="fixed top-14 left-0 right-0 bg-midnight-black/95 backdrop-blur-md z-40 md:hidden">
             <div className="max-w-8xl mx-auto px-4 py-8">
               <div className="flex flex-col space-y-6">
-                {navigationLinks.map((link) => {
-                  if (link.path === '/publishers') {
-                    return (
-                      <div key="mobile-publishers" className="w-full">
-                        <button
-                          onClick={() => setMobilePublishersOpen((s) => !s)}
-                          className="w-full flex items-center justify-between text-soft-gray/80 hover:text-soft-gray transition-colors text-lg font-medium py-2"
-                          aria-expanded={mobilePublishersOpen}
-                          aria-controls="mobile-publishers-panel"
-                        >
-                          <span>{link.label}</span>
-                          <ChevronRight className={`w-5 h-5 transform transition-transform ${mobilePublishersOpen ? 'rotate-90' : ''}`} />
-                        </button>
-                        {mobilePublishersOpen && (
-                          <div id="mobile-publishers-panel" className="pl-4 mt-2 space-y-2">
-                            {publishersFilters.map((f) => (
-                              <Link key={f.label} to={f.href} onClick={() => { closeMenu(); try { window.analytics?.track('nav_publishers_filter', { category: f.category || 'All' }); } catch(e) {} }} className="block text-soft-gray/80 hover:text-soft-gray py-2">
-                                {f.label}
-                              </Link>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    );
-                  }
-
-                  return (
-                    <Link
-                      key={link.path}
-                      to={link.path}
-                      className="text-soft-gray/80 hover:text-soft-gray transition-colors text-lg font-medium py-2"
-                      onClick={closeMenu}
-                    >
-                      {link.label}
-                    </Link>
-                  );
-                })}
+                {navigationLinks.map((link) => (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    className="text-soft-gray/80 hover:text-soft-gray transition-colors text-lg font-medium py-2"
+                    onClick={closeMenu}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
 
                 {/* Mobile CTA */}
                 <div className="pt-6 border-t border-soft-gray/10">

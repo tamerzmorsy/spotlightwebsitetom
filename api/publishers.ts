@@ -64,5 +64,7 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
   const slice = filtered.slice(cursor, cursor + limit);
   const nextCursor = cursor + limit < total ? cursor + limit : null;
 
+  // Cache for 300s with stale-while-revalidate
+  res.setHeader?.("Cache-Control", "public, max-age=0, s-maxage=300, stale-while-revalidate=300");
   res.status(200).json({ items: slice, nextCursor, total });
 }

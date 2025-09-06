@@ -121,11 +121,11 @@ export default function PublisherListStatic() {
                 return (
                   <Link to={`/publisher/${slug}`} key={item.name} className="block">
                     <article
-                      className="bg-[#1C2526] rounded-2xl p-4 shadow-sm transform transition-all hover:scale-105"
-                      style={{ boxShadow: '0 6px 18px rgba(0,0,0,0.4)', border: '1px solid rgba(255,255,255,0.02)' }}
+                      className="bg-[#1C2526] rounded-2xl p-6 shadow-sm transform transition-all hover:scale-105 hover:border-[rgba(0,196,204,0.12)]"
+                      style={{ boxShadow: '0 8px 24px rgba(0,0,0,0.45)', border: '1px solid rgba(255,255,255,0.02)', minHeight: 96 }}
                     >
-                      <div className="flex items-start gap-3">
-                        <div className="w-12 h-12 rounded-full bg-[#0f1414] flex items-center justify-center flex-shrink-0">
+                      <div className="flex items-center gap-4">
+                        <div className="w-14 h-14 rounded-full bg-[#0f1414] flex items-center justify-center flex-shrink-0">
                           <img src={item.img} alt={`${item.name} logo`} loading="lazy" decoding="async" className="w-full h-full object-contain" />
                         </div>
                         <div className="flex-1 min-w-0">

@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, User, LogOut, Settings, BarChart3, ChevronDown, ChevronRight } from "lucide-react";
 import { useAuth } from "@/lib/auth";
-import { useState, useRef, useEffect, useCallback } from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,

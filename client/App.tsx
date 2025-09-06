@@ -10,6 +10,7 @@ import { AuthProvider } from "@/lib/auth";
 import Index from "./pages/Index";
 import Students from "./pages/Students";
 import Publishers from "./pages/Publishers";
+import OurPublishers from "./pages/OurPublishers";
 import Universities from "./pages/Universities";
 import About from "./pages/About";
 import Pricing from "./pages/Pricing";
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/students" element={<Students />} />
           <Route path="/publishers" element={<Publishers />} />
+          <Route path="/our-publishers" element={<OurPublishers />} />
           <Route path="/universities" element={<Universities />} />
           <Route path="/about" element={<About />} />
           <Route path="/pricing" element={<Pricing />} />

@@ -43,9 +43,9 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
   // Navigation links for non-authenticated users (marketing pages)
   const publicNavigationLinks = [
     { path: "/students", label: "Students" },
+    { path: "/publishers", label: "Publishers" },
     { path: "/universities", label: "Colleges/Universities" },
     { path: "/pricing", label: "Pricing" },
-    { path: "/publishers", label: "Publishers" },
     { path: "/about", label: "About" },
   ];
 

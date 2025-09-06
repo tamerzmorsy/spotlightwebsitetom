@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useInfiniteQuery } from "@tanstack/react-query";
@@ -8,18 +9,10 @@ import { Link } from "react-router-dom";
 const LIMIT = 30;
 
 export default function PublisherList() {
-  const [q, setQ] = useState("");
-  const [debouncedQ, setDebouncedQ] = useState(q);
-  useEffect(() => {
-    const t = setTimeout(() => setDebouncedQ(q), 250);
-    return () => clearTimeout(t);
-  }, [q]);
-
   const fetchPage = async ({ pageParam = 0 }) => {
     const params = new URLSearchParams();
     params.set("limit", String(LIMIT));
     params.set("cursor", String(pageParam));
-    if (debouncedQ) params.set("q", debouncedQ);
     const res = await fetch(`/api/publishers?${params.toString()}`);
     if (!res.ok) throw new Error("Failed to load publishers");
     return res.json();
@@ -34,15 +27,11 @@ export default function PublisherList() {
     isLoading,
     error,
   } = useInfiniteQuery({
-    queryKey: ["publisherList", debouncedQ],
+    queryKey: ["publisherList"],
     queryFn: fetchPage,
     getNextPageParam: (last) => last.nextCursor,
     initialPageParam: 0,
   });
-
-  useEffect(() => {
-    refetch();
-  }, [debouncedQ, refetch]);
 
   const items: Publisher[] = useMemo(() => (data ? data.pages.flatMap((p) => p.items) : []), [data]);
   const total = data?.pages?.[0]?.total ?? null;

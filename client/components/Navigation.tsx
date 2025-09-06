@@ -61,6 +61,40 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
   // Choose which navigation links to show
   const navigationLinks = isAuthenticated ? authenticatedNavigationLinks : publicNavigationLinks;
 
+  // Publishers dropdown state and refs
+  const [publishersOpen, setPublishersOpen] = useState(false);
+  const [mobilePublishersOpen, setMobilePublishersOpen] = useState(false);
+  const publishersRef = useRef<HTMLDivElement | null>(null);
+
+  const publishersFilters = [
+    { label: "All Publishers", href: "/publishers", category: "All" },
+    { label: "Campus", href: "/publishers?category=Campus", category: "Campus" },
+    { label: "Local", href: "/publishers?category=Local", category: "Local" },
+    { label: "National", href: "/publishers?category=National", category: "National" },
+    { label: "Global", href: "/publishers?category=Global", category: "Global" },
+  ];
+
+  useEffect(() => {
+    function onDocClick(e: MouseEvent) {
+      const target = e.target as Node;
+      if (publishersRef.current && !publishersRef.current.contains(target)) {
+        setPublishersOpen(false);
+      }
+    }
+    function onKey(e: KeyboardEvent) {
+      if (e.key === "Escape") {
+        setPublishersOpen(false);
+        setMobilePublishersOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", onDocClick);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("mousedown", onDocClick);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, []);
+
   return (
     <nav className="bg-midnight-black/95 backdrop-blur-sm sticky top-0 z-50 border-b border-soft-gray/10">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">

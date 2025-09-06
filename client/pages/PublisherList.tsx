@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useInfiniteQuery } from "@tanstack/react-query";
@@ -8,10 +8,18 @@ import { Link } from "react-router-dom";
 const LIMIT = 30;
 
 export default function PublisherList() {
+  const [q, setQ] = useState("");
+  const [debouncedQ, setDebouncedQ] = useState("");
+  useEffect(() => {
+    const t = setTimeout(() => setDebouncedQ(q), 250);
+    return () => clearTimeout(t);
+  }, [q]);
+
   const fetchPage = async ({ pageParam = 0 }) => {
     const params = new URLSearchParams();
     params.set("limit", String(LIMIT));
     params.set("cursor", String(pageParam));
+    if (debouncedQ) params.set("q", debouncedQ);
     const res = await fetch(`/api/publishers?${params.toString()}`);
     if (!res.ok) throw new Error("Failed to load publishers");
     return res.json();
@@ -26,11 +34,15 @@ export default function PublisherList() {
     isLoading,
     error,
   } = useInfiniteQuery({
-    queryKey: ["publisherList"],
+    queryKey: ["publisherList", debouncedQ],
     queryFn: fetchPage,
     getNextPageParam: (last) => last.nextCursor,
     initialPageParam: 0,
   });
+
+  useEffect(() => {
+    refetch();
+  }, [debouncedQ, refetch]);
 
   const items: Publisher[] = useMemo(() => (data ? data.pages.flatMap((p) => p.items) : []), [data]);
   const total = data?.pages?.[0]?.total ?? null;
@@ -61,6 +73,24 @@ export default function PublisherList() {
           <div className="text-sm text-soft-gray/70">{total !== null ? `${total} publishers` : 'Loading total...'}</div>
         </header>
 
+        {/* Hero + Search */}
+        <div className="mb-8 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+          <div className="md:col-span-2">
+            <p className="text-lg text-soft-gray/80 mb-3">Campus, local, and global newsrooms — all in one trusted feed.</p>
+            <div>
+              <input
+                value={q}
+                onChange={(e) => setQ(e.target.value)}
+                placeholder="Search publishers..."
+                className="w-full rounded-md bg-gray-800/40 border border-soft-gray/10 text-soft-gray px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#00C4CC]"
+                aria-label="Search publishers"
+              />
+            </div>
+          </div>
+          <div className="md:col-span-1 flex justify-end">
+            <img src="https://placehold.co/320x160/png?text=Publishers+Hero" alt="Publishers hero" className="w-full max-w-sm rounded-lg object-cover shadow-md" />
+          </div>
+        </div>
 
         <section aria-live="polite">
           {isLoading && (

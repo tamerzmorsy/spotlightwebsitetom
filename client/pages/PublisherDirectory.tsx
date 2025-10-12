@@ -84,9 +84,9 @@ const PublisherDirectory: React.FC = () => {
           loop
           playsInline
           preload="metadata"
+          poster="https://via.placeholder.com/1600x900.png?text=Spotlight+Hero"
         >
-          <source src="/public/hero-loop.mp4" type="video/mp4" />
-          {/* Fallback poster image */}
+          <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
         </video>
 
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/40 to-black/60" />

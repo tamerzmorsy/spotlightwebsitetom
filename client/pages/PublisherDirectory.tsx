@@ -150,29 +150,7 @@ const PublisherDirectory: React.FC = () => {
               />
             </div>
 
-            <div className="flex items-center gap-3">
-              <button
-                onClick={() => setFilterPremium((s) => !s)}
-                className={`px-4 py-2 rounded-full font-medium transition ${
-                  filterPremium
-                    ? "bg-[#00CCDD] text-white shadow-md"
-                    : "bg-transparent text-[#00CCDD] border border-[#00CCDD]/30"
-                }`}
-              >
-                Premium
-              </button>
-
-              <button
-                onClick={() => setFilterLocal((s) => !s)}
-                className={`px-4 py-2 rounded-full font-medium transition ${
-                  filterLocal
-                    ? "bg-[#00CCDD] text-white shadow-md"
-                    : "bg-transparent text-[#00CCDD] border border-[#00CCDD]/30 text-[#00CCDD]"
-                }`}
-              >
-                Local Paper
-              </button>
-            </div>
+            <div className="flex items-center gap-3" />
           </div>
         </div>
 

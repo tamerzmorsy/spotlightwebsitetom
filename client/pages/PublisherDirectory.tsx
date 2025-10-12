@@ -181,6 +181,26 @@ const PublisherDirectory: React.FC = () => {
           </div>
         </div>
 
+        {/* Category pills */}
+        <div className="mt-4">
+          <div className="max-w-6xl mx-auto px-2">
+            <div className="flex flex-wrap gap-3">
+              {ALL_CATEGORIES.map((cat) => {
+                const active = selectedCategories.has(cat as any);
+                return (
+                  <button
+                    key={cat}
+                    onClick={() => toggleCategory(cat as any)}
+                    className={`px-3 py-1.5 rounded-full text-sm font-medium transition ${active ? 'bg-[#00CCDD] text-white shadow-md' : 'bg-transparent border border-[#00CCDD]/30 text-[#00CCDD]'}`}
+                  >
+                    {cat}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+
         {/* Grid */}
         <section className="mt-8">
           <div className="max-w-6xl mx-auto">

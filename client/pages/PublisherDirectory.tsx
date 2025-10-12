@@ -90,8 +90,6 @@ const PublisherDirectory: React.FC = () => {
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
     return MOCK_PUBLISHERS.filter((p) => {
-      if (filterPremium && !p.isPremium) return false;
-      if (filterLocal && !p.isLocal) return false;
       // category filtering
       if (selectedCategories.size > 0) {
         const has = (p.categories || []).some((cat) => selectedCategories.has(cat));

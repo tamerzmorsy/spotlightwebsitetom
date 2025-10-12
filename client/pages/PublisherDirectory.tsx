@@ -75,8 +75,6 @@ const MOCK_PUBLISHERS: Publisher[] = [
 
 const PublisherDirectory: React.FC = () => {
   const [query, setQuery] = useState("");
-  const [filterPremium, setFilterPremium] = useState(false);
-  const [filterLocal, setFilterLocal] = useState(true);
   const [visibleCount, setVisibleCount] = useState(9);
   const [selectedCategories, setSelectedCategories] = useState<Set<Category>>(new Set(["Local Publication"]));
 

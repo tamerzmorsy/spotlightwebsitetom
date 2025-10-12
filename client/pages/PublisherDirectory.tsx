@@ -100,7 +100,7 @@ const PublisherDirectory: React.FC = () => {
         p.name.toLowerCase().includes(q) || (p.description || "").toLowerCase().includes(q)
       );
     });
-  }, [query, filterPremium, filterLocal, selectedCategories]);
+  }, [query, selectedCategories]);
 
   const visible = filtered.slice(0, visibleCount);
   const canLoadMore = visibleCount < filtered.length;

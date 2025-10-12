@@ -1,6 +1,28 @@
 import React, { useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
+
+const ALL_CATEGORIES = [
+  "Premium",
+  "Business Publication",
+  "College Newspaper",
+  "Entertainment Publication",
+  "Lifestyle",
+  "Local Newspaper",
+  "Local Publication",
+  "Magazine",
+  "News Wire",
+  "Newsletter",
+  "Political News",
+  "Satire",
+  "Science Publication",
+  "Sports Publication",
+  "Student Government",
+  "University Media",
+] as const;
+
+type Category = (typeof ALL_CATEGORIES)[number];
 
 type Publisher = {
   name: string;
@@ -9,35 +31,36 @@ type Publisher = {
   description?: string;
   isPremium?: boolean;
   isLocal?: boolean;
+  categories?: Category[];
 };
 
 const MOCK_PUBLISHERS: Publisher[] = [
   {
     name: "Daily Beacon",
-    logoUrl:
-      "https://via.placeholder.com/300x300.png?text=Daily+Beacon",
+    logoUrl: "https://via.placeholder.com/300x300.png?text=Daily+Beacon",
     url: "https://example.com/daily-beacon",
     description: "Campus-focused daily covering student life, sports, and local news.",
     isPremium: true,
     isLocal: false,
+    categories: ["Premium", "College Newspaper", "University Media"],
   },
   {
     name: "Town Herald",
-    logoUrl:
-      "https://via.placeholder.com/300x300.png?text=Town+Herald",
+    logoUrl: "https://via.placeholder.com/300x300.png?text=Town+Herald",
     url: "https://example.com/town-herald",
     description: "Local community reporting with a focus on human interest stories.",
     isPremium: false,
     isLocal: true,
+    categories: ["Local Newspaper", "Local Publication", "Lifestyle"],
   },
   {
     name: "Metro Ledger",
-    logoUrl:
-      "https://via.placeholder.com/300x300.png?text=Metro+Ledger",
+    logoUrl: "https://via.placeholder.com/300x300.png?text=Metro+Ledger",
     url: "https://example.com/metro-ledger",
     description: "Regional coverage with investigative reporting and features.",
     isPremium: true,
     isLocal: true,
+    categories: ["Premium", "Local Newspaper", "News Wire"],
   },
   // Additional sample items for demonstration and load-more behavior
   ...Array.from({ length: 12 }).map((_, i) => ({
@@ -47,26 +70,42 @@ const MOCK_PUBLISHERS: Publisher[] = [
     description: `Local press edition ${i + 1} covering neighborhoods and events.`,
     isPremium: i % 7 === 0,
     isLocal: true,
+    categories: [i % 5 === 0 ? "Magazine" : "Local Publication"],
   })),
 ];
 
 const PublisherDirectory: React.FC = () => {
   const [query, setQuery] = useState("");
   const [filterPremium, setFilterPremium] = useState(false);
-  const [filterLocal, setFilterLocal] = useState(false);
+  const [filterLocal, setFilterLocal] = useState(true);
   const [visibleCount, setVisibleCount] = useState(9);
+  const [selectedCategories, setSelectedCategories] = useState<Set<Category>>(new Set(["Local Publication"]));
+
+  const toggleCategory = (c: Category) => {
+    setSelectedCategories((prev) => {
+      const next = new Set(prev);
+      if (next.has(c)) next.delete(c);
+      else next.add(c);
+      return next;
+    });
+  };
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
     return MOCK_PUBLISHERS.filter((p) => {
       if (filterPremium && !p.isPremium) return false;
       if (filterLocal && !p.isLocal) return false;
+      // category filtering
+      if (selectedCategories.size > 0) {
+        const has = (p.categories || []).some((cat) => selectedCategories.has(cat));
+        if (!has) return false;
+      }
       if (!q) return true;
       return (
         p.name.toLowerCase().includes(q) || (p.description || "").toLowerCase().includes(q)
       );
     });
-  }, [query, filterPremium, filterLocal]);
+  }, [query, filterPremium, filterLocal, selectedCategories]);
 
   const visible = filtered.slice(0, visibleCount);
   const canLoadMore = visibleCount < filtered.length;

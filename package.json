@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:full": "vite",
     "build": "vite build",
     "build:client": "vite build",
     "preview": "vite preview"

@@ -46,7 +46,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
     { path: "/publishers", label: "Publishers" },
     { path: "/universities", label: "Colleges/Universities" },
     { path: "/pricing", label: "Pricing" },
-    { path: "/publisher-directory", label: "Publisher Directory" },
+    { path: "/publisher-directory", label: "Our Publishers" },
     { path: "/about", label: "About" },
   ];
 

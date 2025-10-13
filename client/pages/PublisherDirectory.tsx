@@ -127,7 +127,7 @@ const PublisherDirectory: React.FC = () => {
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 py-12 h-full flex flex-col justify-center items-center text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white text-glow-blue">
-            Explore Trusted Publishers
+            Explore Current Spotlight Publishers
           </h1>
           <div className="w-20 h-0.5 bg-[#00CCDD] mt-4 mb-4 rounded" />
           <p className="max-w-2xl text-soft-gray/90 text-base md:text-lg">

@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
+import LiquidEther from "@/components/LiquidEther";
 
 const Index = () => {
   return (
@@ -18,6 +19,22 @@ const Index = () => {
               alt="Spotlight News"
               className="h-12 w-auto"
               style={{ filter: 'brightness(0) saturate(100%) invert(50%) sepia(100%) saturate(2000%) hue-rotate(154deg) brightness(119%) contrast(119%)' }}
+            />
+          </div>
+
+          {/* LiquidEther Background Animation */}
+          <div style={{ width: '1080px', height: '1080px', position: 'relative', margin: '0 auto -400px' }}>
+            <LiquidEther
+              mouseForce={20}
+              cursorSize={100}
+              isViscous
+              viscous={30}
+              colors={["#03ccdd", "#FF9FFC", "#B19EEF"]}
+              autoDemo
+              autoSpeed={0.5}
+              autoIntensity={2.2}
+              isBounce={false}
+              resolution={0.5}
             />
           </div>
 

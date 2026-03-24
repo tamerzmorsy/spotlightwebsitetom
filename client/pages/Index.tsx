@@ -11,7 +11,7 @@ const Index = () => {
 
       {/* Hero Section - Apple News inspired clean layout */}
       <section className="relative pt-20 pb-32 px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-8xl mx-auto">
+        <div className="text-center max-w-8xl mx-auto relative z-10">
           {/* Product Badge */}
           <div className="mb-8 flex justify-center">
             <img
@@ -23,7 +23,7 @@ const Index = () => {
           </div>
 
           {/* LiquidEther Background Animation */}
-          <div style={{ width: '1080px', height: '1080px', position: 'relative', margin: '0 auto -400px' }}>
+          <div style={{ width: '1080px', height: '1080px', position: 'absolute', left: '50%', transform: 'translateX(-50%)', top: '-200px', zIndex: 0 }}>
             <LiquidEther
               mouseForce={20}
               cursorSize={100}

@@ -23,7 +23,7 @@ const Index = () => {
           </div>
 
           {/* LiquidEther Background Animation */}
-          <div style={{ width: '1080px', height: '1080px', position: 'absolute', left: '50%', transform: 'translateX(-50%)', top: '-200px', zIndex: 0 }}>
+          <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
             <LiquidEther
               mouseForce={20}
               cursorSize={100}
